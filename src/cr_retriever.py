@@ -3,119 +3,179 @@ import fake_useragent
 import re
 from .extraction_helpers import *
 import urllib.parse
+import mechanicalsoup
+from PIL import Image, ImageSequence
+import os
+import xml.etree.ElementTree as ET
+from typing import Tuple, List
+import uuid
 
 class CommercialRegisterRetriever:
+    def __init__(self, session_id: str = None):
+        self.browser = mechanicalsoup.StatefulBrowser(user_agent='Chrome')
+        self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+        url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
+        self.session_id = url.split(";")[1].split("?")[0]
+        self.company_name = ""
+        self.date = ""
 
-    def __init__(self) -> None:
-        self.user_agent = fake_useragent.UserAgent().chrome
-        self.jsession_id: str = None
-        self.view_state: str = None
 
-        self._get_session_id_view_state()
+    def _add_si_to_cart(self, si_link):
+        # Pull Overview
+        self.browser.open(si_link)
+
+    def _add_gs_to_cart(self, index):
+        # Open document tree
+        self.browser.open(
+            "https://www.unternehmensregister.de/ureg/registerPortal.html;{}?submitaction=showDkTree&searchIdx={}".format(
+                self.session_id, index))
+
+        # Expand
+        level = 2
+
+        while True:
+            elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
+            if len(elements) == 0:
+                raise Exception("no gs list found")
+            if level == 3:
+                element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
+                if len(element) == 0:
+                    raise Exception("no gs list found")
+                self.browser.open_relative(element[0].attrs["href"])
+                level += 1
+                continue
+            if "Liste der" not in elements[0].text:
+                self.browser.open_relative(elements[0].attrs["href"])
+                level += 1
+            else:
+                self.browser.open_relative(elements[0].attrs["href"])
+                level += 1
+                break
+
+        file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
+
+        self.date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        if self.date == "unbekannt":
+            self.date = date_2
+
+        self.browser.select_form("#dkform")
+        self.browser["format"] = file_format
+        self.browser.submit_selected("add2cart")
+        return
+
+    def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
+        # Fill-in the search form
+        self.browser.select_form('#globalSearchForm')
+        self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
+        self.browser["submitaction"] = "searchRegisterData"
+        self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
+
+        # open the search results
+        self.browser.open_relative(self.browser.page.select("div.right a")[0].attrs["href"])
+
+        # retrieve all companies in a list
+        companies = []
+        i = 0
+        si = self.browser.page.select(".reglink[id*='SI']")
+        for result in self.browser.page.select('td.RegPortErg_FirmaKopf'):
+            company = {}
+            company["id"] = uuid.uuid4().hex
+            company["name"] = result.text
+            company["index"] = i
+            company["link"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[i].attrs["href"])
+            companies.append(company)
+            i += 1
+        
+        return companies
+
+
+
+            
     
-    def _get_session_id_view_state(self) -> None:
-        response = self._retrieve_data(use_session=False)
+    def pull_gs(self, index, si_link):
+        has_si = True
+        try:
+            self._add_si_to_cart(self.browser, si_link)
+        except Exception as e:
+            print(e)
+            has_si = False
 
-        # set jsession id
-        regex = r'jsessionid=([a-zA-Z0-9]+\.[a-zA-Z0-9]+-1)\b'
-        match = re.search(regex, response.text)
-        self.jsession_id = match.group(1)
+        has_gs = True
+        date = ""
 
-        # set viewstate
-        self.view_state = get_view_state(response.text)
+        try:
+            date = self._add_gs_to_cart(self.browser, index)
+        except Exception as e:
+            print(e)
+            has_gs = False
+
+        if not (has_gs or has_si):
+            raise Exception("no data found")
+    
+    def _download_documents_from_basket(self):
+        # open the cart & skip payment overview
+        self.browser.open_relative("doccart.html;{}".format(self.session_id))
+        self.browser.select_form("#doccartForm")
+        submit_name = self.browser.page.select("div.right input")[0].attrs["name"]
+        self.browser.submit_selected(submit_name)
+        self.browser.select_form("#paymentFormOverview")
+        self.browser.submit_selected("paymentFormOverview:btnNext")
+        self.browser.open_relative("doccart.html;{}".format(self.session_id))
+
+        # retrieve all download links
+        downloads = [x.attrs["href"] for x in self.browser.page.select("div.download-wrapper div a:not(.disabled)")]
+        if len(downloads) == 0:
+            raise Exception("no downloads found")
+
+        # download all files in the basket
+        for download in downloads:
+            url = 'https://www.unternehmensregister.de/ureg/{}'.format(download)
+            r = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
+
+            if 'content-disposition' not in r.headers:
+                # Most likely failed to fetch because HR is down
+                continue
+            d = r.headers['content-disposition']
+            file_format = re.findall("filename=(.+)", d)[0].split(".")[1]
+
+            filename = ""
+            if file_format.lower() == "tif" or file_format.lower() == "tiff":
+                file_format = "pdf"
+                fname = "GS-Liste-{}-{}.{}".format(self.name, self.date, file_format)
+                filename = "out/{}/{}".format(self.name, fname)
+                os.makedirs(os.path.dirname(filename), exist_ok=True)
+                r.raw.decode_content = True
+                image = Image.open(r.raw)
+
+                images = []
+                for i, page in enumerate(ImageSequence.Iterator(image)):
+                    page = page.convert("RGB")
+                    images.append(page)
+                if len(images) == 1:
+                    images[0].save(filename)
+                else:
+                    images[0].save(filename, save_all=True, append_images=images[1:])
+                gs_list = filename
+            elif file_format.lower() == "xml":
+                fname = "SI.xml"
+                filename = "out/{}/{}".format(self.company_name, fname)
+                os.makedirs(os.path.dirname(filename), exist_ok=True)
+                with open(filename, 'wb') as f:
+                    f.write(r.content)
+                si = filename
+            else:
+                fname = "GS-Liste-{}-{}.{}".format(self.company_name, self.date, file_format)
+                filename = "out/{}/{}".format(self.company_name, fname)
+                os.makedirs(os.path.dirname(filename), exist_ok=True)
+                with open(filename, 'wb') as f:
+                    f.write(r.content)
+        
+    
+
         
 
-    def _retrieve_data(self, payload: dict = {}, method:str = "GET", path:str = "", use_session:bool = True) -> requests.Response:
-        base_url = "https://www.unternehmensregister.de/ureg/"
-        jsession_url = f";jsessionid={self.jsession_id}"
-        params = ""
-
-        url = f"{base_url}{path}{jsession_url}{params}"
-
-        headers = {
-                'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
-                'sec-ch-ua-mobile': '?0',
-                'sec-ch-ua-platform': '"macOS"',
-                'Upgrade-Insecure-Requests': '1',
-                'User-Agent': self.user_agent,
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-                'Sec-Fetch-Site': 'same-origin',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-User': '?1',
-                'Sec-Fetch-Dest': 'document',
-                'Cookie': 'checkCookieSession=true'
-            }
-        response = requests.request(method=method, url=url, headers=headers, data=payload)
-
-        return response
-    
-
-    
-    def retrieve_document(self, search_term: str):
-        payload = f'globalSearchForm=globalSearchForm&globalSearchForm%3AextendedResearchCompanyName={search_term}&globalSearchForm%3Ahidden_element_used_for_validation_only=aaa&submitaction=globalsearch&globalsearch=true&globalSearchForm%3AbtnExecuteSearchOld=Suchen&javax.faces.ViewState={self.view_state}'
-        params = f"?submitaction=regnav&company={search_term}"
-
-        # submit search
-        result = self._retrieve_data(payload=payload, method="POST", path="registerPortalAdvice.html", params=params)
-
-        # get search result
-        result = self._retrieve_data(path="result.html")
-        company_name, company_id = get_company_name_id(result.text)
-
-        # go to registerportaladvice
-        result = self._retrieve_data(path="registerPortalAdvice.html", params=f"?submitaction=regnav&company={company_id}")
-
-        # loop through document tree
-        result = self._retrieve_data(path="registerPortal.html", params=f"?submitaction=showDkTree&searchIdx=0")
-        submit_action = identify_dk_links(result.text, level=0)
-
-        result = self._retrieve_data(path="registerPortal.html", params=submit_action)
-        submit_action = identify_dk_links(result.text, level=1)
-
-        result = self._retrieve_data(path="registerPortal.html", params=submit_action)  
-        submit_action, file_name = get_latest_document_link(result.text)
-
-        result = self._retrieve_data(path="registerPortal.html", params=submit_action)
-        payload = create_payload_for_document_selection(result.text)
-
-        # put document in basket
-        result = self._retrieve_data(payload=payload, method="POST", path="registerPortal.html")
-        result = self._retrieve_data(path="doccart.html")
-
-        payload = create_payload_for_document_download(result.text)
-        result = self._retrieve_data(payload=payload, method="POST", path="doccart.html")
-
-        # click through payment
-        result = self._retrieve_data(path="payment_overview.html")
-        view_state = get_view_state(result.text)
-        payload = {
-            'javax.faces.ViewState': view_state,
-            'paymentFormOverview': 'paymentFormOverview',
-            'paymentFormOverview:acceptAGB': 'true',
-            'paymentFormOverview:btnNext': 'Jetzt freischalten',
-            'submitAmount': '0',
-            'submitaction': 'paymentSubmit'
-        }
-        payload = urllib.parse.urlencode(payload)
-
-        self._retrieve_data(payload=payload, method="POST", path="payment_overview.html")
-
-        self._retrieve_data(path="payment_confirm2.html")
-        self._retrieve_data(path="doccart.html")
-
-        # download document
-        download_link = get_download_link(result.text)
-        result = self._retrieve_data(path=download_link, use_session=False)
-        current_datetime = datetime.now()
-
-
-        file_store_name = company_id + "_" + company_name + "_" + file_name + '_' + current_datetime.isoformat() + '.pdf'
-
-        # Check if the request was successful (status code 200)
-        if result.status_code == 200:
-            # Save the response content to a file
-            with open(file_store_name, 'wb') as file:
-                file.write(result.content)
-            print('File successfully retrieved and saved.')
-        else:
-            print('Error occurred while retrieving the file.')
+                
+            
