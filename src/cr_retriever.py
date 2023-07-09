@@ -7,18 +7,23 @@ import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
 import xml.etree.ElementTree as ET
-from typing import Tuple, List
+from typing import Tuple, List, Dict
 import uuid
 
 class CommercialRegisterRetriever:
     def __init__(self, session_id: str = None):
         self.browser = mechanicalsoup.StatefulBrowser(user_agent='Chrome')
-        self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
-        url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
-        self.session_id = url.split(";")[1].split("?")[0]
+
+        if session_id is None:
+            self._init_session()
+       
         self.company_name = ""
         self.date = ""
 
+    def _init_session(self):
+        self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+        url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
+        self.session_id = url.split(";")[1].split("?")[0]
 
     def _add_si_to_cart(self, si_link):
         # Pull Overview
@@ -90,32 +95,18 @@ class CommercialRegisterRetriever:
             i += 1
         
         return companies
-
-
-
-            
     
-    def pull_gs(self, index, si_link):
-        has_si = True
-        try:
-            self._add_si_to_cart(self.browser, si_link)
-        except Exception as e:
-            print(e)
-            has_si = False
+    def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
+        # add all documents to the cart
+        if "gs" in documents:
+            self._add_gs_to_cart(index = company["index"])
 
-        has_gs = True
-        date = ""
+        if "si" in documents:
+            self._add_si_to_cart(si_link = company["link"])
 
-        try:
-            date = self._add_gs_to_cart(self.browser, index)
-        except Exception as e:
-            print(e)
-            has_gs = False
-
-        if not (has_gs or has_si):
-            raise Exception("no data found")
+        return
     
-    def _download_documents_from_basket(self):
+    def download_documents_from_basket(self):
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
         self.browser.select_form("#doccartForm")
