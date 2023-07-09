@@ -1,12 +1,9 @@
 import requests
-import fake_useragent
 import re
 from .extraction_helpers import *
-import urllib.parse
 import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
-import xml.etree.ElementTree as ET
 from typing import Tuple, List, Dict
 import uuid
 
@@ -163,6 +160,9 @@ class CommercialRegisterRetriever:
                 os.makedirs(os.path.dirname(filename), exist_ok=True)
                 with open(filename, 'wb') as f:
                     f.write(r.content)
+                gs_list = filename
+            
+            return gs_list
         
     
 

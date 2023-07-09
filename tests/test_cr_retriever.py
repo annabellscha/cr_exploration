@@ -1,9 +1,6 @@
 import pytest
 from typing import List
-from src.cr_retriever import CommercialRegisterRetriever
-
-def test_cr_init():
-    retriever = CommercialRegisterRetriever()
+from src.helpers.cr_retriever import CommercialRegisterRetriever
 
 def test_cr_search_companies():
     retriever = CommercialRegisterRetriever()
