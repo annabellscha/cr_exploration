@@ -9,39 +9,38 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-steps:
-  - uses: actions/checkout@v3
-  - run: ls
-  - id: "auth"
-    name: "Authenticate to Google Cloud"
-    uses: "google-github-actions/auth@v1"
-    with:
-      workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_ID }}/locations/global/workloadIdentityPools/idpool/providers/idprovider"
-      service_account: ${{ secrets.GCP_SA_KEY }}
-      token_format: "access_token"
-  - name: "Set up Cloud SDK"
-    uses: "google-github-actions/setup-gcloud@v1"
-    with:
-      version: ">= 363.0.0"
-  - name: "Use gcloud CLI"
-    run: "gcloud info"
-  - name: "Deploy Search Companies Function to Cloud Functions"
-    run: "gcloud functions deploy search_companies \
-          --gen2 \
-          --runtime=python311 \
-          --region=europe-west3 \
-          --source=cr_extraction \
-          --entry-point=search_companies \
-          --trigger-http \
-          --allow-unauthenticated"
-  - name: "Deploy Download Files Function to Cloud Functions"
-    run: "gcloud functions deploy download_files \
-          --gen2 \
-          --runtime=python311 \
-          --region=europe-west3 \
-          --source=cr_extraction \
-          --entry-point=download_files \
-          --trigger-http \
-          --allow-unauthenticated"
+    steps:
+      - uses: actions/checkout@v3
+      - run: ls
+      - id: "auth"
+        name: "Authenticate to Google Cloud"
+        uses: "google-github-actions/auth@v1"
+        with:
+          workload_identity_provider: "projects/${{ secrets.GCP_PROJECT_ID }}/locations/global/workloadIdentityPools/idpool/providers/idprovider"
+          service_account: ${{ secrets.GCP_SA_KEY }}
+          token_format: "access_token"
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v1"
+        with:
+          version: ">= 363.0.0"
+      - name: "Use gcloud CLI"
+        run: "gcloud info"
+      - name: "Deploy Search Companies Function to Cloud Functions"
+        run: "gcloud functions deploy search_companies \
+              --gen2 \
+              --runtime=python311 \
+              --region=europe-west3 \
+              --source=cr_extraction \
+              --entry-point=search_companies \
+              --trigger-http \
+              --allow-unauthenticated"
+      - name: "Deploy Download Files Function to Cloud Functions"
+        run: "gcloud functions deploy download_files \
+              --gen2 \
+              --runtime=python311 \
+              --region=europe-west3 \
+              --source=cr_extraction \
+              --entry-point=download_files \
+              --trigger-http \
+              --allow-unauthenticated"
 
