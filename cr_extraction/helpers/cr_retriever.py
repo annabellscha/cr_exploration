@@ -1,21 +1,23 @@
 import requests
 import re
-from .extraction_helpers import *
+from datetime import datetime
 import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
 from typing import Tuple, List, Dict
 import uuid
+from io import BytesIO
+from google.cloud import storage
 
 class CommercialRegisterRetriever:
-    def __init__(self, session_id: str = None):
+    def __init__(self, session_id: str = None, company_name: str = None):
         self.browser = mechanicalsoup.StatefulBrowser(user_agent='Chrome')
 
         if session_id is None:
             self._init_session()
        
         self.company_name = ""
-        self.date = ""
+        self.gs_date = ""
 
     def _init_session(self):
         self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
@@ -56,12 +58,12 @@ class CommercialRegisterRetriever:
 
         file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
 
-        self.date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+        self.gs_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
-        if self.date == "unbekannt":
-            self.date = date_2
+        if self.gs_date == "unbekannt":
+            self.gs_date = date_2
 
         self.browser.select_form("#dkform")
         self.browser["format"] = file_format
@@ -94,6 +96,9 @@ class CommercialRegisterRetriever:
         return companies
     
     def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
+        # set company name
+        self.company_name = company["name"]
+        
         # add all documents to the cart
         if "gs" in documents:
             self._add_gs_to_cart(index = company["index"])
@@ -103,6 +108,39 @@ class CommercialRegisterRetriever:
 
         return
     
+    def _upload_file_to_gcp(self, storage_client: storage.Client, response: requests.Response, full_path: str) -> None:
+        # change target file name to pdf
+        filename, file_extension = os.path.splitext(full_path)
+        if file_extension.lower() in ['.tif', '.tiff']:
+            full_path = "{}.pdf".format(filename)
+
+        # init bucket and blob
+        bucket_name = "cr_documents"
+        bucket = storage_client.get_bucket(bucket_name)
+        blob = bucket.blob(full_path)
+
+        # save file
+        blob.upload_from_filename("/Users/niklas/Documents/Github/cr-exploration/out/Tanso Technologies GmbH/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
+        if file_extension.lower() in ['.tif', '.tiff']:
+            response.raw.decode_content = True
+            image = Image.open(response.raw)
+
+            images = []
+            for i, page in enumerate(ImageSequence.Iterator(image)):
+                page = page.convert("RGB")
+                images.append(page)
+
+            with blob.open("wb") as f:
+                images[0].save(f, format='PDF', save_all=True, append_images=images[1:])
+            
+        else:
+            with blob.open("wb") as f:
+                f.write(response.content)
+        
+        print("File {} uploaded to {}.".format(full_path, bucket_name))
+        return full_path
+
+
     def download_documents_from_basket(self):
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
@@ -113,56 +151,45 @@ class CommercialRegisterRetriever:
         self.browser.submit_selected("paymentFormOverview:btnNext")
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
 
+
         # retrieve all download links
         downloads = [x.attrs["href"] for x in self.browser.page.select("div.download-wrapper div a:not(.disabled)")]
         if len(downloads) == 0:
             raise Exception("no downloads found")
-
-        # download all files in the basket
+        
+        # init cloud storage
+        storage_client = storage.Client(project="cr-extraction")
+        
+        # download all files in the basket onto cloud storage
+        upload_results = []
         for download in downloads:
             url = 'https://www.unternehmensregister.de/ureg/{}'.format(download)
-            r = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
+            result = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
 
-            if 'content-disposition' not in r.headers:
+            if 'content-disposition' not in result.headers:
                 # Most likely failed to fetch because HR is down
                 continue
-            d = r.headers['content-disposition']
-            file_format = re.findall("filename=(.+)", d)[0].split(".")[1]
+            d = result.headers['content-disposition']
+            file_format = re.findall("filename=(.+)", d)[0].split(".")[1].lower()
 
-            filename = ""
-            if file_format.lower() == "tif" or file_format.lower() == "tiff":
-                file_format = "pdf"
-                fname = "GS-Liste-{}-{}.{}".format(self.name, self.date, file_format)
-                filename = "out/{}/{}".format(self.name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                r.raw.decode_content = True
-                image = Image.open(r.raw)
-
-                images = []
-                for i, page in enumerate(ImageSequence.Iterator(image)):
-                    page = page.convert("RGB")
-                    images.append(page)
-                if len(images) == 1:
-                    images[0].save(filename)
-                else:
-                    images[0].save(filename, save_all=True, append_images=images[1:])
-                gs_list = filename
-            elif file_format.lower() == "xml":
-                fname = "SI.xml"
-                filename = "out/{}/{}".format(self.company_name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                with open(filename, 'wb') as f:
-                    f.write(r.content)
-                si = filename
+            if file_format == "xml":
+                document_type = "SI"
             else:
-                fname = "GS-Liste-{}-{}.{}".format(self.company_name, self.date, file_format)
-                filename = "out/{}/{}".format(self.company_name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                with open(filename, 'wb') as f:
-                    f.write(r.content)
-                gs_list = filename
+                document_type = "GS-" + self.gs_date
+               
+
             
-            return gs_list
+
+            # set filename and path
+            file_name = "{}-{}.{}".format(document_type, self.company_name, file_format)
+            full_path = "{}/{}".format(self.company_name, file_name)
+
+            # save file
+            upload_result = self._upload_file_to_gcp(storage_client, result, full_path)
+            upload_results.append(upload_result)
+
+        return upload_results
+            
         
     
 

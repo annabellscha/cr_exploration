@@ -1,4 +1,5 @@
 from flask import jsonify
+from google.cloud import storage
 
 import functions_framework
 
