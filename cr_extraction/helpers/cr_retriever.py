@@ -1,26 +1,28 @@
 import requests
+import io
 import re
-from .extraction_helpers import *
+from datetime import datetime
 import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
 from typing import Tuple, List, Dict
-import uuid
+from google.cloud import storage
+import xml.etree.ElementTree as ET
+import img2pdf
 
 class CommercialRegisterRetriever:
-    def __init__(self, session_id: str = None):
+    def __init__(self, session_id: str = None, company_name: str = None):
         self.browser = mechanicalsoup.StatefulBrowser(user_agent='Chrome')
 
         if session_id is None:
-            self._init_session()
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
+            self.session_id = url.split(";")[1].split("?")[0]
        
-        self.company_name = ""
-        self.date = ""
-
-    def _init_session(self):
-        self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
-        url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
-        self.session_id = url.split(";")[1].split("?")[0]
+        self.company = {}
+        self.gs_date = ""
+        self.gs_file_name = ""
+        
 
     def _add_si_to_cart(self, si_link):
         # Pull Overview
@@ -50,23 +52,55 @@ class CommercialRegisterRetriever:
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
+                self.gs_file_name = elements[0].text
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
                 break
 
         file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
 
-        self.date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+        self.gs_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
-        if self.date == "unbekannt":
-            self.date = date_2
+        
+
+        if self.gs_date == "unbekannt":
+            self.gs_date = date_2
 
         self.browser.select_form("#dkform")
         self.browser["format"] = file_format
         self.browser.submit_selected("add2cart")
         return
+
+    def _upload_file_to_gcp(self, storage_client: storage.Client, response: requests.Response, full_path: str) -> None:
+        # change target file name to pdf
+        filename, file_extension = os.path.splitext(full_path)
+        if file_extension.lower() in ['.tif', '.tiff']:
+            full_path = "{}.pdf".format(filename)
+
+        # init bucket and blob
+        bucket_name = "cr_documents"
+        bucket = storage_client.get_bucket(bucket_name)
+        blob = bucket.blob(full_path)
+        
+        if file_extension.lower() in ['.tif', '.tiff']:
+            response.raw.decode_content = True
+            # Convert the TIFF content to a PDF byte array
+            with io.BytesIO() as pdf_buffer:
+                pdf_bytes = img2pdf.convert(response.raw)
+
+            blob.content_type = 'application/pdf'
+            
+            with blob.open("wb") as f:
+                f.write(pdf_bytes)
+        
+        else:
+            with blob.open("wb") as f:
+                f.write(response.content)
+        
+        print("File {} uploaded to {}.".format(full_path, bucket_name))
+        return full_path
 
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
@@ -80,26 +114,40 @@ class CommercialRegisterRetriever:
 
         # retrieve all companies in a list
         companies = []
-        i = 0
+
+        # get si links
         si = self.browser.page.select(".reglink[id*='SI']")
-        for result in self.browser.page.select('td.RegPortErg_FirmaKopf'):
+
+        # get company information
+        results_page = self.browser.page
+        results = results_page.find("tbody").find_all("tr", attrs={"class": None})
+
+        for i in range(0, len(results), 2):
             company = {}
-            company["id"] = uuid.uuid4().hex
-            company["name"] = result.text
-            company["index"] = i
-            company["link"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[i].attrs["href"])
+            company["court_city"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\n")[0]
+            company["court"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[2].strip()
+            company["id"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[3].strip() + " " + results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[4].strip() 
+            company["name"] = results[i+1].find("td", attrs={"class": "RegPortErg_FirmaKopf"}).text.strip()
+            company["city"] = results[i+1].find("td", attrs={"class": "RegPortErg_SitzStatusKopf"}).text.strip()
+            company["status"] = results[i+1].findAll("td", attrs={"class": "RegPortErg_SitzStatusKopf"})[1].text.strip()
+            company["search_index"] = int(i/2)
+            company["document_urls"] = {"si": "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[int(i/2)].attrs["href"]),}
+
             companies.append(company)
-            i += 1
-        
+            i+=1
+            
         return companies
     
     def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
+        # set company name
+        self.company = company
+        
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = company["index"])
+            self._add_gs_to_cart(index = self.company["search_index"])
 
         if "si" in documents:
-            self._add_si_to_cart(si_link = company["link"])
+            self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
 
         return
     
@@ -113,56 +161,46 @@ class CommercialRegisterRetriever:
         self.browser.submit_selected("paymentFormOverview:btnNext")
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
 
+
         # retrieve all download links
         downloads = [x.attrs["href"] for x in self.browser.page.select("div.download-wrapper div a:not(.disabled)")]
         if len(downloads) == 0:
             raise Exception("no downloads found")
-
-        # download all files in the basket
+        
+        # init cloud storage
+        storage_client = storage.Client(project="cr-extraction")
+        
+        # download all files in the basket onto cloud storage
+        uploaded_file_paths = []
         for download in downloads:
             url = 'https://www.unternehmensregister.de/ureg/{}'.format(download)
-            r = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
+            result = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
 
-            if 'content-disposition' not in r.headers:
+            if 'content-disposition' not in result.headers:
                 # Most likely failed to fetch because HR is down
                 continue
-            d = r.headers['content-disposition']
-            file_format = re.findall("filename=(.+)", d)[0].split(".")[1]
+            d = result.headers['content-disposition']
+            file_format = re.findall("filename=(.+)", d)[0].split(".")[1].lower()
 
-            filename = ""
-            if file_format.lower() == "tif" or file_format.lower() == "tiff":
-                file_format = "pdf"
-                fname = "GS-Liste-{}-{}.{}".format(self.name, self.date, file_format)
-                filename = "out/{}/{}".format(self.name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                r.raw.decode_content = True
-                image = Image.open(r.raw)
-
-                images = []
-                for i, page in enumerate(ImageSequence.Iterator(image)):
-                    page = page.convert("RGB")
-                    images.append(page)
-                if len(images) == 1:
-                    images[0].save(filename)
-                else:
-                    images[0].save(filename, save_all=True, append_images=images[1:])
-                gs_list = filename
-            elif file_format.lower() == "xml":
-                fname = "SI.xml"
-                filename = "out/{}/{}".format(self.company_name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                with open(filename, 'wb') as f:
-                    f.write(r.content)
-                si = filename
+            if file_format == "xml":
+                document_name = "SI"
+                document_type = "si"
+                # basic_information = self._retrieve_basic_information(result.content)
             else:
-                fname = "GS-Liste-{}-{}.{}".format(self.company_name, self.date, file_format)
-                filename = "out/{}/{}".format(self.company_name, fname)
-                os.makedirs(os.path.dirname(filename), exist_ok=True)
-                with open(filename, 'wb') as f:
-                    f.write(r.content)
-                gs_list = filename
+                document_name = self.gs_file_name if self.gs_file_name != "" else "GS"
+                document_type = "gs"
+               
+
+            # set filename and path
+            file_name = "{}-{}.{}".format(document_name, self.company["name"], file_format)
+            full_path = "{}_{}_{}/{}".format(self.company["name"], self.company["court"], self.company["id"], file_name)
+
+            # save file
+            upload_result = {"type": document_type, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
+            uploaded_file_paths.append(upload_result)
+
+        return self.company, uploaded_file_paths
             
-            return gs_list
         
     
 

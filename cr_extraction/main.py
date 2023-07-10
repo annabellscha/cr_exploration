@@ -1,7 +1,7 @@
+from datetime import datetime
 from flask import jsonify
-
+from google.cloud import storage
 import functions_framework
-
 from helpers.cr_retriever import CommercialRegisterRetriever
 
 @functions_framework.http
@@ -41,7 +41,30 @@ def download_files(request):
         return 'Error: {}'.format(e), 500
 
     retriever.add_documents_to_cart(company=company_data, documents=documents)
-    retriever.download_documents_from_basket()
+    company, documents = retriever.download_documents_from_basket()
 
-    return 'Documents have been downloaded successfully'
+    bucket_name = 'cr_documents'
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+
+    response_object = company
+    response_object["document_urls"] = []
+
+    for document in documents:
+        blob = bucket.blob(document["url"])
+        url = blob.generate_signed_url(
+            version="v4",
+            # This URL is valid for 15 minutes
+            expiration=datetime.timedelta(minutes=30),
+            # Allow GET requests using this URL.
+            method="GET",
+        )
+
+        response_object = company
+        response_object["document_urls"].append({"type": document["type"], "url": url})
+
+    return jsonify(response_object)
     
+
+    
+

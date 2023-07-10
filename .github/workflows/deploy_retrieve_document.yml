@@ -42,3 +42,4 @@ jobs:
           --entry-point=download_files \
           --trigger-http \
           --allow-unauthenticated"
+  
