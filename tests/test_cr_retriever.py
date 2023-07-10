@@ -17,7 +17,7 @@ def test_cr_search_companies():
 def test_cr_download_files():
     session_id: str = None
     documents: List[str] = ["gs", "si"] 
-    company_name: str = 'Tanso'
+    company_name: str = 'Tacto'
 
     # initialize retriever
     retriever = CommercialRegisterRetriever(session_id=session_id)
@@ -32,7 +32,7 @@ def test_cr_download_files():
     retriever.add_documents_to_cart(company=company, documents=documents)
 
     # download documents
-    result = retriever.download_documents_from_basket()
+    company_name, result = retriever.download_documents_from_basket()
 
     assert len(result) > 0
 

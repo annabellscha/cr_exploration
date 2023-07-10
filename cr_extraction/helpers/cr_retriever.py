@@ -5,9 +5,8 @@ import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
 from typing import Tuple, List, Dict
-import uuid
-from io import BytesIO
 from google.cloud import storage
+import xml.etree.ElementTree as ET
 
 class CommercialRegisterRetriever:
     def __init__(self, session_id: str = None, company_name: str = None):
@@ -69,6 +68,40 @@ class CommercialRegisterRetriever:
         self.browser["format"] = file_format
         self.browser.submit_selected("add2cart")
         return
+    
+    def _retrieve_basic_information(self, response_content) -> Dict:
+        try:
+        # Define the namespace dictionary
+            namespace = {"x": "http://www.xjustiz.de", "xsi": "http://www.w3.org/2001/XMLSchema-instance"}
+
+            # Parse the XML content
+            root = ET.fromstring(response_content)
+
+            # Retrieve the desired attributes
+            company_name = root.find(".//x:Bezeichnung_Aktuell", namespace).text
+            location = root.find(".//x:Sitz/x:Ort", namespace).text
+            id = root.find(".//x:Aktenzeichen", namespace).text
+            court = root.find(".//x:Gericht/x:content", namespace).text
+            
+
+            # Create a dictionary with the retrieved attributes
+            basic_information = { 
+                "name": company_name,
+                "location": location,
+                "id": id,
+                "court": court  
+            }
+        except:
+            basic_information = {
+                "name": "unknown",
+                "location": "unknown",
+                "id": "unknown",
+                "court": "unknown"
+            }
+
+        return basic_information
+
+
 
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
@@ -86,7 +119,6 @@ class CommercialRegisterRetriever:
         si = self.browser.page.select(".reglink[id*='SI']")
         for result in self.browser.page.select('td.RegPortErg_FirmaKopf'):
             company = {}
-            company["id"] = uuid.uuid4().hex
             company["name"] = result.text
             company["index"] = i
             company["link"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[i].attrs["href"])
@@ -131,8 +163,10 @@ class CommercialRegisterRetriever:
                 images.append(page)
 
             with blob.open("wb") as f:
-                images[0].save(f, format='PDF', save_all=True, append_images=images[1:])
-            
+                if len(images) > 0:
+                    images[0].save(f, 'PDF', save_all=True, append_images=images[1:])
+                else:
+                    images[0].save(f, 'PDF')
         else:
             with blob.open("wb") as f:
                 f.write(response.content)
@@ -174,21 +208,20 @@ class CommercialRegisterRetriever:
 
             if file_format == "xml":
                 document_type = "SI"
+                basic_information = self._retrieve_basic_information(result.content)
             else:
                 document_type = "GS-" + self.gs_date
                
 
-            
-
             # set filename and path
-            file_name = "{}-{}.{}".format(document_type, self.company_name, file_format)
-            full_path = "{}/{}".format(self.company_name, file_name)
+            file_name = "{}-{}.{}".format(document_type, basic_information["name"], file_format)
+            full_path = "{}/{}/{}/{}".format(basic_information['location'], basic_information['court'], basic_information['id'], file_name)
 
             # save file
             upload_result = self._upload_file_to_gcp(storage_client, result, full_path)
             upload_results.append(upload_result)
 
-        return upload_results
+        return self.company_name, upload_results
             
         
     
