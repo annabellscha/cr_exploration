@@ -10,14 +10,14 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/niklas/Documents/Github/c
 
 def test_cr_search_companies():
     retriever = CommercialRegisterRetriever()
-    companies = retriever.search("Mueller")
+    companies = retriever.search("Forto")
     assert len(companies) > 0
     # assert len(session_id) > 0
 
 def test_cr_download_files():
     session_id: str = None
     documents: List[str] = ["gs", "si"] 
-    company_name: str = 'Mangertseder'
+    company_name: str = 'Sento'
 
     # initialize retriever
     retriever = CommercialRegisterRetriever(session_id=session_id)

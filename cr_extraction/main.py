@@ -1,9 +1,10 @@
 from flask import jsonify
 from google.cloud import storage
-
+from cloudevents.http import CloudEvent
 import functions_framework
-
 from helpers.cr_retriever import CommercialRegisterRetriever
+from helpers.extraction_helpers import parse_filename
+from google.cloud import firestore
 
 @functions_framework.http
 def search_companies(request):
@@ -46,3 +47,6 @@ def download_files(request):
 
     return 'Documents have been downloaded successfully'
     
+
+
+

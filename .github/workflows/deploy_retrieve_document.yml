@@ -42,3 +42,15 @@ jobs:
           --entry-point=download_files \
           --trigger-http \
           --allow-unauthenticated"
+      - name: "Deploy add_firestore_entry Function to Cloud Functions"
+        run: "gcloud functions deploy add_firestore_entry \
+              --gen2 \
+              --runtime=python311 \
+              --region=europe-west3 \
+              --source=cr_extraction \
+              --entry-point=add_firestore_entry \
+              --trigger-event-filters="type=google.cloud.storage.object.v1.finalized" \
+              --trigger-event-filters="bucket=cr_documents" \
+              --trigger-location=us-east1"
+              
+  

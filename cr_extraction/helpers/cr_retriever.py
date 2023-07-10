@@ -117,16 +117,28 @@ class CommercialRegisterRetriever:
 
         # retrieve all companies in a list
         companies = []
-        i = 0
+
+        # get si links
         si = self.browser.page.select(".reglink[id*='SI']")
-        for result in self.browser.page.select('td.RegPortErg_FirmaKopf'):
+
+        # get company information
+        results_page = self.browser.page
+        results = results_page.find("tbody").find_all("tr", attrs={"class": None})
+
+        for i in range(0, len(results), 2):
             company = {}
-            company["name"] = result.text
-            company["index"] = i
-            company["link"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[i].attrs["href"])
+            company["court_city"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\n")[0]
+            company["court"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[2].strip()
+            company["id"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[3].strip() + " " + results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[4].strip() 
+            company["name"] = results[i+1].find("td", attrs={"class": "RegPortErg_FirmaKopf"}).text.strip()
+            company["city"] = results[i+1].find("td", attrs={"class": "RegPortErg_SitzStatusKopf"}).text.strip()
+            company["status"] = results[i+1].findAll("td", attrs={"class": "RegPortErg_SitzStatusKopf"})[1].text.strip()
+            company["search_index"] = i/2
+            company["document_links"] = {"si": "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[int(i/2)].attrs["href"]),}
+
             companies.append(company)
-            i += 1
-        
+            i+=1
+            
         return companies
     
     def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
