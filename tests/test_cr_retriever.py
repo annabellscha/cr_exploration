@@ -17,7 +17,7 @@ def test_cr_search_companies():
 def test_cr_download_files():
     session_id: str = None
     documents: List[str] = ["gs", "si"] 
-    company_name: str = 'Tacto'
+    company_name: str = 'Mangertseder'
 
     # initialize retriever
     retriever = CommercialRegisterRetriever(session_id=session_id)

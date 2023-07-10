@@ -1,4 +1,5 @@
 import requests
+import io
 import re
 from datetime import datetime
 import mechanicalsoup
@@ -7,6 +8,7 @@ import os
 from typing import Tuple, List, Dict
 from google.cloud import storage
 import xml.etree.ElementTree as ET
+import img2pdf
 
 class CommercialRegisterRetriever:
     def __init__(self, session_id: str = None, company_name: str = None):
@@ -151,22 +153,21 @@ class CommercialRegisterRetriever:
         bucket = storage_client.get_bucket(bucket_name)
         blob = bucket.blob(full_path)
 
-        # save file
-        blob.upload_from_filename("/Users/niklas/Documents/Github/cr-exploration/out/Tanso Technologies GmbH/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
+        # # save file
+        # blob.upload_from_filename("/Users/niklas/Documents/Github/cr-exploration/out/Tanso Technologies GmbH/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
+        
+        
         if file_extension.lower() in ['.tif', '.tiff']:
             response.raw.decode_content = True
-            image = Image.open(response.raw)
+            # Convert the TIFF content to a PDF byte array
+            with io.BytesIO() as pdf_buffer:
+                pdf_bytes = img2pdf.convert(response.raw)
 
-            images = []
-            for i, page in enumerate(ImageSequence.Iterator(image)):
-                page = page.convert("RGB")
-                images.append(page)
-
+            blob.content_type = 'application/pdf'
+            
             with blob.open("wb") as f:
-                if len(images) > 0:
-                    images[0].save(f, 'PDF', save_all=True, append_images=images[1:])
-                else:
-                    images[0].save(f, 'PDF')
+                f.write(pdf_bytes)
+        
         else:
             with blob.open("wb") as f:
                 f.write(response.content)
@@ -215,7 +216,7 @@ class CommercialRegisterRetriever:
 
             # set filename and path
             file_name = "{}-{}.{}".format(document_type, basic_information["name"], file_format)
-            full_path = "{}/{}/{}/{}".format(basic_information['location'], basic_information['court'], basic_information['id'], file_name)
+            full_path = "{}/{}_{}_{}/{}".format(basic_information['location'], basic_information['court'], basic_information['id'], basic_information["name"], file_name)
 
             # save file
             upload_result = self._upload_file_to_gcp(storage_client, result, full_path)
