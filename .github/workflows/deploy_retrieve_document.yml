@@ -2,12 +2,15 @@ name: Deploy Retrieve Document Function to Cloud Functions
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
   workflow_dispatch:
 
 jobs:
   build:
+    permissions:
+      contents: "read"
+      id-token: "write"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,20 +30,19 @@ jobs:
         run: "gcloud info"
       - name: "Deploy Search Companies Function to Cloud Functions"
         run: "gcloud functions deploy search_companies \
-              --gen2 \
-              --runtime=python311 \
-              --region=europe-west3 \
-              --source=cr_extraction \
-              --entry-point=search_companies \
-              --trigger-http \
-              --allow-unauthenticated"
+          --gen2 \
+          --runtime=python311 \
+          --region=europe-west3 \
+          --source=cr_extraction \
+          --entry-point=search_companies \
+          --trigger-http \
+          --allow-unauthenticated"
       - name: "Deploy Download Files Function to Cloud Functions"
         run: "gcloud functions deploy download_files \
-              --gen2 \
-              --runtime=python311 \
-              --region=europe-west3 \
-              --source=cr_extraction \
-              --entry-point=download_files \
-              --trigger-http \
-              --allow-unauthenticated"
-
+          --gen2 \
+          --runtime=python311 \
+          --region=europe-west3 \
+          --source=cr_extraction \
+          --entry-point=download_files \
+          --trigger-http \
+          --allow-unauthenticated"
