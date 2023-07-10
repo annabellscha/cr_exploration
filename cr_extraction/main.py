@@ -47,10 +47,11 @@ def download_files(request):
     storage_client = storage.Client()
     bucket = storage_client.bucket(bucket_name)
 
-    download_urls = []
+    response_object = company
+    response_object["document_urls"] = []
 
     for document in documents:
-        blob = bucket.blob(document)
+        blob = bucket.blob(document["url"])
         url = blob.generate_signed_url(
             version="v4",
             # This URL is valid for 15 minutes
@@ -58,9 +59,11 @@ def download_files(request):
             # Allow GET requests using this URL.
             method="GET",
         )
-        download_urls.append(url)
 
-    return download_urls
+        response_object = company
+        response_object["document_urls"].append({"type": document["type"], "url": url})
+
+    return jsonify(response_object)
     
 
     

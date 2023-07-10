@@ -131,7 +131,7 @@ class CommercialRegisterRetriever:
             company["city"] = results[i+1].find("td", attrs={"class": "RegPortErg_SitzStatusKopf"}).text.strip()
             company["status"] = results[i+1].findAll("td", attrs={"class": "RegPortErg_SitzStatusKopf"})[1].text.strip()
             company["search_index"] = int(i/2)
-            company["document_links"] = {"si": "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[int(i/2)].attrs["href"]),}
+            company["document_urls"] = {"si": "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[int(i/2)].attrs["href"]),}
 
             companies.append(company)
             i+=1
@@ -147,7 +147,7 @@ class CommercialRegisterRetriever:
             self._add_gs_to_cart(index = self.company["search_index"])
 
         if "si" in documents:
-            self._add_si_to_cart(si_link = self.company["document_links"]["si"])
+            self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
 
         return
     
@@ -184,9 +184,11 @@ class CommercialRegisterRetriever:
 
             if file_format == "xml":
                 document_name = "SI"
+                document_type = "si"
                 # basic_information = self._retrieve_basic_information(result.content)
             else:
                 document_name = self.gs_file_name if self.gs_file_name != "" else "GS"
+                document_type = "gs"
                
 
             # set filename and path
@@ -194,7 +196,7 @@ class CommercialRegisterRetriever:
             full_path = "{}_{}_{}/{}".format(self.company["name"], self.company["court"], self.company["id"], file_name)
 
             # save file
-            upload_result = self._upload_file_to_gcp(storage_client, result, full_path)
+            upload_result = {"type": document_type, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
             uploaded_file_paths.append(upload_result)
 
         return self.company, uploaded_file_paths
