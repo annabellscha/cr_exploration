@@ -1,10 +1,8 @@
-import pytest
+from datetime import timedelta
 from typing import List
 from cr_extraction.helpers.cr_retriever import CommercialRegisterRetriever
-from cr_extraction.helpers.gcp import upload_blob
 from google.cloud import storage
 import os
-import requests
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/niklas/Documents/Github/cr-exploration/env/lumpito-cloud-storage.json"
 
@@ -17,7 +15,7 @@ def test_cr_search_companies():
 def test_cr_download_files():
     session_id: str = None
     documents: List[str] = ["gs", "si"] 
-    company_name: str = 'Sento'
+    company_name: str = 'Tacto'
 
     # initialize retriever
     retriever = CommercialRegisterRetriever(session_id=session_id)
@@ -36,17 +34,36 @@ def test_cr_download_files():
 
     assert len(result) > 0
 
-def test_upload_blob_original():
-    cr_retriever = CommercialRegisterRetriever()
-    storage_client = storage.Client(project="cr-extraction")
+def test_main_download_files():
+    company = "Forto"
+    documents = ["gs", "si"]
+    
+    retriever = CommercialRegisterRetriever()
 
-    cr_retriever._upload_file_to_gcp(storage_client=storage_client, response=requests.Response(), full_path="test/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
+    try:
+        company_data = retriever.search(company_name=company)[0]
+    except Exception as e:
+        return 'Error: {}'.format(e), 500
 
+    retriever.add_documents_to_cart(company=company_data, documents=documents)
+    company, documents = retriever.download_documents_from_basket()
 
-def test_upload_blob():
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/niklas/Documents/Github/cr-exploration/env/lumpito-cloud-storage.json"
-    storage_client = storage.Client(project="cr-extraction")
-    bucket_name = "cr_documents"
-    bucket = storage_client.get_bucket(bucket_name)
-    blob = bucket.blob("test.pdf")
-    blob.upload_from_filename("/Users/niklas/Documents/Github/cr-exploration/out/Tanso Technologies GmbH/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
+    bucket_name = 'cr_documents'
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+
+    download_urls = []
+
+    for document in documents:
+        blob = bucket.blob(document)
+        url = blob.generate_signed_url(
+            version="v4",
+            # This URL is valid for 15 minutes
+            expiration=timedelta(minutes=30),
+            # Allow GET requests using this URL.
+            method="GET",
+        )
+        download_urls.append(url)
+
+    return download_urls
+    

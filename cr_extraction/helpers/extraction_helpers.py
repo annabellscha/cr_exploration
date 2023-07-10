@@ -1,27 +1,35 @@
 import re
+from typing import List, Dict
+import xml.etree.ElementTree as ET
 
-def parse_filename(filename):
-    result = {}
-    
-    # Extracting company name
-    company_name_match = re.search(r'/D\d+_HRB \d+_(.+?)/SI-', filename)
-    if company_name_match:
-        result['company_name'] = company_name_match.group(1)
-    
-    # Extracting city and registration number
-    city_registration_match = re.search(r'(.+)/D\d+_(\w+)\.xml', filename)
-    if city_registration_match:
-        result['city'] = city_registration_match.group(1)
-        result['registration_number'] = city_registration_match.group(2)
-    
-    # Extracting filename
-    filename_match = re.search(r'/(.+\.xml)', filename)
-    if filename_match:
-        result['filename'] = filename_match.group(1)
-    
-    # Extracting document type
-    document_type_match = re.search(r'/(\w+)-', filename)
-    if document_type_match:
-        result['document_type'] = document_type_match.group(1)
-    
-    return result
+def retrieve_si_data(self, xml_string) -> Dict:
+    try:
+    # Define the namespace dictionary
+        namespace = {"x": "http://www.xjustiz.de", "xsi": "http://www.w3.org/2001/XMLSchema-instance"}
+
+        # Parse the XML content
+        root = ET.fromstring(xml_string)
+
+        # Retrieve the desired attributes
+        company_name = root.find(".//x:Bezeichnung_Aktuell", namespace).text
+        location = root.find(".//x:Sitz/x:Ort", namespace).text
+        id = root.find(".//x:Aktenzeichen", namespace).text
+        court = root.find(".//x:Gericht/x:content", namespace).text
+        
+
+        # Create a dictionary with the retrieved attributes
+        basic_information = { 
+            "name": company_name,
+            "location": location,
+            "id": id,
+            "court": court  
+        }
+    except:
+        basic_information = {
+            "name": "unknown",
+            "location": "unknown",
+            "id": "unknown",
+            "court": "unknown"
+        }
+
+    return basic_information

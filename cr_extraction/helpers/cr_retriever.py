@@ -15,15 +15,14 @@ class CommercialRegisterRetriever:
         self.browser = mechanicalsoup.StatefulBrowser(user_agent='Chrome')
 
         if session_id is None:
-            self._init_session()
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
+            self.session_id = url.split(";")[1].split("?")[0]
        
-        self.company_name = ""
+        self.company = {}
         self.gs_date = ""
-
-    def _init_session(self):
-        self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
-        url = self.browser.page.select("ul.service__list li a")[0].attrs["href"]
-        self.session_id = url.split(";")[1].split("?")[0]
+        self.gs_file_name = ""
+        
 
     def _add_si_to_cart(self, si_link):
         # Pull Overview
@@ -53,6 +52,7 @@ class CommercialRegisterRetriever:
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
+                self.gs_file_name = elements[0].text
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
                 break
@@ -63,6 +63,8 @@ class CommercialRegisterRetriever:
             0].text.strip().replace("\n", "")
         date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
+        
+
         if self.gs_date == "unbekannt":
             self.gs_date = date_2
 
@@ -70,40 +72,35 @@ class CommercialRegisterRetriever:
         self.browser["format"] = file_format
         self.browser.submit_selected("add2cart")
         return
-    
-    def _retrieve_basic_information(self, response_content) -> Dict:
-        try:
-        # Define the namespace dictionary
-            namespace = {"x": "http://www.xjustiz.de", "xsi": "http://www.w3.org/2001/XMLSchema-instance"}
 
-            # Parse the XML content
-            root = ET.fromstring(response_content)
+    def _upload_file_to_gcp(self, storage_client: storage.Client, response: requests.Response, full_path: str) -> None:
+        # change target file name to pdf
+        filename, file_extension = os.path.splitext(full_path)
+        if file_extension.lower() in ['.tif', '.tiff']:
+            full_path = "{}.pdf".format(filename)
 
-            # Retrieve the desired attributes
-            company_name = root.find(".//x:Bezeichnung_Aktuell", namespace).text
-            location = root.find(".//x:Sitz/x:Ort", namespace).text
-            id = root.find(".//x:Aktenzeichen", namespace).text
-            court = root.find(".//x:Gericht/x:content", namespace).text
+        # init bucket and blob
+        bucket_name = "cr_documents"
+        bucket = storage_client.get_bucket(bucket_name)
+        blob = bucket.blob(full_path)
+        
+        if file_extension.lower() in ['.tif', '.tiff']:
+            response.raw.decode_content = True
+            # Convert the TIFF content to a PDF byte array
+            with io.BytesIO() as pdf_buffer:
+                pdf_bytes = img2pdf.convert(response.raw)
+
+            blob.content_type = 'application/pdf'
             
-
-            # Create a dictionary with the retrieved attributes
-            basic_information = { 
-                "name": company_name,
-                "location": location,
-                "id": id,
-                "court": court  
-            }
-        except:
-            basic_information = {
-                "name": "unknown",
-                "location": "unknown",
-                "id": "unknown",
-                "court": "unknown"
-            }
-
-        return basic_information
-
-
+            with blob.open("wb") as f:
+                f.write(pdf_bytes)
+        
+        else:
+            with blob.open("wb") as f:
+                f.write(response.content)
+        
+        print("File {} uploaded to {}.".format(full_path, bucket_name))
+        return full_path
 
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
@@ -133,7 +130,7 @@ class CommercialRegisterRetriever:
             company["name"] = results[i+1].find("td", attrs={"class": "RegPortErg_FirmaKopf"}).text.strip()
             company["city"] = results[i+1].find("td", attrs={"class": "RegPortErg_SitzStatusKopf"}).text.strip()
             company["status"] = results[i+1].findAll("td", attrs={"class": "RegPortErg_SitzStatusKopf"})[1].text.strip()
-            company["search_index"] = i/2
+            company["search_index"] = int(i/2)
             company["document_links"] = {"si": "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si[int(i/2)].attrs["href"]),}
 
             companies.append(company)
@@ -143,51 +140,17 @@ class CommercialRegisterRetriever:
     
     def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
         # set company name
-        self.company_name = company["name"]
+        self.company = company
         
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = company["index"])
+            self._add_gs_to_cart(index = self.company["search_index"])
 
         if "si" in documents:
-            self._add_si_to_cart(si_link = company["link"])
+            self._add_si_to_cart(si_link = self.company["document_links"]["si"])
 
         return
     
-    def _upload_file_to_gcp(self, storage_client: storage.Client, response: requests.Response, full_path: str) -> None:
-        # change target file name to pdf
-        filename, file_extension = os.path.splitext(full_path)
-        if file_extension.lower() in ['.tif', '.tiff']:
-            full_path = "{}.pdf".format(filename)
-
-        # init bucket and blob
-        bucket_name = "cr_documents"
-        bucket = storage_client.get_bucket(bucket_name)
-        blob = bucket.blob(full_path)
-
-        # # save file
-        # blob.upload_from_filename("/Users/niklas/Documents/Github/cr-exploration/out/Tanso Technologies GmbH/GS-Liste-Tanso Technologies GmbH-26.04.2023.pdf")
-        
-        
-        if file_extension.lower() in ['.tif', '.tiff']:
-            response.raw.decode_content = True
-            # Convert the TIFF content to a PDF byte array
-            with io.BytesIO() as pdf_buffer:
-                pdf_bytes = img2pdf.convert(response.raw)
-
-            blob.content_type = 'application/pdf'
-            
-            with blob.open("wb") as f:
-                f.write(pdf_bytes)
-        
-        else:
-            with blob.open("wb") as f:
-                f.write(response.content)
-        
-        print("File {} uploaded to {}.".format(full_path, bucket_name))
-        return full_path
-
-
     def download_documents_from_basket(self):
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
@@ -208,7 +171,7 @@ class CommercialRegisterRetriever:
         storage_client = storage.Client(project="cr-extraction")
         
         # download all files in the basket onto cloud storage
-        upload_results = []
+        uploaded_file_paths = []
         for download in downloads:
             url = 'https://www.unternehmensregister.de/ureg/{}'.format(download)
             result = requests.get(url, allow_redirects=True, stream=True)  # to get content after redirection
@@ -220,21 +183,21 @@ class CommercialRegisterRetriever:
             file_format = re.findall("filename=(.+)", d)[0].split(".")[1].lower()
 
             if file_format == "xml":
-                document_type = "SI"
-                basic_information = self._retrieve_basic_information(result.content)
+                document_name = "SI"
+                # basic_information = self._retrieve_basic_information(result.content)
             else:
-                document_type = "GS-" + self.gs_date
+                document_name = self.gs_file_name if self.gs_file_name != "" else "GS"
                
 
             # set filename and path
-            file_name = "{}-{}.{}".format(document_type, basic_information["name"], file_format)
-            full_path = "{}/{}_{}_{}/{}".format(basic_information['location'], basic_information['court'], basic_information['id'], basic_information["name"], file_name)
+            file_name = "{}-{}.{}".format(document_name, self.company["name"], file_format)
+            full_path = "{}_{}_{}/{}".format(self.company["name"], self.company["court"], self.company["id"], file_name)
 
             # save file
             upload_result = self._upload_file_to_gcp(storage_client, result, full_path)
-            upload_results.append(upload_result)
+            uploaded_file_paths.append(upload_result)
 
-        return self.company_name, upload_results
+        return self.company, uploaded_file_paths
             
         
     
