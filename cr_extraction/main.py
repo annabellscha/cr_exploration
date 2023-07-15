@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import jsonify
 from google.cloud import storage
 import functions_framework
@@ -55,7 +55,7 @@ def download_files(request):
         url = blob.generate_signed_url(
             version="v4",
             # This URL is valid for 15 minutes
-            expiration=datetime.timedelta(minutes=30),
+            expiration=timedelta(minutes=30),
             # Allow GET requests using this URL.
             method="GET",
         )
