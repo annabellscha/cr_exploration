@@ -109,6 +109,23 @@ class CommercialRegisterRetriever:
         self.browser["submitaction"] = "searchRegisterData"
         self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
 
+        # self.browser.open(
+        #     "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(
+        #         self.session_id))
+        # self.browser.select_form("#searchRegisterForm")
+        # self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
+        # self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = company_id
+        # # self.browser["searchRegisterForm:extendedResearchStartDate"] = "01.01.2014"
+
+        # self.browser["submitaction"] = "searchExtendedResearch"
+        # self.browser.submit_selected()
+
+        # page = self.browser.page
+        # # select first company in the list
+        # links = self.browser.page.find_all('a', href=lambda href: href and 'registerPortalAdvice.html' in href)
+        # self.browser.open_relative(links[0].attrs["href"])
+        
+
         # open the search results
         self.browser.open_relative(self.browser.page.select("div.right a")[0].attrs["href"])
 
