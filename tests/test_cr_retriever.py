@@ -9,7 +9,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/niklas/Documents/Github/c
 
 def test_cr_search_companies():
     retriever = CommercialRegisterRetriever()
-    companies = retriever.search("Forto")
+    companies = retriever.search("BCN Food Tech GmbH", "HRB 272187")
     assert len(companies) > 0
     # assert len(session_id) > 0
 
@@ -71,3 +71,17 @@ def test_main_download_files():
 
     return response_object
     
+def test_new_test():
+    retriever = CommercialRegisterRetriever()
+
+    company_id = "HRA 103700"
+
+
+    results = retriever.search(company_name="Müller")
+
+    if company_id:
+        company_data = [x for x in results if x["id"] == company_id][0]
+    else:
+        company_data = results[0]
+
+    print(company_data)
