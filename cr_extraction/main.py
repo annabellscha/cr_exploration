@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from flask import jsonify
 from google.cloud import storage
+from google import auth
 import functions_framework
 from helpers.cr_retriever import CommercialRegisterRetriever
 
@@ -24,6 +25,8 @@ def search_companies(request):
 
 @functions_framework.http
 def download_files(request):
+    credentials, project = auth.default()
+    credentials.refresh(auth.transport.requests.Request())
     request_json = request.get_json(silent=True)
 
     if request_json and 'company' in request_json and 'documents' in request_json:
@@ -55,7 +58,9 @@ def download_files(request):
         url = blob.generate_signed_url(
             version="v4",
             # This URL is valid for 15 minutes
-            expiration=timedelta(minutes=30),
+            expiration=timedelta(minutes=30),\
+            service_account_email=credentials.service_account_email,
+            access_token=credentials.token,
             # Allow GET requests using this URL.
             method="GET",
         )
