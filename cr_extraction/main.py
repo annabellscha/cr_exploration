@@ -40,17 +40,17 @@ def download_files(request):
 
     retriever = CommercialRegisterRetriever()
 
-    try:
-        results = retriever.search(company_name=company)
+    # try:
+    results = retriever.search(company_name=company)
 
-        if company_id:
-            company_data = [x for x in results if x["id"] == company_id][0]
-        else:
-            company_data = results[0]
+    if company_id:
+        company_data = [x for x in results if x["id"] == company_id][0]
+    else:
+        company_data = results[0]
 
  
-    except Exception as e:
-        return 'Error: {}'.format(e), 500
+    # except Exception as e:
+    #     return 'Error: {}'.format(e), 500
 
     retriever.add_documents_to_cart(company=company_data, documents=documents)
     company, documents = retriever.download_documents_from_basket()
