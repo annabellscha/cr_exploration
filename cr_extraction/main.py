@@ -42,6 +42,7 @@ def download_files(request):
 
     # try:
     results = retriever.search(company_name=company)
+    print(results)
 
     if company_id:
         company_data = [x for x in results if x["id"] == company_id][0]

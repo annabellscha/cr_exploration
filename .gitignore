@@ -163,5 +163,4 @@ cython_debug/
 .DS_Store
 out/
 cr_extraction/main.py
-notebooks/output/gs-Alasco Real Estate GmbH.pdf
-notebooks/startupdetector_founders_v1_MF - Startups.csv
+notebooks/output/
