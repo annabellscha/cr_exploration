@@ -2,10 +2,12 @@ from datetime import timedelta
 import datetime
 from typing import List
 from cr_extraction.helpers.cr_retriever import CommercialRegisterRetriever
+from cr_extraction.main import search_companies, download_files
 from google.cloud import storage
 import os
-
 import logging
+import pytest
+from flask import Flask, request
 
 logging.getLogger().setLevel(logging.DEBUG)
 requests_log = logging.getLogger("requests.packages.urllib3")
@@ -16,9 +18,8 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/niklas/Documents/Github/c
 
 def test_cr_search_companies():
     retriever = CommercialRegisterRetriever()
-    companies = retriever.search("BCN Food Tech GmbH", "HRB 272187")
+    companies = retriever.search("BCN Food Tech GmbH")
     assert len(companies) > 0
-    # assert len(session_id) > 0
 
 def test_cr_download_files():
     session_id: str = None
@@ -112,3 +113,16 @@ def test_download_registration():
         response_object = company
         response_object["document_urls"].append({"type": document["type"], "url": url})
 
+    # Assert that the response_object is a dictionary
+    assert isinstance(response_object, dict)
+    assert "document_urls" in response_object
+    assert isinstance(response_object["document_urls"], list)
+    assert response_object["document_urls"]
+
+    # For each document in "document_urls", assert that it's a dictionary with keys "type" and "url"
+    for document in response_object["document_urls"]:
+        assert isinstance(document, dict)
+        assert "type" in document
+        assert "url" in document
+
+    return response_object

@@ -3,7 +3,7 @@ from flask import jsonify
 from google.cloud import storage
 from google import auth
 import functions_framework
-from helpers.cr_retriever import CommercialRegisterRetriever
+from .helpers.cr_retriever import CommercialRegisterRetriever
 
 @functions_framework.http
 def search_companies(request):
@@ -25,8 +25,8 @@ def search_companies(request):
 
 @functions_framework.http
 def download_files(request):
-    credentials, project = auth.default()
-    credentials.refresh(auth.transport.requests.Request())
+    credentials, _ = auth.default()
+
     request_json = request.get_json(silent=True)
 
     if request_json and 'company' in request_json and 'documents' in request_json:
@@ -35,6 +35,7 @@ def download_files(request):
     else:
         return 'Bad Request: Please provide a company name and document types', 400
     
+    company_id = None
     if request_json and 'company_id' in request_json:
         company_id = request_json['company_id']
 

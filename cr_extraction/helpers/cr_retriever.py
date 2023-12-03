@@ -21,8 +21,9 @@ class CommercialRegisterRetriever:
             self.session_id = url.split(";")[1].split("?")[0]
        
         self.company = {}
-        self.gs_date = ""
-        self.gs_file_name = ""
+        self.file_date = ""
+        self.file_name = ""
+        self.file_type = ""
 
     def _clean_text(self, text: str) -> str:
         clean_text = re.sub(r"[^a-zA-Z0-9 ]", "", text)
@@ -57,21 +58,22 @@ class CommercialRegisterRetriever:
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
-                self.gs_file_name = elements[0].text
+                self.file_name = elements[0].text
+                self.file_type = "gs"
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
                 break
 
         file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
 
-        self.gs_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+        self.file_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         
 
-        if self.gs_date == "unbekannt":
-            self.gs_date = date_2
+        if self.file_date == "unbekannt":
+            self.file_date = date_2
 
         self.browser.select_form("#dkform")
         self.browser["format"] = file_format
@@ -89,34 +91,49 @@ class CommercialRegisterRetriever:
 
         while True:
             elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
+
             if len(elements) == 0:
                 raise Exception("no registration found")
-            if level == 4:
-                element = list(filter(lambda x: x.text == "Anmeldung", elements))
-                if len(element) == 0:
-                    raise Exception("no registration found")
+            if any("Dokumente zur Registernummer" in element.string for element in elements):
+                element = list(filter(lambda x: x.text == "Dokumente zur Registernummer", elements))
                 self.browser.open_relative(element[0].attrs["href"])
                 level += 1
                 continue
-            if "Weitere Urkunden" not in elements[0].text:
-                self.browser.open_relative(elements[0].attrs["href"])
+            if any("Weitere Urkunden / Unterlagen" in element.string for element in elements):
+                element = list(filter(lambda x: x.text == "Weitere Urkunden / Unterlagen", elements))
+                self.browser.open_relative(element[0].attrs["href"])
                 level += 1
-            else:
-                self.gs_file_name = elements[0].text
-                self.browser.open_relative(elements[0].attrs["href"])
+                continue
+            if any("Anmeldung vom" in element.string for element in elements):
+                # Extract dates and convert them to datetime objects
+                dates_elements = [(datetime.strptime(e.string.split('vom ')[1], '%d.%m.%Y'), e) for e in elements if 'Anmeldung vom ' in e.string]
+
+                # Find the element with the most recent date
+                element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+
+                self.file_name = element.string
+                self.file_type = "rg"
+                self.browser.open_relative(element.attrs["href"])
                 level += 1
                 break
+            if any("Anmeldung" in element.string for element in elements):
+                element = list(filter(lambda x: x.text == "Anmeldung", elements))
+                self.browser.open_relative(element[0].attrs["href"])
+                level += 1
+                continue
 
+
+        # download the file
         file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
 
-        self.gs_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+        self.file_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
             0].text.strip().replace("\n", "")
         
 
-        if self.gs_date == "unbekannt":
-            self.gs_date = date_2
+        if self.file_date == "unbekannt":
+            self.file_date = date_2
 
         self.browser.select_form("#dkform")
         self.browser["format"] = file_format
@@ -295,8 +312,8 @@ class CommercialRegisterRetriever:
                 document_type = "si"
                 # basic_information = self._retrieve_basic_information(result.content)
             else:
-                document_name = self.gs_file_name if self.gs_file_name != "" else "GS"
-                document_type = "gs"
+                document_name = self.file_name if self.file_name != "" else "unknown filename"
+                document_type = self.file_type if self.file_type != "" else "unknown file type"
         
             document_name_cl = self._clean_text(document_name)
             company_name_cl = self._clean_text(self.company["name"])
