@@ -1,8 +1,11 @@
+from dotenv import load_dotenv
 import pytest
 from flask import Flask, request
 from cr_extraction.main import search_companies, download_files
 import os
 
+
+load_dotenv()
 
 
 @pytest.fixture
