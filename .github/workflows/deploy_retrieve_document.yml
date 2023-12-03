@@ -32,7 +32,8 @@ jobs:
           --source=cr_extraction \
           --entry-point=search_companies \
           --trigger-http \
-          --allow-unauthenticated"
+          --allow-unauthenticated \
+          --set-env-vars=ENV=prod"
       - name: "Deploy Download Files Function to Cloud Functions"
         run: "gcloud functions deploy download_files \
           --gen2 \
@@ -41,5 +42,6 @@ jobs:
           --source=cr_extraction \
           --entry-point=download_files \
           --trigger-http \
-          --allow-unauthenticated"
+          --allow-unauthenticated \
+          --set-env-vars=ENV=prod"
   
