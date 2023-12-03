@@ -276,7 +276,7 @@ class CommercialRegisterRetriever:
 
         return
     
-    def download_documents_from_basket(self):
+    def download_documents_from_basket(self, bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
         self.browser.select_form("#doccartForm")
@@ -291,9 +291,6 @@ class CommercialRegisterRetriever:
         downloads = [x.attrs["href"] for x in self.browser.page.select("div.download-wrapper div a:not(.disabled)")]
         if len(downloads) == 0:
             raise Exception("no downloads found")
-        
-        # init cloud storage
-        storage_client = storage.Client(project="cr-extraction")
         
         # download all files in the basket onto cloud storage
         uploaded_file_paths = []
@@ -326,8 +323,13 @@ class CommercialRegisterRetriever:
             full_path = "{}_{}_{}/{}".format(company_name_cl, court_cl, company_id_cl, file_name)
 
             # save file
-            upload_result = {"type": document_type, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
-            uploaded_file_paths.append(upload_result)
+              # init cloud storage
+            if not bypass_storage:
+                storage_client = storage.Client(project="cr-extraction")
+                upload_result = {"type": document_type, "document_name":file_name, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
+                uploaded_file_paths.append(upload_result)
+            else: 
+                uploaded_file_paths.append({"type": document_type, "document_binary": result.content, "document_name": file_name})
 
         return self.company, uploaded_file_paths
             
