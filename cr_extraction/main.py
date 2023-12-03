@@ -6,7 +6,10 @@ import functions_framework
 from .helpers.cr_retriever import CommercialRegisterRetriever
 import zipfile
 import io
+import os
 import magic
+from dotenv import load_dotenv
+
 
 
 @functions_framework.http
@@ -29,7 +32,10 @@ def search_companies(request):
 
 @functions_framework.http
 def download_files(request):
+    load_dotenv()
     credentials, _ = auth.default()
+    if os.environ.get("ENV") == "prod":
+        credentials.refresh(auth.transport.requests.Request())
 
     request_json = request.get_json(silent=True)
 
