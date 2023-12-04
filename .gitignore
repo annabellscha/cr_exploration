@@ -166,3 +166,4 @@ cr_extraction/main.py
 notebooks/output/
 
 scraped_pdfs
+notebooks/*.pdf

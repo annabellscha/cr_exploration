@@ -99,7 +99,7 @@ def download_files(request):
 
         else:
             zip_buffer = io.BytesIO()
-            with zipfile.ZipFile(zip_buffer, "a", zipfile.ZIP_DEFLATED) as zip_file:
+            with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
                 for document in documents:
                     # data should be in bytes, so ensure that it is in the correct format
                     zip_file.writestr(

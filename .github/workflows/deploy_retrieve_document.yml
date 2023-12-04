@@ -33,7 +33,8 @@ jobs:
           --entry-point=search_companies \
           --trigger-http \
           --allow-unauthenticated \
-          --set-env-vars=ENV=prod"
+          --set-env-vars=ENV=prod \
+          --timeout=100s"
       - name: "Deploy Download Files Function to Cloud Functions"
         run: "gcloud functions deploy download_files \
           --gen2 \
@@ -43,5 +44,6 @@ jobs:
           --entry-point=download_files \
           --trigger-http \
           --allow-unauthenticated \
-          --set-env-vars=ENV=prod"
+          --set-env-vars=ENV=prod \
+          --timeout=240s"
   
