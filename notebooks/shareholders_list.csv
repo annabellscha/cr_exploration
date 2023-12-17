@@ -1,511 +1,275 @@
-name,registry_details,location,nominal_value_per_share,total_nominal_value,total_participation_in_percent,date_of_birth,company,participation_per_share
-Spitzstein Management UG (haftungsbeschrankt),"AG Minchen, HRB 277939",Manchen,1.0,12023.0,100,,fija Finance GmbH,
-Herr Lieven Hauspie,,8500 Kor-,1.0,13000.0,13.000,13. 12.1974,fija Finance GmbH,
-GBS Investments UG (haftungsbeschrankt),"AG Minchen, HRB 283568",Munchen,1.0,25000.0,100,,fija Finance GmbH,
-KM Investments UG (haftungsbeschrankt),AG Charlottenburg HRB 245150,Berlin,1.0,25000.0,100,,fija Finance GmbH,
-SH Energy Vertures UG (haftungsbeschrankt),,Munchen,1.0,5500.0,16.77,,Reverion,
-FF Energy Vertures UG (haftungsbeschrankt),,Munchen,1.0,10375.0,14.86,,Reverion,
-JW Energy Vertures UG (haftungsbeschrankt),,Straubing,1.0,15250.0,14.86,,Reverion,
-MH Energy Vertures UG (haftungsbeschrankt),,Munchen,1.0,20125.0,14.86,,Reverion,
-LP Energy Vertures UG (haftungsbeschrankt),,Munchen,1.0,25000.0,14.86,,Reverion,
-Extantia Climate Flagship II GmbH & Co. KG,,Berlin,1.0,29333.0,13.21,,Reverion,
-LW Capital GmbH,,Munchen,1.0,29334.0,4.06,,Reverion,
-Doral Energy - Tech Ventures Limited Partnership,,"Ramat Gan, Israel",1.0,31667.0,4.06,,Reverion,
-Possible Ventures II GmbH & Co. KG,,Munchen,1.0,32432.0,1.32,,Reverion,
-Michael Achtelik Beteiligungsgesellschaft mbH,,Krailling,1.0,32533.0,0.30,,Reverion,
-DG Beteiligungs-GmbH,,Germering,1.0,32633.0,0.30,,Reverion,
-JCS Beteiligungs-GmbH,,Planegg,1.0,32733.0,0.30,,Reverion,
-Prof. Dr. Hartmut Spliethoff,,Olching,1.0,32767.0,0.10,12.08.1960,Reverion,
-Prof. Dr. Matthias Gaderer,,94362 Neukirchen,1.0,32800.0,0.10,09.01.1968,Reverion,
-Feng Ventures,UG München HRB 277038,München,1.0,12500.0,"37,06778957",,tozero,"0,0029654"
-CEOS UG,Aachen HRB 25923,Aachen,1.0,12500.0,"37,06778957",,tozero,"0,0029654"
-Good Vibe Ventures UG,München HRB 199326,München,1.0,38.0,"0,11268608",,tozero,"0,0029654"
-Stadtelmeyer Investment UG,München HRB 259632,München,1.0,19.0,"0,05634304",,tozero,"0,0029654"
-Lydon Ventures UG,HRB 278213,Munich,1.0,12500.0,38%,,Sizekick,
-Oldeen Ventures UG,HRB 278048,Munich,1.0,12500.0,38%,,Sizekick,
-Hohenstein Laboratories GmbH & Co. KG,HRA 724658,Bonnigheim,1.0,7895.0,24%,,Sizekick,
-Turn Energy GmbH,"Amtsgericht München, HRB 280011",München,1.0,25000.0,100 %,,Turn2x,
-Meinhardt Ventures UG (haftungsbeschrankt),HRB 743243 (AG Mannheim),Bammental,1.0,7245.0,29.7%,,comstruct,
-Hufnagel SPE UG (haftungsbeschrankt),HRB 37259 HB (AG Bremen),Bremen,1.0,7239.0,23.1%,,comstruct,
-Beckort Ventures UG (haftungsbeschrankt),HRB 743112 (AG Mannheim),Bammental,1.0,8798.0,23.1%,,comstruct,
-Brosch Ventures UG (haftungsbeschrankt),HRB 279010 (AG Munchen),Munchen,1.0,10357.0,23.1%,,comstruct,
-SKAUG INDUSTRIES AS,Handelsregister Oslo unter Nr. 929424921,Oslo (Norwegen),1.0,250.0,1%,,comstruct,
-Vieten Ventures UG (haftungsbeschrankt),"AG Munchen, HRB 273382",Munchen,1.0,12741.0,"0,004%",,ExoMatter,"0,004%"
-Prahofer Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 273481","Ismaning, Landkreis Munchen",1.0,1634.0,"0,004 %",,ExoMatter,"0,004 %"
-DeepGreen Ventures UG (haftungsbeschrankt),"AG Kéln, HRB 109724",Kéln,1.0,551.0,"0,004 %",,ExoMatter,"0,004 %"
-Prahofer Ventures UG (haftungsbeschrankt),"AG Minchen, HRB 273481","Ismaning, Landkreis Munchen",1.0,8078.0,"38,848 %",,ExoMatter,"0,004 %"
-DeepGreen Ventures UG (haftungsbeschrankt),"AG Kéln, HRB 109724",Kéln,1.0,74.0,"2,500 %",,ExoMatter,"0,004 %"
-Vieten Ventures UG (haftungsbeschrankt),"AG Minchen, HRB 273382",Munchen,1.0,1922.0,"58,652 %",,ExoMatter,"0,004 %"
-jel Woo Ventures UG (haftungsbeschrankt),UVZ-Nr. 1396 / B / 2022,Miinchen,12501.0,12501.0,50 %,,onyo,"0,004 %"
-jel Wohrle Holding UG (haftungsbeschrankt),UVZ-Nr. 1396 / B / 2022,Miinchen,25002.0,12501.0,50 %,,onyo,"0,004 %"
-Fieg Holding UG (haftungsbeschrankt),UG HRB 51501,"Mainz, Ingelheim",1.0,25000.0,100,,Spreadly,"0,004"
-Fieg Holding AG,"AG Miinchen, HRB 225495","Baierbrunn, Landkreis Manchen",1.0,1500.0,40,,Spreadly,"0,004"
-Darius Gottert,"AG Stendal, HRB 28197",Lutherstadt Wittenberg,1.0,3500.0,14,,Spreadly,"0,004"
-Florian Theimer,"AG Miinchen, HRB 279203","Baierbrunn, Landkreis Munchen",1.0,10000.0,40,,Spreadly,"0,004"
-VEGA Grieshaber KG,Registergericht Freiburg HRA 680687,77709 Wolfach,1.0,950000.0,"100,000%",,VEGA,"32,632%"
-Unknown,,77709 Wolfach,1.0,640000.0,"67,368%",,VEGA,
-Zent Investments UG (haftungsbeschrankt),"AG Miinchen, HRB 274567",Miinchen,1.0,11750.0,37.9032%,,Brainamics,
-BRAINAMICS GmbH,"AG Munchen, HRB 273885",Miinchen,1.0,11750.0,37.9032%,,Brainamics,
-Meinhardt Ventures UG (haftungsbeschrankt),"AG Darmstadt, HRB 103223",Darmstadt,1.0,1500.0,4.8387%,,Brainamics,
-Pi3.14 Investments UG (haftungsbeschrankt),"AG Miinchen, HRB 252676",Miinchen,1.0,111.0,0.3581%,,Brainamics,
-Dr. Christian Glauer,,Neubiberg,1.0,244.0,0.7871%,03.01.1981,Brainamics,
-ARES CAPITAL ADVISERS GmbH,"AG Minchen, HRB 267819",Munchen,1.0,229.0,0.7387%,,Brainamics,
-MJM Investments GmbH,"AG Munchen, HRB 230390",Munchen,1.0,459.0,1.4806%,,Brainamics,
-Albring Investment und Beratungsgesellschaft mbH,"AG Charlottenburg, HRB 229236 B",Berlin,1.0,1785.0,5.7581%,,Brainamics,
-Lapaero GmbH,"AG Miinchen, HRB 243223","Pullachi. Isartal, Landkreis Minchen",1.0,1387.0,4.4742%,,Brainamics,
-Silke Klu@ GmbH,"AG Munchen, HRB 199461",Miinchen,1.0,183.0,0.5903%,,Brainamics,
-UnternehmerTUM Projekt GmbH,"AG Munchen, HRB 184711","Garching, Landkreis Munchen",1.0,993.0,3.2032%,,Brainamics,
-RO! Holding GmbH,"AG Wien, Firmenbuchnr. 567513d",Wien/Osterreich,1.0,609.0,1.9645%,,Brainamics,
-Alexander Glatzle Holding UG (haftungsbeschrankt),"AG Munchen, HRB 274761",Garching b. Munchen,1.0,8060.0,"24,17",,planqc,"1,00"
-Sebastian Blatt Holding UG (haftungsbeschrankt),"AG Munchen, 274760",Garching b. Munchen,1.0,8060.0,"24,17",,planqc,"1,00"
-Johannes Zeiher Holding UG (haftungsbeschrankt),"AG Munchen, HRB 274647",Garching b. Munchen,1.0,6350.0,"19,04",,planqc,"1,00"
-Dr. Reichs6llner,,Munchen,1.0,980.0,"2,94",18. Mai 1985,planqc,"1,00"
-Lukas Markus Wagner,,Wien,1.0,775.0,"2,32",2. Februar 1978,planqc,"1,00"
-Prof. Dr. Ann-Kristin Achleitner,,Munchen,1.0,775.0,"2,32",16. Marz 1966,planqc,"1,00"
-Unternehmertum VC Fonds IllGmbH&Co.,"Handelsregister des Amtsgerichts Munchen, HRA 111267",Garching b. Munchen,1.0,4545.0,"13,63",,planqc,"1,00"
-Speedinvest EuVECA GmbH & Co.,"Handelsgericht Wien, FN 510598f",Wien,1.0,2424.0,"7,27",,planqc,"1,00"
-Amadeus APEX Technology EuVECA GmbH & Co KG,Handelsregister des Amtsgerichts Wien unter FN 589014y,"Wien, Osterreich",1.0,1377.0,"4,13",,planqc,"1,00"
-Stuchtey Capital UG (haftungsbeschrankt),HRB 275570 Starnberg,"Pocking, Landkreis",1.0,25000.0,"67,33 % Kapitalerhéhung",,The Landbanking Group,"0,002 %"
-Deutsche Post Stiftung,Stiftungsregister der Bonn,Kéln,1.0,986.0,"7,85 %",,The Landbanking Group,"0,002 %"
-Below One Fund! GmbH & Co. KG,HRA 126809,Hamburg,1.0,164.0,"3,40 %",,The Landbanking Group,"0,002 %"
-Andreas Hoffmann,,Vaux-sur-Morges/ Schweiz,1.0,2267.0,"9,35 %",31.05.1958,The Landbanking Group,"0,002 %"
-BonVenture IV GmbH & Co. KG,HRA 112197,Miinchen,1.0,328.0,"0,76 %",,The Landbanking Group,"0,002 %"
-Resilience 1 GmbH & Co. KG am Main,HRA 53085,Frankfurt am Main,1.0,410.0,"0,96 %",,The Landbanking Group,"0,002 %"
-Alexandre Micheloud,,Zurich/ Schweiz,1.0,131.0,"0,31 %",25.07.1993,The Landbanking Group,"0,002 %"
-Tobias Bandel Sustainabi- lity Consulting UG (haftungsbeschrankt),HRB 169976,Hamburg,1.0,32.0,"0,07 %",,The Landbanking Group,"0,002 %"
-Cryptofinance Web3 VC GmbH & Co. KG,HRA 115894,Munchen,1.0,82.0,"0,19 %",,The Landbanking Group,"0,002 %"
-Alexa Firmenich,,Zug/Schweiz,1.0,220.0,"0,40 %",12.07.1990,The Landbanking Group,"0,002 %"
-Felipe Fernandez,,Mexiko Stadt/ Mexiko,1.0,220.0,"0,40 %",19.05.1979,The Landbanking Group,"0,002 %"
-Aurum Impact Invest GmbH,HRB 44444,Bielefeld,1.0,820.0,"1,33 %",,The Landbanking Group,"0,002 %"
-Elysara SPRL,Handelsregister von Brussel/Belgien,Belgien,1.0,356.0,"0,83 %",,The Landbanking Group,"0,002 %"
-Fritz & Co. SPRL,Handelsregister von Briissel/Belgien,Belgien,1.0,356.0,"0,83 %",,The Landbanking Group,"0,002 %"
-SUM1 Holdings LP,,New York/USA,1.0,890.0,"2,08 %",,The Landbanking Group,"0,002 %"
-Dr. Cornelius Walter,,Budapest/Ungarn,1.0,128.0,"0,30 %",19.07.1969,The Landbanking Group,"0,002 %"
-Prinz Maximilian von und zu Liechtenstein,,Schaan/Liechtenstein,1.0,260.0,"0,61 %",16.05.1969,The Landbanking Group,"0,002 %"
-Sobremesa Investments GmbH,HRB 265367,"Holzkirchen, Landkreis Miesbach",1.0,520.0,"1,21 %",,The Landbanking Group,"0,002 %"
-Shirish Sankhe,,"Mumbai, Maharashtra/Indien",1.0,516.0,"1,21 %",24.11.1962,The Landbanking Group,"0,002 %"
-Fraser & Company GmbH,HRB 103998,Frankfurt am Main,1.0,220.0,"0,59 %",,The Landbanking Group,"0,002 %"
-Cheptcov Andrei,,Munchen,1.0,25000.0,"83,33 %",20.03.1984,dstack,"0,003 %"
-Rheingau AG Berlin & Co. KG,HRA 56087 B,Charlottenburg,1.0,5000.0,"16,66 %",,dstack,"0,003 %"
-L7 Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 273741",Miinchen,1.0,8039.0,"32,156 %",,Carbon Atlantis,"0,004 %"
-Teufel Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 274023",Miinchen,1.0,8039.0,"32,156 %",,Carbon Atlantis,"0,004 %"
-Atlantic Labs V GmbH & Co. KG,"AG Charlottenburg, HRA 59573 B",Berlin,1.0,883.0,"3,532 %",,Carbon Atlantis,"0,004 %"
-SG9 UG (haftungsbeschrankt) i.G.,,errichtet am 20.09.2022,1.0,8039.0,"32,156 %",,Carbon Atlantis,"0,004 %"
-Rivada Space Systems LLC,"AG Minchen, HRB 272408","Wilmington, Division of Corporations Abtretung einigte Staaten des Bundes von Amerika",1.0,25000.0,100 %,,Rivada Space Networks,
-Lamin Labs Inc. USA,Nr. 6905409,USA,1.0,25000.0,<1%,,Lamin Labs,
-TOLI Beteiligungs UG (haftungs-beschrankt),"Amtsgericht München, HRB 277295",München,1.0,1000.0,100 %,,CyberDesk,"0,00460"
-Ardhya UG (haftungsbeschrankt),"Amtsgericht München, HRB 278188",München,1.0,25000.0,100 %,,CyberDesk,"0,00440"
-JS Durian Ventures UG,"AG Coburg, HRB 6896",Coburg,1.0,377.0,<1%,,truckOs,
-1303 Lemons UG,"AG Charlottenburg, HRB 246760 B",Berlin,1.0,7936.0,"21,05%",,truckOs,
-Saint-Jean Holdings UG,"AG Munchen, HRB 285557",Unterhaching,1.0,7936.0,"21,05%",,truckOs,
-Flash Ventures Management Pool SCSp,"Bertrange, Großherzogtum Luxemburg, Handelsregister Luxemburg (RCS), Nr. B263120","Bertrange, Großherzogtum Luxemburg",1.0,1189.0,"3,15%",,truckOs,
-Flash Ventures GmbH,"AG Charlottenburg, HRB 137267 B",Berlin,1.0,10714.0,"28,42%",,truckOs,
-TruckOS GmbH,"AG Munchen, HRB 276012",Munchen,1.0,9546.0,"25,32%",,truckOs,
-Herr Martin Thoma,HRB 274887,Miinchen,250.0,12250.0,49,13. Marz 1997,bliro,50
-Herr Maurice Schweitzer,HRB 274887,Miinchen,250.0,12250.0,51,5. Januar 1996,bliro,50
-ABsolution Holding UG (haftungsbeschrankt),"AG Freiburg i. Br., HRB 725956",Friesenheim,1.0,6250.0,25 %,,CargoKite,"0,004 %"
-MBischoff Holding UG (haftungsbeschrankt),"AG Freiburg i. Br., HRB 725946",Villingen-Schwenningen,1.0,8375.0,"33,5 %",,CargoKite,"0,004 %"
-Gesellschaft UG (haftungsbeschrankt),"AG Saarbriicken, HRB 108250",Saarbrucken,1.0,5188.0,"20,75 %",,CargoKite,"0,004 %"
-Independent Data Lab UG,"AG Munchen, HRB 249964",Munchen,1.0,16250.0,"65,00 %",,OmicsChart,"0,004 %"
-MEDAI TECHNOLOGIES LTD,"Companies House of England and Wales, company number 14815278","London, UK",1.0,5000.0,"20,00 %",,OmicsChart,"0,004 %"
-Andrei Matusevich,,"Poznan, Polen",1.0,3750.0,"15,00 %",05.10.1984,OmicsChart,"0,004 %"
-Selectio MidCo GmbH,"AG Miinchen, HRB 272334",Miinchen,1.0,25000.0,100 %,,GSG GENII Software Group,"0,004 %"
-TherOVex UG,"AG Munchen, HRB 275246",Munchen,1.0,16100.0,"38,52",,Fusix Biotech,"41,00"
-PYLORIX GmbH,"AG Minchen, Manchen",Munchen,1.0,11500.0,"27,51",,Fusix Biotech,
-Dr. Teresa Aurelia Krabbe,,Munchen,1.0,5000.0,"11,96",15.09.1990,Fusix Biotech,
-A3ZLF Biovectis UG,"AG Minchen, Munchen",Munchen,1.0,9200.0,"22,01",,Fusix Biotech,"0,0024"
-Goce Staleski,Miinchen,Miinchen,1.0,5000.0,"16,67",25. Mai 1985,spiritory,"1,00"
-Wilezura Holding UG (haftungs-beschrankt),"Minchen, AG Munchen, HRB 273758",,1.0,5833.0,"83,33",,spiritory,"1,00"
-Wilczura Holding UG (haftungs-beschrankt),"Minchen, AG Minchen, HRB 273758",,41.0,10833.0,"100,00",,spiritory,"41,00"
-Tenhil GmbH & Co. KG,AG München HRB 275447,München,25000.0,25000.0,100,,Tenhil,100
-Dirk Kummerle,,,,25000.0,100,,Tenhil,100
-fropsy ventures UG (haftungsbeschrankt),AG Munchen HRB 279250,Munchen,1.0,12500.0,"36,83%",,agrantis,"0,0029%"
-drei1415 ventures UG (haftungsbeschrankt),AG Bamberg HRB 10947,Bamberg,1.0,12500.0,"36,83%",,agrantis,"0,0029%"
-The Circle | Holdings Limited,Guernsey Registry No. 68786,"St. Peter Port, Guernsey",1.0,719.0,"2,12%",,agrantis,"0,0029%"
-SEK Ventures GmbH,AG Minchen HRB 201802,"Grafeling, Landkreis Miinchen",1.0,1798.0,"5,3%",,agrantis,"0,0029%"
-Speedinvest IV EuVECA GmbH & Co KG,"Handelsgericht Wien (Firmenbuch), FN 572350t","Wien, Osterreich",1.0,6427.0,"18,93%",,agrantis,"0,0029%"
-Wolfquadrat GmbH,Amtsgericht Lubeck Ahrensburg HRB 21243 HL,Ahrensburg,1.0,6250.0,"20,2%",,sqior medical,1%
-MyNils GmbH,"Amtsgericht Munchen Kirchheim b. HRB 274731 Munchen, Landkreis Munchen",Kirchheim b. Munchen,1.0,6250.0,"20,2%",,sqior medical,1%
-Sven FloRmann GmbH,"Amtsgericht Minchen Feldkirchen b. HRB 274728 Mianchen, Landkreis Munchen",Feldkirchen b. Munchen,1.0,6250.0,"20,2%",,sqior medical,1%
-M. Eimer Invest GmbH,Amtsgericht Plattling Deggendorf HRB 5600,Plattling,1.0,6250.0,"20,2%",,sqior medical,1%
-WCap GmbH,Amtsgericht Hamburg HRB 176055,Hamburg,1.0,2475.0,"8,0% Kapitalerhéhung",,sqior medical,1%
-Friedel Healthcare Consulting GmbH,Amtsgericht Flensburg Schleswig HRB 11251 FL,Schleswig,1.0,1485.0,"4,8%",,sqior medical,1%
-QAware GmbH,Amtsgericht Munchen HRB 163761,Munchen,1.0,1980.0,"6,4%",,sqior medical,1%
-Dr. Christian Soyk,"AG Minchen, HRB neu",Munchen,1.0,25000.0,100,11.03.1988,skailark,"0,004"
-Synergy Holding GmbH,HRB 190261,Munchen,1.0,65000.0,28.89,,Homenergy,
-Muinzinger Holding GmbH,HRB 277042,Munchen,1.0,65000.0,28.89,,Homenergy,
-Priebe Holding GmbH,HRB 278544,Munchen,1.0,35000.0,15.56,,Homenergy,
-Busl Holding GmbH,HRB 279301,Munchen,1.0,35000.0,15.56,,Homenergy,
-greenmetz ventures UG (haftungsbeschrankt),,Munchen,1.0,4464.0,1.98,,Homenergy,
-GoJo GmbH,,"Salzburg, Grogmain, Osterreich",1.0,4464.0,1.98,,Homenergy,
-Lake Ammer Ventures GmbH,,Augsburg Eching am Ammersee,1.0,3869.0,1.72,,Homenergy,
-Nobbe Holding GmbH,HRB 287943,Munchen,1.0,2083.0,0.93,,Homenergy,
-FE Capital GmbH,HRB 785925,Stuttgart Wernau am Neckar,1.0,1785.0,0.79,,Homenergy,
-TVenture Capital GmbH,HRB 16335,Wurzburg Marktheidenfeld,1.0,1488.0,0.66,,Homenergy,
-Ozman Holding GmbH,HRB 67947,Ludwigshafen am Rhein,1.0,1487.0,0.66,,Homenergy,
-Vireo Ventures GmbH,HRB 256564,Munchen,1.0,806.0,0.36,,Homenergy,
-Gaschler Ventures UG (haftungsbeschrankt),HRB 136688,Hamburg,1.0,403.0,0.18,,Homenergy,
-FundX GmbH,HRB 281793,Munchen,1.0,1611.0,0.72,,Homenergy,
-Herr Tobias Mehrer,,Dusseldorf,1.0,403.0,0.18,09.09.1971,Homenergy,
-Aurelio GmbH,HRB 74379,Dusseldorf Ratingen,806.0,806.0,0.36,,Homenergy,
-JP Lutze Holding UG (haftungsbeschrankt),HRB 279851,Munchen,1000.0,1000.0,"50,00",,NoMaze,"1,00"
-Finn Gaida Holding UG (haftungsbeschrankt),HRB 279579,Munchen,1000.0,1000.0,"50,00",,NoMaze,"1,00"
-LKH Investment GmbH,"AG Minchen, HRB 276582",Munchen,1.0,10250.0,50,,aborise,
-LKH Investment GmbH,"AG Minchen, HRB 276582",Munchen,1.0,12500.0,50,,aborise,
-LKH Investment GmbH,"AG Charlottenburg, HRB 243110 B",Berlin,1.0,14750.0,50,,aborise,
-LKH Investment GmbH,"AG Charlottenburg, HRB 243110 B",Berlin,1.0,25000.0,50,,aborise,
-Bastian Fisser,HRB 273605,Unterhaching,1.0,18.725,"74,9 %",11.12.1990,The Bitery,"0,004 %"
-Tanja Fisser,HRB 273605,Munchen,1.0,6250.0,"25,1 %",09.09.1964,The Bitery,"0,004 %"
-Herr Dr. Matthias Berger,,81541 Miinchen,1.0,8500.0,"33,33",17. November 1986,azuma healthtech,"0,004"
-Herr Julian Su&mann,,81545 Munchen,1.0,8500.0,"33,33",12. April 1983,azuma healthtech,"0,004"
-Herr Eugen Wachtel,,81541 Miinchen,1.0,8500.0,"33,33",15. Februar 1984,azuma healthtech,"0,004"
-Dr. Martin KOrneF,HRB 229816,Munchen,5.0,5750.0,"0,004 %",14.09.1974,Engity GmbH,"0,004 %"
-Greemundo Capital GmbH,HRB 229816,Munchen,5.0,5750.0,"0,004 %",,Engity GmbH,"0,004 %"
-UrsulaGoebel,,Munchen,5.0,5750.0,"0,004 %",24.08.1975,Engity GmbH,"0,004 %"
-Gregor Noczinski,,Berlin,,10875.0,100 %,16.08.1982,Engity GmbH,100 %
-engitygmbh,,Ame Trautmann,,25900.0,100 %,,Engity GmbH,100 %
-ROBEL Holding GmbH,"Amtsgericht Traunstein, HRB 12578",Freilassing,1.0,25000.0,100 %,,Deutsche Plasser,"0,8333 %"
-ROBEL Holding GmbH,"Amtsgericht Traunstein, HRB 12578",Freilassing,1.0,2975000.0,100 %,,Deutsche Plasser,"99,1666 %"
-Fei Liu,,Karlsfeld,1.0,25000.0,"100,00",13.08.1982,TDF Labs,
-Starfinger Ventures UG (haftungsbeschrankt),"AG Kempten (Allgau), HRB 16454",Munchen,1.0,1334.0,33.4,,HospiChef,1%
-Bodenbach Ventures UG (haftungsbeschrankt),"AG Kempten (Allgau), HRB 16454",Munchen,1.0,1334.0,33.4,,HospiChef,1%
-Andreas Hartung Ventures UG (haftungsbeschrankt),"AG Kempten (Allgau), HRB 16454","Germaringen, Ortsteil Ketterschwang",1.0,1332.0,33.3,,HospiChef,1%
-ROBEL Holding GmbH,"Amtsgericht Traunstein, HRB 12578",Freilassing,1.0,25000.0,100 %,,Plasser Robel Services,"0,8333 %"
-ROBEL Holding GmbH,"Amtsgericht Traunstein, HRB 12578",Freilassing,1.0,2975000.0,100 %,,Plasser Robel Services,"99,1666 %"
-Herr Vijay Pravin Maharajan,,Miinchen,1.0,5.006,20%,26.02.1991,bitsCrunch,"0,004"
-Herr Gopi Kannappan,,Miinchen,1.0,5.007,20%,20.11.1980,bitsCrunch,"0,004"
-Herr Ashok Varadharajan,,Puchheim,1.0,6.007,20%,01.08.1989,bitsCrunch,"0,004"
-Herr Gopi Kannappan,,Munchen,1.0,11.007,20%,20.11.1980,bitsCrunch,"0,004"
-Herr Saravanan Jaichandaran,,"Adukkamparai, Vellore, Indien",1.0,12.007,20%,22.07.1994,bitsCrunch,"0,004"
-Herr Gopi Kannappan,,Miinchen,1.0,17.007,20%,20.11.1980,bitsCrunch,"0,004"
-Herr Ajay Prashanth Narasaraju Gajendraraju,,"Ramappa Lyt JP Nagar 7th Phase, Bengaluru, Indien",1.0,17.507,20%,14.12.1993,bitsCrunch,"0,004"
-Herr Gopi Kannappan,,Miinchen,1.0,22.507,20%,20.11.1980,bitsCrunch,"0,004"
-Franziska Steiner Ventures UG (haftungsbeschrankt),HRB 263243,Munchen,1.0,12500.0,"23,4%",,Edurino,
-"Grunwald, Landkreis Miinchen / Griinwald, District Mu- n",HRB 263170,Munchen,1.0,1869.0,"23,4%",,Edurino,
-CAMI Ventures UG (haftungsbeschrankt),HRB 263168,Munchen,1.0,15000.0,"23,4%",,Edurino,
-Begemann Capital GmbH,,Berlin,1.0,2744.0,"5,0%",,Edurino,
-Blue Unicorn Ventures GmbH,,Frankfurt am Main,1.0,4253.0,"2,3%",,Edurino,
-Einhorn Capital GmbH,,Hamburg,1.0,376.0,<1%,,Edurino,
-Black Solitaire Ventures GmbH,,Frankfurt am Main,1.0,873.0,"1,6%",,Edurino,
-Kupke GmbH,,Lineburg,1.0,626.0,<1%,,Edurino,
-A06 Ventures UG (haftungsbeschrankt),,Berlin,1.0,49.0,<1%,,Edurino,
-AENU Fund SCA SICAV-RAIF,,"Munsbach, GroRherzogtum Luxemburg",1.0,2490.0,<1%,,Edurino,
-"btov Digital Technologies li S.C.S., SICAR",,"Munsbach, GroRherzogtum Luxemburg",1.0,5246.0,<1%,,Edurino,
-Emerge Venture Partners | LP,,"London, GroBbritannien",1.0,4574.0,<1%,,Edurino,
-Pausder Ventures GmbH,,Berlin,1.0,125.0,<1%,,Edurino,
-JJL Invest UG (haftungsbeschrankt),,Hamburg,1.0,50.0,<1%,,Edurino,
-Roppel Beteiligungs UG (haftungsbeschrankt),,Manchen,1.0,174.0,<1%,,Edurino,
-Benjamin Drury,,"London, GroRbritannien",,63.0,<1%,04.08.1975,Edurino,
-inventhie GmbH,,Hamburg,1.0,640.0,"1,1%",,Edurino,
-playfull GmbH,,Wien,1.0,150.0,"0,38%",,Edurino,
-DN Capital - Global Venture Capital V SCSp,,Luxemburg,1.0,8479.0,"15,4%",,Edurino,
-Tengelmann Ventures Fund VI GmbH,,Munich,1.0,3686.0,"6,7%",,Edurino,
-G-Fund Invest | GmbH & Co. KG,,Munich,1.0,295.0,<1%,,Edurino,
-"FJ Labs Ill, LP",5956457,"Wilmington, Delaware, USA",,354.0,<1%,,Edurino,
-"FJ Labs Entrepreneurs Fund 2022, eine Serie von FJ Labs Funds, LP",6551354,"Wilmington, Delaware, USA",,15.0,<1%,,Edurino,
-Artur Koop,,Bremen,1.0,96.46,3.34%,,The Exploration Company,
-Sebastien Reichstadt,,"Bordeaux, Frankreich",1.0,35.42,2.50%,,The Exploration Company,
-Johannes Reijneveld,,"Toulouse, Frankreich",1.0,35.465,2.54%,,The Exploration Company,
-Priyanka Das,,"Toulouse, Frankreich",1.0,35.478,0.01%,,The Exploration Company,
-Héléne Huby,,Bremen,1.0,35.353,22.90%,,The Exploration Company,
-Pierre Vinet,,"Rom, Italien",1.0,55.288,1.31%,,The Exploration Company,
-André Lanata,,"Oletta, Frankreich",1.0,35.568,0.001%,,The Exploration Company,
-Christian Dargnat,,"Paris, Frankreich",1.0,35.793,0.223%,,The Exploration Company,
-AURA SAS,,"Paris, Frankreich",1.0,25.05,0.20%,,The Exploration Company,
-Deep Impact Investment Holding GmbH,,Wolfsburg,1.0,36.13,0.53%,,The Exploration Company,
-Temaris et associés SAS,,"Paris, Frankreich",1.0,37.03,0.89%,,The Exploration Company,
-Aperitus Limited,,"Santa Venera, Malta",1.0,37.48,0.45%,,The Exploration Company,
-Nils Bernhardt,,München,1.0,96.687,0.698%,,The Exploration Company,
-Romain Mabboux,,Lille,1.0,37.637,0.02%,,The Exploration Company,
-Orbital Ventures S.C.A. SICAV-RAIF,,Luxemburg,1.0,60.865,16.52%,,The Exploration Company,
-Vsquared Ventures GmbH & Co. KG,,München,1.0,63.041,5.40%,,The Exploration Company,
-Bruno Maisonnier,,Paris,1.0,52.232,0.07%,,The Exploration Company,
-The Nuga Trust,,"Wilmington, USA",1.0,52.364,0.13%,,The Exploration Company,
-Maru Winnacker,,Berlin,1.0,96.817,0.09%,,The Exploration Company,
-Cherry Ventures Fund IV GmbH & Co KG,,Berlin,1.0,65.217,5.70%,,The Exploration Company,
-Rymdkapital SPV TEC AB,,"Stockholm, Schweden",1.0,93.974,0.62%,,The Exploration Company,
-Possible Ventures Il GmbH & Co KG,,München,1.0,55.37,0.05%,,The Exploration Company,
-Prof. Dr. Dr. Ann-Kristin Achleitner,,München,1.0,55.424,0.05%,,The Exploration Company,
-July Fund 22 GmbH & Co. KG,,Berlin,1.0,63.041,1.77%,,The Exploration Company,
-FPCI Omnes Real Tech,,Paris,1.0,67.447,2.21%,,The Exploration Company,
-FCPI Capital Invest PME 2019,,Paris,1.0,68.246,0.79%,,The Exploration Company,
-FCPI Capital Invest PME 2020,,Paris,1.0,68.385,0.14%,,The Exploration Company,
-FCPI Capital Invest PME 2021,,Paris,1.0,68.481,0.10%,,The Exploration Company,
-Partech Entrepreneur Fund IV FPCI,,Luxemburg,1.0,71.201,2.70%,,The Exploration Company,
-SORIAK S.A.S.,,Paris,1.0,73.513,2.29%,,The Exploration Company,
-WMA Master VCC,,Singapur,1.0,74.873,1.35%,,The Exploration Company,
-EQT Ventures lI S.a r.l. SICAF-RAIF,,Luxemburg,1.0,85.755,7.55%,,The Exploration Company,
-RRW Il Growth SLP,,Paris,1.0,93.372,0.34%,,The Exploration Company,
-Najwa Naimy,,"Meudon, Frankreich",1.0,96.694,0.01%,,The Exploration Company,
-Olivier Faure,,"Eysines, Frankreich",1.0,96.722,0.01%,,The Exploration Company,
-Thomas Nussmann,,"Poissy, Frankreich",1.0,96.729,0.01%,,The Exploration Company,
-Francesco Stortini,,München,1.0,96.748,0.01%,,The Exploration Company,
-Antoine Pallois,,München,1.0,96.754,0.01%,,The Exploration Company,
-Sonia Magniant,,"Gaillon sur Montcient, Frankreich",1.0,96.761,0.01%,,The Exploration Company,
-Karim Ganem,,"Barcelona, Spanien",1.0,97.162,0.34%,,The Exploration Company,
-BleM56 S.C.1.,,"Meudon, Frankreich",1.0,97.853,0.69%,,The Exploration Company,
-Geodesic S.A.S.,,"Paris, Frankreich",1.0,98.198,0.34%,,The Exploration Company,
-Pink Capital GmbH,,Berlin,1.0,98.338,0.14%,,The Exploration Company,
-Sebastien Ayton,,"Paris, Frankreich",1.0,98.408,0.07%,,The Exploration Company,
-Lear Javiv,,"London, Vereinigtes Königreich",1.0,98.548,0.14%,,The Exploration Company,
-Interface Capital GmbH & Co. KG,,Berlin,1.0,98.688,0.14%,,The Exploration Company,
-Izzat Holdings Ltd.,,"Tortola, British Virgin Islands",1.0,99.204,0.51%,,The Exploration Company,
-MHz2 Capital GmbH,,Berlin,1.0,99.274,0.07%,,The Exploration Company,
-Marc Postel-Vinay,,"Paris, Frankreich",1.0,99.618,0.34%,,The Exploration Company,
-Habert Dassault Finance SAS,,"Paris, Frankreich",1.0,100.598,0.97%,,The Exploration Company,
-Schlumberger Investment Services B.V.,,"Den Haag, Niederlande",1.0,101.124,0.52%,,The Exploration Company,
-Jonas Jager Ventures UG,"AG München, HRB 278858",München,1.0,16764.0,"15,03 %",,Buycycle,"0,0014857737 %"
-Golditchuk Ventures UG,AG München,München,1.0,18842.0,"15,03 %",,Buycycle,"0,0014857737 %"
-MVN Ventures UG,AG Landshut,Landshut,1.0,885.0,"0,21 %",,Buycycle,"0,0014857737 %"
-Kuhnhold Ventures UG,AG München,München,1.0,885.0,"0,10 %",,Buycycle,"0,0014857737 %"
-EP Ventures UG,AG München,München,1.0,263.0,"0,10 %",,Buycycle,"0,0014857737 %"
-Florian Senoner Ventures UG,AG München,München,1.0,2397.0,"0,89 %",,Buycycle,"0,0014857737 %"
-Max fl UG,AG München,München,1.0,1585.0,"7,24 %",,Buycycle,"0,0014857737 %"
-Oud Equity UG,AG Darmstadt,Mörlenbach,1.0,260.0,"0,12 %",,Buycycle,"0,0014857737 %"
-Aelius Ventures GmbH,AG Charlottenburg,Berlin,1.0,1938.0,"0,12 %",,Buycycle,"0,0014857737 %"
-Anduril Ventures GmbH,AG München,München,1.0,2397.0,"20,97 %",,Buycycle,"0,0014857737 %"
-OsMa Ventures UG,AG München,München,1.0,346.0,"16,13 %",,Buycycle,"0,0014857737 %"
-Angel's Eye |1V GmbH & Co.,AG Charlottenburg,Berlin,1.0,78.0,"100,00 %",,Buycycle,"0,0014857737 %"
-Wax Venture UG,AG München,München,1.0,70.0,"0,21 %",,Buycycle,"0,0014857737 %"
-NxFoods GmbH,"AG Munchen, HRB 265352",Manchen,1.0,25000.0,100,,Planet A Foods,
-Software Defined Automation Inc.,"AG Munchen, HRB 267933","Garching b. Miinchen, Landkreis Munchen",1.0,25000.0,100,,Software Defined Automation,
-FYS Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 268779",Miinchen,1.0,1110.0,"2,34 %",,Tanso,
-Tanso Technologies AG,"Munchen, HRB 269123",Miinchen,1.0,6973.0,"14,73 %",,Tanso,
-Wiechmann Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 268778",Miinchen,1.0,8083.0,"17,07 %",,Tanso,
-Gyri Ventures UG (haftungsbeschrankt),"AG Miinchen, HRB 268777",Miinchen,1.0,8083.0,"17,07 %",,Tanso,
-Hetzel Ventures UG (haftungsbeschrankt),"AG Disseldorf, HRB 94685",Dusseldorf,1.0,751.0,"1,59 %",,Tanso,
-Unternehmertum VC AG,Munchen,Garching b.,1.0,9362.0,"19,77 %",,Tanso,
-Fonds Ill GmbH & Co. KG,HRA 111267 Minchen,Landkreis Munchen,1.0,34670.0,"73,20 %",,Tanso,
-Picus Capital GmbH,AG Munchen,Miinchen,1.0,1840.0,"3,89 %",,Tanso,
-Possible Ventures II GmbH & Co. KG,HRA 114517,Miinchen,1.0,686.0,"1,45 %",,Tanso,
-Salma Vogel,,Miinchen,1.0,137.0,"0,29 %",19. Januar 1990,Tanso,
-Alvio GmbH,"AG Charlottenburg, HRB 181047 B",Berlin,1.0,164.0,"0,35 %",,Tanso,
-Alexander Schworer,,Ulm,1.0,274.0,"0,58 %",19. Dezember 1973,Tanso,
-DMI GmbH,"AG Jena, HRB 516634",Kaltennordheim,1.0,109.0,"0,23 %",,Tanso,
-Peter-Paul Brenninkmeijer,,Berlin,1.0,109.0,"0,23 %",4. Juli 1992,Tanso,
-Jakob Stein,,Berlin,1.0,54.0,"0,11 %",19. Marz 1995,Tanso,
-Wolffpack Ventures UG (haftungsbeschrankt),"AG Charlottenburg, HRB 233180 B",Berlin,1.0,54.0,"0,11 %",,Tanso,
-Benjamin Gunther Invest GmbH,"AG Munchen, HRB 230764",Munchen,1.0,553.0,"1,17 %",,Tanso,
-MADV Ventures GmbH & Co. KG,HRA 114505 Landkreis Freising,Eching,1.0,553.0,"1,17 %",,Tanso,
-OMA Ventures GmbH,"AG Munchen, HRB 264026",Miinchen,1.0,54.0,"0,11 %",,Tanso,
-Capnamic Ventures AG Fund III GmbH & Co. KG,HRA 35354,KéGln,1.0,8401.0,"17,74 %",,Tanso,
-S15 Invest GmbH,"AG Miinchen, HRB 262318, 25.501 - 27.795 Miinchen 31.545 - 31.775",Miinchen,1.0,16500.0,30.2158%,,Tidely,0.0016%
-H23 Invest UG (haftungsbeschrankt),"AG Miinchen, HRB 262078, Vaterstetten",Vaterstetten,1.0,3750.0,5.9555%,,Tidely,0.0016%
-TU3 Invest GmbH,"AG K6ln, HRB 104400, 27.796 - 28.815 Koln 44.161 - 44.455",Koln,1.0,4315.0,6.8528%,,Tidely,0.0016%
-cannonball invest GmbH,"AG Miinchen, HRB 201779, 28.816 - 29.070 Miesbach 44.456 - 44.839",Miesbach,1.0,1014.0,1.6104%,,Tidely,0.0016%
-Jiirgen Eckel,,Miinchen,1.0,612.0,0.9719%,,Tidely,0.0016%
-STM Consulting GmbH,"AG Frankfurt am Main, HRB 107349, 29.071 - 29.198 Frankfurt am Main",Frankfurt am Main,1.0,503.0,0.7988%,,Tidely,0.0016%
-Dr. Carsten Baumgartner,,Miinchen,1.0,878.0,1.3944%,,Tidely,0.0016%
-K41 GmbH,"AG Miinchen, HRB 213866, Miinchen",Miinchen,1.0,250.0,0.397%,,Tidely,0.0016%
-Sheran Investments UG (haftungsbeschrankt),"AG Miinchen, HRB 253161, Miinchen, 39.549 - 39.627",Miinchen,1.0,834.0,1.3245%,,Tidely,0.0016%
-dreifff Management GmbH,"AG Mainz, HRB 51303, 31.973 - 33.155 Ingelheim am Rhein 45.077 - 45.667",Ingelheim am Rhein,1.0,3049.0,4.8422%,,Tidely,0.0016%
-XIMA INVEST ApS,,Virum,1.0,511.0,0.8115%,,Tidely,0.0016%
-KP Ventures ApS,,Gentofte,1.0,393.0,0.6241%,,Tidely,0.0016%
-Patrick Frowein,,UK-London,1.0,1084.0,1.7215%,,Tidely,0.0016%
-MH ASSETS GmbH,"AG Mannheim, HRB 720803, 39.746 - 40.139 Karlsruhe 45.963 - 46.553",Karlsruhe,1.0,1971.0,3.1302%,,Tidely,0.0016%
-Christoph Hansmeyer,,Miinchen,1.0,477.0,0.7575%,,Tidely,0.0016%
-33 cent GmbH,"AG Neuss, HRB 20727, 40.219 - 42.189 Neuss",Neuss,1.0,3943.0,6.262%,,Tidely,0.0016%
-Astra Holding GmbH,"AG Miinchen, HRB 233045, 42.190 - 44.160 Miinchen",Miinchen,1.0,3943.0,6.262%,,Tidely,0.0016%
-TX Group AG,,"Zurich, Schweiz",1.0,8207.0,13.0338%,,Tidely,0.0016%
-Bayern Kapital Innovationsfonds EFRE GmbH & Co. KG,"AG Landshut, HRA 11166, Landshut",Landshut,1.0,8207.0,13.0338%,,Tidely,0.0016%
-Dr. Johannes Sebastian Otterbach,,Berlin,1.0,500.0,100%,29.03.1984,Orthogonal,
-CK Holding UG (haftungsbeschrankt),"AG Regensburg, HRB 18636",Lappersdorf,1.0,8595.0,23.20%,,oculai,0.003 %
-TS Capital UG (haftungsbeschrankt),"AG Firth, HRB 18877",Eckental,1.0,8595.0,23.20%,,oculai,0.003 %
-Mack Holding UG (haftungsbeschrankt),"AG Firth, HRB 18874",Eckental,1.0,7810.0,21.08%,,oculai,0.003 %
-High-Tech Griinderfonds IV GmbH & Co. KG,"AG Bonn, HRA 9754",Bonn,1.0,3575.0,9.65%,,oculai,0.003 %
-Axeleo Proptech 1 FPCI Investment-CAPITAL SAS,"Greffe du Tribunal de Commerce de Lyon No 824690002, Lyon, Frankreich",Lyon,1.0,2904.0,7.84%,,oculai,0.003 %
-Bayern Kapital Innovationsfonds EFRE GmbH & Co. KG,"AG Landshut, HRA 11166",Landshut,1.0,2904.0,7.84%,,oculai,0.003 %
-Jentzsch Investment GmbH,"AG Chemnitz, HRB 32938",Mittweida,1.0,1618.0,4.37%,,oculai,0.003 %
-MiToO GmbH,"AG Hannover, HRB 213953",Hemmingen,1.0,596.0,1.61%,,oculai,0.003 %
-LNRA Invest SAS,Greffe du Tribunal de Commerce de Nanterre No 501659312 R.C.S. Nanterre,"Nanterre, Frankreich",1.0,234.0,0.63%,,oculai,0.003 %
-Arno Zinke,,Bonn,1.0,2904.0,7.84%,13. April 1975,oculai,0.003 %
-ZenML Inc.,"Division of Corporations, 25.000 Geschäftsanteile, 25.000","Wilmington, Delaware",1.0,25000.0,"0,004 %",,ZenML,
-Maximilian Kérner Investment UG (haftungsbeschränkt),"AG München, HRB 251704",Asselfingen,1.0,8334.0,19.9914%,,Predium,0.0024%
-Razouane Ventures UG (haftungsbeschränkt),"AG München, HRB 271008",München,1.0,8334.0,19.9914%,,Predium,0.0024%
-Thumm Ventures UG (haftungsbeschränkt),"AG Ulm, HRB 743154",München,1.0,8334.0,19.9914%,,Predium,0.0024%
-RAS Invest GmbH,"AG Düsseldorf, HRB 93560",Düsseldorf,1.0,1014.0,2.4324%,,Predium,0.0024%
-Heidelventure GmbH,"AG Mannheim, HRB 730572",Heidelberg,1.0,188.0,0.451%,,Predium,0.0024%
-Vesta Venture Holding GmbH,"AG Marburg, HRB 7414",Battenberg,1.0,241.0,0.5781%,,Predium,0.0024%
-Brokamp Capital GmbH,"AG Frankfurt am Main, HRB 121646",Frankfurt am Main,1.0,97.0,0.2327%,,Predium,0.0024%
-Manuel Backfisch Investment Stiftung,Aufsichts- und Dienstleistungsdirektion Trier,Boppard,1.0,128.0,0.307%,,Predium,0.0024%
-Stefan Loacker,,Speicher,1.0,192.0,0.4606%,6. Juni 1969,Predium,0.0024%
-Mutschler Ventures AG,,"Baar, Schweiz",1.0,461.0,1.1058%,,Predium,0.0024%
-Verdurion GmbH,"AG Charlottenburg, HRB 124962 B",Berlin,1.0,97.0,0.2327%,,Predium,0.0024%
-LionCorn Capital GmbH,"AG Mannheim, HRB 734809",Heidelberg,1.0,96.0,0.2303%,,Predium,0.0024%
-Wax Venture UG (haftungsbeschränkt),"AG München, HRB 213094","Eching, Landkreis Freising",1.0,38.0,0.0912%,,Predium,0.0024%
-2bX Urban Fund I GmbH & Co. KG,"AG Charlottenburg, HRA 59469",Berlin,1.0,1346.0,3.2287%,,Predium,0.0024%
-"btov Digital Technologies II S.C.S., SICAR",AG Registre de Commerce et des Sociétés B243529,"Munsbach, Luxemburg",1.0,4523.0,10.8496%,,Predium,0.0024%
-Unternehmertum VC Fonds III GmbH & Co. KG,"AG München, HRA 111267",München,1.0,7870.0,18.8783%,,Predium,0.0024%
-JD Invest & Advisory GmbH,"AG Stuttgart, HRB 778754",Stuttgart,1.0,175.0,0.4198%,,Predium,0.0024%
-AXS Investments GmbH,"AG Ulm, HRB 746261",Ulm,1.0,93.0,0.2231%,,Predium,0.0024%
-AddReal GmbH,"AG Frankfurt am Main, HRB 132387",Frankfurt am Main,1.0,58.0,0.1391%,,Predium,0.0024%
-Dasr Ventures UG (haftungsbeschränkt),"AG München, HRB 283911",München,1.0,23.0,0.0552%,,Predium,0.0024%
-Szeli Ventures GmbH,"AG München, HRB 286809",Karlsfeld,1.0,23.0,0.0552%,,Predium,0.0024%
-Tomislav Tomov,,München,1.0,23.0,0.0552%,21. Juli 1991,Predium,0.0024%
-Prof. Dr. Enrique Solano,AG Mannheim,München,1.0,8334.0,25.64%,08.09.1964,Kipu Quantum,<1%
-Milliways Holding UG (haftungsbeschrankt),"AG Mannheim, HRB 730646",Karlsruhe,1.0,8333.0,25.64%,,Kipu Quantum,
-DV Verwaltung UG (haftungsbeschrankt),"AG Mannheim, HRB 744886",Karlsruhe,1.0,8333.0,25.64%,,Kipu Quantum,
-QUANTONATION 1 FPCI,"Paris, Frankreich, eingetragen bei der franzdsischen Finanzmarktausicht (FMA) unter Nr. FRO014000AD8, 58, vertreten durch die Verwaltungsgesellschaft Quantonation Ventures SAS, Handels- und Gesellschaftsregister von Paris, Nr. 849813522","Paris, Frankreich",1.0,3125.0,9.62%,,Kipu Quantum,
-"Entrada Ventures II B, LLC","Delaware, USA, Delaware Department of State (Division of Corporations), Nr. 6957312","Delaware, USA",1.0,2500.0,7.69%,,Kipu Quantum,
-First Momentum Ventures Fund II GmbH & Co. KG,"Karlsruhe, AG Mannheim, HRA 710275",Karlsruhe,1.0,1875.0,5.77%,,Kipu Quantum,
-J. Cornelius GmbH,HRB 203860 Minchen,Munchen,1.0,12500.0,"40,45307443",,Zavvy,
-M. Yilmaz GmbH,"AGiMinehen, Miinchen",Munchen,1.0,12500.0,"40,45307443",,Zavvy,
-Renner Ventures & Philanthropies GmbH,HRB 223857 Manchen,Munchen,1.0,131.0,"0,42394822",,Zavvy,
-La Famiglia Fonds! GmbH & Co. KG,HRB 56110 B,Berlin,1.0,3148.0,"10,18770227",,Zavvy,
-EMERGE VENTURE PARTNERS LP,LP020080,London,1.0,839.0,"2,715210356",,Zavvy,
-Picus Capital GmbH,"Neoamcnen, Munchen",Munchen,1.0,830.0,"2,038834951",,Zavvy,
-Alexander Bernhard Lippert,,London,1.0,52.0,"0,16828479",26.09.1989,Zavvy,
-Anselm Bauer Invest GmbH,HRB 230392 Minchen,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Benjamin Giinther Invest GmbH,HRB 230764 Miinchen,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Blue Impact Ventures UG,HRB 159992 B,Berlin,1.0,105.0,"0,339805825",,Zavvy,
-PDA Deutzclie one rales Digitalagentur GmbH,HRB 146584 B,Berlin,1.0,105.0,"0,339805825",,Zavvy,
-Dicki GmbH,HRB 188883 Munchen,Munchen,1.0,52.0,"0,16828479",,Zavvy,
-Jiinger Invest UG,HRB 223107 Munchen,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Lata Venture GmbH,"ne Munchen, MGnchen",Munchen,1.0,52.0,"0,16828479",,Zavvy,
-MJM Investments AG,HRB 230390 Miinchen,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Renaud Visage,,Paris,1.0,52.0,"0,16828479",27.08.1971,Zavvy,
-Riverton UG,HRB 215830 Unterschlei&heim,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Sebastian Schuon Investments GmbH,HRB 230360 Munchen,Munchen,1.0,105.0,"0,339805825",,Zavvy,
-Wax Venture UG,HRB 213004 Eching,Munchen,1.0,34.0,"0,100323625",,Zavvy,
-DSR Ventures GmbH,HRB 21008 Westerham,Feldkirchen-Westerham,1.0,73.0,"0,236245955",,Zavvy,
-Armin Lustig,,Iffezheim,1.0,12500.0,50 %,10.05.1969,allO,<1
-Olivia Doro Lustig,,Iffezheim,1.0,12500.0,50 %,17.06.2002,allO,<1
-Patty Lip Wai Lee,,Singapur,100.0,12500.0,50 %,2. Februar 1975,Orbit Health,"0,004 %"
-DIGITAL HELIX GmbH,"AG Miinchen, HRB 226981","Neuried, Landkreis Miinchen",100.0,12500.0,50 %,,Orbit Health,"0,004 %"
-Benedikt Schneider Ventures UG,HRB 16549,Siegburg,1.0,12500.0,36.2%,,Floy,
-BONDO Holding GmbH,HRB 16530,Bochum,1.0,12500.0,36.2%,,Floy,
-10x Founders Fund GmbH & Co. KG,HRA 113840,München,1.0,5435.0,15.74%,,Floy,
-XDECK Fund 1/K6éIn GmbH & Co. KG,HRA 35431,Köln,1.0,1174.0,6.3%,,Floy,
-Florian Huber Beteiligungen GmbH,HRB 177215,"Pecking, Landkreis Starnberg",1.0,610.0,2.1%,,Floy,
-Mercutio GmbH,HRB 107123,Berlin,1.0,335.0,1.26%,,Floy,
-Z Equity GmbH,HRB 213546,Pullach i. Isartal,1.0,377.0,1.05%,,Floy,
-ROMM Holding GmbH,HRB 145775,Berlin,1.0,132.0,0.63%,,Floy,
-Roskopf Ventures GmbH,HRB 126690,Berlin,1.0,349.0,0.52%,,Floy,
-"CCL Ventures 1 -— 50,000 UG (haftungsbeschr",,Munchen/Munich,1.0,50000.0,33.511 %,,Penzilla GmbH,
-"CCL Capital UG 50,001 — 100,000/ (haftungsbeschr",,Munchen/Munich,1.0,50000.0,33.511 %,,Penzilla GmbH,
-"Angel Invest 100,001 -!00.KG",,Bocholt,1.0,100000.0,1.952 %,,Penzilla GmbH,
-Konermann & Partner GmbH,,Munchen/Munich,1.0,102912.0,0.975 %,,Penzilla GmbH,
-MMB Ventures GmbH,,Berlin,1.0,104368.0,0.488 %,,Penzilla GmbH,
-Stevan Lutz Invest GmbH,,Berlin,1.0,105095.0,0.488 %,,Penzilla GmbH,
-Susanne Listmann,,Munchen/Munich,1.0,105096.0,0.975 %,,Penzilla GmbH,
-Menden Ventures Consulting GmbH,,Munchen/Munich,1.0,105823.0,0.975 %,,Penzilla GmbH,
-SEMA Vermdgensverw altungs UG (haftungsbeschr,,Munchen/Munich,1.0,107278.0,0.975 %,,Penzilla GmbH,
-Fritz Christoph Listmann,,Munchen/Munich,1.0,108442.0,0.975 %,,Penzilla GmbH,
-Andreas Burike,,Munchen/Munich,1.0,109169.0,0.975 %,,Penzilla GmbH,
-MMB Ventures GmbH,,Berlin,1.0,110622.0,0.975 %,,Penzilla GmbH,
-Stevan Lutz Invest GmbH,,Berlin,1.0,113528.0,0.975 %,,Penzilla GmbH,
-All Digital Services GmbH,,Berlin,1.0,114545.0,0.682 %,,Penzilla GmbH,
-Skatchkov Ventures UG,,Berlin,1.0,115682.0,1.209 %,,Penzilla GmbH,
-All Digital Services GmbH,,Berlin,1.0,116690.0,1.209 %,,Penzilla GmbH,
-All Digital Services GmbH,,Berlin,1.0,117345.0,1.209 %,,Penzilla GmbH,
-Motive Early Stage (E) GmbH,,Potsdam,1.0,117788.0,1.209 %,,Penzilla GmbH,
-Motive Early Stage (E) GmbH,,Potsdam,1.0,125288.0,1.117 %,,Penzilla GmbH,
-WENVEST Capital GmbH,,Potsdam,1.0,133621.0,0.558 %,,Penzilla GmbH,
-MM Opportunities Ventures GmbH,,Oldenburg (Oldenburg),1.0,116913.0,1.117 %,,Penzilla GmbH,
-CERES VENTURE GmbH,,Berlin,1.0,116914.0,1.117 %,,Penzilla GmbH,
-YouCo H156 GmbH (kiinftig:/future: Tesoro GmbH),,Berlin,1.0,113529.0,0.289 %,,Penzilla GmbH,
-F23- Vorrats-,,Berlin,1.0,114546.0,1.209 %,,Penzilla GmbH,
-Motive Early Stage (A) Aggregator LLC,,Frankfurt am Main,1.0,115683.0,1.793 %,,Penzilla GmbH,
-Namalala UG (haftungsbeschr,,Frankfurt am Main,1.0,116122.0,1.793 %,,Penzilla GmbH,
-Motive Early Stage (A) Aggregator LLC,,Frankfurt am Main,1.0,117789.0,1.793 %,,Penzilla GmbH,
-Namalala UG (haftungsbeschr,,Frankfurt am Main,1.0,125289.0,1.793 %,,Penzilla GmbH,
-Motive Early Stage (A) Aggregator LLC,,Frankfurt am Main,1.0,133622.0,1.793 %,,Penzilla GmbH,
-Ivor van Dartel,,Munchen,1.0,12500.0,"35,29%",08.03.1984,Vaeridion,<1%
-Dr. Sebastian Seemann,,Niederwerrn,1.0,12500.0,"35,29%",10.08.1982,Vaeridion,"35,29%"
-Vsquared Ventures | GmbH & Co. KG,,Munchen,1.0,4557.0,"12,87%",,Vaeridion,"12,87%"
-Project A Ventures IV GmbH & Co. KG,,Berlin,1.0,4557.0,"12,87%",,Vaeridion,"12,87%"
-Kupke GmbH,,Liineburg,1.0,1302.0,100%,,Vaeridion,"3,68%"
-Vormals Gesell- | Uvod Ventures UG (haftungsbeschrankt),HRB neu,Munchen,1.0,12500.0,50,15. April 1991,Mily Technologies,"0,004"
-Herr Aleksandar Buha,,Munchen,1.0,12500.0,50,5. Marz 1991,Mily Technologies,"0,004"
-Richard Markus Wolfgang Fobo,,München,1.0,20983.0,"20,983%",26.10.1998,cureVision,
-Johannes Menelaus Ruopp,,München,1.0,20980.0,"20,980%",06.08.1998,cureVision,
-Kerstin Heike von Diemar,,München,1.0,20980.0,"20,980%",31.03.1977,cureVision,
-acmaios GmbH,"AG München, HRB 246170",München,1.0,2517.0,"2,517%",,cureVision,
-Merk MIC GmbH,"AG München, HRB 264809",Starnberg,1.0,638.0,"0,638%",,cureVision,
-Prof. Dr. Gerald Martin Werner Huber,,Pliiderhausen,1.0,638.0,"0,638%",25.05.1966,cureVision,
-Stefan Kilian,,Mainz,1.0,638.0,"0,638%",13.01.1963,cureVision,
-Wolfgang Schmidt,,Köln,1.0,638.0,"0,638%",20.08.1968,cureVision,
-Preußische Stiftungsdirektion Berlin GmbH,"AG Charlottenburg, HRB 238881 B",Berlin,1.0,476.0,"0,476%",,cureVision,
-Sunconergy GmbH,"AG Friedberg, HRB 9430",Altenstadt,1.0,476.0,"0,476%",,cureVision,
-Frank Thomas Trinkaus,,Bergneustadt,1.0,476.0,"0,476%",08.05.1967,cureVision,
-Bertold Mathias Wagner,,Koblenz,1.0,476.0,"0,476%",12.04.1964,cureVision,
-Alexander Ludwig Friedrich Christian Fuchs,,Salzburg/Osterreich,1.0,476.0,"0,476%",22.12.1954,cureVision,
-Reto Rilegg,,Ruschein/Schweiz,1.0,476.0,"0,476%",11.05.1968,cureVision,
-rheinaue Invest GmbH,"AG Köln, HRB 105903",Köln,1.0,476.0,"0,476%",,cureVision,
-Thorsten Fritz Herbert Drescher,,Neuss,1.0,476.0,"0,476%",10.07.1973,cureVision,
-Dr. Arthur Steinmetz,,Hofheim,1.0,476.0,"0,476%",25.08.1949,cureVision,
-Bramlage Lifesciences GmbH,"AG Potsdam, HRB 29861 P",Blankenfelde-Mahlow,1.0,476.0,"0,476%",,cureVision,
-Gerrit Jörg Arends,,München,1.0,476.0,"0,476%",21.05.1973,cureVision,
-Robert Helmut Glaser,,Worth,1.0,476.0,"0,476%",01.05.1967,cureVision,
-Dr. Alfred Heinrich Georg Spieker,,Achern,1.0,476.0,"0,476%",23.03.1965,cureVision,
-eastWest Venture Capital GmbH,"AG Bad Homburg, HRB 5908",Bad Homburg,1.0,476.0,"0,476%",,cureVision,
-Jan Arne Tegtmeier,,Hamburg,1.0,168.0,"0,003%",20.08.1976,cureVision,
-Pelle Maerkedahl Larsen,,Berlin,1.0,168.0,"0,003%",15.04.1975,cureVision,
-Christian Orsinger,,Bergisch Gladbach,1.0,168.0,"0,003%",29.05.1961,cureVision,
-Nika Norr,,Rheinau-Weil,1.0,168.0,"0,003%",,cureVision,
-Indigo8 GmbH,"AG München, HRB 185735",München,1.0,168.0,"0,003%",,cureVision,
-Companisto Trust Service XVII GmbH,"AG Frankfurt am Main, HRB 121619",Frankfurt am Main,1.0,35277.0,"35,277%",,cureVision,
-Snow Day UG (haftungsbeschrankt),,Berlin,1.0,17500.0,"38,87852128321",,TreasureHunter,"38,87852128321"
-ICONIC Ventures GmbH,,Stuttgart,1.0,5357.0,"11,90127077224",,TreasureHunter,"11,90127077224"
-LOUD ENGINE UG (haftungsbeschrankt),,Berlin,1.0,2143.0,"4,88758553275",,TreasureHunter,
-Vestion GmbH,,Düsseldorf,1.0,4104.0,"4,88758553275",,TreasureHunter,
-Martin-Dirk Bihlmaier,,Stuttgart,1.0,764.0,"1,69931836136",,TreasureHunter,
-hBMg GmbH,,Stuttgart,1.0,2597.0,"5,78879476465",,TreasureHunter,
-Christian Felten,,Frankfurt am Main,1.0,567.0,"1,25807535768",,TreasureHunter,
-Rebellion Ventures UG (haftungsbeschrankt),,Berlin,1.0,57.0,"0,12663289789",,TreasureHunter,
-Quentin Muhlert,,Berlin,1.0,57.0,"0,12663289789",,TreasureHunter,
-Steven Rude,,"Los Angeles, Kalifornien, USA",1.0,57.0,"0,12663289789",,TreasureHunter,
-Gauselmann AG,,Espelkamp,1.0,8470.0,"18,81720430108",,TreasureHunter,
-Kairem Beteiligungs-GmbH Sylt OT Keitum,,Flensburg,1.0,562.0,"1,24855594064",,TreasureHunter,
-Sisu Game Ventures Oy,,"Helsinki, Finnland",1.0,562.0,"1,24855594064",,TreasureHunter,
-TreasureHunt GmbH,,Berlin,1.0,720.0,"1,59957344708",,TreasureHunter,
-LOOHMI GmbH,HRB 253929 Munchen / county Munich,Griinwald,1.0,12750.0,43.16%,,Garentii,
-LOOHMI GmbH,HRB 253929 Munchen / county Munich,Griinwald,1.0,3063.0,8.34%,,Garentii,
-Zhovtyuk UG (haftungsbeschrankt),HRB 267838 Ebersberg / county Ebersberg,Kirchseeon,1.0,6062.0,25.07%,,Garentii,
-Zhovtyuk UG (haftungsbeschrankt),HRB 267838 Ebersberg / county Ebersberg,Kirchseeon,1.0,8125.0,25.07%,,Garentii,
-Dennis Stern Beteiligungs UG (haftungsbeschrankt),HRB 125201,Frankfurt/Main,1.0,1750.0,7.51%,,Garentii,
-"Greenlight Reinsurance, Ltd.",CR-137831,Cayman Islands,1.0,3868.0,13.29%,,Garentii,
-KO Beteiligungs UG (haftungsbeschrankt),HRB 127062,Frankfurt/Main,1.0,365.0,1%,,Garentii,
-Elkstone Ventures Limited,604054,"Dublin, Ireland",1.0,2069.0,9.97%,,Garentii,
-Prof. Dr. Stephan Axel Sieber,HRB 265575,Utting am Ammersee,1.0,11500.0,"43,24%",19.03.1976,smartbax,1%
-Macsics Vermégensverwaltung UG (haftungsbeschränkt),HRB 265389,München,1.0,11500.0,"43,24%",,smartbax,1%
-Swanlake Management GmbH,HRB 178256,München,1.0,2000.0,"7,52%",,smartbax,1%
-High-Tech Gründerfonds IV GmbH & Co. KG,HRA 9754,Bonn,1.0,798.0,"3,00%",,smartbax,1%
-Boehringer Ingelheim Venture Fund GmbH,HRB 42763,Ingelheim a. Rhein,1.0,798.0,"3,00%",,smartbax,1%
-PARADICA GmbH,"Amtsgericht München, HRB 272815",München,1.0,20161.0,"80,64",,Twinu,"0,004"
-rena) ss UG (haftungsbeschränkt),"Amtsgericht München, HRB 272478",München,1.0,22749.0,-,,Twinu,"10,75"
-TWINU GmbH,"Amtsgericht München, HRB 273555",München,1.0,25000.0,"8,6",,Twinu,"0,004"
-Sebastian Priester,,72336 Balingen,1.0,1250.0,"5,3 %",29. September 1978,PINSL,"0,004 %"
-Nifty Ventures GmbH,,Stuttgart,1.0,5100.0,"15,4 %",,PINSL,"0,004 %"
-AL 13 UG (haftungsbeschrankt),,Stuttgart,1.0,7250.0,54 %,,PINSL,"0,004 %"
-NTD Ventures UG (haftungsbeschrankt),,Frankfurt am Main,1.0,8750.0,16 %,,PINSL,"0,004 %"
-Schone Téchter GmbH,,Reutlingen,1.0,15000.0,"4,0 %",,PINSL,"0,004 %"
-NTD Ventures UG (haftungsbeschrankt),,Frankfurt am Main,1.0,17500.0,16 %,,PINSL,"0,004 %"
-AL 13 UG (haftungsbeschrankt),,Stuttgart,1.0,18675.0,54 %,,PINSL,"0,004 %"
-sports03 GmbH,,Stuttgart,1.0,20000.0,"3,3 %",,PINSL,"0,004 %"
-AL 13 UG (haftungsbeschrankt),,Stuttgart,1.0,25000.0,54 %,,PINSL,"0,004 %"
-Pelion Energy Holding GmbH,HRB 265447,Griinwald,1.0,15835.0,24%,,Entrix,
-Kleinschulz Invest UG (haftungsbeschrankt),HRB 271440,Munchen,1.0,3672.0,10%,,Entrix,
-Sébastien Schikora,,Munchen,1.0,1102.0,3%,22.05.1972,Entrix,
-BASHE Invest UG (haftungsbeschrankt),HRB 276057,Munchen,1.0,4102.0,11%,,Entrix,
-Wolfgang Ridinger,,Munchen,1.0,367.0,1%,12.05.1988,Entrix,
-Raeecuniel,,Munchen,1.0,367.0,1%,,Entrix,
-Philipp Trocha,,Munchen,1.0,367.0,1%,14.02.1988,Entrix,
-Entrix GmbH,HRB 269431,Munchen,1.0,2472.0,6.73%,,Entrix,
-Lars Lohie,,Stuttgart,1.0,918.0,2.50%,13.09.1986,Entrix,
-ENKRAFT VENTURE.partners AG,HRA 117480,Unterhaching,1.0,2505.0,6.82%,,Entrix,
-KRAFTWERK.ventures AG,HRA 117527,Unterhaching,1.0,1044.0,2.84%,,Entrix,
-ENPAL B.V.,89067363,Amsterdam,1.0,4175.0,11.37%,,Entrix,
-ABACON Invest GmbH,HRB 151846,Hamburg,1.0,2088.0,5.69%,,Entrix,
-Lino GmbH,HRB 181550 B,"Charlottenburg, Berlin",1.0,167.0,0.45%,,Entrix,
-Alvio GmbH,HRB 181550 B,"Charlottenburg, Berlin",1.0,167.0,0.45%,,Entrix,
-PK Projects GmbH,HRB 117075 B,"Charlottenburg, Berlin",1.0,104.0,0.28%,,Entrix,
-Sebastian Schuon Investments GmbH,HRB 230360,Grafelfing,1.0,157.0,0.43%,,Entrix,
-GV Avente LLC,Nr. 5725938,Dover (Delaware),1.0,146.0,0.40%,,Entrix,
-AB1204 Verwaltungs GmbH,HRB 29343,Brannenburg,1.0,209.0,0.57%,,Entrix,
-Valluga Capital GmbH,HRB 204025,Munchen,1.0,104.0,0.28%,,Entrix,
-Martin Siddiqui,,,,21.0,0.06%,08.11.1983,Entrix,
-Herr Vasile Andrei Mituca,,Munchen,1.0,480.0,"48,00",,DriotData,"0,1"
-Herr Armin Moin,,Munchen,1.0,480.0,"48,00",,DriotData,"0,1"
-Herr Prof. Dr. Stephan GUnnemann,,Munchen,1.0,40.0,"4,00",,DriotData,"0,1"
-Mipex Group GmbH & Co. KG,"AG Firth, HRA 12054",Furth,1.0,25000.0,100 %,-,Rivus Capital,"0,004 %"
+name,registry_details,location,nominal_value_per_share,total_nominal_value,participation_per_share,total_participation_in_percent,company,date_of_birth
+Marc Tuscher Holding | AG Stuttgart Kornwestheim,HRB 781859,Kornwestheim,1.0,12500,"0,0025","31,68",Sereact,
+makeyourself UG (haftungsbeschrankt),HRB 781875,Stuttgart,1.0,12500,"0,0025","31,68",Sereact,
+Azur Venture Capital GmbH,HRB 35577,Nurnberg,1.0,1491,"0,0025","3,78",Sereact,
+Arconsis IT-Solutions GmbH,HRB 700713,Karlsruhe,1.0,570,"0,0025","1,44",Sereact,
+DG Beteiligungs GmbH,HRB 259802,Germering,1.0,380,"0,0025","0,96",Sereact,
+JCS Beteiligungs GmbH,HRB 259940,Planegg,1.0,381,"0,0025","0,97",Sereact,
+Cambridge Ventures UG (haftungsbeschrankt),HRB 265325,Unterfohring,1.0,190,"0,0025","0,48",Sereact,
+Michael Achtelik Beteiligungsgesellschaft mbH,HRB 261719,Krailling,1.0,657,"0,0025","1,67",Sereact,
+Boston Venture GmbH,HRB 222892,Munchen,1.0,189,"0,0025","0,48",Sereact,
+rek DIGITAL Beteiligungs- und Beratungs GmbH,HRB 781223,Stuttgart,1.0,163,"0,0025","0,41",Sereact,
+Point Nine Capital GmbH & Co. KG,HRA 59489 B,Berlin,1.0,4783,"0,0025","12,12",Sereact,
+Point Nine Co-Invest VI GmbH & Co. KG,HRA 59473 B,Berlin,1.0,305,"0,0025","0,77",Sereact,
+Air Street Capital II LP,No. 4238,Guernsey,1.0,6086,"0,0025","12,89",Sereact,
+OMA acht beteiligungs GbR,HRB 277083,Munchen,1.0,258,"0,0025","0,65",Sereact,
+David Antonio Nothacker,AG Charlottenburg HRB 170455 B,Bad Homburg,1.0,12500,"0,0005541947 %","6,93 %",sennder,17. Oktober 1987
+"MAP Mergers Acquisition Handelsregisteramt Privatisatt, nS ‘M quisit","Lugano, Schweiz Kantons Tessin","Lugano, Schweiz",1.0,2176,"0,0005541947 %","1,21 %",sennder,
+Hosni Ventures UG AG,Stuttgart HRB 758742,Stuttgart,1.0,6927,"0,0005541947 %","3,84 %",sennder,
+ANP Investments UG AG Charlottenbur KG HRB 60257 B,Berlin,Berlin,1.0,448,"0,0005541947 %","0,25 %",sennder,
+"Jethro Capital S.a r.l. 9, et des Sociétés",Luxemburg,Luxemburg,1.0,1289,"0,0005541947 %","0,71 %",sennder,
+Scania Growth Capital AB,"Sodertalje, (Schweden) Schweden 559090-6524",Schweden,1.0,16334,"0,0005541947 %","9,05 %",sennder,
+Joseph Neil Bearden,,"Singapur, Singapur",1.0,383,"0,0005541947 %","0,21 %",sennder,5. Juli 1973
+Cecilia Braggiotti,,"Mailand, Italien",1.0,206,"0,0005541947 %","0,11 %",sennder,14. Oktober 1989
+Alessandro Felisi,,Pregassona,1.0,846,"0,0005541947 %","0,47 %",sennder,27. September 1989
+Patrick Ugo Guiseppe Larai,,"Dubai, Vereinigte Arabische Emirate",1.0,65,"0,0005541947 %","0,04 %",sennder,39 august 1973
+Jesus Antonio Esteve Cortes,,"Genf, Schweiz",1.0,149,"0,0005541947 %","0,08 %",sennder,6. August 1987
+Lodovico Brioschi,,Seo Paulo,1.0,252,"0,0005541947 %","0,14 %",sennder,6. August 1987
+Omar Henri Liess,,"Genf, Schweiz",1.0,168,"0,0005541947 %","0,09 %",sennder,27. Juli 1989
+Marco De Grazia,,Spanien,1.0,115,"0,0005541947 %","0,06 %",sennder,3. November 1988
+Olivier Kanitzk,,Kéin,1.0,0,"0,0005541947 %","0,14 %",sennder,
+Liya Magdeeva,,"New York, USA",1.0,76,"0,0005541947 %","0,04 %",sennder,26. September 1983
+Julius Kurt Kohler,,Berlin,1.0,124,"0,0005541947 %","0,07 %",sennder,30. September 1988
+SEK Ventures GmbH,Starnberg HRB 201802,Starnberg,1.0,333,"0,0005541947 %","0,18 %",sennder,
+poke Ventures Il GmbH,Belin,Belin,1.0,12797,"0,0005541947 %","7,09 %",sennder,
+HV Holtzbrinck Ventures Fund VII GmbH & Co. KG,AG Minchen,Munchen,1.0,17186,"0,0005541947 %","9,52 %",sennder,
+Accel London V L.P.,"Palo Alto, USA",London,1.0,13875,"0,0005541947 %","7,69 %",sennder,
+Foncon V Strategic,"Palo Alto, USA","Palo Alto, USA",1.0,211,"0,0005541947 %","0,12 %",sennder,
+Accel London Investors 2016) LP.,"Palo Alto, USA",London,1.0,622,"0,0005541947 %","0,34 %",sennder,
+Ithaca 2 S.r.l.,"Mailand, Italien",Mailand,1.0,0,"0,0005541947 %","0,05 %",sennder,
+Lakestar Growth L.P.,"Palo Alto, USA",Guernsey,1.0,7024,"0,0005541947 %","7,04 %",sennder,
+Scania CV AB,Schweden,Schweden,1.0,3331,"0,0005541947 %","3,31 %",sennder,
+H14 S.p.A.,"Mailand, Italien",Mailand,1.0,115,"0,0005541947 %","0,52 %",sennder,
+Accel Growth Fund V L.P.,"Palo Alto, CA, USA","Palo Alto, CA, USA",1.0,206,"0,0005541947 %","2,06 %",sennder,
+Next47 Fund 2019 L.P.,"Palo Alto, CA, USA",England and Wales,1.0,1055,"0,0005541947 %","1,05 %",sennder,
+Next47 Fund 2020 L.P.,"Palo Alto, CA, USA",England and Wales,1.0,1616,"0,0005541947 %","0,90 %",sennder,
+Next47 Fund 2021 L.P.,"Palo Alto, CA, USA",England and Wales,1.0,338,"0,0005541947 %","0,19 %",sennder,
+cael Ventures GmbH & Co. KG,Munchen,Munchen,1.0,997,"0,0005541947 %","0,55 %",sennder,
+GOLD ROAD CAPITAL PARTNERS LP,,Cayman Islands,1.0,599,"0,0005541947 %","0,33 %",sennder,
+GR Growth SPC Cayman Twiande,,Cayman Islands,1.0,718,"0,0005541947 %","0,40 %",sennder,
+SWILUX S.A.,Luxemburg,Luxemburg,1.0,1689,"0,0005541947 %","0,94 %",sennder,
+HS Investments III Limited,,Guernsey,1.0,7520,"0,0005541947 %","4,17 %",sennder,
+"Target Global Selected Opportunities, LLC - Series Sennder (Delaware)","Delaware, USA","Delaware, USA",1.0,10135,"0,0005541947 %","5,62 %",sennder,
+Litten Investments Ltd.,,"Limassol, Zypern",1.0,153,"0,0005541947 %","0,08 %",sennder,
+HV Capital Fund 7 COIF GmbH & Co. geschlossene Investment KG,Munchen,Munchen,1.0,1689,"0,0005541947 %","0,94 %",sennder,
+M.V.E.1 S.P.A.,"Milan, Italien",Milan,1.0,861,"0,0005541947 %","0,48 %",sennder,
+Baillie Gifford European Growth Trust ple,London,Vereinigtes K6nigreich,1.0,1013,"0,0005541947 %","0,56 %",sennder,
+ABACON CAPITAL GmbH,,Hamburg,1.0,1783,"0,0005541947 %","0,99 %",sennder,
+Vewatenge GmbH,,Greven,1.0,591,"0,0005541947 %","0,33 %",sennder,
+Regaine Opportunity Fund,"Munsbach, Luxemburg",Luxemburg,1.0,1013,"0,0005541947 %","0,56 %",sennder,
+Innformance Funds - PE Capital III Furstentum,,Furstentum Liechtenstein,1.0,1013,"0,0005541947 %","0,56 %",sennder,
+Juwel 225. V V GmbH,Berlin,Berlin,1.0,199,"0,0005541947 %","0,11 %",sennder,
+Bodo Uebber,,Munchen,1.0,20,"0,0005541947 %","0,01 %",sennder,18. August 1959
+Andreas Renschler,,Stuttgart,1.0,20,"0,0005541947 %","0,01 %",sennder,29. Marz 1958
+Booom Growth GmbH & Co. KG,Berlin,Berlin,1.0,57,"0,0005541947 %","0,03 %",sennder,
+Bloomfield Hills Ventures UG,Berlin,Berlin,1.0,3501,"0,0005541947 %","1,94 %",sennder,
+Alov Ventures UG (haftungsbeschrankt),"AG / local court of Charlottenburg, HRB 219888 B",Berlin,1.0,8403,<1%,"17,37%",Payrails ,
+Talay Ventures UG (haftungsbeschrankt),"AG / local court of Charlottenburg, HRB 219888 B",Berlin,1.0,8404,,"17,37%",Payrails ,
+THZ Capital UG (haftungsbeschrankt),"AG / local court of Charlottenburg, HRB 232475 B",Berlin,1.0,8400,,"17,37%",Payrails ,
+"Andreessen Horowitz Seed Fund I, L.P.","Wilmington, Delaware, USA, Secretary of State - Division of Corporations, Nr. / no. 6188989","Wilmington, Delaware, USA",1.0,4541,,"9,39%",Payrails ,
+HV Holtzbrinck Ventures Fund VIII GmbH & Co. geschlossene Investment KG,"Miinchen / Munich, AG / local court of Miinchen / Munich, HRA 112522",Munich,1.0,5552,,"11,48%",Payrails ,
+Steethorse Capital GmbH,"Berlin, AG / local court of Charlottenburg, HRB 145955 B",Berlin,1.0,165,,"11,48%",Payrails ,
+DSR Ventures GmbH,"Feldkirchen-Westerham, AG / local court of Traunstein, HRB 21008",Feldkirchen-Westerham,1.0,165,<1%,<1%,Payrails ,
+Red Hook Ventures UG (haftungsbeschrankt),"Berlin, AG / local court of Charlottenburg, HRB 165544 B",Berlin,1.0,33,<1%,<1%,Payrails ,
+Courage Companies GmbH,"Bebra, AG / local court of Bad Hersfeld, HRB 2594",Bebra,1.0,33,<1%,<1%,Payrails ,
+Dada Ventures UG (haftungsbeschrankt),"Berlin, AG / local court of Charlottenburg, HRB 209224 B",Berlin,1.0,13,<1%,<1%,Payrails ,
+Privera Partners GmbH,"Donaueschingen, AG / local court of Freiburg i. Br.; HRB 611823",Donaueschingen,1.0,53,<1%,<1%,Payrails ,
+Barbaros Serdar Ozbugutu,"6. August 1977, Istanbul, Tiirkei","Istanbul, Turkey",1.0,66,<1%,<1%,Payrails ,
+Selin Kiper Saitoglu,"24. August 1981, Istanbul, Tirkei","Istanbul, Turkey",1.0,33,<1%,<1%,Payrails ,
+Mehmet Mert Oztekin,"17. Juni 1985, Berlin",Berlin,1.0,33,<1%,<1%,Payrails ,
+Marc Bhargava,"23. Januar 1986, Bal Harbour, FL 33154, USA","Bal Harbour, FL 33154, USA",1.0,33,<1%,<1%,Payrails ,
+SEK Ventures GmbH,"Grafelfing, Landkreis Miinchen / Munich district, AG / local court of Miinchen / Munich, HRB 201802","Grafelfing, Munich district",1.0,293,,<1%,Payrails ,
+FD Invest GmbH,"Berlin, AG / local court of Charlottenburg, HRB 115744 B",Berlin,1.0,48,,<1%,Payrails ,
+Mahdi Raza,"29. Februar 1992, Old Bridge, NJ 08857, USA","Old Bridge, NJ 08857, USA",1.0,13,<1%,<1%,Payrails ,
+EQT Ventures III S.4 r.J. SICAF-RAIF,"Luxemburg, Grofsherzogtum Luxemburg / Luxembourg, Grand-Duchy of Luxembourg, Registre de Commerce et des Sociétés, B259227",Luxembourg,1.0,7859,,<1%,Payrails ,
+"General Catalyst Group XI — Ignition, L.P.","Wilmington, Delaware, USA, Division of Corporations of the State of Delaware, Nr. / no. 6072112","Wilmington, Delaware, USA",1.0,4231,,<1%,Payrails ,
+Lukas R6hle Holding UG,HRB 28312,Kempenich,1.0,10000,,26.89 %,Prematch,
+Niklas Brackmann Holding UG,HRB 106845,Wesseling,1.0,7500,,20.17 %,Prematch,
+Fiete Griimter Holding UG,HRB 8808,Nettersheim,1.0,7500,,20.17 %,Prematch,
+Rebet GmbH,HRB 96448,Kdln,1.0,197,,0.53 %,Prematch,
+Christian Greb GmbH,HRB 269966,Miinchen,1.0,327,,1.21 %,Prematch,
+F.R. Roehder GmbH,HRB 188475 B,Berlin,1.0,263,,0.82 %,Prematch,
+Swish UG (haftungsbeschrankt),HRB 157760 B,Berlin,1.0,262,,0.88 %,Prematch,
+"Glasmacher, Nikolaus",,Berlin,1.0,0,,0.0027 %,Prematch,
+Alexander Luik UG (haftungsbeschrankt),HRB 68700,Diisseldorf,1.0,197,,0.53 %,Prematch,
+RE 14 Holding GmbH,HRB 197921 B,Berlin,1.0,197,,0.53 %,Prematch,
+Wilde NF UG (haftungsbeschrankt),HRB 95266,Ratingen,1.0,0,,0.0027 %,Prematch,
+Rapid Pioneers Group UG (haftungsbeschrankt) & Co. KG,HRA 56436 B,Berlin,1.0,0,,0.0027 %,Prematch,
+OJA Invest GmbH,HRB 239130 B,Berlin,1.0,0,,0.0027 %,Prematch,
+JoeKa UG (haftungsbeschrankt),HRB 203748 B,Berlin,1.0,72,,0.53 %,Prematch,
+Florian Huber Beteiligungen GmbH,HRB 177215,Pécking,1.0,285,,0.77 %,Prematch,
+"Bischof, Thomas",,K6In,1.0,118,,0.32 %,Prematch,
+Gasper Beteiligungsgesellschaft UG (haftungsbeschrankt),HRB 24380,Niederzissen,1.0,0,,0.0027 %,Prematch,
+Nils Eiteneyer Beteiligungs-UG (haftungsbeschrankt),HRB 106878,K6ln,1.0,0,,0.0027 %,Prematch,
+NaoLen B.V.,,Horn/Niederlande,1.0,143,,0.38 %,Prematch,
+Haseltown Ventures UG (haftungsbeschrankt),HRB 243157 B,Berlin,1.0,176,,0.47 %,Prematch,
+F4 GmbH,HRB 120527 B,Berlin,1.0,143,,0.38 %,Prematch,
+OM 100 GmbH,HRB 146832 B,Berlin,1.0,143,,0.38 %,Prematch,
+CMD Invest UG (haftungsbeschrankt),HRB 30155 HB,Bremen,1.0,0,,0.0027 %,Prematch,
+Ophelia Invest GmbH,HRB 273368,Miinchen,1.0,72,,0.19 %,Prematch,
+Spielerrat Invest GmbH,HRB 38618,Niimberg,1.0,0,,0.0027 %,Prematch,
+Steinhaus Invest UG (haftungsbeschrankt),HRB 175233,Hamburg,1.0,0,,0.0027 %,Prematch,
+Finjo Venture UG (haftungsbeschrankt),HRB 277851,Miinchen,1.0,214,,0.72 %,Prematch,
+"Zitzmann, Robert",,Hamburg,1.0,0,,0.0027 %,Prematch,
+Fleetblick Ventures UG (haftungsbeschrankt),HRB 225583 B,Berlin,1.0,72,,0.22 %,Prematch,
+Kroth Ventures GmbH,,Dortmund,1.0,85,,0.40 %,Prematch,
+FTW Capital GmbH,,Monheim am Rhein,1.0,281,,1.04 %,Prematch,
+raumstation UG (haftungsbeschrankt),,K6ln,1.0,0,,0.0027 %,Prematch,
+SmashForward OU,,Tallinn/Estland,1.0,0,,0.0027 %,Prematch,
+datavest UG (haftungsbeschrankt),HRB 115479,Frankfurt am Main,1.0,143,,0.44 %,Prematch,
+Mackeprang Ventures GmbH,HRB 83760,K6ln,1.0,0,,0.0027 %,Prematch,
+SW Investment GmbH,,K6ln,1.0,0,,0.0027 %,Prematch,
+ARU Group GmbH,,Stuttgart,1.0,285,,0.77 %,Prematch,
+GO Ventures GmbH,,K6ln,1.0,114,,0.35 %,Prematch,
+"Bielau, Stefan",,Warschau/Polen,1.0,72,,0.34 %,Prematch,
+Konig Consulting UG (haftungsbeschrankt),HRB 30320,Essen,1.0,71,,0.19 %,Prematch,
+Triiffelschwein Beteiligungen UG (haftungsbeschrankt),,KéIn,1.0,72,,0.19 %,Prematch,
+FitzFuture-Ventures UG (haftungsbeschrankt),,Ké6In,1.0,71,,0.22 %,Prematch,
+MK Freundeskreis UG (haftungsbeschrankt),,Kéln,1.0,0,,0.0027 %,Prematch,
+Creative Friends UG (haftungsbeschrankt),,Berlin,1.0,143,,0.67 %,Prematch,
+"Dreyer, Dominik",,Berlin,1.0,143,,0.45 %,Prematch,
+"Dr. Kurch, Markus",,Berlin,1.0,72,,0.31 %,Prematch,
+"Reiffen, Andreas",,Brooklyn/USA,1.0,84,,0.23 %,Prematch,
+"Burkardt, Jonathan",,Mainz,1.0,54,,0.15 %,Prematch,
+"Raum, David",,Sinsheim,1.0,107,,0.29 %,Prematch,
+Shio Equity LLC,,Austin/USA,1.0,321,,0.86 %,Prematch,
+DSH Ventures GmbH,,Kronberg im Taunus,1.0,0,,0.0027 %,Prematch,
+CKH Beteiligungs UG (haftungsbeschrankt),,Berlin,1.0,0,,0.0027 %,Prematch,
+MOre-invest GmbH,,Niimberg,1.0,0,,0.0027 %,Prematch,
+Combes Ventures UG (haftungsbeschrankt),,Berlin,1.0,0,,0.0027 %,Prematch,
+Pausder Ventures GmbH,,Berlin,1.0,0,,0.0027 %,Prematch,
+Kurz Ventures GmbH,,Berlin,1.0,0,,0.0027 %,Prematch,
+Gipfelgliick GmbH,,Berlin,1.0,54,,0.15 %,Prematch,
+Strachbert GmbH,HRB 745081,Stuttgart,1.0,54,,0.15 %,Prematch,
+Steinforth Asset Management GmbH,HRB 99603,Diisseldorf,1.0,107,,0.29 %,Prematch,
+Hellenthunde GmbH,HRB 71309,Diisseldorf,1.0,11,,0.29 %,Prematch,
+"Jauch, Mathias",,RoBtal,1.0,33,,0.09 %,Prematch,
+Zweig am Baum Investment UG (haftungsbeschrankt),HRB 209562 B,Berlin,1.0,0,,0.0027 %,Prematch,
+MARINI HOLDING SRL,,Turin/Italien,1.0,0,,0.0027 %,Prematch,
+Julia Westermann UG (haftungsbeschrankt),HRB 76491,Diisseldorf,1.0,107,,0.29 %,Prematch,
+Schawei GmbH,HRB 8726,Kreuztal,1.0,54,,0.15 %,Prematch,
+"Gnabry, Serge David",,Miinchen,1.0,1499,,4.03 %,Prematch,
+Schwarz Ventures UG (haftungsbeschrankt),HRB 276878,Miinchen,1.0,54,,0.15 %,Prematch,
+K4 Beteiligungsgesellschaft GmbH,HRB 48407,Mainz,1.0,214,,0.58 %,Prematch,
+axion Holding GmbH,HRB 227609 B,Berlin,1.0,0,,0.0027 %,Prematch,
+Scout Fund VII; L.P.,,Menlo Park/USA,1.0,0,,0.0027 %,Prematch,
+t-grove GmbH,HRB 6094,Villmar,1.0,0,,0.0027 %,Prematch,
+BMKurz UG (haftungsbeschrankt),Amtsgericht Stuttgart HRB 770963,Sindelfingen,1.0,11500,,23.1277%,Knowunity,
+Lucas Hild,,Stuttgart,1.0,2693,,5.4159%,Knowunity,16. Marz 2002
+Yannik Prigl,,Tubingen,1.0,2693,,5.4159%,Knowunity,26. Dezember 1994
+Gregor Weber,,Karlsruhe,1.0,2693,,5.4159%,Knowunity,24. April 2002
+Knowunity GmbH,,Sindelfingen,1.0,3215,,6.4657%,Knowunity,
+Julian Prigl,,Sindelfingen,1.0,2206,,4.4365%,Knowunity,16. Oktober 1997
+wow yes ventures GmbH,Amtsgericht Hamburg HRB 156035,Hamburg,1.0,456,,0.9171%,Knowunity,
+AOS Vermégensverwaltungs GmbH,Amtsgericht Hamburg HRB 136568,Hamburg,1.0,456,,0.9171%,Knowunity,
+SM Assets UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 124982 B,Berlin,1.0,343,,0.6898%,Knowunity,
+Obiegala Holding UG (haftungsbeschrankt),Amtsgericht Dusseldorf HRB 74736,Dusseldorf,1.0,213,,0.4284%,Knowunity,
+Dr. Jorg Meyer Beteiligungsverwaltung GmbH,Amtsgericht Stuttgart HRB 723867,Aichtal,1.0,133,,0.2675%,Knowunity,
+Dr.Ing. Ludger Laufenberg,,Ludenscheid,1.0,133,,0.2675%,Knowunity,26. Marz 1963
+Helmut Ludwig Bayer,,Stuttgart,1.0,133,,0.2675%,Knowunity,8. November 1962
+Lightfield Equity GmbH & Co. KG,Amtsgericht Stuttgart HRA 733032,Heilbronn,1.0,133,,0.2675%,Knowunity,
+Michael Raith,,Korntal-Minchingen,1.0,133,,0.2675%,Knowunity,23. Juli 1972
+Tilman Kemmler,,Stuttgart,1.0,133,,0.2675%,Knowunity,22. August 1967
+Project A Ventures III GmbH & Co. KG,Amtsgericht Charlottenburg HRA 55286 B,Berlin,1.0,8865,,17.8284%,Knowunity,
+Discovery Ventures Fund Il GmbH & Co. KG,Amtsgericht Charlottenburg HRA 55849 B,Berlin,1.0,1191,,2.3952%,Knowunity,
+Philipp Man,,"Zug, Schweiz",1.0,155,,0.3117%,Knowunity,15. April 1991
+Wurlitzer Capital GmbH,Amtsgericht K6In HRB 103238,KdIn,1.0,52,,0.1046%,Knowunity,
+"Tiny Fund Il, a series of Tiny Supercomputer Investment Companies, LP",Delaware Division of Corporations 6912454,"Salt Lake City, Utah, USA",1.0,98,,0.1971%,Knowunity,
+"Tiny II, a series of Continental Tiny Supercomputer Investment Companies, LP",Delaware Division of Corporations 6919407,"Salt Lake City, Utah, USA",1.0,31,,0.0623%,Knowunity,
+WCP Holding GmbH,Amtsgericht K6In HRB 97255,KdIn,1.0,103,,0.2071%,Knowunity,
+Pausder Ventures GmbH,Amtsgericht Charlottenburg HRB 163315 B,Berlin,1.0,283,,0.5691%,Knowunity,
+Possible Ventures | GmbH & Co. KG,Amtsgericht Minchen HRA 112107,Minchen,1.0,701,,1.4098%,Knowunity,
+Alvio GmbH,Amtsgericht Charlottenburg HRB 181047 B,Berlin,1.0,88,,0.177%,Knowunity,
+Companion-M GmbH,Amtsgericht Dusseldorf HRB 89384,Dusseldorf,1.0,111,,0.2232%,Knowunity,
+PK Projects GmbH,Amtsgericht Charlottenburg HRB 117075 B,Berlin,1.0,111,,0.2232%,Knowunity,
+ROMM Holding GmbH,Amtsgericht Siegburg HRB 16703,Sankt Augustin,1.0,88,,0.177%,Knowunity,
+Roskopf Ventures GmbH,Amtsgericht Charlottenburg HRB 126690 B,Berlin,1.0,88,,0.177%,Knowunity,
+Blackbird Internet UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 134277 B,Berlin,1.0,88,,0.177%,Knowunity,
+whiletrue GmbH,Amtsgericht Charlottenburg HRB 191921 B,Berlin,1.0,88,,0.177%,Knowunity,
+WEFA GmbH,Amtsgericht Charlottenburg HRB 107449 B,Berlin,1.0,88,,0.177%,Knowunity,
+OyFri GmbH,Amtsgericht Charlottenburg HRB 198800 B,Berlin,1.0,18,,0.0362%,Knowunity,
+Pasame XingFu UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 135694 B,Berlin,1.0,18,,0.0362%,Knowunity,
+Auenland Ventures UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 215143 B,Berlin,1.0,31,,0.0623%,Knowunity,
+DK87 Ventures UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 223368 B,Berlin,1.0,8,,0.0161%,Knowunity,
+Fleetblick Ventures UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 225583 B,Berlin,1.0,37,,0.0744%,Knowunity,
+P5 Invest GmbH,Amtsgericht Charlottenburg HRB 235731 B,Berlin,1.0,145,,0.2916%,Knowunity,
+"Redalpine Capital S. C. S. SICAR, Compartment Redalpine Capital VI",registre de commerce et des sociétés B162577,"Luxemburg, Luxemburg",1.0,4183,,8.4124%,Knowunity,
+Discovery Ventures III GmbH & Co. KG,Amtsgericht Charlottenburg,Berlin,1.0,312,,0.6275%,Knowunity,
+Possible Ventures B | GmbH & Co. KG,Amtsgericht Minchen HRA 113430,Minchen,1.0,184,,0.37%,Knowunity,
+Anthonie Jan Kosten,,"Leiden, Niederlande",1.0,261,,0.5249%,Knowunity,26. August 1968
+Gingo UG (haftungsbeschrankt),Amtsgericht Charlottenburg HRB 150158 B,Berlin,1.0,16,,0.0322%,Knowunity,
+Kyrylo Bigay,,"Barcelona, Spanien",1.0,21,,0.0422%,Knowunity,27. Juli 1986
+Hugo Suidman,,Berlin,1.0,16,,0.0322%,Knowunity,23. Juli 1975
+Educapital II FPCI,vertreten durch ihre société de gestion,"Paris, Frankreich",1.0,1805,,3.63%,Knowunity,
+DSH Ventures GmbH,Amtsgericht K6nigstein HRB 9681,Kronberg im Taunus,1.0,18,,0.0362%,Knowunity,
+Gesamt Lino Teuteberg GmbH,Amtsgericht Charlottenburg HRB 179179 B,Berlin,1.0,18,,0.0362%,Knowunity,
+Schork Management UG (haftungsbeschrankt) & Co. KG,HRA 114000,Munchen,1.0,5000,,28.06%,simpleclub,
+Giesecke Management UG (haftungsbeschrankt) & Co. KG,HRA 114002,Munchen,1.0,5002,,28.06%,simpleclub,
+Dr. Markus Nauheim,,Munchen,1.0,25001,,8.49%,simpleclub,29.08.1968
+Ionlion Entertainment GmbH,HRB 148045,"Bernried, Landkreis Munchen",1.0,28616,,2.03%,simpleclub,
+Pausder Ventures GmbH,HRB 163315 B,Berlin,1.0,29520,,1.35%,simpleclub,
+HV Holtzbrinck Ventures Fund VII GmbH & Co. geschlossene Investment KG,HRA 107328,Munchen,1.0,45125,,17.34%,simpleclub,
+CH Stiftung Christian Hilsewig Familienstiftung,,Boppard,1.0,49759,,2.75%,simpleclub,
+Grafelfing,HRB 201802,Landkreis Munchen,1.0,51010,,0.93%,simpleclub,
+Stuttgart,HRB 767189,,1.0,51093,,0.28%,simpleclub,
+MN py siiel inkels Charlottenburg UG (haftungsbeschrankt),HRB 198896,Berlin,1.0,51093,,0.19%,simpleclub,
+MSMM Beteiligungen GmbH,HRB 122197,Charlottenburg,1.0,51385,,0.47%,simpleclub,
+10x Founders Fund GmbH & Co. KG,HRA 113840,Munchen,1.0,54643,,7.35%,simpleclub,
+Brook Alan Bow,,"San Francisco, CA 94105",1.0,57916,,0.53%,simpleclub,07.09.1974
+"Milano, Italien",Registro Imprese der Handelskammer Milano,,,58154,,0.29%,simpleclub,
+Ithaca 3 s.r.l.,Registro Imprese der Handelskammer Milano,Monza Brianza Lodi,,58282,,0.09%,simpleclub,
+Warp284 GmbH,HRB 184717,"Bernried am Starnberger See, Landkreis Munchen",,58321,,0.04%,simpleclub,
+DWD Holding GmbH,HRB 10380,Stegaurach,,58322,,0.29%,simpleclub,
+T161 Holding GmbH,HRB 767189,Stuttgart,,58341,,0.28%,simpleclub,
+Belcarra GmbH,HRB 176522,"Icking, Landkreis Bad Tolz-Wolfratshausen",,58508,,0.29%,simpleclub,
+CH Stiftung Christian Hilsewig Familienstiftung,,Boppard,,58896,,0.12%,simpleclub,
+BDX Holding SEM GmbH,HRB 37082,Leipzig,,58897,,0.03%,simpleclub,
+Weinberger Ventures UG (haftungsbeschrankt),HRB 251408,"Gauting, Landkreis Starnberg",,58961,,0.58%,simpleclub,
+GSN3 GmbH,HRB 251408,"Gauting, Landkreis Starnberg",,59220,,0.29%,simpleclub,
+"Patema (Valencia), Spanien",Registro mercantil von Valencia,,,59350,,0.44%,simpleclub,
+Herr Nicolas Christoph Somogyi,"AG Charlottenburg, HRB 252554 B","Zurich, Schweiz",1.0,11688,"0,0027%","31,58%",Nala Earth,15.07.1992
+Herr Nick Zumbuhl,"AG Charlottenburg, HRB 252554 B","Zug, Schweiz",1.0,11688,"0,0027%","31,58%",Nala Earth,28.10.1993
+AKA Ventures GmbH,"AG Charlottenburg, HRB 139433 B",,1.0,25000,"0,0027%","12,33%",Nala Earth,
+Wingman Ventures Fund Il SCSp,commercial register of Luxembourg registration number B270753,,100.0,32050,"0,0027%","11,119%",Nala Earth,
+Pale Blue Dot Investments AB,Swedish Companies Register (Bolagsverket) registration number 559246-5552,,1.0,36162,"0,0027%","11,11%",Nala Earth,
+Boesch Ventures UG (haftungsbeschrankt),AG Charlottenburg HRB 139390 B,,1.0,36218,"0,0027%","0,1513%",Nala Earth,
+Herr Daniel Mahler,,"Freienbach, Schweiz",1.0,36359,"0,0027%","0,381%",Nala Earth,04.08.1970
+Pink Capital GmbH,AG Charlottenburg HRB 142203 B,,1.0,36528,"0,0027%","0,4567%",Nala Earth,
+BCF Weboptions Vermégensverwaltung GmbH,AG Charlottenburg HRB 136909 B,,1.0,36697,"0,0027%","0,4567%",Nala Earth,
+"Climate-Tech Fund I, a series of Voyagers Funds, LP","Master Voyagers Funds, LP, Delaware Department of State, registration number 3559933",,1.0,36698,"0,0027%","0,4567%",Nala Earth,
+The Delta Flow AG,"commercial register of the Principality of Liechtenstein, registration No. FL-0002.508.058-0",,1.0,37007,"0,0027%","0,381%",Nala Earth,
+Peschko UG (haftungsbeschrankt),eingetragen beim Amtsgericht Wiesbaden unter HRB 25903,Wiesbaden,1.0,25000,,99.8%,RIDE Capital,
+"Peschko, Johannes",,Frankfurt am Main,1.0,25000,,100%,RIDE Capital,4. Dezember 1980
+Franz Christopher Kranzler,AG Charlottenburg HRB 193226 B,Berlin,1.0,5002,"1,00","14,832",Lengoo,02.10.1989
+lengoo GmbH,AG Charlottenburg HRB 193226 B,Berlin,1.0,11339,"1,00","6,695",Lengoo,
+Gigga UG (haftungsbeschrankt),AG Mannheim HRB 720067,Karlsruhe,1.0,24339,"1,00","7,279",Lengoo,
+Techstars Berlin City Fund GmbH & Co. KG,AG Charlottenburg HRA 50780 B,Berlin,1.0,26598,"1,00","2,679",Lengoo,
+Star Power Partners Europe LP,Companies House von England und Wales unter Nr. LP016555,London (Vereinigtes K6nig-reich),1.0,27440,"1,00","1,413",Lengoo,
+Eyser GmbH,AG Stuttgart HRB 733064,Stuttgart,1.0,5627,"1,00","0,359",Lengoo,
+Mercurius Ventures GmbH,AG Charlottenburg HRB 116762 B,Berlin,1.0,5629,"1,00","0,352",Lengoo,
+Gekko Ventures GmbH,AG Charlottenburg HRB 117041 B,Berlin,1.0,27983,"1,00","0,304",Lengoo,
+MH2 Capital GmbH,AG Charlottenburg HRB 146514 B,Berlin,1.0,5675,"1,00","0,567",Lengoo,
+Howzat Growth SCSP,Handelsregister (RCS) von Luxemburg unter B200263,Luxemburg (Luxemburg),1.0,28887,"1,00","1,213",Lengoo,
+Creathor Venture Fund IV (SCSp) SICAR,Handelsregister (RCS) von Luxemburg unter B204789,Luxemburg (Luxemburg),1.0,1111,"1,00","4,166",Lengoo,
+Piton Capital III Investments Co6peratief B.A.,,Amsterdam (Niederlande),1.0,3515,"1,00","8,927",Lengoo,
+Michael Schmitt,,Potsdam,1.0,5759,"1,00","0,544",Lengoo,19.11.1972
+"Redalpine Capital S.C.S., SICAR",Handelsregister (RCS) von Luxemburg unter B162577,Munsbach (Luxemburg),1.0,5517,"1,00","18,251",Lengoo,
+QCS QualityConsult Service GmbH,,Brilisau (Schweiz),1.0,5696,"1,00","0,363",Lengoo,
+"Techstars Ventures 2017, L.P.",Division of Corporations des Staates Delaware unter 6621964,Boulder CO (USA),1.0,5624,"1,00","0,478",Lengoo,
+Volker Pyrtek,,Bonn,1.0,10255,"1,00","0,206",Lengoo,09.07.1959
+Stichting Depositary INKEF Investment Fund,Handelsregister von Amsterdam (Kamer van Koophandel) unter Nr. 50132008,Amsterdam (Niederlande),1.0,10213,"1,00","21,547",Lengoo,
+Polipo LP,Division of Corporations (limited partnerships) in New South Wales unter ILP1800053,North Sydney (Australien),1.0,10339,"1,00","0,396",Lengoo,
+Yasser Ezbakhe,,"Brooklyn, NY (USA)",1.0,59583,"1,00","0,029",Lengoo,05.03.1991
+DM Invest UG (haftungsbeschrankt),AG Minchen HRB 254214,Munchen,1.0,8334,,<1,Heimkapital,
+JS Invest UG (haftungsbeschrankt),AG Minchen HRB 254180,Munchen,1.0,8334,,<1,Heimkapital,
+Starlight Capital GmbH,AG Minchen HRB 249175,Munchen,1.0,16669,,"16,29",Heimkapital,
+VAFM Finfte Beteiligungs GmbH,AG Weiden i. d. OPf HRB 5471,Weiden i.d. Opf.,1.0,651,,"6,12 und 25,02",Heimkapital,
+Herr Kurt Schoffer,,Munchen,1.0,693,,<1,Heimkapital,07. Februar 1962
+Herr Dr. Andreas Daniel Oldenbourg,,Manchen,1.0,693,,<1,Heimkapital,03. Juni 1952
+SLL InvestConsult GmbH,AG Friedberg (Hessen) HRB 9261,Bad Nauheim,1.0,12799,,"1,35",Heimkapital,
+yabeo PropertyTech 2021 GmbH,AG Minchen HRB 268467,"Pullach i. Isartal, Landkreis Munchen",1.0,51150,,"2,39",Heimkapital,
+Vereinigte Volksbank Raiffeisenbank eG,AG Darmstadt GnR 70104,Reinheim,1.0,4514,,<1,Heimkapital,
+TAMAVI PropTech Fund CommV,,Eke/Belgien,1.0,2446,,<1,Heimkapital,
+VividTech Limited,Handelsregister Larnaca/Zypern HE n 400119,Zypern,1.0,25000,,"0,004",Vivid Money,
+Alexander Emeshev,,Berlin,,25000,,"100,00",Vivid Money,23.10.2023
+MDM Minzhandels- Theodor-Heuss- Geschaftsanteil,,Braunschweig,1.0,25000,,100%,World Coin,
