@@ -22,7 +22,7 @@ requests_log.propagate = True
 def test_cr_search_companies():
     retriever = CommercialRegisterRetriever()
     companies = retriever.search("BCN Food Tech GmbH")
-    assert len(companies) > 0
+    assert len(companies) > 0   
 
 def test_cr_download_files():
     session_id: str = None
@@ -45,3 +45,11 @@ def test_cr_download_files():
     company_name, result = retriever.download_documents_from_basket(bypass_storage=True)
 
     assert len(result) > 0
+
+
+def test_cr_find_company_by_hrb():
+    retriever = CommercialRegisterRetriever()
+    # companies = retriever.extended_search(company_id="HRB 269123")
+    companies = retriever.extended_search(company_id="123")
+    assert len(companies) > 0
+    
