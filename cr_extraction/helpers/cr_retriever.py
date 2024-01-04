@@ -174,26 +174,35 @@ class CommercialRegisterRetriever:
         self.browser.open(extended_search_url)
         self.browser.select_form("#searchRegisterForm")
 
-        view_state = self.browser.page.find('input', {'id': 'j_id1:javax.faces.ViewState:1'})['value']
-
-      # Fill in the form fields
-        self.browser["searchRegisterForm:extendedResearchCompanyName"] = "Tanso"
+        # Fill in the form fields
+        self.browser["searchRegisterForm:extendedResearchCompanyName"] = ""
+        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = company_id
         self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = ""
         self.browser["searchRegisterForm:extendedResearchLegalForm"] = "0"
         self.browser["searchRegisterForm:extendedResearchCircuitId"] = "0"
         self.browser["searchRegisterForm:extendedResearchRegisterType"] = "0"
-        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = ""
         self.browser["searchRegisterForm:extendedResearchLanguage"] = "0"
         self.browser["searchRegisterForm:extendedResearchStartDate"] = ""
         self.browser["searchRegisterForm:extendedResearchEndDate"] = ""
         self.browser["submitaction"] = "searchExtendedResearch"
-        # self.browser["searchRegisterForm:j_idt329"] = "Suchen"
-        self.browser["javax.faces.ViewState"] = view_state
+        self.browser["javax.faces.ViewState"] = self.browser.page.find('input', {'id': 'j_id1:javax.faces.ViewState:1'})['value']
 
-        result = self.browser.submit_selected()
+        self.browser.submit_selected()
 
-          # open the search results
-        self.browser.open_relative(self.browser.page.select("div.right a")[0].attrs["href"])
+         # Find the container div
+        container_div = self.browser.page.select_one('.container.result_container.global-search')
+
+        # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+
+        # If there are no results or multiple results, raise an exception
+        if len(row_back_divs) == 0:
+            raise Exception("no results found")
+        elif len(row_back_divs) > 1:
+            raise Exception("multiple results found")
+
+        # open search results
+        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
 
         # retrieve all companies in a list
         companies = []

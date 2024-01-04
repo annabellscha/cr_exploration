@@ -49,7 +49,6 @@ def test_cr_download_files():
 
 def test_cr_find_company_by_hrb():
     retriever = CommercialRegisterRetriever()
-    # companies = retriever.extended_search(company_id="HRB 269123")
-    companies = retriever.extended_search(company_id="123")
+    companies = retriever.extended_search(company_id="HRB 269123")
     assert len(companies) > 0
     
