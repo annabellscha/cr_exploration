@@ -169,6 +169,104 @@ class CommercialRegisterRetriever:
         print("File {} uploaded to {}.".format(full_path, bucket_name))
         return full_path
 
+    def _parse_company_results_page(self, results: List[Dict]) -> List[Dict]:
+        results_page = self.browser.page
+        results = results_page.find("tbody").find_all("tr", attrs={"class": None})
+        companies = []
+        for i in range(0, len(results), 2):
+            company = {}
+            try:
+                company["court_city"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\n")[0]
+            except:
+                company["court_city"] = None
+
+            try:
+                company["court"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[2].strip()
+            except:
+                company["court"] = None
+
+            try:
+                company["id"] = results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[3].strip() + " " + results[i].find("td", attrs={"class": "RegPortErg_AZ"}).text.split("\xa0")[4].strip() 
+            except:
+                company["id"] = None
+
+            try:
+                company["name"] = results[i+1].find("td", attrs={"class": "RegPortErg_FirmaKopf"}).text.strip()
+            except:
+                company["name"] = None
+
+            try:
+                company["city"] = results[i+1].find("td", attrs={"class": "RegPortErg_SitzStatusKopf"}).text.strip()
+            except:
+                company["city"] = None
+
+            try:
+                company["status"] = results[i+1].findAll("td", attrs={"class": "RegPortErg_SitzStatusKopf"})[1].text.strip()
+            except:
+                company["status"] = None
+
+            company["search_index"] = int(i/2)
+
+            company["document_urls"] = {}
+            try:
+                si = results[i+1].find("td", attrs={"class": "RegPortErg_RandRechts"}).find("a", string="SI").attrs["href"]
+                company["document_urls"]["si"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, si)
+            except:
+                si = None
+
+            try:
+                dk = results[i+1].find("td", attrs={"class": "RegPortErg_RandRechts"}).find("a", string="DK").attrs["href"]
+                company["document_urls"]["dk"] = "https://www.unternehmensregister.de/ureg/registerPortal.html;{}{}".format(self.session_id, dk)
+            except:
+                dk = None
+
+            companies.append(company)
+            i+=1
+        return companies
+    
+    
+    def extended_search(self, company_id:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "") -> Dict:
+        extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
+        self.browser.open(extended_search_url)
+        self.browser.select_form("#searchRegisterForm")
+
+        # Fill in the form fields
+        self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
+        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = company_id
+        self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = company_location
+        self.browser["searchRegisterForm:extendedResearchLegalForm"] = legal_form
+        self.browser["searchRegisterForm:extendedResearchCircuitId"] = circuit_id
+        self.browser["searchRegisterForm:extendedResearchRegisterType"] = register_type
+        self.browser["searchRegisterForm:extendedResearchLanguage"] = language
+        self.browser["searchRegisterForm:extendedResearchStartDate"] = start_date
+        self.browser["searchRegisterForm:extendedResearchEndDate"] = end_date
+        self.browser["submitaction"] = "searchExtendedResearch"
+        self.browser["javax.faces.ViewState"] = self.browser.page.find('input', {'id': 'j_id1:javax.faces.ViewState:1'})['value']
+
+        self.browser.submit_selected()
+
+         # Find the container div
+        container_div = self.browser.page.select_one('.container.result_container.global-search')
+
+        # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+
+        # If there are no results or multiple results, raise an exception
+        if len(row_back_divs) == 0:
+            raise Exception("no results found")
+        elif len(row_back_divs) > 1:
+            raise Exception("multiple results found")
+
+        # open search results
+        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+        companies = self._parse_company_results_page(self.browser.page)
+
+        # we expect only one result for the company id
+        if len(companies) != 1:
+            raise Exception("no results found/ multiple companies found")
+            
+        return companies[0]
+   
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
         self.browser.select_form('#globalSearchForm')
@@ -340,3 +438,4 @@ class CommercialRegisterRetriever:
 
                 
             
+

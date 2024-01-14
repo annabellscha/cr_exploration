@@ -98,24 +98,7 @@ def download_files(request):
             )
 
         else:
-            zip_buffer = io.BytesIO()
-            with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
-                for document in documents:
-                    # data should be in bytes, so ensure that it is in the correct format
-                    zip_file.writestr(
-                        document["document_name"], document["document_binary"]
-                    )
-                zip_buffer.seek(0)
-
-            with open(f'{company["name"]}_{company["court"]}.zip', "wb") as f:
-                f.write(zip_buffer.read())
-
-            return send_file(
-                zip_buffer,
-                mimetype="application/zip",
-                as_attachment=True,
-                download_name=f'{company["name"]}_{company["court"]}.zip',
-            )
+           return "You can only bypass storage for a single document", 400
 
     else:
         bucket_name = "cr_documents"
