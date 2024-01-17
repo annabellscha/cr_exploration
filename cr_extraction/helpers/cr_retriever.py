@@ -10,6 +10,9 @@ from google.cloud import storage
 import xml.etree.ElementTree as ET
 import img2pdf
 import re
+import os
+from supabase import create_client, Client
+from dotenv import load_dotenv
 
 class CommercialRegisterRetriever:
     def __init__(self, session_id: str = None, company_name: str = None):
@@ -168,6 +171,44 @@ class CommercialRegisterRetriever:
         
         print("File {} uploaded to {}.".format(full_path, bucket_name))
         return full_path
+    
+    def _upload_file_to_supabase(response: requests.Response, full_path: str) -> None:
+        # change target file name to pdf
+        filename, file_extension = os.path.splitext(full_path)
+        if file_extension.lower() in ['.tif', '.tiff']:
+            full_path = "{}.pdf".format(filename)
+
+        # init supabase client
+        url: str = os.environ.get("SUPABASE_URL")
+        key: str = os.environ.get("SUPABASE_KEY")
+        supabase: Client = create_client(url, key)
+
+        # prepare file content
+        if file_extension.lower() in ['.tif', '.tiff']:
+            response.raw.decode_content = True
+            # Convert the TIFF content to a PDF byte array
+            with io.BytesIO() as pdf_buffer:
+                pdf_bytes = img2pdf.convert(response.raw)
+
+            content_type = 'application/pdf'
+            file_content = pdf_bytes
+
+        else:
+            content_type = 'application/xml'  # or whatever the content type of your other files is
+            file_content = response.content
+
+        # upload file to supabase
+        response = supabase.storage.upload_file(
+            path=full_path,
+            file_or_path=file_content,
+            content_type=content_type,
+        )
+
+        if response.error:
+            print(f"Failed to upload {full_path}: {response.error.message}")
+        else:
+            print(f"File {full_path} uploaded to Supabase.")
+            return full_path
 
     def _parse_company_results_page(self, results: List[Dict]) -> List[Dict]:
         results_page = self.browser.page
