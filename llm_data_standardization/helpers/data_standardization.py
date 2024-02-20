@@ -2,13 +2,13 @@ from openai import OpenAI
 client = OpenAI()
 
 import tiktoken as tiktok
-
-
-class DataStandardization:
-  def num_tokens_from_string(string: str, encoding_name: str) -> int:
+def num_tokens_from_string(string: str, encoding_name: str) -> int:
       encoding = tiktok.encoding_for_model(encoding_name)
       num_tokens = len(encoding.encode(string))
       return num_tokens
+
+class DataStandardization:
+  
 
   def send_to_Openai(df):
     csv_table = df

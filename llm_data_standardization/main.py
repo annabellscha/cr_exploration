@@ -26,10 +26,10 @@ def standardize_data(request):
     else:
         return 'No data provided', 400
     
-    payload = df.to_csv
+    payload = df
     standardizer = DataStandardization()
     result = standardizer.send_to_Openai(payload)
-
+    
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...
     
