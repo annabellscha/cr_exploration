@@ -8,7 +8,7 @@ from google.cloud import storage
 from google import auth
 import functions_framework
 
-from .helpers.table_extraction import DataStandardization
+from .helpers.table_extraction import TableExtractor
 
 # Initialize OpenAI client with your API key
 openai.api_key = 'your-api-key'
@@ -19,16 +19,14 @@ def extract_table(request):
     request_json = request.get_json(silent=True)
     request_args = request.args
     
-    if request_json and 'data' in request_json:
-        df = pd.DataFrame(request_json['data'])
-    elif request_args and 'data' in request_args:
-        df = pd.DataFrame(request_args['data'])
+    if request_json and 'path' in request_json:
+        path = request_json['path']
+    elif request_args and 'path' in request_args:
+        path = request_args['path']
     else:
         return 'No data provided', 400
-    
-    payload = df.to_csv
-    standardizer = DataStandardization()
-    result = standardizer.send_to_Openai(payload)
+    extractor =  TableExtractor()
+    result = extractor.get_pdf_data(path)
 
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...
