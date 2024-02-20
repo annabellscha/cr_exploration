@@ -24,28 +24,28 @@ jobs:
           version: ">= 363.0.0"
       - name: "Use gcloud CLI"
         run: "gcloud info"
-      - name: "Deploy Search Companies Function to Cloud Functions"
-        run: "gcloud functions deploy search_companies \
-          --gen2 \
-          --runtime=python311 \
-          --region=europe-west3 \
-          --source=cr_extraction \
-          --entry-point=search_companies \
-          --trigger-http \
-          --allow-unauthenticated \
-          --set-env-vars=ENV=prod \
-          --timeout=100s"
-      - name: "Deploy Download Files Function to Cloud Functions"
-        run: "gcloud functions deploy download_files \
-          --gen2 \
-          --runtime=python311 \
-          --region=europe-west3 \
-          --source=cr_extraction \
-          --entry-point=download_files \
-          --trigger-http \
-          --allow-unauthenticated \
-          --set-env-vars=ENV=prod \
-          --timeout=240s"
+      # - name: "Deploy Search Companies Function to Cloud Functions"
+      #   run: "gcloud functions deploy search_companies \
+      #     --gen2 \
+      #     --runtime=python311 \
+      #     --region=europe-west3 \
+      #     --source=cr_extraction \
+      #     --entry-point=search_companies \
+      #     --trigger-http \
+      #     --allow-unauthenticated \
+      #     --set-env-vars=ENV=prod \
+      #     --timeout=100s"
+      # - name: "Deploy Download Files Function to Cloud Functions"
+      #   run: "gcloud functions deploy download_files \
+      #     --gen2 \
+      #     --runtime=python311 \
+      #     --region=europe-west3 \
+      #     --source=cr_extraction \
+      #     --entry-point=download_files \
+      #     --trigger-http \
+      #     --allow-unauthenticated \
+      #     --set-env-vars=ENV=prod \
+      #     --timeout=240s"
       - name: "Deploy LLM data standardization to cloud functions"
         run: "gcloud functions deploy send_to_openai \
           --gen2 \
