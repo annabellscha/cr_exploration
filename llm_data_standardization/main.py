@@ -20,9 +20,9 @@ def standardize_data(request):
     request_args = request.args
     
     if request_json and 'data' in request_json:
-        df = pd.DataFrame(request_json['data'])
+        df = request_json['data']
     elif request_args and 'data' in request_args:
-        df = pd.DataFrame(request_args['data'])
+        df = request_args['data']
     else:
         return 'No data provided', 400
     
