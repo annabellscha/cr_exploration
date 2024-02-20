@@ -43,7 +43,7 @@ def search_companies_by_id(request):
         return "Bad Request: Please provide a company name", 400
 
     retriever = CommercialRegisterRetriever()
-    companies = retriever.search(name)
+    companies = retriever.extended_search(name)
 
     return jsonify(companies)
 
