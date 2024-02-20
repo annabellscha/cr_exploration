@@ -34,33 +34,52 @@ import PyPDF2
 import io
 chunk_size = 2
 
+
+from google.cloud import storage
+import io
+import PyPDF2
+import pandas as pd
+
 class TableExtractor:
+    def __init__(self, bucket_name):
+        self.storage_client = storage.Client()
+        self.bucket_name = bucket_name
 
-  def get_pdf_data(self,file_path):
-      with open(file_path, "rb") as file:
-          reader = PyPDF2.PdfReader(file)
-          df_list = pd.DataFrame() 
-          for i in range(0, len(reader.pages), chunk_size):
-              writer = PyPDF2.PdfWriter()
+    def get_pdf_data(self, gcs_file_path):
+        bucket = self.storage_client.get_bucket(self.bucket_name)
+        blob = bucket.blob(gcs_file_path)
+        pdf_bytes = io.BytesIO(blob.download_as_bytes())
 
-              for j in range(i, min(i + chunk_size, len(reader.pages))):
-                  writer.add_page(reader.pages[j])
+        reader = PyPDF2.PdfReader(pdf_bytes)
+        df_list = pd.DataFrame()
+        for i in range(0, len(reader.pages), chunk_size):
+            writer = PyPDF2.PdfWriter()
 
-              pdf_bytes = io.BytesIO()
-              writer.write(pdf_bytes)
-              pdf_bytes.seek(0)
+            for j in range(i, min(i + chunk_size, len(reader.pages))):
+                writer.add_page(reader.pages[j])
 
-              # Now `pdf_bytes` is a file-like object containing the PDF data.
-              # This can be sent to an API as follows:
-              response = analyze_PDF(pdf_bytes)
-              table = get_table_data(response)
-              # Check the response
-              df_list=df_list.append(table)
-              print(df_list)
-              # Clear the writer for the next chunk of pages
-              writer = PyPDF2.PdfWriter()
+            pdf_chunk_bytes = io.BytesIO()
+            writer.write(pdf_chunk_bytes)
+            pdf_chunk_bytes.seek(0)
 
-      return df_list
+            # Now `pdf_chunk_bytes` is a file-like object containing the PDF data.
+            # This can be sent to an API as follows:
+            response = analyze_PDF(pdf_chunk_bytes)
+            table = get_table_data(response)
+            # Check the response
+            df_list = df_list.append(table)
+            print(df_list)
+            # Clear the writer for the next chunk of pages
+            writer = PyPDF2.PdfWriter()
+
+        return df_list
+
+# Usage
+# Assuming you have already authenticated with GCS and have the necessary permissions
+bucket_name = 'cr_documents'
+gcs_file_path = 'Tacto Technology GmbH_München_HRB 257852/Liste der Gesellschafter - Aufnahme in den Registerordner am 18.11.2022-Tacto Technology GmbH.pdf'
+table_extractor = TableExtractor(bucket_name)
+df_list = table_extractor.get_pdf_data(gcs_file_path)
 
 def analyze_PDF(buffer):
       poller = document_analysis_client.begin_analyze_document("prebuilt-layout",buffer)

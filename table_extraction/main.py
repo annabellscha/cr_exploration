@@ -25,7 +25,7 @@ def extract_table(request):
         path = request_args['path']
     else:
         return 'No data provided', 400
-    extractor =  TableExtractor()
+    extractor =  TableExtractor('cr_documents')
     result = extractor.get_pdf_data(path)
 
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
