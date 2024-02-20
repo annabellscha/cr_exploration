@@ -56,4 +56,5 @@ jobs:
           --trigger-http \
           --allow-unauthenticated \
           --set-env-vars=ENV=prod \
+          --set-env-vars OPENAI_API_KEY=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 \
           --timeout=100s"
