@@ -70,7 +70,7 @@ class TableExtractor:
             df_list = pd.concat([df_list, table], ignore_index=True)
             # Clear the writer for the next chunk of pages
             writer = PyPDF2.PdfWriter()
-        result = df_list.to_csv
+        result = df_list.to_json()
         return result
 
 # Usage
