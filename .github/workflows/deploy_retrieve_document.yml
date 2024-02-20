@@ -67,7 +67,5 @@ jobs:
           --entry-point=extract_table \
           --trigger-http \
           --allow-unauthenticated \
-          --set-env-vars=ENV=prod \
-          --set-env-vars FORM_RECOGNIZER_ENDPOINT=https://scraper.cognitiveservices.azure.com/\
-          --set-env-vars FORM_RECOGNIZER_KEY=8b2877ef2b52444886bb09e0c5be84e5 \
+          --set-env-vars=ENV=prod,FORM_RECOGNIZER_ENDPOINT=https://scraper.cognitiveservices.azure.com/,FORM_RECOGNIZER_KEY=8b2877ef2b52444886bb09e0c5be84e5 \
           --timeout=100s"
