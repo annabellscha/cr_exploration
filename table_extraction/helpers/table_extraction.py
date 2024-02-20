@@ -36,7 +36,7 @@ chunk_size = 2
 
 class TableExtractor:
 
-  def get_pdf_data(file_path):
+  def get_pdf_data(self,file_path):
       with open(file_path, "rb") as file:
           reader = PyPDF2.PdfReader(file)
           df_list = pd.DataFrame() 
