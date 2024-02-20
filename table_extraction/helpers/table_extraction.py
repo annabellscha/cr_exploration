@@ -11,10 +11,10 @@ import pandas as pd
 load_dotenv()
 
 # Access the environment variables
-# endpoint = os.getenv("FORM_RECOGNIZER_ENDPOINT")
-# key = os.getenv("FORM_RECOGNIZER_KEY")
-endpoint ="https://scraper.cognitiveservices.azure.com/"
-key ="8b2877ef2b52444886bb09e0c5be84e5"
+endpoint = os.getenv("FORM_RECOGNIZER_ENDPOINT")
+key = os.getenv("FORM_RECOGNIZER_KEY")
+# endpoint ="https://scraper.cognitiveservices.azure.com/"
+# key ="8b2877ef2b52444886bb09e0c5be84e5"
 
 print(key)
 print(endpoint)
