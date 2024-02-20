@@ -47,12 +47,12 @@ jobs:
       #     --set-env-vars=ENV=prod \
       #     --timeout=240s"
       - name: "Deploy LLM data standardization to cloud functions"
-        run: "gcloud functions deploy send_to_openai \
+        run: "gcloud functions deploy standardize_data \
           --gen2 \
           --runtime=python311 \
           --region=europe-west3 \
           --source=llm_data_standardization \
-          --entry-point=send_to_openai \
+          --entry-point=standardize_data \
           --trigger-http \
           --allow-unauthenticated \
           --set-env-vars=ENV=prod \

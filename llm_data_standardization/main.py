@@ -15,7 +15,7 @@ openai.api_key = 'your-api-key'
 
 
 @functions_framework.http
-def send_to_openai(request):
+def standardize_data(request):
     request_json = request.get_json(silent=True)
     request_args = request.args
     
