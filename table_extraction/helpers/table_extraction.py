@@ -66,7 +66,8 @@ class TableExtractor:
             response = analyze_PDF(pdf_chunk_bytes)
             table = get_table_data(response)
             # Check the response
-            df_list = df_list.append(table)
+            # df_list = df_list.append(table)
+            df_list = pd.concat([df_list, table], ignore_index=True)
             print(df_list)
             # Clear the writer for the next chunk of pages
             writer = PyPDF2.PdfWriter()
