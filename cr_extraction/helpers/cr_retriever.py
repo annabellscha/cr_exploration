@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 import img2pdf
 import re
 import os
-from supabase import create_client, Client
+# from supabase import create_client, Client
 from dotenv import load_dotenv
 
 class CommercialRegisterRetriever:
