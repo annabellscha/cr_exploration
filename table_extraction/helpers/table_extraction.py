@@ -41,12 +41,9 @@ import PyPDF2
 import pandas as pd
 
 class TableExtractor:
-    def __init__(self, bucket_name):
-        self.storage_client = storage.Client()
-        self.bucket_name = bucket_name
 
     def get_pdf_data(self, gcs_file_path):
-        bucket = self.storage_client.get_bucket(self.bucket_name)
+        bucket = self.storage_client.get_bucket('cr_documents')
         blob = bucket.blob(gcs_file_path)
         pdf_bytes = io.BytesIO(blob.download_as_bytes())
 
