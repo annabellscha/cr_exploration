@@ -68,11 +68,10 @@ class TableExtractor:
             # Check the response
             # df_list = df_list.append(table)
             df_list = pd.concat([df_list, table], ignore_index=True)
-            print(df_list)
             # Clear the writer for the next chunk of pages
             writer = PyPDF2.PdfWriter()
-
-        return df_list.to_csv
+        result = df_list.to_csv
+        return result
 
 # Usage
 # Assuming you have already authenticated with GCS and have the necessary permissions
