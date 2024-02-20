@@ -72,7 +72,7 @@ class TableExtractor:
             # Clear the writer for the next chunk of pages
             writer = PyPDF2.PdfWriter()
 
-        return df_list
+        return df_list.to_csv
 
 # Usage
 # Assuming you have already authenticated with GCS and have the necessary permissions
