@@ -10,7 +10,7 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 class DataStandardization:
   
 
-  def send_to_Openai(df):
+  def send_to_Openai(self,df):
     csv_table = df
     example_prompt = """
     Please extract all shareholders and their information into a JSON object from the following csv table:
