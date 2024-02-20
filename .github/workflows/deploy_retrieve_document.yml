@@ -2,7 +2,7 @@ name: Deploy Retrieve Document Function to Cloud Functions
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "feature/data-extraction-azure-document-intelligence"]
 
   workflow_dispatch:
 
