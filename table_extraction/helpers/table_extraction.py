@@ -76,10 +76,7 @@ class TableExtractor:
 
 # Usage
 # Assuming you have already authenticated with GCS and have the necessary permissions
-bucket_name = 'cr_documents'
-gcs_file_path = 'Tacto Technology GmbH_München_HRB 257852/Liste der Gesellschafter - Aufnahme in den Registerordner am 18.11.2022-Tacto Technology GmbH.pdf'
-table_extractor = TableExtractor(bucket_name)
-df_list = table_extractor.get_pdf_data(gcs_file_path)
+
 
 def analyze_PDF(buffer):
       poller = document_analysis_client.begin_analyze_document("prebuilt-layout",buffer)
