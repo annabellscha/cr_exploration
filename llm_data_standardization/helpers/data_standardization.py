@@ -97,7 +97,7 @@ class DataStandardization:
     if tokens > 4096:
       model = 'gpt-4-1106-preview'
     else:
-      model = 'gpt-3.5-1106'
+      model = 'gpt-3.5-turbo-1106'
     print(model)
     response = client.chat.completions.create(
       model=model,
