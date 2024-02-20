@@ -46,4 +46,14 @@ jobs:
           --allow-unauthenticated \
           --set-env-vars=ENV=prod \
           --timeout=240s"
-  
+      - name: "Deploy LLM data standardization to cloud functions"
+        run: "gcloud functions deploy send_to_openai \
+          --gen2 \
+          --runtime=python311 \
+          --region=europe-west3 \
+          --source=cr_extraction \
+          --entry-point=send_to_openai \
+          --trigger-http \
+          --allow-unauthenticated \
+          --set-env-vars=ENV=prod \
+          --timeout=100s"
