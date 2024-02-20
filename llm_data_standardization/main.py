@@ -8,7 +8,7 @@ from google.cloud import storage
 from google import auth
 import functions_framework
 
-from .helpers.data_standardization import send_to_Openai
+from .helpers.data_standardization import DataStandardization
 
 # Initialize OpenAI client with your API key
 openai.api_key = 'your-api-key'
@@ -27,8 +27,8 @@ def send_to_openai(request):
         return 'No data provided', 400
     
     payload = df.to_csv
-
-    result = send_to_Openai(payload)
+    standardizer = DataStandardization()
+    result = standardizer.send_to_Openai(payload)
 
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...
