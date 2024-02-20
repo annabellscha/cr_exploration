@@ -8,7 +8,7 @@ from google.cloud import storage
 from google import auth
 import functions_framework
 
-from llm_data_standardization.helpers.data_standardization import send_to_Openai
+from .helpers.data_standardization import send_to_Openai
 
 # Initialize OpenAI client with your API key
 openai.api_key = 'your-api-key'
