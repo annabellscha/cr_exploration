@@ -153,7 +153,8 @@ class CommercialRegisterRetriever:
         bucket_name = "cr_documents"
         bucket = storage_client.get_bucket(bucket_name)
         blob = bucket.blob(full_path)
-        
+        print(f"This is the blob : {blob}")
+        print(f"This is the full path : {full_path}")
         if file_extension.lower() in ['.tif', '.tiff']:
             response.raw.decode_content = True
             # Convert the TIFF content to a PDF byte array
