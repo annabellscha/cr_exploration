@@ -81,12 +81,12 @@ def download_files(request):
     # print(results)
     print("We are about to start extended search")
     results = retriever.extended_search(register_number=register_number, circuit_id=register_mapping)
-    print(results)
-    print(results[0])
+    print(len(results))
+
     # if company_id:
     #     company_data = [x for x in results if x["id"] == company_id][0]
     # else:
-    company_data = results[0]
+    company_data = results
     print(company_data)
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
