@@ -7,6 +7,8 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
 import pandas as pd
 
+from .db_manager import DocumentManager
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -43,7 +45,10 @@ import pandas as pd
 class TableExtractor:
     
 
-    def get_pdf_data(self, gcs_file_path):
+    def get_pdf_data(self, company_id):
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        gcs_file_path=document_manager._get_file_path(company_id)
+
         storage_client = storage.Client(project="cr-extraction")
         bucket = storage_client.get_bucket('cr_documents')
         blob = bucket.blob(gcs_file_path)
