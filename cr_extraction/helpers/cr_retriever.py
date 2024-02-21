@@ -2,6 +2,7 @@ import requests
 import io
 import re
 from datetime import datetime
+from cr_extraction.helpers.db_manager import DocumentManager
 import mechanicalsoup
 from PIL import Image, ImageSequence
 import os
@@ -422,7 +423,7 @@ class CommercialRegisterRetriever:
 
         return
     
-    def download_documents_from_basket(self, bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
+    def download_documents_from_basket(self, company_id, bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
         self.browser.select_form("#doccartForm")
@@ -474,6 +475,8 @@ class CommercialRegisterRetriever:
             if not bypass_storage:
                 storage_client = storage.Client(project="cr-extraction")
                 upload_result = {"type": document_type, "document_name":file_name, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
+                document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id)
                 uploaded_file_paths.append(upload_result)
                 
             else: 
@@ -481,7 +484,10 @@ class CommercialRegisterRetriever:
 
         return self.company, uploaded_file_paths
             
-        
+    # def _save_document_link_to_db(self, full_path: str, company_id: int):
+    #     #Access supabase
+
+
     
 
         
