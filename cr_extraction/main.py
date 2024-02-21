@@ -82,10 +82,10 @@ def download_files(request):
 
     results = retriever.extended_search(register_number=register_number, circuit_id=register_mapping)
 
-    if company_id:
-        company_data = [x for x in results if x["id"] == company_id][0]
-    else:
-        company_data = results[0]
+    # if company_id:
+    #     company_data = [x for x in results if x["id"] == company_id][0]
+    # else:
+    company_data = results[0]
 
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
