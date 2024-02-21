@@ -155,6 +155,9 @@ class CommercialRegisterRetriever:
         blob = bucket.blob(full_path)
         print(f"This is the blob : {blob}")
         print(f"This is the full path : {full_path}")
+
+        
+
         if file_extension.lower() in ['.tif', '.tiff']:
             response.raw.decode_content = True
             # Convert the TIFF content to a PDF byte array
@@ -267,14 +270,14 @@ class CommercialRegisterRetriever:
         return companies
     
     
-    def extended_search(self, company_id:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+    def extended_search(self, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
         self.browser.open(extended_search_url)
         self.browser.select_form("#searchRegisterForm")
 
         # Fill in the form fields
         self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
-        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = company_id
+        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = register_number
         self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = company_location
         self.browser["searchRegisterForm:extendedResearchLegalForm"] = legal_form
         self.browser["searchRegisterForm:extendedResearchCircuitId"] = circuit_id
@@ -465,12 +468,14 @@ class CommercialRegisterRetriever:
             file_name = "{}-{}.{}".format(document_name_cl, company_name_cl, file_format)
             full_path = "{}_{}_{}/{}".format(company_name_cl, court_cl, company_id_cl, file_name)
 
+
             # save file
               # init cloud storage
             if not bypass_storage:
                 storage_client = storage.Client(project="cr-extraction")
                 upload_result = {"type": document_type, "document_name":file_name, "url": self._upload_file_to_gcp(storage_client, result, full_path)}
                 uploaded_file_paths.append(upload_result)
+                
             else: 
                 uploaded_file_paths.append({"type": document_type, "document_binary": result.content, "document_name": file_name})
 
