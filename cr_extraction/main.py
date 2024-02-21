@@ -87,10 +87,10 @@ def download_files(request):
     #     company_data = [x for x in results if x["id"] == company_id][0]
     # else:
     company_data = results[0]
-
+    print(company_data)
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
-
+    print("We are about to start documents to cart")
     retriever.add_documents_to_cart(company=company_data, documents=documents)
     company, documents = retriever.download_documents_from_basket(
         bypass_storage=bypass_storage
