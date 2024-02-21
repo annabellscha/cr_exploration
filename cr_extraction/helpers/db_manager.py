@@ -6,13 +6,14 @@ class DocumentManager:
 
     def _save_document_link_to_db(self, full_path: str, company_id: int):
         # Define the table name where you want to save the document link
-        table_name = 'startup'
+        print("we are in the function now")
+        table_name = 'startups'
 
         # Create a new record or update existing with the company_id and the full_path
         data = {'link_SI_file_current': full_path}
-
+        print("we now atttemot the update")
         # Insert or update the data into the table
-        response = self.supabase.table(table_name).update(data).eq('company_id', company_id).execute()
+        response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
 
         # Check if the operation was successful
         if response.get('status_code') in range(200, 300):
