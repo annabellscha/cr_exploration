@@ -79,7 +79,7 @@ def download_files(request):
     # try:
     # results = retriever.search(company_name=company)
     # print(results)
-
+    print("We are about to start extended search")
     results = retriever.extended_search(register_number=register_number, circuit_id=register_mapping)
     print(results)
     print(results[0])
