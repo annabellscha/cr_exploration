@@ -14,16 +14,16 @@ class DocumentManager:
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
-
-        # Check if the operation was successful
-        if response.get('status_code') in range(200, 300):
-            print("Document link saved successfully.")
-            return response.data
-        else:
-            # Handle any errors that occur during the insert
-            error_message = response.get('error', {}).get('message', 'Unknown error')
-            print(f"Failed to save document link: {error_message}")
-            return None
+        return
+        # # Check if the operation was successful
+        # if response.get('status_code') in range(200, 300):
+        #     print("Document link saved successfully.")
+        #     return response.data
+        # else:
+        #     # Handle any errors that occur during the insert
+        #     error_message = response.get('error', {}).get('message', 'Unknown error')
+        #     print(f"Failed to save document link: {error_message}")
+        #     return None
 
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
