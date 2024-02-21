@@ -66,9 +66,9 @@ def download_files(request):
     else:
         return "Bad Request: Please provide a company name and document types", 400
 
-    company_id = None
-    if request_json and "company_id" in request_json:
-        company_id = request_json["company_id"]
+    # company_id = None
+    # if request_json and "company_id" in request_json:
+    #     # company_id = request_json["company_id"]
 
     bypass_storage = False
     if request_json and "bypass_storage" in request_json:
