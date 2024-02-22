@@ -277,6 +277,8 @@ class CommercialRegisterRetriever:
         data=document_manager._get_search_attributes_from_db(company_id=company_id)
         register_number = data.get('register_identification_number', None)
         circuit_id = data.get('register_mapping', None)
+        print(register_number)
+        print(circuit_id)
 
 
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
