@@ -54,6 +54,13 @@ class DocumentManager:
         #     # Handle any errors that occur during the insert
         #     print(f"Failed to save JSON: {response.error.message if response.error else 'Unknown error'}")
         return None
+    
+    def check_and_get_azure_json(self, company_id: int):
+        table_name = 'startups'
+        
+        # Fetch the record with the given company_id
+        response = self.supabase.table(table_name).select('azure_json').eq('id', company_id).execute()
+        return response.data
 
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
