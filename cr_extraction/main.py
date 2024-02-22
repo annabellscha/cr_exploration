@@ -57,12 +57,16 @@ def download_files(request):
 
     request_json = request.get_json(silent=True)
 
-    if request_json and "company_name" in request_json and "documents" in request_json and "company_id" in request_json and "register_number" in request_json and "register_mapping" in request_json:
-        company_name = request_json["company_name"]
-        documents = request_json["documents"]
+    # if request_json and "company_name" in request_json and "documents" in request_json and "company_id" in request_json and "register_number" in request_json and "register_mapping" in request_json:
+    #     company_name = request_json["company_name"]
+    #     documents = request_json["documents"]
+    #     company_id = request_json["company_id"]
+    #     register_number= request_json["register_number"]
+    #     register_mapping = request_json["register_mapping"]
+    # else:
+    #     return "Bad Request: Please provide a company name and document types", 400
+    if request_json and "company_id" in request_json:
         company_id = request_json["company_id"]
-        register_number= request_json["register_number"]
-        register_mapping = request_json["register_mapping"]
     else:
         return "Bad Request: Please provide a company name and document types", 400
 
@@ -80,7 +84,7 @@ def download_files(request):
     # results = retriever.search(company_name=company)
     # print(results)
 
-    results = retriever.extended_search(register_number=register_number, circuit_id=register_mapping)
+    results = retriever.extended_search(company_id=company_id)
 
 
     # if company_id:

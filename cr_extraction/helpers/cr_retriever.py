@@ -271,7 +271,14 @@ class CommercialRegisterRetriever:
         return companies
     
     
-    def extended_search(self, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+    def extended_search(self, company_id:int, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+        
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id)
+        circuit_id = data.get('register_identification_number', None)
+        register_number = data.get('register_mapping', None)
+        
+
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
         self.browser.open(extended_search_url)
         self.browser.select_form("#searchRegisterForm")
