@@ -78,11 +78,11 @@ class DocumentManager:
 
         # Parse the JSON data
         try:
-            shareholders = json.loads(shareholders_json)
+            shareholders_data = json.loads(shareholders_json)
+            shareholders = shareholders_data.get('shareholders', [])
         except json.JSONDecodeError as e:
             print(f"Invalid JSON data provided: {str(e)}")
             return
-
         # Assuming shareholders is a list of dictionaries
         for shareholder in shareholders:
             shareholder['startup_name'] = company_name
