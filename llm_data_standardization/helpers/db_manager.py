@@ -67,10 +67,8 @@ class DocumentManager:
 
     def get_company_name_by_id(self, company_id: int) -> str:
         response = self.supabase.table('startups').select('startup_name').eq('startup_id', company_id).execute()
-        if response.status_code in range(200, 300) and response.data:
-            return response.data[0].get('startup_name')
-        else:
-            return None
+        return response.data[0].get('startup_name')
+       
 
     def save_shareholders_to_db(self, shareholders_json: str, company_id: int):
         company_name = self.get_company_name_by_id(company_id)
