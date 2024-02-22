@@ -324,6 +324,7 @@ class CommercialRegisterRetriever:
                 
             return companies[0]
         else:
+            print(companies)
             return companies
         
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:

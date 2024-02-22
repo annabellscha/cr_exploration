@@ -65,8 +65,9 @@ def download_files(request):
     #     register_mapping = request_json["register_mapping"]
     # else:
     #     return "Bad Request: Please provide a company name and document types", 400
-    if request_json and "company_id" in request_json:
+    if request_json and "company_id" in request_json and "documents" in request_json:
         company_id = request_json["company_id"]
+        documents = request_json["documents"]
     else:
         return "Bad Request: Please provide a company name and document types", 400
 
@@ -91,7 +92,7 @@ def download_files(request):
     #     company_data = [x for x in results if x["id"] == company_id][0]
     # else:
     company_data = results
- 
+    
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
     retriever.add_documents_to_cart(company=company_data, documents=documents)
