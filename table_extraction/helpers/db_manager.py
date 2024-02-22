@@ -44,7 +44,7 @@ class DocumentManager:
         data = {'azure_json': json_string}
 
         # Insert or update the data into the table
-        response = self.supabase.table(table_name).update(data).eq('id', startup_id).execute()
+        response = self.supabase.table(table_name).update(data).eq('startup_id', startup_id).execute()
 
         # Check if the operation was successful
         # if response.status_code in range(200, 300):
