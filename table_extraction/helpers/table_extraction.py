@@ -51,8 +51,8 @@ class TableExtractor:
         #if not, extract the json and save it to DB
         #if yes, return the json
         result =document_manager.check_and_get_azure_json(company_id)
-
-        if result == None:
+        print(result)
+        if result is None:
             gcs_file_path=document_manager._get_file_path(company_id)
 
 
