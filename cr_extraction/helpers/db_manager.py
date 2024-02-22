@@ -30,7 +30,7 @@ class DocumentManager:
         columns_to_select = 'register_identification_number, register_mapping'
         
         # Fetch the required records with the given company_id
-        response = self.supabase.table(table_name).select(columns_to_select).eq('id', company_id).execute()
+        response = self.supabase.table(table_name).select(columns_to_select).eq('startup_id', company_id).execute()
         return response.data[0]
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
