@@ -59,7 +59,7 @@ class DocumentManager:
         table_name = 'startups'
         
         # Fetch the record with the given company_id
-        response = self.supabase.table(table_name).select('azure_json').eq('id', company_id).execute()
+        response = self.supabase.table(table_name).select('azure_json').eq('startup_id', company_id).execute()
         return response.data
 
 # Usage example:
