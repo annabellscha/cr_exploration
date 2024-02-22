@@ -64,14 +64,11 @@ class DocumentManager:
     
     from supabase import create_client, Client
 
-    
-    def __init__(self, supabase_url: str, supabase_key: str):
-        self.supabase: Client = create_client(supabase_url, supabase_key)
 
     def get_company_name_by_id(self, company_id: int) -> str:
-        response = self.supabase.table('startups').select('company_name').eq('id', company_id).execute()
+        response = self.supabase.table('startups').select('startup_name').eq('startup_id', company_id).execute()
         if response.status_code in range(200, 300) and response.data:
-            return response.data[0].get('company_name')
+            return response.data[0].get('startup_name')
         else:
             return None
 
@@ -90,8 +87,8 @@ class DocumentManager:
 
         # Assuming shareholders is a list of dictionaries
         for shareholder in shareholders:
-            shareholder['company_name'] = company_name
-            shareholder['company_id'] = company_id
+            shareholder['startup_name'] = company_name
+            shareholder['startup_id'] = company_id
             # Insert the shareholder data into the shareholder_relations table
             response = self.supabase.table('shareholder_relations').insert(shareholder).execute()
     
