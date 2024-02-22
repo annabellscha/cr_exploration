@@ -33,7 +33,7 @@ class DocumentManager:
         link = response.data[0].get('link_SI_file_current')
         return link 
     
-    def _save_json_to_db(self, json_data: dict, startup_id: int):
+    def _save_json_to_db(self, json_data: dict, startup_id: int, column_name: str):
         # Define the table name where you want to save the JSON data
         table_name = 'startups'
 
@@ -41,7 +41,7 @@ class DocumentManager:
         json_string = json.dumps(json_data) if isinstance(json_data, dict) else json_data
 
         # Create a record or update an existing one with the startup_id and the JSON data
-        data = {'azure_json': json_string}
+        data = {column_name: json_string}
 
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', startup_id).execute()

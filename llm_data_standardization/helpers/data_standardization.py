@@ -16,7 +16,7 @@ class DataStandardization:
     
     document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
     df = document_manager._check_and_get_azure_json(company_id)
-    
+
     csv_table = df
     example_prompt = """
     Please extract all shareholders and their information into a JSON object from the following csv table:
@@ -112,4 +112,6 @@ class DataStandardization:
     )
     print(response.choices[0].message.content)
     openai_result = response.choices[0].message.content
+
+    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json")
     return openai_result
