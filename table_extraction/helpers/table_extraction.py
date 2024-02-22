@@ -69,6 +69,7 @@ class TableExtractor:
             # Now `pdf_chunk_bytes` is a file-like object containing the PDF data.
             # This can be sent to an API as follows:
             response = analyze_PDF(pdf_chunk_bytes)
+            raw_results = response
             table = get_table_data(response)
             # Check the response
             # df_list = df_list.append(table)
@@ -76,6 +77,11 @@ class TableExtractor:
             # Clear the writer for the next chunk of pages
             writer = PyPDF2.PdfWriter()
         result = df_list.to_json()
+        #write json to
+        #Write result json to DB
+        document_manager._save_json_to_db(result, startup_id=company_id)
+
+
         return result
 
 # Usage
