@@ -275,9 +275,9 @@ class CommercialRegisterRetriever:
         
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
         data=document_manager._get_search_attributes_from_db(company_id=company_id)
-        circuit_id = data.get('register_identification_number', None)
-        register_number = data.get('register_mapping', None)
-        
+        register_number = data.get('register_identification_number', None)
+        circuit_id = data.get('register_mapping', None)
+
 
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
         self.browser.open(extended_search_url)
