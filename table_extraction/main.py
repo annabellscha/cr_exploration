@@ -19,14 +19,15 @@ def extract_table(request):
     request_json = request.get_json(silent=True)
     request_args = request.args
     
-    if request_json and 'path' in request_json:
-        path = request_json['path']
-    elif request_args and 'path' in request_args:
-        path = request_args['path']
+    if request_json and 'company_id' in request_json:
+        company_id = request_json['company_id']
+    elif request_args and 'company_id' in request_args:
+        company_id = request_args['company_id']
     else:
         return 'No data provided', 400
     extractor =  TableExtractor()
-    result = extractor.get_pdf_data(path)
+
+    result = extractor.get_pdf_data(company_id)
 
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...

@@ -19,16 +19,16 @@ def standardize_data(request):
     request_json = request.get_json(silent=True)
     request_args = request.args
     
-    if request_json and 'data' in request_json:
-        df = request_json['data']
-    elif request_args and 'data' in request_args:
-        df = request_args['data']
+    if request_json and 'company_id' in request_json:
+        df = request_json['company_id']
+    elif request_args and 'company_id' in request_args:
+        df = request_args['company_id']
     else:
         return 'No data provided', 400
     
     payload = df
     standardizer = DataStandardization()
-    result = standardizer.send_to_Openai(payload)
+    result = standardizer.send_to_Openai(company_id=payload)
     
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...

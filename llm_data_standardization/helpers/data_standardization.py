@@ -1,4 +1,6 @@
 from openai import OpenAI
+import os
+from .db_manager import DocumentManager
 client = OpenAI()
 
 import tiktoken as tiktok
@@ -10,7 +12,11 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 class DataStandardization:
   
 
-  def send_to_Openai(self,df):
+  def send_to_Openai(self,company_id: int):
+    
+    document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+    df = document_manager._check_and_get_azure_json(company_id)
+
     csv_table = df
     example_prompt = """
     Please extract all shareholders and their information into a JSON object from the following csv table:
@@ -106,4 +112,10 @@ class DataStandardization:
     )
     print(response.choices[0].message.content)
     openai_result = response.choices[0].message.content
+
+    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json")
+
+    # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
+    document_manager.save_shareholders_to_db(openai_result, company_id)
+
     return openai_result
