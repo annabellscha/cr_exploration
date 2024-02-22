@@ -281,6 +281,7 @@ class CommercialRegisterRetriever:
         print(circuit_id)
 
 
+
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
         self.browser.open(extended_search_url)
         self.browser.select_form("#searchRegisterForm")
