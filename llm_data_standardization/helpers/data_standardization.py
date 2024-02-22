@@ -10,7 +10,9 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 class DataStandardization:
   
 
-  def send_to_Openai(self,df):
+  def send_to_Openai(self,company_id: int):
+
+    df = self._check_and_get_azure_json(company_id)
     csv_table = df
     example_prompt = """
     Please extract all shareholders and their information into a JSON object from the following csv table:
