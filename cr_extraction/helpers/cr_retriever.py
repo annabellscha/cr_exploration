@@ -399,23 +399,24 @@ class CommercialRegisterRetriever:
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
             raise Exception("no results found")
+            companies = search(self, company_name= company_name)
+            return companies[0]
         elif len(row_back_divs) > 1:
             raise Exception("multiple results found")
-
-        # open search results
-        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
-        companies = self._parse_company_results_page(self.browser.page)
-
-        # we expect only one result for the company id
-        if return_one:
-            if len(companies) != 1:
-                raise Exception("no results found/ multiple companies found")
-                if len(companies) == 1:
-                    companies = search(self, company_name= company_name)
-            return companies[0]
         else:
-            print(companies)
-            return companies
+        # open search results
+            self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            companies = self._parse_company_results_page(self.browser.page)
+
+            # we expect only one result for the company id
+            if return_one:
+                if len(companies) != 1:
+                    raise Exception("no results found/ multiple companies found")
+                    
+                return companies[0]
+            else:
+                print(companies)
+                return companies
         
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
