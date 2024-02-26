@@ -413,7 +413,11 @@ class CommercialRegisterRetriever:
             # raise Exception("no results found")
             print(company_name)
             companies = self.search(company_name)
-            return companies[0]
+            if companies is None:
+                document_manager._write_error_to_db("no results found", company_id)
+                raise Exception("no results found")
+            else:
+                return companies[0]
         elif len(row_back_divs) > 1:
             raise Exception("multiple results found")
         else:
