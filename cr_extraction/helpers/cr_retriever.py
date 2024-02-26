@@ -405,7 +405,7 @@ class CommercialRegisterRetriever:
 
             # raise Exception("no results found")
             print(company_name)
-            companies = self.search(self, company_name=company_name)
+            companies = self.search(company_name)
             return companies[0]
         elif len(row_back_divs) > 1:
             raise Exception("multiple results found")
