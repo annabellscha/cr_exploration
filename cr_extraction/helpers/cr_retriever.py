@@ -272,6 +272,9 @@ class CommercialRegisterRetriever:
     
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
+        if self.session_id is not None:
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            
         self.browser.select_form('#globalSearchForm')
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
