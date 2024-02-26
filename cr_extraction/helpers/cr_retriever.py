@@ -50,6 +50,7 @@ class CommercialRegisterRetriever:
         while True:
             elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
             if len(elements) == 0:
+                write_error_to_db("no gs list found")
                 raise Exception("no gs list found")
             if level == 3:
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
