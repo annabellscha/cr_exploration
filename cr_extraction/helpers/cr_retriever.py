@@ -421,6 +421,8 @@ class CommercialRegisterRetriever:
                 print(f"these are results: {companies}")
                 return companies
         elif len(row_back_divs) > 1:
+            document_manager._write_error_to_db("multiple results found", company_id)
+            print(f"these are results: {companies}")
             raise Exception("multiple results found")
         else:
         # open search results
