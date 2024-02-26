@@ -402,10 +402,10 @@ class CommercialRegisterRetriever:
 
         # Find all divs with class 'row back' within the container
         row_back_divs = container_div.select('.row.back')
-        print("If statement coming up")
+       
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
-
+            print("doing name search")
             # raise Exception("no results found")
             print(company_name)
             companies = self.search(company_name)
