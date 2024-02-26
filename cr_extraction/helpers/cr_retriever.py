@@ -269,6 +269,7 @@ class CommercialRegisterRetriever:
             companies.append(company)
             i+=1
         return companies
+    
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
         self.browser.select_form('#globalSearchForm')
