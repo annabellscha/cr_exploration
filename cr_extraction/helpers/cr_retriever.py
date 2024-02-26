@@ -38,8 +38,11 @@ class CommercialRegisterRetriever:
         # Pull Overview
         self.browser.open(si_link)
 
-    def _add_gs_to_cart(self, index):
+    def _add_gs_to_cart(self, index, company_id):
         # Open document tree
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+       
+        
         self.browser.open(
             "https://www.unternehmensregister.de/ureg/registerPortal.html;{}?submitaction=showDkTree&searchIdx={}".format(
                 self.session_id, index))
@@ -50,7 +53,7 @@ class CommercialRegisterRetriever:
         while True:
             elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
             if len(elements) == 0:
-                write_error_to_db("no gs list found")
+                document_manager._write_error_to_db("no gs list found", company_id)
                 raise Exception("no gs list found")
             if level == 3:
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
@@ -429,13 +432,13 @@ class CommercialRegisterRetriever:
                 return companies
       
     
-    def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
+    def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
         # set company name
         self.company = company
         
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = self.company["search_index"])
+            self._add_gs_to_cart(index = self.company["search_index"], company_id=company_id)
 
         if "si" in documents:
             self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
