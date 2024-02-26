@@ -414,7 +414,7 @@ class CommercialRegisterRetriever:
             print(company_name)
             companies = self.search(company_name)
             print("check if result is empty")
-            if len(companies) is 0:
+            if len(companies) == 0:
                 document_manager._write_error_to_db("no results found", company_id)
                 raise Exception("no results found")
             else:
