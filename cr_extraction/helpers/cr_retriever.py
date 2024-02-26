@@ -398,8 +398,8 @@ class CommercialRegisterRetriever:
 
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
-            raise Exception("no results found")
-            companies = search(self, company_name= company_name)
+            # raise Exception("no results found")
+            companies = self.search(self, company_name= company_name)
             return companies[0]
         elif len(row_back_divs) > 1:
             raise Exception("multiple results found")
