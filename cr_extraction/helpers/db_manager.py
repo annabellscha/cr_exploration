@@ -27,7 +27,7 @@ class DocumentManager:
     
     def _get_search_attributes_from_db(self, company_id: int):
         table_name = 'startups'
-        columns_to_select = 'register_identification_number, register_mapping'
+        columns_to_select = 'register_identification_number, register_mapping, startup_name'
         
         # Fetch the required records with the given company_id
         response = self.supabase.table(table_name).select(columns_to_select).eq('startup_id', company_id).execute()
