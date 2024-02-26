@@ -372,7 +372,7 @@ class CommercialRegisterRetriever:
        
         print(register_number)
         print(circuit_id)
-         print("we ry to print company name")
+        print("we ry to print company name")
         print(company_name)
 
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
@@ -506,12 +506,3 @@ class CommercialRegisterRetriever:
             
     # def _save_document_link_to_db(self, full_path: str, company_id: int):
     #     #Access supabase
-
-
-    
-
-        
-
-                
-            
-

@@ -32,6 +32,7 @@ class DocumentManager:
         # Fetch the required records with the given company_id
         response = self.supabase.table(table_name).select(columns_to_select).eq('startup_id', company_id).execute()
         print(response.data[0])
+        print("response content above")
         return response.data[0]
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
