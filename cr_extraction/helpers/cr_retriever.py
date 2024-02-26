@@ -367,12 +367,13 @@ class CommercialRegisterRetriever:
         data=document_manager._get_search_attributes_from_db(company_id=company_id)
         register_number = data.get('register_identification_number', None)
         circuit_id = data.get('register_mapping', None)
+
         company_name = data.get('startup_name', None)
+       
         print(register_number)
         print(circuit_id)
+         print("we ry to print company name")
         print(company_name)
-
-
 
         extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
         self.browser.open(extended_search_url)
@@ -398,9 +399,10 @@ class CommercialRegisterRetriever:
 
         # Find all divs with class 'row back' within the container
         row_back_divs = container_div.select('.row.back')
-
+        print("If statement coming up")
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
+
             # raise Exception("no results found")
             print(company_name)
             companies = self.search(self, company_name=company_name)
