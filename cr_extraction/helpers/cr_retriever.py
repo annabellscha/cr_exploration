@@ -377,7 +377,7 @@ class CommercialRegisterRetriever:
         self.browser.select_form("#searchRegisterForm")
 
         # Fill in the form fields
-        self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
+        #self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
         self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = register_number
         self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = company_location
         self.browser["searchRegisterForm:extendedResearchLegalForm"] = legal_form
@@ -400,7 +400,8 @@ class CommercialRegisterRetriever:
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
             # raise Exception("no results found")
-            companies = self.search(self, company_name= company_name)
+            print(company_name)
+            companies = self.search(self, company_name=company_name)
             return companies[0]
         elif len(row_back_divs) > 1:
             raise Exception("multiple results found")
