@@ -95,7 +95,7 @@ def download_files(request):
     
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
-    retriever.add_documents_to_cart(company=company_data, documents=documents)
+    retriever.add_documents_to_cart(company=company_data, documents=documents, company_id=company_id)
     company, documents = retriever.download_documents_from_basket(
         bypass_storage=bypass_storage, company_id = company_id
     )

@@ -27,11 +27,20 @@ class DocumentManager:
     
     def _get_search_attributes_from_db(self, company_id: int):
         table_name = 'startups'
-        columns_to_select = 'register_identification_number, register_mapping'
+        columns_to_select = 'register_identification_number, register_mapping, startup_name'
         
         # Fetch the required records with the given company_id
         response = self.supabase.table(table_name).select(columns_to_select).eq('startup_id', company_id).execute()
+        print(response.data[0])
+        print("response content above")
         return response.data[0]
+    
+    def _write_error_to_db(self, error: str, company_id: int):
+
+        data = {'error': error}
+        table_name = 'startups'
+        response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
+
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
 # document_manager = DocumentManager('your_supabase_url', 'your_supabase_key')

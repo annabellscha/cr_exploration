@@ -38,8 +38,11 @@ class CommercialRegisterRetriever:
         # Pull Overview
         self.browser.open(si_link)
 
-    def _add_gs_to_cart(self, index):
+    def _add_gs_to_cart(self, index, company_id):
         # Open document tree
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+       
+        
         self.browser.open(
             "https://www.unternehmensregister.de/ureg/registerPortal.html;{}?submitaction=showDkTree&searchIdx={}".format(
                 self.session_id, index))
@@ -50,10 +53,12 @@ class CommercialRegisterRetriever:
         while True:
             elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
             if len(elements) == 0:
+                
                 raise Exception("no gs list found")
             if level == 3:
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
                 if len(element) == 0:
+                    document_manager._write_error_to_db("no gs list found", company_id)
                     raise Exception("no gs list found")
                 self.browser.open_relative(element[0].attrs["href"])
                 level += 1
@@ -270,65 +275,11 @@ class CommercialRegisterRetriever:
             i+=1
         return companies
     
-    
-    def extended_search(self, company_id:int, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
-        
-        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-        data=document_manager._get_search_attributes_from_db(company_id=company_id)
-        register_number = data.get('register_identification_number', None)
-        circuit_id = data.get('register_mapping', None)
-        print(register_number)
-        print(circuit_id)
-
-
-
-        extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
-        self.browser.open(extended_search_url)
-        self.browser.select_form("#searchRegisterForm")
-
-        # Fill in the form fields
-        self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
-        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = register_number
-        self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = company_location
-        self.browser["searchRegisterForm:extendedResearchLegalForm"] = legal_form
-        self.browser["searchRegisterForm:extendedResearchCircuitId"] = circuit_id
-        self.browser["searchRegisterForm:extendedResearchRegisterType"] = register_type
-        self.browser["searchRegisterForm:extendedResearchLanguage"] = language
-        self.browser["searchRegisterForm:extendedResearchStartDate"] = start_date
-        self.browser["searchRegisterForm:extendedResearchEndDate"] = end_date
-        self.browser["submitaction"] = "searchExtendedResearch"
-        self.browser["javax.faces.ViewState"] = self.browser.page.find('input', {'id': 'j_id1:javax.faces.ViewState:1'})['value']
-
-        self.browser.submit_selected()
-
-         # Find the container div
-        container_div = self.browser.page.select_one('.container.result_container.global-search')
-
-        # Find all divs with class 'row back' within the container
-        row_back_divs = container_div.select('.row.back')
-
-        # If there are no results or multiple results, raise an exception
-        if len(row_back_divs) == 0:
-            raise Exception("no results found")
-        elif len(row_back_divs) > 1:
-            raise Exception("multiple results found")
-
-        # open search results
-        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
-        companies = self._parse_company_results_page(self.browser.page)
-
-        # we expect only one result for the company id
-        if return_one:
-            if len(companies) != 1:
-                raise Exception("no results found/ multiple companies found")
-                
-            return companies[0]
-        else:
-            print(companies)
-            return companies
-        
     def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
+        if self.session_id is not None:
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            
         self.browser.select_form('#globalSearchForm')
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
@@ -418,13 +369,85 @@ class CommercialRegisterRetriever:
             
         return companies
     
-    def add_documents_to_cart(self, company: Dict, documents: List[str]) -> None:
+    def extended_search(self, company_id:int, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+        
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id)
+        register_number = data.get('register_identification_number', None)
+        circuit_id = data.get('register_mapping', None)
+
+        company_name = data.get('startup_name', None)
+       
+        print(register_number)
+        print(circuit_id)
+        print("we ry to print company name")
+        print(company_name)
+
+        extended_search_url = "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(self.session_id)
+        self.browser.open(extended_search_url)
+        self.browser.select_form("#searchRegisterForm")
+
+        # Fill in the form fields
+        #self.browser["searchRegisterForm:extendedResearchCompanyName"] = company_name
+        self.browser["searchRegisterForm:extendedResearchRegisterNumber"] = register_number
+        self.browser["searchRegisterForm:extendedResearchCompanyLocation"] = company_location
+        self.browser["searchRegisterForm:extendedResearchLegalForm"] = legal_form
+        self.browser["searchRegisterForm:extendedResearchCircuitId"] = circuit_id
+        self.browser["searchRegisterForm:extendedResearchRegisterType"] = register_type
+        self.browser["searchRegisterForm:extendedResearchLanguage"] = language
+        self.browser["searchRegisterForm:extendedResearchStartDate"] = start_date
+        self.browser["searchRegisterForm:extendedResearchEndDate"] = end_date
+        self.browser["submitaction"] = "searchExtendedResearch"
+        self.browser["javax.faces.ViewState"] = self.browser.page.find('input', {'id': 'j_id1:javax.faces.ViewState:1'})['value']
+
+        self.browser.submit_selected()
+
+         # Find the container div
+        container_div = self.browser.page.select_one('.container.result_container.global-search')
+
+        # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+       
+        # If there are no results or multiple results, raise an exception
+        if len(row_back_divs) == 0:
+            print("doing name search")
+            # raise Exception("no results found")
+            print(company_name)
+            companies = self.search(company_name)
+            print("check if result is empty")
+            if len(companies) == 0:
+                document_manager._write_error_to_db("no results found", company_id)
+                raise Exception("no results found")
+            else:
+                print(f"these are results: {companies}")
+                return companies
+        elif len(row_back_divs) > 1:
+            document_manager._write_error_to_db("multiple results found", company_id)
+            print(f"these are results: {companies}")
+            raise Exception("multiple results found")
+        else:
+        # open search results
+            self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            companies = self._parse_company_results_page(self.browser.page)
+
+            # we expect only one result for the company id
+            if return_one:
+                if len(companies) != 1:
+                    raise Exception("no results found/ multiple companies found")
+                    
+                return companies[0]
+            else:
+                print(companies)
+                return companies
+      
+    
+    def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
         # set company name
         self.company = company
         
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = self.company["search_index"])
+            self._add_gs_to_cart(index = self.company["search_index"], company_id=company_id)
 
         if "si" in documents:
             self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
@@ -499,12 +522,3 @@ class CommercialRegisterRetriever:
             
     # def _save_document_link_to_db(self, full_path: str, company_id: int):
     #     #Access supabase
-
-
-    
-
-        
-
-                
-            
-
