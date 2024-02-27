@@ -11,7 +11,6 @@ import functions_framework
 from .helpers.structured_information import StructuredInformation
 
 # Initialize OpenAI client with your API key
-openai.api_key = 'your-api-key'
 
 
 @functions_framework.http
@@ -28,7 +27,7 @@ def get_structured_content(request):
     
     structurer = StructuredInformation()
     result = structurer.get_shareholder_details_from_si(company_id=df)
-    
+
     
     # Your existing code to convert the DataFrame to CSV and generate the JSON response
     # ...
