@@ -50,26 +50,7 @@ class DataStandardization:
     """
 
     example_result ="""{
-        "shareholders": [
-          {
-            "name": "TestInc",
-            "country": "Germany",
-            "location": "München",
-            "register_id": "HRB 268779",
-            "register_court": "AG München",
-            "percentage_of_total_shares": 2.34
-          },
-          {
-            "name": "TestyMcTestface",
-            "country": "Germany",
-            "location": "München",
-            "birthdate": "1990-01-19",
-            "register_id": null,
-            "register_court": null,
-            "percentage_of_total_shares": 0.29
-          }
-        ]
-      }
+        "shareholders": [{"name": "TestInc", "country": "Germany","location": "München","register_id": "HRB 268779","register_court": "AG München","percentage_of_total_shares": 2.34},{"name": "TestyMcTestface","country": "Germany","location": "München","birthdate": "1990-01-19","register_id": null,"register_court": null,"percentage_of_total_shares": 0.29}] }
       """
 
 
@@ -116,6 +97,9 @@ class DataStandardization:
     document_manager._save_json_to_db(openai_result, company_id, "shareholder_json")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
-    document_manager.save_shareholders_to_db(openai_result, company_id)
+    try:
+      document_manager.save_shareholders_to_db(openai_result, company_id)
+    except Exception as e:
+       document_manager._write_error_to_db("could not add json to shareholdes list", company_id)
 
     return openai_result
