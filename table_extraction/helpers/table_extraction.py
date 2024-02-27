@@ -34,7 +34,7 @@ document_analysis_client = DocumentAnalysisClient(
 #     return buffer
 import PyPDF2
 import io
-chunk_size = 2
+
 
 
 from google.cloud import storage
@@ -63,10 +63,10 @@ class TableExtractor:
 
             reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
-            for i in range(0, len(reader.pages), chunk_size):
+            for i in range(0, len(reader.pages), len(reader.pages)):
                 writer = PyPDF2.PdfWriter()
 
-                for j in range(i, min(i + chunk_size, len(reader.pages))):
+                for j in range(i, min(i + len(reader.pages), len(reader.pages))):
                     writer.add_page(reader.pages[j])
 
                 pdf_chunk_bytes = io.BytesIO()
