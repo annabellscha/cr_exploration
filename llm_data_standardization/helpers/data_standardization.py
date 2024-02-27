@@ -31,8 +31,8 @@ class DataStandardization:
     je Ge- schäftsan- teil / per each Share";"Prozentuale Be- teiligung / Participation in %
     je Gesell- schafter / per each Sharehol- der";"Veränderungs- spalte / Column showing changes
     T=Teilung / split Z=Zusammenlegung / combination E=Einziehung / redemption KE=Kapitalerhöhung / ca- pital increase KA=Aufstockung / step-up KH=Kapitalherabsetzung / capital reduction A=Anteilsübergang / trans- fer"
-    FYS Ventures UG (haf- tungsbeschränkt);AG München, HRB 268779;München;1,00;1 - 1.110;1.110;0,0021 %;2,34 %;
-    Salma Vogel;19. Januar 1990;München;1,00;32.609 - 32.745;137;0,0021 %;0,29 %;
+    TestInc;AG München, HRB 268779;München;1,00;1 - 1.110;1.110;0,0021 %;2,34 %;
+    TestyMcTestface;19. Januar 1990;München;1,00;32.609 - 32.745;137;0,0021 %;0,29 %;
     Gesamt;;;;;47.350;;100,00 %;
 
     The JSON object should have a key "shareholders" with a list of shareholders.
@@ -100,7 +100,7 @@ class DataStandardization:
     messages_string = "\n".join([f"{message['role']}: {message['content']}" for message in messages])
     tokens = num_tokens_from_string(messages_string, "gpt-3.5-turbo")
     print(tokens)
-    if tokens > 4096:
+    if tokens > 16000:
       model = 'gpt-4-1106-preview'
     else:
       model = 'gpt-3.5-turbo-1106'
