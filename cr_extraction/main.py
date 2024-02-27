@@ -31,6 +31,24 @@ def search_companies(request):
 
 
 @functions_framework.http
+def search_companies_by_id(request):
+    request_json = request.get_json(silent=True)
+    request_args = request.args
+
+    if request_json and "name" in request_json:
+        name = request_json["name"]
+    elif request_args and "name" in request_args:
+        name = request_args["name"]
+    else:
+        return "Bad Request: Please provide a company name", 400
+
+    retriever = CommercialRegisterRetriever()
+    companies = retriever.search(name)
+
+    return jsonify(companies)
+
+
+@functions_framework.http
 def download_files(request):
     load_dotenv()
     credentials, _ = auth.default()
@@ -39,15 +57,23 @@ def download_files(request):
 
     request_json = request.get_json(silent=True)
 
-    if request_json and "company" in request_json and "documents" in request_json:
-        company = request_json["company"]
+    # if request_json and "company_name" in request_json and "documents" in request_json and "company_id" in request_json and "register_number" in request_json and "register_mapping" in request_json:
+    #     company_name = request_json["company_name"]
+    #     documents = request_json["documents"]
+    #     company_id = request_json["company_id"]
+    #     register_number= request_json["register_number"]
+    #     register_mapping = request_json["register_mapping"]
+    # else:
+    #     return "Bad Request: Please provide a company name and document types", 400
+    if request_json and "company_id" in request_json and "documents" in request_json:
+        company_id = request_json["company_id"]
         documents = request_json["documents"]
     else:
         return "Bad Request: Please provide a company name and document types", 400
 
-    company_id = None
-    if request_json and "company_id" in request_json:
-        company_id = request_json["company_id"]
+    # company_id = None
+    # if request_json and "company_id" in request_json:
+    #     # company_id = request_json["company_id"]
 
     bypass_storage = False
     if request_json and "bypass_storage" in request_json:
@@ -56,20 +82,22 @@ def download_files(request):
     retriever = CommercialRegisterRetriever()
 
     # try:
-    results = retriever.search(company_name=company)
-    print(results)
+    # results = retriever.search(company_name=company)
+    # print(results)
 
-    if company_id:
-        company_data = [x for x in results if x["id"] == company_id][0]
-    else:
-        company_data = results[0]
+    results = retriever.extended_search(company_id=company_id)
 
+
+    # if company_id:
+    #     company_data = [x for x in results if x["id"] == company_id][0]
+    # else:
+    company_data = results
+    
     # except Exception as e:
     #     return 'Error: {}'.format(e), 500
-
-    retriever.add_documents_to_cart(company=company_data, documents=documents)
+    retriever.add_documents_to_cart(company=company_data, documents=documents, company_id=company_id)
     company, documents = retriever.download_documents_from_basket(
-        bypass_storage=bypass_storage
+        bypass_storage=bypass_storage, company_id = company_id
     )
 
     response_object = company
@@ -98,24 +126,7 @@ def download_files(request):
             )
 
         else:
-            zip_buffer = io.BytesIO()
-            with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
-                for document in documents:
-                    # data should be in bytes, so ensure that it is in the correct format
-                    zip_file.writestr(
-                        document["document_name"], document["document_binary"]
-                    )
-                zip_buffer.seek(0)
-
-            with open(f'{company["name"]}_{company["court"]}.zip', "wb") as f:
-                f.write(zip_buffer.read())
-
-            return send_file(
-                zip_buffer,
-                mimetype="application/zip",
-                as_attachment=True,
-                download_name=f'{company["name"]}_{company["court"]}.zip',
-            )
+           return "You can only bypass storage for a single document", 400
 
     else:
         bucket_name = "cr_documents"
@@ -124,6 +135,7 @@ def download_files(request):
 
         for document in documents:
             blob = bucket.blob(document["url"])
+            print(blob)
             url = blob.generate_signed_url(
                 version="v4",
                 # This URL is valid for 15 minutes

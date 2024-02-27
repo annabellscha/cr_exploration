@@ -167,3 +167,4 @@ notebooks/output/
 
 scraped_pdfs
 notebooks/*.pdf
+notebooks/*.xml
