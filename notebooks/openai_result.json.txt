@@ -1,0 +1,461 @@
+{
+  "shareholders": [
+    {
+      "shareholder_name": "Artur Koop",
+      "shareholder_country": "Germany",
+      "birthdate": "1991-06-16",
+      "shareholder_location": "Bremen",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 3.34
+    },
+    {
+      "shareholder_name": "Sebastien Reichstadt",
+      "shareholder_country": "France",
+      "birthdate": "1979-10-06",
+      "shareholder_location": "Bordeaux",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 2.50
+    },
+    {
+      "shareholder_name": "Johannes Reijneveld",
+      "shareholder_country": "France",
+      "birthdate": "1986-06-04",
+      "shareholder_location": "Toulouse",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 2.54
+    },
+    {
+      "shareholder_name": "The Exploration Company GmbH - eigene Anteile -",
+      "shareholder_country": null,
+      "birthdate": null,
+      "shareholder_location": null,
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 1.59
+    },
+    {
+      "shareholder_name": "Priyanka Das",
+      "shareholder_country": "France",
+      "birthdate": "1991-10-03",
+      "shareholder_location": "Toulouse",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Hélène Huby",
+      "shareholder_country": "Germany",
+      "birthdate": "1978-02-20",
+      "shareholder_location": "Bremen",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 22.90
+    },
+    {
+      "shareholder_name": "Pierre Vinet",
+      "shareholder_country": "Italy",
+      "birthdate": "1975-04-20",
+      "shareholder_location": "Rom",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 1.31
+    },
+    {
+      "shareholder_name": "André Lanata",
+      "shareholder_country": "France",
+      "birthdate": "1961-10-10",
+      "shareholder_location": "Oletta",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.29
+    },
+    {
+      "shareholder_name": "Christian Dargnat",
+      "shareholder_country": "France",
+      "birthdate": "1965-10-13",
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares":  0.63
+    },
+    {
+      "shareholder_name": "AURA SAS",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "838 931 103",
+      "register_court": "Paris",
+      "percentage_of_total_shares": 0.20
+    },
+    {
+      "shareholder_name": "Deep Impact Investment Holding GmbH",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Wolfsburg",
+      "register_id": "HRB 208640",
+      "register_court": "AG Braunschweig",
+      "percentage_of_total_shares": 0.53
+    },
+    {
+      "shareholder_name": "Temaris et associés SAS",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "835 283 508 000 17",
+      "register_court": "Handelsregister Paris",
+      "percentage_of_total_shares": 0.89
+    },
+    {
+      "shareholder_name": "Aperitus Limited",
+      "shareholder_country": "Malta",
+      "birthdate": null,
+      "shareholder_location": "Santa Venera",
+      "register_id": "C91051",
+      "register_court": "Malta Business Registry",
+      "percentage_of_total_shares": 0.45
+    },
+    {
+      "shareholder_name": "Nils Bernhardt",
+      "shareholder_country": "Germany",
+      "birthdate": "1994-12-26",
+      "shareholder_location": "München",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares":  0.14
+    },
+    {
+      "shareholder_name": "Romain Mabboux",
+      "shareholder_country": "France",
+      "birthdate": "1997-08-01",
+      "shareholder_location": "Lille",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.02
+    },
+    {
+      "shareholder_name": "Orbital Ventures S.C.A., SICAV-RAIF",
+      "shareholder_country": "Luxembourg",
+      "birthdate": null,
+      "shareholder_location": "Luxemburg",
+      "register_id": "B238342",
+      "register_court": "Registre de Commerce et des So- ciétés (RCS)",
+      "percentage_of_total_shares": 16.52
+    },
+    {
+      "shareholder_name": "Vsquared Ventures I GmbH & Co. KG",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "München",
+      "register_id": "HRA 112079",
+      "register_court": "AG München",
+      "percentage_of_total_shares": 5.40
+    },
+    {
+      "shareholder_name": "Bruno Maisonnier",
+      "shareholder_country": "France",
+      "birthdate": "1958-08-03",
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.07
+    },
+    {
+      "shareholder_name": "The Nuga Trust",
+      "shareholder_country": "USA",
+      "birthdate": null,
+      "shareholder_location": "Wilmington, DE",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.13
+    },
+    {
+      "shareholder_name": "Maru Winnacker",
+      "shareholder_country": "Germany",
+      "birthdate": "1979-07-03",
+      "shareholder_location": "Berlin",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.09
+    },
+    {
+      "shareholder_name": "Cherry Ventures Fund IV GmbH & Co KG",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Berlin",
+      "register_id": "HRA 59198 B",
+      "register_court": "AG Charlottenburg",
+      "percentage_of_total_shares": 5.70
+    },
+    {
+      "shareholder_name": "Rymdkapital SPV TEC AB",
+      "shareholder_country": "Sweden",
+      "birthdate": null,
+      "shareholder_location": "Stockholm",
+      "register_id": "559400-5919",
+      "register_court": "Schwedisches Gesellschaftsregister",
+      "percentage_of_total_shares": 0.62
+    },
+    {
+      "shareholder_name": "Possible Ventures II GmbH & Co. KG",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "München",
+      "register_id": "HRA 114517",
+      "register_court": "AG München",
+      "percentage_of_total_shares": 0.05
+    },
+    {
+      "shareholder_name": "Prof. Dr. Dr. Ann-Kristin Achleitner, geb. Koberg",
+      "shareholder_country": "Germany",
+      "birthdate": "1966-03-16",
+      "shareholder_location": "München",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.05
+    },
+    {
+      "shareholder_name": "July Fund 22 GmbH & Co. KG",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Berlin",
+      "register_id": "HRA 60199 B",
+      "register_court": "AG Charlottenburg",
+      "percentage_of_total_shares": 1.77
+    },
+    {
+      "shareholder_name": "FPCI Omnes Real Tech",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 2.21
+    },
+    {
+      "shareholder_name": "FCPI Capital Invest PME 2019",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.79
+    },
+    {
+      "shareholder_name": "FCPI Capital Invest PME 2020",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.14
+    },
+    {
+      "shareholder_name": "FCPI Capital Invest PME 2021",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.10
+    },
+    {
+      "shareholder_name": "Partech Entrepreneur Fund IV FPCI",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 2.70
+    },
+    {
+      "shareholder_name": "SORIAK S.A.S.",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "829 881 465 R.C.S. Paris",
+      "register_court": "Greffe du Tribunal de Commerce de Paris",
+      "percentage_of_total_shares": 2.29
+    },
+    {
+      "shareholder_name": "WMA Master VCC",
+      "shareholder_country": "Singapore",
+      "birthdate": null,
+      "shareholder_location": "Singapur",
+      "register_id": "T22VC0265F",
+      "register_court": "Singapur Accounting and Corporate Regulatory Authority (ACRA)",
+      "percentage_of_total_shares": 1.35
+    },
+    {
+      "shareholder_name": "EQT Ventures III S.à r.l. SICAF-RAIF",
+      "shareholder_country": "Luxembourg",
+      "birthdate": null,
+      "shareholder_location": "Luxemburg",
+      "register_id": "B 259227",
+      "register_court": "Registre de Commerce et des Sociétés",
+      "percentage_of_total_shares": 10.79
+    },
+    {
+      "shareholder_name": "RRW II Growth SLP",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "904 969 524 R.C.S. Paris",
+      "register_court": "Greffe du Tribunal de Commerce de Paris",
+      "percentage_of_total_shares": 7.55
+    },
+    {
+      "shareholder_name": "Najwa Naimy",
+      "shareholder_country": "France",
+      "birthdate": "1990-12-05",
+      "shareholder_location": "Meudon",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Olivier Faure",
+      "shareholder_country": "France",
+      "birthdate": "1985-03-23",
+      "shareholder_location": "Eysines",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.03
+    },
+    {
+      "shareholder_name": "Thomas Nussmann",
+      "shareholder_country": "France",
+      "birthdate": "1981-11-21",
+      "shareholder_location": "Poissy",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Francesco Stortini",
+      "shareholder_country": "Germany",
+      "birthdate": "1990-08-14",
+      "shareholder_location": "München",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Antoine Pallois",
+      "shareholder_country": "Germany",
+      "birthdate": "1995-07-17",
+      "shareholder_location": "München",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Sonia Magniant",
+      "shareholder_country": "France",
+      "birthdate": "1982-04-13",
+      "shareholder_location": "Gaillon sur Montcient",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.01
+    },
+    {
+      "shareholder_name": "Karim Ganem",
+      "shareholder_country": "Spain",
+      "birthdate": "1977-01-29",
+      "shareholder_location": "Barcelona",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.34
+    },
+    {
+      "shareholder_name": "BleM56 S.C.I.",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Meudon",
+      "register_id": "485 039 481 R.C.S. Nanterre",
+      "register_court": "Greffe du Tribunal de Commerce de Nanterre",
+      "percentage_of_total_shares": 0.69
+    },
+    {
+      "shareholder_name": "Geodesic S.A.S.",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "901 549 790 R.C.S. Paris",
+      "register_court": "Greffe du Tribunal de Commerce de Paris",
+      "percentage_of_total_shares": 0.34
+    },
+    {
+      "shareholder_name": "Pink Capital GmbH",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Berlin",
+      "register_id": "HRB 142203 B",
+      "register_court": "AG Charlottenburg",
+      "percentage_of_total_shares": 0.14
+    },
+    {
+      "shareholder_name": "Sebastien Ayton",
+      "shareholder_country": "France",
+      "birthdate": "1986-06-06",
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.07
+    },
+    {
+      "shareholder_name": "Lear Javiv",
+      "shareholder_country": "United Kingdom",
+      "birthdate": "1985-10-25",
+      "shareholder_location": "London",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.14
+    },
+    {
+      "shareholder_name": "Interface Capital I GmbH & Co. KG",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Berlin",
+      "register_id": "HRA 60165 B",
+      "register_court": "AG Charlottenburg",
+      "percentage_of_total_shares": 0.14
+    },
+    {
+      "shareholder_name": "Izzat Holdings Ltd.",
+      "shareholder_country": "British Virgin Islands",
+      "birthdate": null,
+      "shareholder_location": "Tortola",
+      "register_id": "1625418",
+      "register_court": "Register Tortola, British Virgin Islands",
+      "percentage_of_total_shares": 0.51
+    },
+    {
+      "shareholder_name": "MH2 Capital GmbH",
+      "shareholder_country": "Germany",
+      "birthdate": null,
+      "shareholder_location": "Berlin",
+      "register_id": "HRB 146514 B",
+      "register_court": "AG Charlottenburg",
+      "percentage_of_total_shares": 0.07
+    },
+    {
+      "shareholder_name": "Marc Postel-Vinay",
+      "shareholder_country": "France",
+      "birthdate": "1986-01-17",
+      "shareholder_location": "Paris",
+      "register_id": null,
+      "register_court": null,
+      "percentage_of_total_shares": 0.34
+    },
+    {
+      "shareholder_name": "Habert Dassault Finance SAS",
+      "shareholder_country": "France",
+      "birthdate": null,
+      "shareholder_location": "Paris",
+      "register_id": "409 109 428 R.C.S. Paris",
+      "register_court": "Greffe du Tribunal de Commerce de Paris",
+      "percentage_of_total_shares": 0.97
+    }]}

@@ -1,3 +1,7 @@
+
+openai
+pandas
+tiktoken
 requests==2.31.0
 MechanicalSoup==1.3.0
 beautifulsoup4==4.12.2
@@ -11,3 +15,6 @@ python-magic==0.4.27
 python-dotenv==1.0.0
 pdf2image==1.16.3
 supabase
+azure-ai-formrecognizer
+PyPDF2
+
