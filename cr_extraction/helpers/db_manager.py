@@ -4,13 +4,16 @@ class DocumentManager:
     def __init__(self, supabase_url: str, supabase_key: str):
         self.supabase: Client = create_client(supabase_url, supabase_key)
 
-    def _save_document_link_to_db(self, full_path: str, company_id: int):
+    def _save_document_link_to_db(self, full_path: str, company_id: int, document_type:str):
         # Define the table name where you want to save the document link
         print("we are in the function now")
         table_name = 'startups'
 
         # Create a new record or update existing with the company_id and the full_path
-        data = {'link_SI_file_current': full_path}
+        if document_type == "si":
+            data = {'link_structured_content_file_current': full_path}
+        else:
+            data = {'link_SI_file_current': full_path}
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()

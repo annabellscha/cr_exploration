@@ -512,7 +512,7 @@ class CommercialRegisterRetriever:
                 
                 print("we are trying to save now")
                 document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id)
+                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id, document_type=document_type)
                 uploaded_file_paths.append(upload_result)
                 
             else: 
