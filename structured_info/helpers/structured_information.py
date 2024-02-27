@@ -69,7 +69,7 @@ class StructuredInformation:
 
   def get_shareholder_details_from_si(self,company_id:int):
   
-    file_content = self.get_pdf_for_company(company_id,'si',True)
+    file_content = self._get_pdf_for_company(company_id,'si',True)
 
     root = ET.fromstring(file_content)
 
