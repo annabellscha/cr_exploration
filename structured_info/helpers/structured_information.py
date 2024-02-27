@@ -1,7 +1,7 @@
 from openai import OpenAI
 import os
 from .db_manager import DocumentManager
-client = OpenAI()
+
 
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.formrecognizer import DocumentAnalysisClient
