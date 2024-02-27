@@ -46,31 +46,31 @@ jobs:
       #     --allow-unauthenticated \
       #     --set-env-vars=ENV=prod,SUPABASE_URL=https://vzaliuejopysgkdewpip.supabase.co,SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6YWxpdWVqb3B5c2drZGV3cGlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ4MjYwMiwiZXhwIjoyMDIxMDU4NjAyfQ.IJRQA4brOCmZOmIe6E_RU5cpLGJ1zEthiesYGK9im6E \
       #     --timeout=240s"
-      - name: "Deploy LLM data standardization to cloud functions"
-        run: "gcloud functions deploy standardize_data \
-          --gen2 \
-          --runtime=python311 \
-          --region=europe-west3 \
-          --source=llm_data_standardization \
-          --entry-point=standardize_data \
-          --trigger-http \
-          --allow-unauthenticated \
-          --memory=1024Mi \
-          --set-env-vars=ENV=prod \
-          --set-env-vars OPENAI_API_KEY=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,SUPABASE_URL=https://vzaliuejopysgkdewpip.supabase.co,SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6YWxpdWVqb3B5c2drZGV3cGlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ4MjYwMiwiZXhwIjoyMDIxMDU4NjAyfQ.IJRQA4brOCmZOmIe6E_RU5cpLGJ1zEthiesYGK9im6E \
-          --timeout=100s"
-      # - name: "Get Table from PDF"
-      #   run: "gcloud functions deploy extract_table \
+      # - name: "Deploy LLM data standardization to cloud functions"
+      #   run: "gcloud functions deploy standardize_data \
       #     --gen2 \
       #     --runtime=python311 \
       #     --region=europe-west3 \
-      #     --source=table_extraction \
-      #     --entry-point=extract_table \
+      #     --source=llm_data_standardization \
+      #     --entry-point=standardize_data \
       #     --trigger-http \
       #     --allow-unauthenticated \
       #     --memory=1024Mi \
-      #     --set-env-vars=ENV=prod,FORM_RECOGNIZER_ENDPOINT=https://scraper.cognitiveservices.azure.com/,FORM_RECOGNIZER_KEY=8b2877ef2b52444886bb09e0c5be84e5,SUPABASE_URL=https://vzaliuejopysgkdewpip.supabase.co,SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6YWxpdWVqb3B5c2drZGV3cGlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ4MjYwMiwiZXhwIjoyMDIxMDU4NjAyfQ.IJRQA4brOCmZOmIe6E_RU5cpLGJ1zEthiesYGK9im6E \
+      #     --set-env-vars=ENV=prod \
+      #     --set-env-vars OPENAI_API_KEY=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,SUPABASE_URL=https://vzaliuejopysgkdewpip.supabase.co,SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6YWxpdWVqb3B5c2drZGV3cGlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ4MjYwMiwiZXhwIjoyMDIxMDU4NjAyfQ.IJRQA4brOCmZOmIe6E_RU5cpLGJ1zEthiesYGK9im6E \
       #     --timeout=100s"
+      - name: "Get Table from PDF"
+        run: "gcloud functions deploy extract_table \
+          --gen2 \
+          --runtime=python311 \
+          --region=europe-west3 \
+          --source=table_extraction \
+          --entry-point=extract_table \
+          --trigger-http \
+          --allow-unauthenticated \
+          --memory=1024Mi \
+          --set-env-vars=ENV=prod,FORM_RECOGNIZER_ENDPOINT=https://scraper.cognitiveservices.azure.com/,FORM_RECOGNIZER_KEY=8b2877ef2b52444886bb09e0c5be84e5,SUPABASE_URL=https://vzaliuejopysgkdewpip.supabase.co,SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6YWxpdWVqb3B5c2drZGV3cGlwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwNTQ4MjYwMiwiZXhwIjoyMDIxMDU4NjAyfQ.IJRQA4brOCmZOmIe6E_RU5cpLGJ1zEthiesYGK9im6E \
+          --timeout=100s"
       # - name: "Get Structured Information from XML"
       #   run: "gcloud functions deploy get_structured_content \
       #     --gen2 \
