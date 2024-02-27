@@ -90,6 +90,11 @@ class DocumentManager:
             # Insert the shareholder data into the shareholder_relations table
             response = self.supabase.table('shareholder_relations').insert(shareholder).execute()
     
+    def _write_error_to_db(self, error: str, company_id: int):
+
+        data = {'error': error}
+        table_name = 'startups'
+        response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
 
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
