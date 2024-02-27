@@ -52,7 +52,7 @@ class DataStandardization:
     example_result ="""{
         "shareholders": [
           {
-            "name": "FYS Ventures UG (haftungsbeschränkt)",
+            "name": "TestInc",
             "country": "Germany",
             "location": "München",
             "register_id": "HRB 268779",
@@ -60,7 +60,7 @@ class DataStandardization:
             "percentage_of_total_shares": 2.34
           },
           {
-            "name": "Salma Vogel",
+            "name": "TestyMcTestface",
             "country": "Germany",
             "location": "München",
             "birthdate": "1990-01-19",
