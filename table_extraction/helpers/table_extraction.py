@@ -96,7 +96,7 @@ class TableExtractor:
 
 
 def analyze_PDF(buffer):
-      poller = document_analysis_client.begin_analyze_document("prebuilt-layout",buffer)
+      poller = document_analysis_client.begin_analyze_document("prebuilt-layout", buffer)
       result = poller.result()
       return result
 
