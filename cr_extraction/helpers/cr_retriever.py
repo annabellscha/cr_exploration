@@ -75,14 +75,14 @@ class CommercialRegisterRetriever:
                 #filter for element that contains the word "2021", '2020' or '2019' 
                 element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
                 print(f"Elements 4: {elements}")
-                self.file_name = elements[0].text
+                self.file_name = elements[1].text
                 print(f"Elements an 0: {elements[0].text}")
                 print(f"Elements an 1: {elements[1].text}")
                 print(self.file_name)
                 
                 self.file_type = "gs"
-                self.browser.open_relative(elements[0].attrs["href"])
-                print(elements[0].attrs["href"])
+                self.browser.open_relative(elements[1].attrs["href"])
+                print(elements[1].attrs["href"])
                 level += 1
                 break
 
