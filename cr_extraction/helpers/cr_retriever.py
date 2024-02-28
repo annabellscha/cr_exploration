@@ -59,11 +59,11 @@ class CommercialRegisterRetriever:
                 #filter for document that contains the word "2021", '2020' or '2019' AND "Liste der Gesellschafter"
                 
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
-                #
+                print(element)
                 if len(element) == 0:
                     document_manager._write_error_to_db("no gs list found", company_id)
                     raise Exception("no gs list found")
-                self.browser.open_relative(element[1].attrs["href"])
+                self.browser.open_relative(element[0].attrs["href"])
                 level += 1
                 continue
             if "Liste der" not in elements[0].text:
