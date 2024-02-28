@@ -63,7 +63,7 @@ class CommercialRegisterRetriever:
                 if len(element) == 0:
                     document_manager._write_error_to_db("no gs list found", company_id)
                     raise Exception("no gs list found")
-                self.browser.open_relative(element[1].attrs["href"])
+                self.browser.open_relative(element[0].attrs["href"])
                 level += 1
                 continue
             if "Liste der" not in elements[0].text:
@@ -71,6 +71,7 @@ class CommercialRegisterRetriever:
                 level += 1
             else:
                 self.file_name = elements[0].text
+                print(self.file_name)
                 self.file_type = "gs"
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
