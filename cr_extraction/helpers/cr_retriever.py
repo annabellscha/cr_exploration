@@ -38,7 +38,7 @@ class CommercialRegisterRetriever:
         # Pull Overview
         self.browser.open(si_link)
 
-    def _add_gs_to_cart(self, index, company_id):
+    def _add_gs_from2021_to_cart(self, index, company_id):
         # Open document tree
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
        
@@ -73,16 +73,79 @@ class CommercialRegisterRetriever:
                 level += 1
             else:
                 #filter for element that contains the word "2021", '2020' or '2019' 
-                element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
+               
+                # Extract dates and convert them to datetime objects
+                dates_elements = [(datetime.strptime(e.string.split('am ')[1], '%d.%m.%Y'), e) for e in elements if 'Liste der' in e.string]
+                print(dates_elements)
+                # Find the element with the most recent date
+                element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                 print(f"Elements 4: {elements}")
                 self.file_name = elements[1].text
-                print(f"Elements an 0: {elements[0].text}")
-                print(f"Elements an 1: {elements[1].text}")
+          
                 print(self.file_name)
                 
                 self.file_type = "gs"
                 self.browser.open_relative(elements[1].attrs["href"])
                 print(elements[1].attrs["href"])
+                level += 1
+                break
+
+        file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
+
+        self.file_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        
+
+        if self.file_date == "unbekannt":
+            self.file_date = date_2
+
+        self.browser.select_form("#dkform")
+        self.browser["format"] = file_format
+        self.browser.submit_selected("add2cart")
+        return
+    
+
+    def _add_gs_to_cart(self, index, company_id):
+        # Open document tree
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+       
+        
+        self.browser.open(
+            "https://www.unternehmensregister.de/ureg/registerPortal.html;{}?submitaction=showDkTree&searchIdx={}".format(
+                self.session_id, index))
+
+        # Expand
+        level = 2
+
+        while True:
+            elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
+            if len(elements) == 0:
+                
+                raise Exception("no gs list found")
+            if level == 3:
+                #filter for document that contains the word "2021", '2020' or '2019' AND "Liste der Gesellschafter"
+                
+                element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
+
+                if len(element) == 0:
+                    document_manager._write_error_to_db("no gs list found", company_id)
+                    raise Exception("no gs list found")
+                self.browser.open_relative(element[0].attrs["href"])
+                level += 1
+                continue
+            if "Liste der" not in elements[0].text:
+
+                self.browser.open_relative(elements[0].attrs["href"])
+                level += 1
+            else:
+                #filter for element that contains the word "2021", '2020' or '2019' 
+                element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
+                self.file_name = elements[0].text
+                self.file_type = "gs"
+                self.browser.open_relative(elements[0].attrs["href"])
+          
                 level += 1
                 break
 
@@ -460,7 +523,7 @@ class CommercialRegisterRetriever:
         
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = self.company["search_index"], company_id=company_id)
+            self._add_gs_from2021_to_cart(index = self.company["search_index"], company_id=company_id)
 
         if "si" in documents:
             self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
