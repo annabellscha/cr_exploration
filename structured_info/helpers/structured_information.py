@@ -47,7 +47,7 @@ import xml.etree.ElementTree as ET
 class StructuredInformation:
 
 
-  def _get_pdf_for_company(self,company_id:int,document_type:str,download:bool):
+  def _get_xml_for_company(self,company_id:int,document_type:str,download:bool):
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
     documentManager._get_file_path(company_id)
 
@@ -69,7 +69,7 @@ class StructuredInformation:
 
   def get_shareholder_details_from_si(self,company_id:int):
   
-    file_content = self._get_pdf_for_company(company_id,'si',True)
+    file_content = self._get_xml_for_company(company_id,'si',True)
 
     root = ET.fromstring(file_content)
 

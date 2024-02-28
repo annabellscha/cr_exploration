@@ -52,6 +52,7 @@ class CommercialRegisterRetriever:
 
         while True:
             elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
+            print(f"Elements 1: {elements}")
             if len(elements) == 0:
                 
                 raise Exception("no gs list found")
@@ -59,7 +60,7 @@ class CommercialRegisterRetriever:
                 #filter for document that contains the word "2021", '2020' or '2019' AND "Liste der Gesellschafter"
                 
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
-                print(element)
+                print(f"Elements 2: {elements}")
                 if len(element) == 0:
                     document_manager._write_error_to_db("no gs list found", company_id)
                     raise Exception("no gs list found")
@@ -67,17 +68,21 @@ class CommercialRegisterRetriever:
                 level += 1
                 continue
             if "Liste der" not in elements[0].text:
+                print(f"Elements 3: {elements}")
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
                 #filter for element that contains the word "2021", '2020' or '2019' 
                 element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
-                print(elements)
+                print(f"Elements 4: {elements}")
                 self.file_name = elements[0].text
+                print(f"Elements an 0: {elements[0].text}")
+                print(f"Elements an 1: {elements[1].text}")
                 print(self.file_name)
-                print(elements[1].text)
+                
                 self.file_type = "gs"
                 self.browser.open_relative(elements[0].attrs["href"])
+                print(elements[0].attrs["href"])
                 level += 1
                 break
 
