@@ -77,16 +77,19 @@ class CommercialRegisterRetriever:
                 # Extract dates and convert them to datetime objects
                 dates_elements = [(datetime.strptime(e.string.split('am ')[1], '%d.%m.%Y'), e) for e in elements if 'Liste der' in e.string]
                 print(dates_elements)
-                # Find the element with the most recent date
+                # Find the element with 2021 or earlier as date
+                #drop dates that are not 2021 or earlier
+                dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+
                 element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                 print(f"Elements 4: {elements}")
-                self.file_name = elements[1].text
+                self.file_name = element.text
           
                 print(self.file_name)
                 
                 self.file_type = "gs"
-                self.browser.open_relative(elements[1].attrs["href"])
-                print(elements[1].attrs["href"])
+                self.browser.open_relative(element.attrs["href"])
+                print(element.attrs["href"])
                 level += 1
                 break
 
