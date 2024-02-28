@@ -62,6 +62,7 @@ class StructuredInformation:
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
     file_content = bytes_buffer.getvalue()
+    file_content.tostring()
     return file_content
 
 
