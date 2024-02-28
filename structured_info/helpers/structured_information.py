@@ -61,9 +61,10 @@ class StructuredInformation:
     bytes_buffer = io.BytesIO()
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
-    file_content = bytes_buffer.getvalue()
-    file_content.tostring()
-    return file_content
+    
+    xml_string = bytes_buffer.getvalue().decode('utf-8')
+    print(xml_string)
+    return xml_string
 
 
 
