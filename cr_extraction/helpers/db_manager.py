@@ -13,7 +13,7 @@ class DocumentManager:
         if document_type == "si":
             data = {'link_structured_content_file_current': full_path}
         else:
-            data = {'link_SI_file_current': full_path}
+            data = {'link_shareholder_file_2021': full_path}
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()

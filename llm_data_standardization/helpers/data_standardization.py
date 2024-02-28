@@ -94,7 +94,7 @@ class DataStandardization:
     print(response.choices[0].message.content)
     openai_result = response.choices[0].message.content
 
-    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json")
+    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json_2021")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
     try:

@@ -59,8 +59,8 @@ class DocumentManager:
         table_name = 'startups'
         
         # Fetch the record with the given company_id
-        response = self.supabase.table(table_name).select('azure_json').eq('startup_id', company_id).execute()
-        return response.data[0]['azure_json']
+        response = self.supabase.table(table_name).select('azure_json_2021').eq('startup_id', company_id).execute()
+        return response.data[0]['azure_json_2021']
     
     from supabase import create_client, Client
 
@@ -88,7 +88,7 @@ class DocumentManager:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
             # Insert the shareholder data into the shareholder_relations table
-            response = self.supabase.table('shareholder_relations').insert(shareholder).execute()
+            response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
     
 
 # Usage example:

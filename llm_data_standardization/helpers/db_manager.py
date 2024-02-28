@@ -10,7 +10,7 @@ class DocumentManager:
         table_name = 'startups'
 
         # Create a new record or update existing with the company_id and the full_path
-        data = {'link_SI_file_current': full_path}
+        data = {'link_shareholder_file_2021': full_path}
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
@@ -29,8 +29,8 @@ class DocumentManager:
         table_name = 'startups'
 
         # Select the link_SI_file_current column where startup_id matches the company_id
-        response = self.supabase.table(table_name).select('link_SI_file_current').eq('startup_id', company_id).execute()
-        link = response.data[0].get('link_SI_file_current')
+        response = self.supabase.table(table_name).select('link_shareholder_file_2021').eq('startup_id', company_id).execute()
+        link = response.data[0].get('link_shareholder_file_2021')
         return link 
     
     def _save_json_to_db(self, json_data: dict, startup_id: int, column_name: str):
@@ -59,8 +59,8 @@ class DocumentManager:
         table_name = 'startups'
         
         # Fetch the record with the given company_id
-        response = self.supabase.table(table_name).select('azure_json').eq('startup_id', company_id).execute()
-        return response.data[0]['azure_json']
+        response = self.supabase.table(table_name).select('azure_json_2021').eq('startup_id', company_id).execute()
+        return response.data[0]['azure_json_2021']
     
     from supabase import create_client, Client
 
@@ -88,7 +88,7 @@ class DocumentManager:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
             # Insert the shareholder data into the shareholder_relations table
-            response = self.supabase.table('shareholder_relations').insert(shareholder).execute()
+            response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
     
     def _write_error_to_db(self, error: str, company_id: int):
 
