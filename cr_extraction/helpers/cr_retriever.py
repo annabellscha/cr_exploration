@@ -70,10 +70,12 @@ class CommercialRegisterRetriever:
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
-                self.file_name = elements[0].text
+                #filter for element that contains the word "2021", '2020' or '2019' 
+                element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
+                self.file_name = element[0].text
                 print(self.file_name)
                 self.file_type = "gs"
-                self.browser.open_relative(elements[0].attrs["href"])
+                self.browser.open_relative(element[0].attrs["href"])
                 level += 1
                 break
 
