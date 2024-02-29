@@ -79,15 +79,26 @@ class TableExtractor:
                 print(gcs_file_path)
             
             print(pdf_bytes)
-            reader = PyPDF2.PdfReader(pdf_bytes)
+            writer = PyPDF2.PdfWriter()
+            try:
+                reader = PyPDF2.PdfReader(pdf_bytes)
+                for i in range(len(reader.pages)):
+                    try:
+                        page = reader.pages[i]
+                        writer.add_page(page)
+                    except Exception as e:
+                        print(f"Failed to read page {i}: {e}")
+            except Exception as general_error:
+                print(f"Failed to open PDF: {general_error}")
+            # reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
            
-            writer = PyPDF2.PdfWriter()
+            # writer = PyPDF2.PdfWriter()
 
                 # Add all pages to the writer
-            print(reader.pages)
-            for page in reader.pages:
-                writer.add_page(page)
+            # print(reader.pages)
+            # for page in reader.pages:
+            #     writer.add_page(page)
 
                 # Create a file-like object to hold the PDF data
             pdf_chunk_bytes = io.BytesIO()
