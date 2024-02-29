@@ -58,6 +58,15 @@ class TableExtractor:
 
             storage_client = storage.Client(project="cr-extraction")
             bucket = storage_client.get_bucket('cr_documents')
+
+            #try to download file from GCS, in case it fails change the path ending to .pdf
+            try:
+                blob = bucket.blob(gcs_file_path)
+                pdf_bytes = io.BytesIO(blob.download_as_bytes())
+            except:
+                print(gcs_file_path)
+                gcs_file_path = gcs_file_path.replace('.tif',".pdf")
+                print(gcs_file_path)
             blob = bucket.blob(gcs_file_path)
             pdf_bytes = io.BytesIO(blob.download_as_bytes())
 
