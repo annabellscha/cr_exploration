@@ -147,11 +147,11 @@ def analyze_PDF(buffer):
 
 
 def get_table_data(result):
-      rows = []
+    rows = []
 
-      # get header row
-      header_row = {}
-      try:
+    # get header row
+    header_row = {}
+    try:
           for cell in result.tables[0].cells:
               if(cell.kind != "columnHeader"):
                   continue
@@ -165,14 +165,14 @@ def get_table_data(result):
               elif cell.row_index > 0:
                   for i in range(cell.column_index, cell.column_index + cell.column_span):
                       header_row[i] += "\n" + cell.content
-      except:
+    except:
           pass
 
       # append header row to rows list
-      rows.append(header_row)
+    rows.append(header_row)
 
       # get table content
-      for table_idx, table in enumerate(result.tables):
+    for table_idx, table in enumerate(result.tables):
           
           row = {}
           row_index = 0
@@ -200,6 +200,9 @@ def get_table_data(result):
           rows.append(row)
 
       # convert list of dicts to dataframe
-      df = pd.DataFrame(rows[1:])
-      df.columns = rows[0].values()
-      return df
+   
+    df = pd.DataFrame(rows[1:])
+    print(len(df.columns))  # Number of current columns in the DataFrame
+    print(len(rows[0].values())) 
+    df.columns = rows[0].values()
+    return df
