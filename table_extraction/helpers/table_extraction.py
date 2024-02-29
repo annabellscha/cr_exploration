@@ -207,5 +207,7 @@ def get_table_data(result):
     df = pd.DataFrame(rows[1:])
     print(len(df.columns))  # Number of current columns in the DataFrame
     print(len(rows[0].values())) 
+    print(df)
+    print(rows[0].values())
     df.columns = rows[0].values()
     return df
