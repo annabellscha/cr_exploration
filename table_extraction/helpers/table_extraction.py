@@ -81,7 +81,10 @@ class TableExtractor:
                     gcs_file_path = gcs_file_path.replace('.tiff',".pdf")
                     blob = bucket.blob(gcs_file_path)
                     pdf_bytes = io.BytesIO(blob.download_as_bytes())
-                
+                elif gcs_file_path.endswith('.zip'):
+                    gcs_file_path = gcs_file_path.replace('.zip',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
                 print(gcs_file_path)
             
             print(pdf_bytes)
