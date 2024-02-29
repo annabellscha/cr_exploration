@@ -118,11 +118,13 @@ class TableExtractor:
             #if yes, rename one of them to _1
             #if no, append the column to the df_list
             for col in df_list.columns:
+                int_col = 0
                 if col in df_list.columns:
-                    df_list.rename(columns={col: col + '_1'}, inplace=True)
+                    df_list.rename(columns={col: col + f'_{int_col}'}, inplace=True)
                 else:
                     df_list[col] = df_list[col]
-
+            for col in df_list.columns:
+                print(col)
             result = df_list.to_json()
             #write json to
             #Write result json to DB
