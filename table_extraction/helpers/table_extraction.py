@@ -118,16 +118,19 @@ class TableExtractor:
             #if yes, rename one of them to _1
             #if no, append the column to the df_list
            # Check for duplicate column names and rename them if necessary
-            columns_seen = {}  # Dictionary to keep track of seen columns and their counts
-            for col in df_list.columns:
-                if col in columns_seen:
-                    # If the column is a duplicate, increment its count and rename
-                    columns_seen[col] += 1
-                    new_col_name = f"{col}_{columns_seen[col]}"
-                    df_list.rename(columns={col: new_col_name}, inplace=True)
-                else:
-                    # If the column is not a duplicate, add it to the dictionary
-                    columns_seen[col] = 0
+            duplicates = df_list.columns[df_list.columns.duplicated()]
+            # Create a new DataFrame to avoid modifying the original one while iterating
+            df_unique_cols = df_list.copy()
+
+            # Rename the duplicate columns
+            for i, col in enumerate(df_unique_cols.columns):
+                if col in duplicates:  # Check if the column is a duplicate
+                    count = 1  # Start counting for the suffix from 1
+                    new_col = f"{col}_{count}"
+                    while new_col in df_unique_cols.columns:  # Ensure the new name is not already in use
+                        count += 1
+                        new_col = f"{col}_{count}"
+                    df_unique_cols.rename(columns={col: new_col}, inplace=True)
 
             for col in df_list.columns:
                 print(col)
