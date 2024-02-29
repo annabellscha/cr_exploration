@@ -63,16 +63,20 @@ class TableExtractor:
             try:
                 blob = bucket.blob(gcs_file_path)
                 pdf_bytes = io.BytesIO(blob.download_as_bytes())
+                print(pdf_bytes)
             except:
                 print(gcs_file_path)
                 if gcs_file_path.endswith('.tif'):
                     gcs_file_path = gcs_file_path.replace('.tif',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
                 elif gcs_file_path.endswith('.tiff'):
                     gcs_file_path = gcs_file_path.replace('.tiff',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
                 
                 print(gcs_file_path)
-            blob = bucket.blob(gcs_file_path)
-            pdf_bytes = io.BytesIO(blob.download_as_bytes())
+            
             print(pdf_bytes)
             reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
