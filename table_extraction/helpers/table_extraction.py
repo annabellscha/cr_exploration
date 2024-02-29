@@ -132,9 +132,9 @@ class TableExtractor:
                         new_col = f"{col}_{count}"
                     df_unique_cols.rename(columns={col: new_col}, inplace=True)
 
-            for col in df_list.columns:
+            for col in df_unique_cols.columns:
                 print(col)
-            result = df_list.to_json()
+            result = df_unique_cols.to_json()
             #write json to
             #Write result json to DB
             document_manager._save_json_to_db(result, startup_id=company_id)
