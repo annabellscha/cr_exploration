@@ -76,26 +76,27 @@ class TableExtractor:
 
             reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
-            for i in range(0, len(reader.pages), len(reader.pages)):
-                writer = PyPDF2.PdfWriter()
+           
+            writer = PyPDF2.PdfWriter()
 
-                for j in range(i, min(i + len(reader.pages), len(reader.pages))):
-                    writer.add_page(reader.pages[j])
+                # Add all pages to the writer
+            for page in reader.pages:
+                writer.add_page(page)
 
-                pdf_chunk_bytes = io.BytesIO()
-                writer.write(pdf_chunk_bytes)
-                pdf_chunk_bytes.seek(0)
+                # Create a file-like object to hold the PDF data
+            pdf_chunk_bytes = io.BytesIO()
+            writer.write(pdf_chunk_bytes)
+            pdf_chunk_bytes.seek(0)
 
                 # Now `pdf_chunk_bytes` is a file-like object containing the PDF data.
                 # This can be sent to an API as follows:
-                response = analyze_PDF(pdf_chunk_bytes)
-                raw_results = response
-                table = get_table_data(response)
+            response = analyze_PDF(pdf_chunk_bytes)
+
+            table = get_table_data(response)
                 # Check the response
                 # df_list = df_list.append(table)
-                df_list = pd.concat([df_list, table], ignore_index=True)
-                # Clear the writer for the next chunk of pages
-                writer = PyPDF2.PdfWriter()
+            df_list = pd.concat([df_list, table], ignore_index=True)
+              
             result = df_list.to_json()
             #write json to
             #Write result json to DB
