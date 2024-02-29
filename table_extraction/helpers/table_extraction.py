@@ -44,7 +44,7 @@ import pandas as pd
 
 class TableExtractor:
     
-    def _rename_duplicate_columns(df):
+    def _rename_duplicate_columns(self,df):
         cols = pd.Series(df.columns)
         for dup in cols[cols.duplicated()].unique():
             cols[cols[cols == dup].index] = [f'{dup}_{i}' if i != 0 else dup for i in range(sum(cols == dup))]
