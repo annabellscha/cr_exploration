@@ -210,6 +210,11 @@ def get_table_data(result):
         # Add empty columns to the DataFrame to match the number of columns in the header row
         for i in range(len(rows[0].values()) - len(df.columns)):
             df[i] = None
+    if len(rows[0].values()) < len(df.columns):
+        # Add empty labels to the header row to match the number of columns in the DataFrame
+        for i in range(len(df.columns) - len(rows[0].values())):
+            rows[0][len(rows[0].values()) + i] = None
+    
     print(len(rows[0].values())) 
     print(df)
 
