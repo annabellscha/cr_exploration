@@ -113,7 +113,16 @@ class TableExtractor:
                 # Check the response
                 # df_list = df_list.append(table)
             df_list = pd.concat([df_list, table], ignore_index=True)
-              
+
+            #check if two columna are the same
+            #if yes, rename one of them to _1
+            #if no, append the column to the df_list
+            for col in df_list.columns:
+                if col in df_list.columns:
+                    df_list.rename(columns={col: col + '_1'}, inplace=True)
+                else:
+                    df_list[col] = df_list[col]
+
             result = df_list.to_json()
             #write json to
             #Write result json to DB
