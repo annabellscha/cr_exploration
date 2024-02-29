@@ -117,12 +117,18 @@ class TableExtractor:
             #check if two columna are the same
             #if yes, rename one of them to _1
             #if no, append the column to the df_list
+           # Check for duplicate column names and rename them if necessary
+            columns_seen = {}  # Dictionary to keep track of seen columns and their counts
             for col in df_list.columns:
-                int_col = 0
-                if col in df_list.columns:
-                    df_list.rename(columns={col: col + f'_{int_col}'}, inplace=True)
+                if col in columns_seen:
+                    # If the column is a duplicate, increment its count and rename
+                    columns_seen[col] += 1
+                    new_col_name = f"{col}_{columns_seen[col]}"
+                    df_list.rename(columns={col: new_col_name}, inplace=True)
                 else:
-                    df_list[col] = df_list[col]
+                    # If the column is not a duplicate, add it to the dictionary
+                    columns_seen[col] = 0
+
             for col in df_list.columns:
                 print(col)
             result = df_list.to_json()
