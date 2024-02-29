@@ -44,6 +44,12 @@ import pandas as pd
 
 class TableExtractor:
     
+    def _rename_duplicate_columns(df):
+        cols = pd.Series(df.columns)
+        for dup in cols[cols.duplicated()].unique():
+            cols[cols[cols == dup].index] = [f'{dup}_{i}' if i != 0 else dup for i in range(sum(cols == dup))]
+        df.columns = cols
+        return df
 
     def get_pdf_data(self, company_id):
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
@@ -120,20 +126,8 @@ class TableExtractor:
            # Check for duplicate column names and rename them if necessary
             duplicates = df_list.columns[df_list.columns.duplicated()]
             # Create a new DataFrame to avoid modifying the original one while iterating
-            df_unique_cols = df_list.copy()
-
-            # Rename the duplicate columns
-            for i, col in enumerate(df_unique_cols.columns):
-                if col in duplicates:  # Check if the column is a duplicate
-                    count = 1  # Start counting for the suffix from 1
-                    new_col = f"{col}_{count}"
-                    while new_col in df_unique_cols.columns:  # Ensure the new name is not already in use
-                        count += 1
-                        new_col = f"{col}_{count}"
-                    df_unique_cols.rename(columns={col: new_col}, inplace=True)
-
-            for col in df_unique_cols.columns:
-                print(col)
+            df_unique_cols = self._rename_duplicate_columns(df_list)
+            # Convert the DataFrame to JSON
             result = df_unique_cols.to_json()
             #write json to
             #Write result json to DB
