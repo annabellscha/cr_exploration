@@ -73,13 +73,14 @@ class TableExtractor:
                 print(gcs_file_path)
             blob = bucket.blob(gcs_file_path)
             pdf_bytes = io.BytesIO(blob.download_as_bytes())
-
+            print(pdf_bytes)
             reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
            
             writer = PyPDF2.PdfWriter()
 
                 # Add all pages to the writer
+            print(reader.pages)
             for page in reader.pages:
                 writer.add_page(page)
 
