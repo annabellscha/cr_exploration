@@ -206,8 +206,13 @@ def get_table_data(result):
    
     df = pd.DataFrame(rows[1:])
     print(len(df.columns))  # Number of current columns in the DataFrame
+    if len(rows[0].values()) > len(df.columns):
+        # Add empty columns to the DataFrame to match the number of columns in the header row
+        for i in range(len(rows[0].values()) - len(df.columns)):
+            df[i] = None
     print(len(rows[0].values())) 
     print(df)
+
     print(rows[0].values())
     df.columns = rows[0].values()
     return df
