@@ -66,7 +66,7 @@ class StructuredInformation:
     true_encoding=None
     for enc in encodings:
         try:
-            content = bytes_buffer.getvalue.decode(enc)
+            content = bytes_buffer.getvalue().decode(enc)
             print(f"Decoded with encoding: {enc}")
             true_encoding = enc
             break
