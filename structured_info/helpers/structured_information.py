@@ -148,5 +148,5 @@ class StructuredInformation:
     #write gegenstand only to db
     documentManager._save_json_to_db(gegenstand, company_id, column_name='startup_purpose')
 
-    return df_shareholder_info
+    return "yes"
   
