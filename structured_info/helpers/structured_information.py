@@ -123,8 +123,17 @@ class StructuredInformation:
             #Create a liust of all vorname, nachname
             
     print(df_shareholder_info)
-    #jsonify the df shareholder info
-    df_shareholder_info = df_shareholder_info.to_json()
+    #jsonify the df shareholder info while making sure we have unique column names
+    # Check for duplicate column names and rename them if necessary
+    duplicates = df_shareholder_info.columns[df_shareholder_info.columns.duplicated()]
+    print(duplicates)
+    # Create a new DataFrame to avoid modifying the original one while iterating
+    df_unique_cols = df_shareholder_info.copy()
+    for col in duplicates:
+        df_unique_cols.rename(columns={col: f"{col}_1"}, inplace=True)
+    # Convert the DataFrame to JSON
+    df_shareholder_info = df_unique_cols.to_json()
+
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
