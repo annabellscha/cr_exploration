@@ -143,7 +143,10 @@ class StructuredInformation:
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
     documentManager._save_json_to_db(json_str, company_id, column_name='list_mds')
-
+    gegenstand = {'gegenstand':gegenstand}
+    
+    #write gegenstand only to db
+    documentManager._save_json_to_db(gegenstand, company_id, column_name='startup_purpose')
 
     return df_shareholder_info
   
