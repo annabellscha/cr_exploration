@@ -172,7 +172,7 @@ def get_shareholder_structured_info(request):
     
     retriever = CommercialRegisterRetriever()
 
-    results = retriever.extended_search(company_id=shareholder_id, search_type="shareholder")
+    results = retriever.extended_search(company_id=shareholder_id, search_type="shareholders")
 
     bypass_storage = False
     if request_json and "bypass_storage" in request_json:

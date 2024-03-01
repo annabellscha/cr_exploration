@@ -451,7 +451,7 @@ class CommercialRegisterRetriever:
     def extended_search(self, company_id:int, search_type:str, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
         
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type="shareholder")
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
         if search_type == 'startups':
             register_number = data.get('register_identification_number', None)
             circuit_id = data.get('register_mapping', None)
