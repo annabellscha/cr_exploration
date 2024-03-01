@@ -10,7 +10,7 @@ class DocumentManager:
         table_name = 'startups'
 
         # Create a new record or update existing with the company_id and the full_path
-        data = {'link_SI_file_current': full_path}
+        data = {'link_structured_content_file_current': full_path}
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
@@ -29,8 +29,8 @@ class DocumentManager:
         table_name = 'startups'
 
         # Select the link_SI_file_current column where startup_id matches the company_id
-        response = self.supabase.table(table_name).select('link_SI_file_current').eq('startup_id', company_id).execute()
-        link = response.data[0].get('link_SI_file_current')
+        response = self.supabase.table(table_name).select('link_structured_content_file_current').eq('startup_id', company_id).execute()
+        link = response.data[0].get('link_structured_content_file_current')
         return link 
     
     def _save_json_to_db(self, json_data: dict, startup_id: int, column_name: str):
