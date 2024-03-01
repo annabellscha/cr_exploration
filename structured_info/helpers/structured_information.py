@@ -117,7 +117,7 @@ class StructuredInformation:
             # Print the results
             df_temp = {'name':company_id,'aktenzeichen':aktenzeichen,'gegenstand':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'geburtsdatum': geburtsdatum, 'geschlecht': geschlecht}
             df_temp_df = pd.DataFrame([df_temp])
-            df_shareholder_info = pd.concat(df_shareholder_info, pd.DataFrame(df_temp_df),ignore_index=True)
+            df_shareholder_info = pd.concat(df_shareholder_info, pd.DataFrame(df_temp_df))
             #Create a liust of all vorname, nachname
             name_json.append(vorname + ' ' + nachname)
           
