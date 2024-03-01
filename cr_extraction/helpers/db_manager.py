@@ -13,14 +13,18 @@ class DocumentManager:
         if document_type == "si" & search_type == "startups":
             table_name = 'startups'
             data = {'link_structured_content_file_current': full_path}
+            id_column = 'startup_id'
         elif document_type == "si" & search_type == "shareholders":
             table_name = 'shareholders'
             data = {'link_structured_content_file_current': full_path}
+            id_column = 'shareholder_id'
         else:
             data = {'link_shareholder_file_2021': full_path}
+            table_name = 'startups'
+            id_column = 'startup_id'
         print("we now atttemot the update")
         # Insert or update the data into the table
-        response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
+        response = self.supabase.table(table_name).update(data).eq(id_column, company_id).execute()
         return
         # # Check if the operation was successful
         # if response.get('status_code') in range(200, 300):
