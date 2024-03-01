@@ -24,4 +24,4 @@ PyPDF2>=2.10.3
 pandas>=1.5.2
 google-auth>=2.6.0
 functions-framework>=3.0.0
-chardet
+chardet==4.0.0  # or use whatever version you prefer
