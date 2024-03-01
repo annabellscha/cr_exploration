@@ -53,7 +53,7 @@ class DocumentManager:
         # else:
         #     # Handle any errors that occur during the insert
         #     print(f"Failed to save JSON: {response.error.message if response.error else 'Unknown error'}")
-        return None
+        return response
     
     def _check_and_get_azure_json(self, company_id: int):
         table_name = 'startups'

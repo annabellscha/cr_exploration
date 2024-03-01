@@ -137,6 +137,8 @@ class StructuredInformation:
     # df_shareholder_info = df_unique_cols.to_json()
     #drop empty columns
    
+    #remove column names
+  
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
