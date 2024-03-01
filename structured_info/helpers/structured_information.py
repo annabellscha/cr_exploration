@@ -121,7 +121,7 @@ class StructuredInformation:
             df_shareholder_info = pd.concat([df_shareholder_info,df_temp_df])
             
             #Create a liust of all vorname, nachname
-            name_json.append(vorname + ' ' + nachname)
+            
           
     #jsonify the df shareholder info
     df_shareholder_info = df_shareholder_info.to_json()
