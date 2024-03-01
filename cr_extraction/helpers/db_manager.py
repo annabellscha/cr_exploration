@@ -10,11 +10,11 @@ class DocumentManager:
         
 
         # Create a new record or update existing with the company_id and the full_path
-        if document_type == "si" & search_type == "startups":
+        if document_type == "si" and search_type == "startups":
             table_name = 'startups'
             data = {'link_structured_content_file_current': full_path}
             id_column = 'startup_id'
-        elif document_type == "si" & search_type == "shareholders":
+        elif document_type == "si" and search_type == "shareholders":
             table_name = 'shareholders'
             data = {'link_structured_content_file_current': full_path}
             id_column = 'shareholder_id'
