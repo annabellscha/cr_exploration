@@ -62,9 +62,21 @@ class StructuredInformation:
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
     print(bytes_buffer)
-    encoding = chardet.detect(bytes_buffer.getvalue())['encoding']   
-    # Decode using the detected encoding
-    xml_string = bytes_buffer.getvalue().decode(encoding)
+    encodings = ['utf-8', 'iso-8859-1', 'windows-1252', 'utf-16']
+    true_encoding=None
+    for enc in encodings:
+        try:
+            content = bytes_buffer.getvalue.decode(enc)
+            print(f"Decoded with encoding: {enc}")
+            true_encoding = enc
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        print("Failed to detect encoding.")
+        content = None  # or handle the undecodable data as you see fit
+
+    xml_string = bytes_buffer.getvalue().decode(true_encoding)
     print(xml_string)
     return xml_string
 
