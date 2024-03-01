@@ -61,10 +61,9 @@ class StructuredInformation:
     bytes_buffer = io.BytesIO()
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
-    
-    encoding = chardet.detect(bytes_buffer.getvalue())['encoding']
-        
-        # Decode using the detected encoding
+    print(bytes_buffer)
+    encoding = chardet.detect(bytes_buffer.getvalue())['encoding']   
+    # Decode using the detected encoding
     xml_string = bytes_buffer.getvalue().decode(encoding)
     print(xml_string)
     return xml_string
