@@ -501,13 +501,13 @@ class CommercialRegisterRetriever:
             companies = self.search(company_name)
             print("check if result is empty")
             if len(companies) == 0:
-                document_manager._write_error_to_db("no results found", company_id)
+                document_manager._write_error_to_db("no results found", company_id, search_type)
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies}")
                 return companies
         elif len(row_back_divs) > 1:
-            document_manager._write_error_to_db("multiple results found", company_id)
+            document_manager._write_error_to_db("multiple results found", company_id, search_type)
             print(f"these are results: {companies}")
             raise Exception("multiple results found")
         else:
