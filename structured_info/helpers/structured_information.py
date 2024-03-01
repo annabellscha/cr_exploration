@@ -121,7 +121,7 @@ class StructuredInformation:
             df_shareholder_info = pd.concat([df_shareholder_info,df_temp_df])
             
             #Create a liust of all vorname, nachname
-            
+    df_shareholder_info = df_shareholder_info.dropna(axis=1, how='all')       
     print(df_shareholder_info)
     #jsonify the df shareholder info while making sure we have unique column names
     # Check for duplicate column names and rename them if necessary
@@ -133,7 +133,8 @@ class StructuredInformation:
         df_unique_cols.rename(columns={col: f"{col}_1"}, inplace=True)
     # Convert the DataFrame to JSON
     df_shareholder_info = df_unique_cols.to_json()
-
+    #drop empty columns
+   
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
