@@ -166,6 +166,7 @@ def get_shareholder_structured_info(request):
     request_json = request.get_json(silent=True)
     if request_json and "shareholder_id" in request_json:
         shareholder_id = request_json["shareholder_id"]
+        documents = request_json["documents"]
         
     else:
         return "Bad Request: Please provide a shareholder id", 400
