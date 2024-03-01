@@ -85,7 +85,7 @@ def download_files(request):
     # results = retriever.search(company_name=company)
     # print(results)
 
-    results = retriever.extended_search(company_id=company_id)
+    results = retriever.extended_search(company_id=company_id, search_type="shareholder")
 
 
     # if company_id:
@@ -154,9 +154,93 @@ def download_files(request):
     return jsonify(response_object)
 
 
-# @functions_framework.http
-# def download_file(request):
+
+@functions_framework.http
+def get_shareholder_structured_info(request):
 #     credentials, _ = auth.default()
+    load_dotenv()
+    credentials, _ = auth.default()
+    if os.environ.get("ENV") == "prod":
+        credentials.refresh(auth.transport.requests.Request())
+
+    request_json = request.get_json(silent=True)
+    if request_json and "shareholder_id" in request_json:
+        shareholder_id = request_json["shareholder_id"]
+        
+    else:
+        return "Bad Request: Please provide a shareholder id", 400
+    
+    retriever = CommercialRegisterRetriever()
+
+    results = retriever.extended_search(company_id=shareholder_id, search_type="shareholder")
+
+    bypass_storage = False
+    if request_json and "bypass_storage" in request_json:
+        bypass_storage = request_json["bypass_storage"]
+    # if company_id:
+    #     company_data = [x for x in results if x["id"] == company_id][0]
+    # else:
+    company_data = results
+    
+    # except Exception as e:
+    #     return 'Error: {}'.format(e), 500
+    retriever.add_documents_to_cart(company=company_data, documents=documents, company_id=shareholder_id)
+    company, documents = retriever.download_documents_from_basket(
+        bypass_storage=bypass_storage, company_id = shareholder_id, search_type="shareholder"
+    )
+
+    response_object = company
+    response_object["document_urls"] = []
+
+    if bypass_storage:
+        if len(documents) == 0:
+            return "No documents found", 404
+        elif len(documents) == 1:
+            # Create a BytesIO object from the binary content
+            buffer = io.BytesIO(documents[0]["document_binary"])
+            mime_type = magic.from_buffer(buffer.read(1024), mime=True)
+
+            if buffer.getbuffer().nbytes == 0:
+                print("Warning: Buffer is empty")
+
+            # Reset the buffer's position to the start
+            buffer.seek(0)
+
+            # Send the buffer using send_file
+            return send_file(
+                buffer,
+                as_attachment=True,
+                download_name=f'{company["name"]}_{company["court"]}.{mime_type.split("/")[1]}',
+                mimetype=mime_type,
+            )
+
+        else:
+           return "You can only bypass storage for a single document", 400
+
+    else:
+        bucket_name = "cr_documents"
+        storage_client = storage.Client()
+        bucket = storage_client.bucket(bucket_name)
+
+        for document in documents:
+            blob = bucket.blob(document["url"])
+            print(blob)
+            url = blob.generate_signed_url(
+                version="v4",
+                # This URL is valid for 15 minutes
+                expiration=timedelta(minutes=30),
+                service_account_email=credentials.service_account_email,
+                access_token=credentials.token,
+                # Allow GET requests using this URL.
+                method="GET",
+            )
+
+            response_object = company
+            response_object["document_urls"].append(
+                {"type": document["type"], "url": url}
+            )
+
+    return jsonify(response_object)
 
 #     request_json = request.get_json(silent=True)
 

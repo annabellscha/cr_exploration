@@ -4,13 +4,17 @@ class DocumentManager:
     def __init__(self, supabase_url: str, supabase_key: str):
         self.supabase: Client = create_client(supabase_url, supabase_key)
 
-    def _save_document_link_to_db(self, full_path: str, company_id: int, document_type:str):
+    def _save_document_link_to_db(self, full_path: str, company_id: int, document_type:str, search_type:str):
         # Define the table name where you want to save the document link
         print("we are in the function now")
-        table_name = 'startups'
+        
 
         # Create a new record or update existing with the company_id and the full_path
-        if document_type == "si":
+        if document_type == "si" & search_type == "startups":
+            table_name = 'startups'
+            data = {'link_structured_content_file_current': full_path}
+        elif document_type == "si" & search_type == "shareholders":
+            table_name = 'shareholders'
             data = {'link_structured_content_file_current': full_path}
         else:
             data = {'link_shareholder_file_2021': full_path}
@@ -28,10 +32,14 @@ class DocumentManager:
         #     print(f"Failed to save document link: {error_message}")
         #     return None
     
-    def _get_search_attributes_from_db(self, company_id: int):
-        table_name = 'startups'
-        columns_to_select = 'register_identification_number, register_mapping, startup_name'
-        
+    def _get_search_attributes_from_db(self, company_id: int, search_type:str):
+        if search_type == "startups":
+            table_name = 'startups'
+            columns_to_select = 'register_identification_number, register_mapping, startup_name'
+        elif search_type == "shareholders":
+            table_name = 'shareholders'
+            columns_to_select = 'register_id, register_mapping, shareholder_name'
+
         # Fetch the required records with the given company_id
         response = self.supabase.table(table_name).select(columns_to_select).eq('startup_id', company_id).execute()
         print(response.data[0])

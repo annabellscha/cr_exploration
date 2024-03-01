@@ -448,15 +448,21 @@ class CommercialRegisterRetriever:
             
         return companies
     
-    def extended_search(self, company_id:int, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+    def extended_search(self, company_id:int, search_type:str, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
         
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-        data=document_manager._get_search_attributes_from_db(company_id=company_id)
-        register_number = data.get('register_identification_number', None)
-        circuit_id = data.get('register_mapping', None)
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type="shareholder")
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
 
-        company_name = data.get('startup_name', None)
-       
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
+
+        
         print(register_number)
         print(circuit_id)
         print("we ry to print company name")
@@ -536,7 +542,7 @@ class CommercialRegisterRetriever:
 
         return
     
-    def download_documents_from_basket(self, company_id, bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
+    def download_documents_from_basket(self, company_id, search_type:str,bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
         self.browser.select_form("#doccartForm")
@@ -591,7 +597,7 @@ class CommercialRegisterRetriever:
                 
                 print("we are trying to save now")
                 document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id, document_type=document_type)
+                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id, document_type=document_type, search_type=search_type)
                 uploaded_file_paths.append(upload_result)
                 
             else: 
