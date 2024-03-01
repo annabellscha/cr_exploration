@@ -42,7 +42,7 @@ import io
 import PyPDF2
 import pandas as pd
 import xml.etree.ElementTree as ET
-
+import chardet
 
 class StructuredInformation:
 
@@ -62,7 +62,10 @@ class StructuredInformation:
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
     
-    xml_string = bytes_buffer.getvalue().decode('utf-8')
+    encoding = chardet.detect(bytes_buffer.getvalue())['encoding']
+        
+        # Decode using the detected encoding
+    xml_string = bytes_buffer.getvalue().decode(encoding)
     print(xml_string)
     return xml_string
 
