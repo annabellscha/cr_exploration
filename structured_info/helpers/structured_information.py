@@ -132,13 +132,15 @@ class StructuredInformation:
     for col in duplicates:
         df_unique_cols.rename(columns={col: f"{col}_1"}, inplace=True)
     # Convert the DataFrame to JSON
-    df_shareholder_info = df_unique_cols.to_json()
+    df_shareholder_info = df_shareholder_info.reset_index(drop=True)
+    json_str = df_shareholder_info.to_json(orient='columns')
+    # df_shareholder_info = df_unique_cols.to_json()
     #drop empty columns
    
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
-    documentManager._save_json_to_db(df_shareholder_info, company_id, column_name='list_mds')
+    documentManager._save_json_to_db(json_str, company_id, column_name='list_mds')
 
 
     return df_shareholder_info
