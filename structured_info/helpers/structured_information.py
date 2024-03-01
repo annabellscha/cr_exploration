@@ -115,7 +115,7 @@ class StructuredInformation:
             geschlecht = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
             
             # Print the results
-            df_shareholder_info = df_shareholder_info.concat({'name':company_id,'aktenzeichen':aktenzeichen,'gegenstand':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'geburtsdatum': geburtsdatum, 'geschlecht': geschlecht}, ignore_index=True)
+            df_shareholder_info = df_shareholder_info.append({'name':company_id,'aktenzeichen':aktenzeichen,'gegenstand':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'geburtsdatum': geburtsdatum, 'geschlecht': geschlecht}, ignore_index=True)
             #Create a liust of all vorname, nachname
             name_json.append(vorname + ' ' + nachname)
           
