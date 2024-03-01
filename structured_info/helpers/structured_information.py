@@ -122,9 +122,10 @@ class StructuredInformation:
             
             #Create a liust of all vorname, nachname
             
-          
+    print(df_shareholder_info)
     #jsonify the df shareholder info
     df_shareholder_info = df_shareholder_info.to_json()
+
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
     documentManager._save_json_to_db(df_shareholder_info, company_id, column_name='list_mds')
