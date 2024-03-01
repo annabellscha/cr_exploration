@@ -186,7 +186,7 @@ def get_shareholder_structured_info(request):
     #     return 'Error: {}'.format(e), 500
     retriever.add_documents_to_cart(company=company_data, documents=documents, company_id=shareholder_id)
     company, documents = retriever.download_documents_from_basket(
-        bypass_storage=bypass_storage, company_id = shareholder_id, search_type="shareholder"
+        bypass_storage=bypass_storage, company_id = shareholder_id, search_type="shareholders"
     )
 
     response_object = company
