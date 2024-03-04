@@ -69,7 +69,7 @@ class CommercialRegisterRetriever:
                 continue
             if "Liste der" not in elements[0].text:
                 print(f"Elements 3: {elements}")
-                self.browser.open_relative(elements[0].attrs["href"])
+                self.browser.open_relative(elements[1].attrs["href"])
                 level += 1
             else:
                 #filter for element that contains the word "2021", '2020' or '2019' 
