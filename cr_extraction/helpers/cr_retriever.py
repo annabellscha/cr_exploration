@@ -77,6 +77,9 @@ class CommercialRegisterRetriever:
                 print(elements[0].text)
                 print(len(elements))
                 if len(elements) > 1:
+                    #check if any of the elements starts with Liste der Gesellschafter
+                    elements_list = [x for x in elements if x.text.startswith("Liste der Gesellschafter")]
+                    dates_elements = [(datetime.strptime(e.string.split('am ')[1], '%d.%m.%Y'), e) for e in elements_list if 'Liste der' in e.string]
                     # dates_elements = pd.DataFrame(["element", "date"])
                     # for element in elements:
                     #     if element.text.startswith("Liste der Gesellschafter"):
@@ -89,20 +92,32 @@ class CommercialRegisterRetriever:
                     #         dates_elements = pd.concat([dates_elements, date])
                     # print(dates_elements)
                     #check if any of the elements starts with Liste der Gesellschafter
-                    # elements_list = [x for x in elements if x.text.startswith("Liste der Gesellschafter")]
-                    dates_elements = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
+                    elements_toggle = [x for x in elements if not x.text.startswith("Liste der Gesellschafter")]
+                    # get list
+                    dates_elements_toggle = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
+                    #concat dates_elements and dates_elements_toggle
+                    dates_elements = dates_elements + dates_elements_toggle
+                    dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+                    #get the max date of all dates
+                    element =max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    if element.startswith("Liste der Gesellschafter"):
+                        self.browser.open_relative(element.attrs["href"])
+                        level += 1
+                    else:
+                        self.browser.open_relative(elements[0].attrs["href"])
+                        level += 1
                     print(dates_elements)
                     # # Find the element with 2021 or earlier as date
                     # #drop dates that are not 2021 or earlier
                     #take subset of dates_elements that are 2021 or earlier
-                    dates_elements = [x for x in dates_elements if x[0].year <= 2021]
-                    
                     # dates_elements = [x for x in dates_elements if x[0].year <= 2021]
-                    element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
-                    print(elements[1].text)
-                    self.browser.open_relative(element.attrs["href"])
-                    print(f"Elements in if statement 3: {elements[1]}")
-                    level += 1
+                    
+                    # # dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+                    # element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    # print(elements[1].text)
+                    # self.browser.open_relative(element.attrs["href"])
+                    # print(f"Elements in if statement 3: {elements[1]}")
+                    # level += 1
                 else:
                     self.browser.open_relative(elements[0].attrs["href"])
                     level += 1
