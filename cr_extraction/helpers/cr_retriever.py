@@ -77,26 +77,26 @@ class CommercialRegisterRetriever:
                 print(elements[0].text)
                 print(len(elements))
                 if len(elements) > 1:
-                    dates_elements = pd.DataFrame(["element", "date"])
-                    for element in elements:
-                        if element.text.startswith("Liste der Gesellschafter"):
-                            date=datetime.strptime(element.string.split('am ')[1], '%d.%m.%Y')
-                            date = pd.DataFrame([element, date])
-                            dates_elements = pd.concat([dates_elements, date])
-                        else:
-                            date = datetime.strptime(e.string, '%d.%m.%Y')
-                            date = pd.DataFrame([element, date])
-                            dates_elements = pd.concat([dates_elements, date])
-                    print(dates_elements)
+                    # dates_elements = pd.DataFrame(["element", "date"])
+                    # for element in elements:
+                    #     if element.text.startswith("Liste der Gesellschafter"):
+                    #         date=datetime.strptime(element.string.split('am ')[1], '%d.%m.%Y')
+                    #         date = pd.DataFrame([element, date])
+                    #         dates_elements = pd.concat([dates_elements, date])
+                    #     else:
+                    #         date = datetime.strptime(e.string, '%d.%m.%Y')
+                    #         date = pd.DataFrame([element, date])
+                    #         dates_elements = pd.concat([dates_elements, date])
+                    # print(dates_elements)
                     #check if any of the elements starts with Liste der Gesellschafter
                     # elements_list = [x for x in elements if x.text.startswith("Liste der Gesellschafter")]
-                    # dates_elements = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
-                    # print(dates_elements)
+                    dates_elements = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
+                    print(dates_elements)
                     # # Find the element with 2021 or earlier as date
                     # #drop dates that are not 2021 or earlier
                     #take subset of dates_elements that are 2021 or earlier
+                    dates_elements = [x for x in dates_elements if x[1].year <= 2021]
                     
-
                     # dates_elements = [x for x in dates_elements if x[0].year <= 2021]
                     element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                     print(elements[1].text)
