@@ -67,10 +67,27 @@ class CommercialRegisterRetriever:
                 self.browser.open_relative(element[0].attrs["href"])
                 level += 1
                 continue
+            #if elements[0].text is a date, check if it is 2021 or earlier, else go to element[1].text and check if it is 2021 or earlier
+            
+
             if "Liste der" not in elements[0].text:
-                print(f"Elements in if statement 3: {elements[0]}")
-                self.browser.open_relative(elements[0].attrs["href"])
-                level += 1
+                try:
+                    for element in elements:
+                        date_object = datetime.strptime(element.text, '%Y-%m-%d')  # Adjust the format if necessary
+                            # Check if the year is 2021 or earlier
+                        if date_object.year <= 2021:
+                            self.browser.open_relative(elements[0].attrs["href"])
+                            level += 1
+                            
+                            print("The date is from the year 2021 or earlier.")
+                            break
+                        else:
+
+                            print("The date is after the year 2021.")
+                except:
+                    print(f"Elements in if statement 3: {elements[0]}")
+                    self.browser.open_relative(elements[0].attrs["href"])
+                    level += 1
             else:
                 #filter for element that contains the word "2021", '2020' or '2019' 
                
