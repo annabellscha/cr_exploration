@@ -75,10 +75,11 @@ class CommercialRegisterRetriever:
                 print(len(elements))
                 if len(elements) > 1:
                     print(elements[1].text)
-                
-                print(f"Elements in if statement 3: {elements[0]}")
-                self.browser.open_relative(elements[0].attrs["href"])
-                level += 1
+                    self.browser.open_relative(elements[1].attrs["href"])
+                    print(f"Elements in if statement 3: {elements[1]}")
+                else:
+                    self.browser.open_relative(elements[0].attrs["href"])
+                    level += 1
             else:
                 #filter for element that contains the word "2021", '2020' or '2019' 
                
