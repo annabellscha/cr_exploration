@@ -72,7 +72,9 @@ class CommercialRegisterRetriever:
 
             if "Liste der" not in elements[0].text:
                 print(elements[0].text)
-                print(elements[1].text)
+                print(len(elements))
+                if len(elements) > 1:
+                    print(elements[1].text)
                 
                 print(f"Elements in if statement 3: {elements[0]}")
                 self.browser.open_relative(elements[0].attrs["href"])
