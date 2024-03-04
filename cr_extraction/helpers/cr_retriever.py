@@ -74,8 +74,14 @@ class CommercialRegisterRetriever:
                 print(elements[0].text)
                 print(len(elements))
                 if len(elements) > 1:
+                    dates_elements = [(datetime.strptime(e.string.split(), '%d.%m.%Y'), e) for e in elements]
+                    print(dates_elements)
+                    # Find the element with 2021 or earlier as date
+                    #drop dates that are not 2021 or earlier
+                    dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+                    element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                     print(elements[1].text)
-                    self.browser.open_relative(elements[1].attrs["href"])
+                    self.browser.open_relative(element.attrs["href"])
                     print(f"Elements in if statement 3: {elements[1]}")
                     level += 1
                 else:
