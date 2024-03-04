@@ -101,8 +101,10 @@ class CommercialRegisterRetriever:
                     dates_elements = dates_elements + dates_elements_toggle
                     print(dates_elements)
                     dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+                    print(dates_elements)
                     #get the max date of all dates
-                    element =max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    element =max (dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    print(element)
                     if element.startswith("Liste der Gesellschafter"):
                         self.browser.open_relative(element.attrs["href"])
                         level += 1
