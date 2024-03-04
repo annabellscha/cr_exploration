@@ -74,7 +74,7 @@ class CommercialRegisterRetriever:
                 print(elements[0].text)
                 print(len(elements))
                 if len(elements) > 1:
-                    dates_elements = [(datetime.strptime(e.string.split(), '%d.%m.%Y'), e) for e in elements]
+                    dates_elements = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
                     print(dates_elements)
                     # Find the element with 2021 or earlier as date
                     #drop dates that are not 2021 or earlier
