@@ -77,6 +77,7 @@ class CommercialRegisterRetriever:
                     print(elements[1].text)
                     self.browser.open_relative(elements[1].attrs["href"])
                     print(f"Elements in if statement 3: {elements[1]}")
+                    level += 1
                 else:
                     self.browser.open_relative(elements[0].attrs["href"])
                     level += 1
