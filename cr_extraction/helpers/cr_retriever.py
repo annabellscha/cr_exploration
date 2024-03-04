@@ -106,7 +106,7 @@ class CommercialRegisterRetriever:
                     element =max (dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                     print(element)
                     if element.text.startswith("Liste der Gesellschafter"):
-                        self.browser.open_relative(element.attrs["href"])
+                        # self.browser.open_relative(element.attrs["href"])
                         level += 1
                     else:
                         self.browser.open_relative(elements[0].attrs["href"])
@@ -137,7 +137,7 @@ class CommercialRegisterRetriever:
                 dates_elements = [x for x in dates_elements if x[0].year <= 2021]
 
                 element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
-                print(f"Elements 4: {elements}")
+                print(f"Elements 4: {element}")
                 self.file_name = element.text
           
                 print(self.file_name)
