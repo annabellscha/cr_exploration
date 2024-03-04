@@ -105,7 +105,7 @@ class CommercialRegisterRetriever:
                     #get the max date of all dates
                     element =max (dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                     print(element)
-                    if element.startswith("Liste der Gesellschafter"):
+                    if element.text.startswith("Liste der Gesellschafter"):
                         self.browser.open_relative(element.attrs["href"])
                         level += 1
                     else:
