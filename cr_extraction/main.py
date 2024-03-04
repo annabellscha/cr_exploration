@@ -85,7 +85,7 @@ def download_files(request):
     # results = retriever.search(company_name=company)
     # print(results)
 
-    results = retriever.extended_search(company_id=company_id, search_type="shareholder")
+    results = retriever.extended_search(company_id=company_id, search_type="shareholders")
 
 
     # if company_id:
