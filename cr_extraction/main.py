@@ -85,7 +85,7 @@ def download_files(request):
     # results = retriever.search(company_name=company)
     # print(results)
 
-    results = retriever.extended_search(company_id=company_id, search_type="shareholders")
+    results = retriever.extended_search(company_id=company_id, search_type="startups")
 
 
     # if company_id:
@@ -97,7 +97,7 @@ def download_files(request):
     #     return 'Error: {}'.format(e), 500
     retriever.add_documents_to_cart(company=company_data, documents=documents, company_id=company_id)
     company, documents = retriever.download_documents_from_basket(
-        bypass_storage=bypass_storage, company_id = company_id
+        bypass_storage=bypass_storage, company_id = company_id, search_type="startups"
     )
 
     response_object = company
