@@ -76,7 +76,7 @@ class CommercialRegisterRetriever:
                         date_object = datetime.strptime(element.text, '%Y-%m-%d')  # Adjust the format if necessary
                             # Check if the year is 2021 or earlier
                         if date_object.year <= 2021:
-                            self.browser.open_relative(elements[0].attrs["href"])
+                            self.browser.open_relative(element.attrs["href"])
                             level += 1
                             
                             print("The date is from the year 2021 or earlier.")
