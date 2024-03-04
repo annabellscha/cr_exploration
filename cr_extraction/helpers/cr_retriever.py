@@ -98,7 +98,7 @@ class CommercialRegisterRetriever:
                     dates_elements = [x for x in dates_elements if x[1].year <= 2021]
                     
                     # dates_elements = [x for x in dates_elements if x[0].year <= 2021]
-                    element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    element = max(dates_elements, key=lambda x: x[0])[0] if dates_elements else None
                     print(elements[1].text)
                     self.browser.open_relative(element.attrs["href"])
                     print(f"Elements in if statement 3: {elements[1]}")
