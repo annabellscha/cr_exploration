@@ -80,6 +80,7 @@ class CommercialRegisterRetriever:
                     #check if any of the elements starts with Liste der Gesellschafter
                     elements_list = [x for x in elements if x.text.startswith("Liste der Gesellschafter")]
                     dates_elements = [(datetime.strptime(e.string.split('am ')[1], '%d.%m.%Y'), e) for e in elements_list if 'Liste der' in e.string]
+                    print(dates_elements)
                     # dates_elements = pd.DataFrame(["element", "date"])
                     # for element in elements:
                     #     if element.text.startswith("Liste der Gesellschafter"):
@@ -94,9 +95,11 @@ class CommercialRegisterRetriever:
                     #check if any of the elements starts with Liste der Gesellschafter
                     elements_toggle = [x for x in elements if not x.text.startswith("Liste der Gesellschafter")]
                     # get list
-                    dates_elements_toggle = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
+                    dates_elements_toggle = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements_toggle]
+                    print(dates_elements_toggle)
                     #concat dates_elements and dates_elements_toggle
                     dates_elements = dates_elements + dates_elements_toggle
+                    print(dates_elements)
                     dates_elements = [x for x in dates_elements if x[0].year <= 2021]
                     #get the max date of all dates
                     element =max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
