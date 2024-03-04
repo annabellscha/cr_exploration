@@ -71,6 +71,7 @@ class CommercialRegisterRetriever:
             
 
             if "Liste der" not in elements[0].text:
+                print(elements[0].text)
                 try:
                     for element in elements:
                         date_object = datetime.strptime(element.text, '%Y-%m-%d')  # Adjust the format if necessary
