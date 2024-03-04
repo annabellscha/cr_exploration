@@ -136,7 +136,7 @@ class CommercialRegisterRetriever:
                 #drop dates that are not 2021 or earlier
                 dates_elements = [x for x in dates_elements if x[0].year <= 2021]
 
-                element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                # element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                 print(f"Elements 4: {element}")
                 self.file_name = element.text
           
