@@ -109,7 +109,7 @@ class CommercialRegisterRetriever:
                         # self.browser.open_relative(element.attrs["href"])
                         level += 1
                     else:
-                        self.browser.open_relative(elements[0].attrs["href"])
+                        self.browser.open_relative(element.attrs["href"])
                         level += 1
                     print(dates_elements)
                     # # Find the element with 2021 or earlier as date
