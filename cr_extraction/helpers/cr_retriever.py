@@ -520,11 +520,11 @@ class CommercialRegisterRetriever:
                 document_manager._write_error_to_db("no results found", company_id, search_type)
                 raise Exception("no results found")
             else:
-                print(f"these are results: {companies}")
+                print(f"these are results: {companies[0]}")
                 return companies[0]
         elif len(row_back_divs) > 1:
             document_manager._write_error_to_db("multiple results found", company_id, search_type)
-            print(f"these are results: {companies}")
+            print(f"these are results multiple: {companies}")
             raise Exception("multiple results found")
         else:
         # open search results
@@ -535,7 +535,7 @@ class CommercialRegisterRetriever:
             if return_one:
                 if len(companies) != 1:
                     raise Exception("no results found/ multiple companies found")
-                    
+                print(companies[0])
                 return companies[0]
             else:
                 print(companies)
