@@ -521,7 +521,9 @@ class CommercialRegisterRetriever:
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies[0]}")
+                print(self.browser.page)
                 self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+                print(self.browser.page)
                 result = companies[0]
                 print(result)
         elif len(row_back_divs) > 1:
@@ -531,6 +533,7 @@ class CommercialRegisterRetriever:
         elif len(row_back_divs) == 1:
         # open search results
             self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            print(self.browser.page)
             companies = self._parse_company_results_page(self.browser.page)
 
             # we expect only one result for the company id
