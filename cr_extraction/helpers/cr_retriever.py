@@ -400,8 +400,8 @@ class CommercialRegisterRetriever:
         companies = self._parse_company_results_page(self.browser.page)
             # we expect only one result for the company id
             
-        print(companies[0])
-        result = companies[0]
+        print(companies)
+        result = companies
         
         
         return result
