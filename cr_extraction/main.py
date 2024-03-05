@@ -86,7 +86,7 @@ def download_files(request):
     # print(results)
 
     results = retriever.extended_search(company_id=company_id, search_type="startups")
-
+    print(results)
     if results == "normal search":
         print(results)
         retriever = CommercialRegisterRetriever()

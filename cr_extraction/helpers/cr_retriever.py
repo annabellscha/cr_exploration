@@ -371,14 +371,7 @@ class CommercialRegisterRetriever:
         return companies
     
     def search(self, company_id: int,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
-        # Fill-in the search form
-        if self.session_id is not None:
-            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
-            
-        self.browser.select_form('#globalSearchForm')
-        self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
-        self.browser["submitaction"] = "searchRegisterData"
-        self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
+       
 
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
         data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
@@ -391,7 +384,14 @@ class CommercialRegisterRetriever:
             register_number = data.get('register_id', None)
             circuit_id = data.get('register_mapping', None)
             company_name = data.get('shareholder_name', None)
-
+         # Fill-in the search form
+        if self.session_id is not None:
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            
+        self.browser.select_form('#globalSearchForm')
+        self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
+        self.browser["submitaction"] = "searchRegisterData"
+        self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
         # self.browser.open(
         #     "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(
         #         self.session_id))
