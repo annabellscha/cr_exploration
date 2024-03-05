@@ -370,7 +370,7 @@ class CommercialRegisterRetriever:
             i+=1
         return companies
     
-    def search(self, company_name: str,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
+    def search(self, company_id: int,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
         if self.session_id is not None:
             self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
@@ -420,6 +420,7 @@ class CommercialRegisterRetriever:
 
         # get company information
         results_page = self.browser.page
+
         results = results_page.find("tbody").find_all("tr", attrs={"class": None})
 
         for i in range(0, len(results), 2):
