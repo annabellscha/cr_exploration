@@ -370,7 +370,7 @@ class CommercialRegisterRetriever:
             i+=1
         return companies
     
-    def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
+    def search(self, company_name: str,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
         # Fill-in the search form
         if self.session_id is not None:
             self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
@@ -379,6 +379,18 @@ class CommercialRegisterRetriever:
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
         self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
+
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
+
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
 
         # self.browser.open(
         #     "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(
@@ -462,7 +474,7 @@ class CommercialRegisterRetriever:
             i+=1
 
             
-        return companies
+        return companies[0]
     
     def extended_search(self, company_id:int, search_type:str, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
         
@@ -514,16 +526,14 @@ class CommercialRegisterRetriever:
             print("doing name search")
             # raise Exception("no results found")
             print(company_name)
-            companies = self.search(company_name)
+            # companies = self.search(company_name)
+            result = "normal search"
             print("check if result is empty")
             if len(companies) == 0:
                 document_manager._write_error_to_db("no results found", company_id, search_type)
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies[0]}")
-                print(self.browser.page)
-                self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
-                print(self.browser.page)
                 result = companies[0]
                 print(result)
         elif len(row_back_divs) > 1:
