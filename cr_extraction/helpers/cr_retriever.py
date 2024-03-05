@@ -390,7 +390,7 @@ class CommercialRegisterRetriever:
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
         self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
-        
+        self.browser.open_relative(self.browser.page.select("div.right a")[0].attrs["href"])
 
         container_div = self.browser.page.select_one('.container.result_container.global-search')
 
