@@ -91,13 +91,14 @@ class DocumentManager:
             shareholder['startup_id'] = company_id
             #make sure  that birsthdate is in the right format date YYYY-MM-DD
             date_format = "%Y-%m-%d"
-            
-            birthdate = shareholder.get('birthdate')
-            print(birthdate)
-            valid_birthdate = datetime.strptime(birthdate, date_format)
-            print(valid_birthdate)
-            shareholder['birthdate'] = valid_birthdate
-
+            try:
+                birthdate = shareholder.get('birthdate')
+                print(birthdate)
+                valid_birthdate = datetime.strptime(birthdate, date_format)
+                print(valid_birthdate)
+                shareholder['birthdate'] = valid_birthdate
+            except ValueError:
+                print("The birthdate was in the right format")
             #Check format of percentage_of_total_shares
             percentage_of_total_shares = shareholder.get('percentage_of_total_shares')
             try:
