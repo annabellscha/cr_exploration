@@ -1,3 +1,4 @@
+import datetime
 from supabase import create_client, Client
 import json
 class DocumentManager:
@@ -88,6 +89,12 @@ class DocumentManager:
         for shareholder in shareholders:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
+            #make sure  that birsthdate is in the right format date YYYY-MM-DD
+            date_format = "%Y-%m-%d"
+
+            birthdate = shareholder.get('birthdate')
+            valid_birthdate = datetime.strptime(birthdate, date_format)
+            shareholder['birthdate'] = valid_birthdate
             # Insert the shareholder data into the shareholder_relations table
             print(shareholder)
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
