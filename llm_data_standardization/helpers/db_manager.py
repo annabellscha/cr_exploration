@@ -104,7 +104,7 @@ class DocumentManager:
                 print("The percentage_of_total_shares is not a number")
                 valid_percentage_of_total_shares = 0.0
 
-
+            shareholder['percentage_of_total_shares'] = valid_percentage_of_total_shares
             # Insert the shareholder data into the shareholder_relations table
             print(shareholder)
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
