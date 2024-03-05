@@ -508,7 +508,7 @@ class CommercialRegisterRetriever:
 
         # Find all divs with class 'row back' within the container
         row_back_divs = container_div.select('.row.back')
-       
+        result =None
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
             print("doing name search")
@@ -521,7 +521,7 @@ class CommercialRegisterRetriever:
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies[0]}")
-                return companies[0]
+                result = companies[0]
         elif len(row_back_divs) > 1:
             document_manager._write_error_to_db("multiple results found", company_id, search_type)
             print(f"these are results multiple: {companies}")
@@ -536,11 +536,11 @@ class CommercialRegisterRetriever:
                 if len(companies) != 1:
                     raise Exception("no results found/ multiple companies found")
                 print(companies[0])
-                return companies[0]
+                result = companies[0]
             else:
                 print(companies)
-                return companies
-      
+                result = companies
+        return result
     
     def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
         # set company name
