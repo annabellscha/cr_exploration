@@ -370,6 +370,42 @@ class CommercialRegisterRetriever:
             i+=1
         return companies
     
+    def search_one(self, company_id: int, search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
+
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
+         # Fill-in the search form
+        if self.session_id is not None:
+            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
+            
+        self.browser.select_form('#globalSearchForm')
+        self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
+        self.browser["submitaction"] = "searchRegisterData"
+        self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
+        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+
+        container_div = self.browser.page.select_one('.container.result_container.global-search')
+
+        # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+        
+        companies = self._parse_company_results_page(self.browser.page)
+            # we expect only one result for the company id
+            
+        print(companies[0])
+        result = companies[0]
+        
+        
+        return result
+
     def search(self, company_id: int,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
        
 
