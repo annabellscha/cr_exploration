@@ -474,7 +474,8 @@ class CommercialRegisterRetriever:
             companies.append(company)
             i+=1
 
-            
+        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+        print(companies[0])   
         return companies[0]
     
     def extended_search(self, company_id:int, search_type:str, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
