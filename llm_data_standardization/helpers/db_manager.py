@@ -91,9 +91,11 @@ class DocumentManager:
             shareholder['startup_id'] = company_id
             #make sure  that birsthdate is in the right format date YYYY-MM-DD
             date_format = "%Y-%m-%d"
-
+            
             birthdate = shareholder.get('birthdate')
+            print(birthdate)
             valid_birthdate = datetime.strptime(birthdate, date_format)
+            print(valid_birthdate)
             shareholder['birthdate'] = valid_birthdate
 
             #Check format of percentage_of_total_shares
@@ -103,7 +105,7 @@ class DocumentManager:
             except ValueError:
                 print("The percentage_of_total_shares is not a number")
                 valid_percentage_of_total_shares = 0.0
-
+            print(valid_percentage_of_total_shares)
             shareholder['percentage_of_total_shares'] = valid_percentage_of_total_shares
             # Insert the shareholder data into the shareholder_relations table
             print(shareholder)
