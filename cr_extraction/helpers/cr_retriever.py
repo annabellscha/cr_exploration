@@ -395,7 +395,7 @@ class CommercialRegisterRetriever:
         container_div = self.browser.page.select_one('.container.result_container.global-search')
 
         # Find all divs with class 'row back' within the container
-        row_back_divs = container_div.select('.row.back')
+        # row_back_divs = container_div.select('.row.back')
         self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
         companies = self._parse_company_results_page(self.browser.page)
             # we expect only one result for the company id
