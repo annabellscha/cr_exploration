@@ -89,8 +89,13 @@ class DocumentManager:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
             # Insert the shareholder data into the shareholder_relations table
+            print(shareholder)
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
+            # Check if the operation was successful
+            print(response.status_code)
+            # if response.status_code in range(200, 300):
             
+
     
     def _write_error_to_db(self, error: str, company_id: int):
 
