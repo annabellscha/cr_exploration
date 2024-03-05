@@ -521,6 +521,7 @@ class CommercialRegisterRetriever:
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies[0]}")
+                self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
                 result = companies[0]
                 print(result)
         elif len(row_back_divs) > 1:
@@ -543,7 +544,7 @@ class CommercialRegisterRetriever:
                 result = companies
         
         
-        print(result)
+        print(f"results{result}")
         return result
     
     def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
