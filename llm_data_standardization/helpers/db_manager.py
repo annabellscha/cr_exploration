@@ -95,6 +95,16 @@ class DocumentManager:
             birthdate = shareholder.get('birthdate')
             valid_birthdate = datetime.strptime(birthdate, date_format)
             shareholder['birthdate'] = valid_birthdate
+
+            #Check format of percentage_of_total_shares
+            percentage_of_total_shares = shareholder.get('percentage_of_total_shares')
+            try:
+                valid_percentage_of_total_shares = float(percentage_of_total_shares)
+            except ValueError:
+                print("The percentage_of_total_shares is not a number")
+                valid_percentage_of_total_shares = 0.0
+
+
             # Insert the shareholder data into the shareholder_relations table
             print(shareholder)
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
