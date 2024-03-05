@@ -89,6 +89,7 @@ class DocumentManager:
             shareholder['startup_id'] = company_id
             # Insert the shareholder data into the shareholder_relations table
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
+            
     
 
 # Usage example:
