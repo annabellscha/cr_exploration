@@ -383,9 +383,7 @@ class CommercialRegisterRetriever:
             circuit_id = data.get('register_mapping', None)
             company_name = data.get('shareholder_name', None)
          # Fill-in the search form
-        if self.session_id is not None:
-            self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
-            
+          
         self.browser.select_form('#globalSearchForm')
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
@@ -396,11 +394,15 @@ class CommercialRegisterRetriever:
         container_div = self.browser.page.select_one('.container.result_container.global-search')
 
         # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+        print(row_back_divs)    
+        # Find all divs with class 'row back' within the container
         # row_back_divs = container_div.select('.row.back')
-        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
-        companies = self._parse_company_results_page(self.browser.page)
-            # we expect only one result for the company id
-            
+        if len(row_back_divs) is not None:
+            self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            companies = self._parse_company_results_page(self.browser.page)
+                # we expect only one result for the company id
+                
         print(companies)
         result = companies
         
