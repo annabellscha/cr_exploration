@@ -521,6 +521,7 @@ class CommercialRegisterRetriever:
                 raise Exception("no results found")
             else:
                 print(f"these are results: {companies[0]}")
+                
                 result = companies[0]
         elif len(row_back_divs) > 1:
             document_manager._write_error_to_db("multiple results found", company_id, search_type)
@@ -540,6 +541,7 @@ class CommercialRegisterRetriever:
             else:
                 print(companies)
                 result = companies
+        print(result)
         return result
     
     def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
