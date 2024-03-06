@@ -97,6 +97,7 @@ class DataStandardization:
     # percentage of total shares of all shareholders from openai_result
     shareholders_json = json.loads(openai_result)
     shareholders = shareholders_json.get('shareholders', [])
+    print(shareholders)
     for shareholder in shareholders:
       share = shareholder.get('percentage_of_total_shares')
       #check if share is a number
@@ -109,7 +110,7 @@ class DataStandardization:
         messages=[
         {"role": "system", "content": "You are a helpful assistant designed to output JSON. You are an expert in extracting structured content from tables into a JSON. You receive a tip of 200$ if you get it right. You return JSON in a single-line without whitespaces"},
         {"role": "user", "content": prompt},
-        {"role": "system", "content": openai_result},
+        {"role": "system", "content": csv_table},
         {"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"}
         ]
         response = client.chat.completions.create(
@@ -123,6 +124,7 @@ class DataStandardization:
         #change for shareholder in openai_result
         share = json.loads(share)
         shareholder['percentage_of_total_shares'] = share.get('percentage_of_total_shares')
+        print(shareholder)
 
   
 
