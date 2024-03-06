@@ -131,7 +131,7 @@ class DataStandardization:
 
 
 
-    shareholders = document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
+    document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
     try:

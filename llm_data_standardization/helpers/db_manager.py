@@ -114,8 +114,7 @@ class DocumentManager:
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
             # Check if the operation was successful
             
-            # if response.status_code in range(200, 300):
-            
+            # if response.status_code in range(200, 300):   
         return shareholders
     
     def _write_error_to_db(self, error: str, company_id: int):
