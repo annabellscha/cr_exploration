@@ -107,7 +107,7 @@ class DataStandardization:
           valid_share = float(share)
         else: 
           #throw an error
-          valid_share = 0.0
+          share = 0.0
           raise ValueError
         
       except ValueError:
