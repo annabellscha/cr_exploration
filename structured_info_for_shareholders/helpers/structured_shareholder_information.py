@@ -90,10 +90,12 @@ class StructuredInformation:
     people = root.findall('.//tns:beteiligung', namespaces)
     aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
     total_MDs = len(people)-2
+    print(total_MDs)
     # Find and extract the gegenstand element
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     
     for person in people:
+        print(person)
         person_info = {}
         vorname = person.find('.//tns:vorname', namespaces)
         nachname = person.find('.//tns:nachname', namespaces)
