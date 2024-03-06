@@ -98,7 +98,7 @@ class DataStandardization:
     shareholders_json = json.loads(openai_result)
     shareholders = shareholders_json.get('shareholders', [])
     for shareholder in shareholders:
-      share = shareholders.get('percentage_of_total_shares')
+      share = shareholder.get('percentage_of_total_shares')
       #check if share is a number
       try:
         valid_share = float(share)
