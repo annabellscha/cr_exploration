@@ -97,7 +97,7 @@ class DataStandardization:
     # percentage of total shares of all shareholders from openai_result
     shareholders_json = json.loads(openai_result)
     shareholders = shareholders_json.get('shareholders', [])
-    print(shareholders)
+    print(f"this is the shareholders {shareholders}")
     for shareholder in shareholders:
       share = shareholder.get('percentage_of_total_shares')
       #check if share is a number
@@ -131,7 +131,7 @@ class DataStandardization:
 
 
 
-    document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
+    shareholders = document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
     try:

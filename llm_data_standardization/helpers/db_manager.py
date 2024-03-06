@@ -116,7 +116,7 @@ class DocumentManager:
             
             # if response.status_code in range(200, 300):
             
-
+        return shareholders
     
     def _write_error_to_db(self, error: str, company_id: int):
 
