@@ -47,11 +47,11 @@ import chardet
 class StructuredInformation:
 
 
-  def _get_xml_for_company(self,company_id:int,document_type:str,download:bool):
+  def _get_xml_for_company(self,shareholder_id:int,document_type:str,download:bool):
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
-    documentManager._get_file_path(company_id)
+    documentManager._get_file_path(shareholder_id)
 
-    gcs_file_path=documentManager._get_file_path(company_id)
+    gcs_file_path=documentManager._get_file_path(shareholder_id)
   
     storage_client = storage.Client(project="cr-extraction")
     bucket = storage_client.bucket('cr_documents')
@@ -83,9 +83,9 @@ class StructuredInformation:
 
 
 
-  def get_shareholder_details_from_si(self,company_id:int):
+  def get_shareholder_details_from_si(self,shareholder_id:int):
   
-    file_content = self._get_xml_for_company(company_id,'si',True)
+    file_content = self._get_xml_for_company(shareholder_id,'si',True)
 
     root = ET.fromstring(file_content)
 
@@ -94,6 +94,10 @@ class StructuredInformation:
     namespaces = {'tns': 'http://www.xjustiz.de'}
     name_json = {}
 
+    # get shareholder name
+    documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
+    name_json = documentManager._get_search_attributes_from_db(shareholder_id, 'shareholder_name')
+    shareholder_name = name_json['shareholder_name']
     # Find elements with the given namespace
     people = root.findall('.//tns:beteiligung', namespaces)
     aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
@@ -115,7 +119,7 @@ class StructuredInformation:
             geschlecht = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
             
             # Print the results
-            df_temp = {'name':company_id,'aktenzeichen':aktenzeichen,'gegenstand':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'geburtsdatum': geburtsdatum, 'geschlecht': geschlecht}
+            df_temp = {'shareholder_name':shareholder_name,'gender':geschlecht,'shareholder_purpose':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'birthdate': geburtsdatum}
             df_temp_df = pd.DataFrame([df_temp])
             #add df temp to df_shareholder_info
             df_shareholder_info = pd.concat([df_shareholder_info,df_temp_df])
@@ -136,18 +140,20 @@ class StructuredInformation:
     json_str = df_shareholder_info.to_json(orient='columns')
     # df_shareholder_info = df_unique_cols.to_json()
     #drop empty columns
-   
+    print(json_str)
     #remove column names
-  
+    #add each people df to the table shareholders as a new row
+    for shareholder in json_str:
+        documentManager._save_json_to_db(shareholder, shareholder_id, column_name='shareholder_details')
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
-    documentManager._save_json_to_db(json_str, company_id, column_name='list_mds')
+    documentManager._save_json_to_db(json_str, shareholder_id, column_name='list_mds')
     
     gegenstand = {'gegenstand':gegenstand}
     
     #write gegenstand only to db
-    documentManager._save_json_to_db(gegenstand, company_id, column_name='startup_purpose')
+    documentManager._save_json_to_db(gegenstand, shareholder_id, column_name='startup_purpose')
 
     return "yes"
   
