@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from supabase import create_client, Client
 import json
 class DocumentManager:
