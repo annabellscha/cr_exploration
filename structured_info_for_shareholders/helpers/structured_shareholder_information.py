@@ -115,6 +115,7 @@ class StructuredInformation:
                     'birthdate': geburtsdatum_element.text,
                     'gender': gender,
                     'shareholder_id': shareholder_id,
+                    'list_mds': total_MDs,
                 }
                 shareholders["shareholders"].append(person_info)
 
