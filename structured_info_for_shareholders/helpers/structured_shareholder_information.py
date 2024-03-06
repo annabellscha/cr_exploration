@@ -98,13 +98,17 @@ class StructuredInformation:
         print(person)
         person_info = {}
         vorname = person.find('.//tns:vorname', namespaces)
-        print(vorname)
+        print(vorname.text)
         nachname = person.find('.//tns:nachname', namespaces)
+        print(nachname.text)
         geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
+        print(geburtsdatum.text)
         geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
+        print(geschlecht_code.text)
         
         if all([vorname, nachname, geburtsdatum, geschlecht_code]):
             person_info['firstname'] = vorname.text
+            
             person_info['lastname'] = nachname.text
             person_info['birthdate'] = geburtsdatum.text
             person_info['gender'] = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
@@ -112,6 +116,7 @@ class StructuredInformation:
             person_info['list_mds'] = total_MDs
             # Add the person to the shareholders list
             shareholders["shareholders"].append(person_info)
+            print(shareholders)
     
     # Serialize the shareholders dictionary to a JSON string
     shareholders_json = json.dumps(shareholders, ensure_ascii=False)
