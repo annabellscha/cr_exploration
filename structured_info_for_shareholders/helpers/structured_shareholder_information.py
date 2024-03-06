@@ -94,29 +94,52 @@ class StructuredInformation:
     # Find and extract the gegenstand element
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     
-    for person in people:
-        print(person)
-        person_info = {}
-        vorname = person.find('.//tns:vorname', namespaces)
-        print(vorname.text)
-        nachname = person.find('.//tns:nachname', namespaces)
-        print(nachname.text)
-        geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
-        print(geburtsdatum.text)
-        geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
-        print(geschlecht_code.text)
+    for beteiligung in root.findall('.//tns:beteiligung', namespaces):
+        # Look for natural person within the beteiligung element
+        natuerliche_person = beteiligung.find('.//tns:natuerlichePerson', namespaces)
+        if natuerliche_person is not None:
+            vorname_element = natuerliche_person.find('.//tns:vollerName/tns:vorname', namespaces)
+            nachname_element = natuerliche_person.find('.//tns:vollerName/tns:nachname', namespaces)
+            geburtsdatum_element = natuerliche_person.find('.//tns:geburt/tns:geburtsdatum', namespaces)
+            geschlecht_element = natuerliche_person.find('.//tns:geschlecht', namespaces)
+
+            # Only proceed if all elements are found
+            if vorname_element is not None and nachname_element is not None and geburtsdatum_element is not None and geschlecht_element is not None:
+                geschlecht_code = geschlecht_element.find('.//code', namespaces)
+                gender = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
+                
+                # Construct the shareholder info dictionary
+                person_info = {
+                    'firstname': vorname_element.text,
+                    'lastname': nachname_element.text,
+                    'birthdate': geburtsdatum_element.text,
+                    'gender': gender
+                }
+                shareholders["shareholders"].append(person_info)
+
+    # for person in people:
+    #     print(person)
+    #     person_info = {}
+    #     vorname = person.find('.//tns:vorname', namespaces)
+    #     print(vorname.text)
+    #     nachname = person.find('.//tns:nachname', namespaces)
+    #     print(nachname.text)
+    #     geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
+    #     print(geburtsdatum.text)
+    #     geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
+    #     print(geschlecht_code.text)
         
-        if all([vorname, nachname, geburtsdatum, geschlecht_code]):
-            person_info['firstname'] = vorname.text
+    #     if all([vorname, nachname, geburtsdatum, geschlecht_code]):
+    #         person_info['firstname'] = vorname.text
             
-            person_info['lastname'] = nachname.text
-            person_info['birthdate'] = geburtsdatum.text
-            person_info['gender'] = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
-            person_info['shareholder_name'] = shareholder_name
-            person_info['list_mds'] = total_MDs
-            # Add the person to the shareholders list
-            shareholders["shareholders"].append(person_info)
-            print(shareholders)
+    #         person_info['lastname'] = nachname.text
+    #         person_info['birthdate'] = geburtsdatum.text
+    #         person_info['gender'] = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
+    #         person_info['shareholder_name'] = shareholder_name
+    #         person_info['list_mds'] = total_MDs
+    #         # Add the person to the shareholders list
+    #         shareholders["shareholders"].append(person_info)
+    #         print(shareholders)
     
     # Serialize the shareholders dictionary to a JSON string
     shareholders_json = json.dumps(shareholders, ensure_ascii=False)
