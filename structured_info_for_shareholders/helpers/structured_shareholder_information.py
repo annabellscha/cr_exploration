@@ -98,6 +98,7 @@ class StructuredInformation:
         print(person)
         person_info = {}
         vorname = person.find('.//tns:vorname', namespaces)
+        print(vorname)
         nachname = person.find('.//tns:nachname', namespaces)
         geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
         geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
