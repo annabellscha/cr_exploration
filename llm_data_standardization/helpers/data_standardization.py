@@ -106,7 +106,12 @@ class DataStandardization:
         print("The percentage_of_total_shares is not a number")
         valid_share = 0.0
         #call openai and ask for shareholder.get('shareholder_name') if it is sure about the total percentage of shares
-        messages= messages.append({"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"})
+        messages=[
+        {"role": "system", "content": "You are a helpful assistant designed to output JSON. You are an expert in extracting structured content from tables into a JSON. You receive a tip of 200$ if you get it right. You return JSON in a single-line without whitespaces"},
+        {"role": "user", "content": prompt},
+        {"role": "system", "content": openai_result},
+        {"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"}
+      ]
         response = client.chat.completions.create(
           model=model,
           response_format={ "type": "json_object" },
