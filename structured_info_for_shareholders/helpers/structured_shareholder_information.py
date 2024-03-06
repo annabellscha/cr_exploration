@@ -2,9 +2,6 @@ from openai import OpenAI
 import os
 from .db_manager import DocumentManager
 
-
-from azure.core.credentials import AzureKeyCredential
-from azure.ai.formrecognizer import DocumentAnalysisClient
 import pandas as pd
 
 from .db_manager import DocumentManager
@@ -12,18 +9,9 @@ from .db_manager import DocumentManager
 # Load environment variables from .env file
 
 
-# Access the environment variables
-endpoint = os.getenv("FORM_RECOGNIZER_ENDPOINT")
-key = os.getenv("FORM_RECOGNIZER_KEY")
+
 # endpoint ="https://scraper.cognitiveservices.azure.com/"
 # key ="8b2877ef2b52444886bb09e0c5be84e5"
-
-print(key)
-print(endpoint)
-# iniitalize the client
-document_analysis_client = DocumentAnalysisClient(
-    endpoint=endpoint, credential=AzureKeyCredential(key)
-)
 
 
 
