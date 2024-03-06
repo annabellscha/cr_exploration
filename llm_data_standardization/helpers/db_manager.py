@@ -96,7 +96,7 @@ class DocumentManager:
                 print(birthdate)
                 valid_birthdate = datetime.strptime(birthdate, date_format)
                 print(valid_birthdate)
-                shareholder['birthdate'] = valid_birthdate
+                shareholder['birthdate'] = valid_birthdate.date()
             except ValueError:
                 print("The birthdate was in the right format")
             #Check format of percentage_of_total_shares
