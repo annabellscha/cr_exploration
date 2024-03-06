@@ -113,7 +113,8 @@ class StructuredInformation:
                     'firstname': vorname_element.text,
                     'lastname': nachname_element.text,
                     'birthdate': geburtsdatum_element.text,
-                    'gender': gender
+                    'gender': gender,
+                    'shareholder_id': shareholder_id,
                 }
                 shareholders["shareholders"].append(person_info)
 
