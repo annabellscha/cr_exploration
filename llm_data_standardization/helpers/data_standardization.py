@@ -101,9 +101,13 @@ class DataStandardization:
     for shareholder in shareholders:
       share = shareholder.get('percentage_of_total_shares')
       #check if share is a number
+      
       try:
         if share is not None:
           valid_share = float(share)
+        else: 
+          #throw an error
+          raise ValueError
         
       except ValueError:
         print("The percentage_of_total_shares is not a number")
