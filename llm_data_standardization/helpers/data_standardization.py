@@ -101,7 +101,7 @@ class DataStandardization:
     for shareholder in shareholders:
       share = shareholder.get('percentage_of_total_shares')
       #check if share is a number
-      
+      print(share)
       try:
         if share is not None:
           valid_share = float(share)
@@ -130,7 +130,11 @@ class DataStandardization:
         share = response.choices[0].message.content
         #change for shareholder in openai_result
         share = json.loads(share)
-        shareholder['percentage_of_total_shares'] = share.get('percentage_of_total_shares')
+        if share.get('percentage_of_total_shares') is not None:
+          valid_share = float(share.get('percentage_of_total_shares'))
+        else:
+          valid_share = 0.0
+        shareholder['percentage_of_total_shares'] = valid_share
         print(shareholder)
 
   
