@@ -159,10 +159,10 @@ class StructuredInformation:
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
     documentManager._update_shareholders_in_db(shareholders_json, shareholder_id)
     
-    gegenstand = {'gegenstand':gegenstand}
+    gegenstand = {'shareholder_purpose':gegenstand}
     
     #write gegenstand only to db
-    documentManager._save_json_to_db(gegenstand, shareholder_id, column_name='startup_purpose')
+    documentManager._save_json_to_db(gegenstand, shareholder_id, column_name='shareholder_purpose')
 
     return "yes"
   

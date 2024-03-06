@@ -93,9 +93,10 @@ class DocumentManager:
     def _update_shareholders_in_db(self,shareholders_json: str, shareholder_id: int):
         # Deserialize the JSON string to a dictionary
         shareholders_data = json.loads(shareholders_json)
-
+        print(shareholders_data)
         # Loop through each shareholder
         for shareholder in shareholders_data["shareholders"]:
+            print(shareholder)
             # Update the shareholder's information in the 'shareholders' table
             # You would need to have a unique identifier for each shareholder to update the correct row.
             # I'm assuming here that `shareholder_id` is a field in your JSON and in the table.
