@@ -89,10 +89,26 @@ class DocumentManager:
             shareholder['shareholder_id'] = shareholder_id
             # Insert the shareholder data into the shareholder_relations table
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
-            
     
+    def _update_shareholders_in_db(self,shareholders_json: str, shareholder_id: int):
+        # Deserialize the JSON string to a dictionary
+        shareholders_data = json.loads(shareholders_json)
 
-# Usage example:
-# You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
-# document_manager = DocumentManager('your_supabase_url', 'your_supabase_key')
-# document_manager._save_document_link_to_db('/path/to/document.pdf', 123)
+        # Loop through each shareholder
+        for shareholder in shareholders_data["shareholders"]:
+            # Update the shareholder's information in the 'shareholders' table
+            # You would need to have a unique identifier for each shareholder to update the correct row.
+            # I'm assuming here that `shareholder_id` is a field in your JSON and in the table.
+            response = self.supabase.table('shareholders').update(shareholder).eq('shareholder_id', shareholder['shareholder_id']).execute()
+
+            # Check for errors in the response
+            if response.get('error'):
+                print(f"An error occurred while updating shareholder {shareholder['shareholder_id']}: {response['error']}")
+
+        return "Update completed"        
+        
+
+    # Usage example:
+    # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
+    # document_manager = DocumentManager('your_supabase_url', 'your_supabase_key')
+    # document_manager._save_document_link_to_db('/path/to/document.pdf', 123)

@@ -3,7 +3,7 @@ import os
 from .db_manager import DocumentManager
 
 import pandas as pd
-
+import json
 from .db_manager import DocumentManager
 
 # Load environment variables from .env file
@@ -85,58 +85,79 @@ class StructuredInformation:
     # get shareholder name
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
     shareholder_name = documentManager.get_search_attributes_from_db(shareholder_id, 'shareholder_name')
-    
+    shareholders = {"shareholders": []}
     # Find elements with the given namespace
     people = root.findall('.//tns:beteiligung', namespaces)
     aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
     total_MDs = len(people)-2
     # Find and extract the gegenstand element
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
+    
     for person in people:
-        
+        person_info = {}
         vorname = person.find('.//tns:vorname', namespaces)
         nachname = person.find('.//tns:nachname', namespaces)
         geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
         geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
+        
+        if all([vorname, nachname, geburtsdatum, geschlecht_code]):
+            person_info['firstname'] = vorname.text
+            person_info['lastname'] = nachname.text
+            person_info['birthdate'] = geburtsdatum.text
+            person_info['gender'] = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
+            person_info['shareholder_name'] = shareholder_name
+            person_info['list_mds'] = total_MDs
+            # Add the person to the shareholders list
+            shareholders["shareholders"].append(person_info)
+    
+    # Serialize the shareholders dictionary to a JSON string
+    shareholders_json = json.dumps(shareholders, ensure_ascii=False)
+
+    # for person in people:
+        
+    #     vorname = person.find('.//tns:vorname', namespaces)
+    #     nachname = person.find('.//tns:nachname', namespaces)
+    #     geburtsdatum = person.find('.//tns:geburtsdatum', namespaces)
+    #     geschlecht_code = person.find('.//tns:geschlecht/code', namespaces)
        
-        if vorname is not None and nachname is not None and geburtsdatum is not None and geschlecht_code is not None:
-            vorname = vorname.text
+    #     if vorname is not None and nachname is not None and geburtsdatum is not None and geschlecht_code is not None:
+    #         vorname = vorname.text
          
-            nachname = nachname.text
-            geburtsdatum = geburtsdatum.text
-            geschlecht = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
+    #         nachname = nachname.text
+    #         geburtsdatum = geburtsdatum.text
+    #         geschlecht = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
             
-            # Print the results
-            df_temp = {'shareholder_name':shareholder_name,'gender':geschlecht,'shareholder_purpose':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'birthdate': geburtsdatum}
-            df_temp_df = pd.DataFrame([df_temp])
-            #add df temp to df_shareholder_info
-            df_shareholder_info = pd.concat([df_shareholder_info,df_temp_df])
+    #         # Print the results
+    #         df_temp = {'shareholder_name':shareholder_name,'gender':geschlecht,'shareholder_purpose':gegenstand,'total_MDs':total_MDs,'vorname': vorname, 'nachname': nachname, 'birthdate': geburtsdatum}
+    #         df_temp_df = pd.DataFrame([df_temp])
+    #         #add df temp to df_shareholder_info
+    #         df_shareholder_info = pd.concat([df_shareholder_info,df_temp_df])
             
-            #Create a liust of all vorname, nachname
-    df_shareholder_info = df_shareholder_info.dropna(axis=1, how='all')       
-    print(df_shareholder_info)
-    #jsonify the df shareholder info while making sure we have unique column names
-    # Check for duplicate column names and rename them if necessary
-    duplicates = df_shareholder_info.columns[df_shareholder_info.columns.duplicated()]
-    print(duplicates)
-    # Create a new DataFrame to avoid modifying the original one while iterating
-    df_unique_cols = df_shareholder_info.copy()
-    for col in duplicates:
-        df_unique_cols.rename(columns={col: f"{col}_1"}, inplace=True)
-    # Convert the DataFrame to JSON
-    df_shareholder_info = df_shareholder_info.reset_index(drop=True)
-    json_str = df_shareholder_info.to_json(orient='columns')
-    # df_shareholder_info = df_unique_cols.to_json()
-    #drop empty columns
-    print(json_str)
-    #remove column names
-    #add each people df to the table shareholders as a new row
-    for shareholder in json_str:
-        documentManager._save_json_to_db(shareholder, shareholder_id, column_name='shareholder_details')
+    #         #Create a liust of all vorname, nachname
+    # df_shareholder_info = df_shareholder_info.dropna(axis=1, how='all')       
+    # print(df_shareholder_info)
+    # #jsonify the df shareholder info while making sure we have unique column names
+    # # Check for duplicate column names and rename them if necessary
+    # duplicates = df_shareholder_info.columns[df_shareholder_info.columns.duplicated()]
+    # print(duplicates)
+    # # Create a new DataFrame to avoid modifying the original one while iterating
+    # df_unique_cols = df_shareholder_info.copy()
+    # for col in duplicates:
+    #     df_unique_cols.rename(columns={col: f"{col}_1"}, inplace=True)
+    # # Convert the DataFrame to JSON
+    # df_shareholder_info = df_shareholder_info.reset_index(drop=True)
+    # json_str = df_shareholder_info.to_json(orient='columns')
+    # # df_shareholder_info = df_unique_cols.to_json()
+    # #drop empty columns
+    # print(json_str)
+    # #remove column names
+    # #add each people df to the table shareholders as a new row
+    # for shareholder in json_str:
+    #     documentManager._save_json_to_db(shareholder, shareholder_id, column_name='shareholder_details')
 
     #write the json to the db
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
-    documentManager._save_json_to_db(json_str, shareholder_id, column_name='list_mds')
+    documentManager._update_shareholders_in_db(shareholders_json, shareholder_id)
     
     gegenstand = {'gegenstand':gegenstand}
     
