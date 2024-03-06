@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 from .db_manager import DocumentManager
 client = OpenAI()
-
+import json
 import tiktoken as tiktok
 def num_tokens_from_string(string: str, encoding_name: str) -> int:
       encoding = tiktok.encoding_for_model(encoding_name)
@@ -93,8 +93,37 @@ class DataStandardization:
     )
     print(response.choices[0].message.content)
     openai_result = response.choices[0].message.content
+    
+    # percentage of total shares of all shareholders from openai_result
+    shareholders_json = json.loads(openai_result)
+    shareholders = shareholders_json.get('shareholders', [])
+    for shareholder in shareholders:
+      share = shareholders.get('percentage_of_total_shares')
+      #check if share is a number
+      try:
+        valid_share = float(share)
+      except ValueError:
+        print("The percentage_of_total_shares is not a number")
+        valid_share = 0.0
+        #call openai and ask for shareholder.get('shareholder_name') if it is sure about the total percentage of shares
+        messages= messages.append({"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"})
+        response = client.chat.completions.create(
+          model=model,
+          response_format={ "type": "json_object" },
+          messages=messages,
+        )
+        response.choices[0].message.content
+        #change the value of share to the value of response.choices[0].message.content
+        share = response.choices[0].message.content
+        #change for shareholder in openai_result
+        shareholder['percentage_of_total_shares'] = share
 
-    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json_2021")
+  
+
+
+
+
+    document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
     try:

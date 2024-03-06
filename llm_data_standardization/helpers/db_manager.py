@@ -79,8 +79,9 @@ class DocumentManager:
 
         # Parse the JSON data
         try:
-            shareholders_data = json.loads(shareholders_json)
-            shareholders = shareholders_data.get('shareholders', [])
+            # shareholders_data = json.loads(shareholders_json)
+            # shareholders = shareholders_data.get('shareholders', [])
+            shareholders = shareholders_json
             print(shareholders)
         except json.JSONDecodeError as e:
             print(f"Invalid JSON data provided: {str(e)}")
@@ -89,7 +90,7 @@ class DocumentManager:
         for shareholder in shareholders:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
-            #make sure  that birsthdate is in the right format date YYYY-MM-DD
+            #make sure  that birthdate is in the right format date YYYY-MM-DD
             date_format = "%Y-%m-%d"
             try:
                 birthdate = shareholder.get('birthdate')
