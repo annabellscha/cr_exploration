@@ -65,7 +65,7 @@ class DocumentManager:
     from supabase import create_client, Client
 
 
-    def get_company_name_by_id(self, shareholder_id: int) -> str:
+    def get_search_attributes_from_db(self, shareholder_id: int, column_name:str) -> str:
         response = self.supabase.table('shareholders').select('shareholder_name').eq('shareholder_id', shareholder_id).execute()
         return response.data[0].get('shareholder_name')
        

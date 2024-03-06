@@ -84,8 +84,8 @@ class StructuredInformation:
 
     # get shareholder name
     documentManager = DocumentManager(os.environ.get('SUPABASE_URL'), os.environ.get('SUPABASE_KEY'))
-    name_json = documentManager._get_search_attributes_from_db(shareholder_id, 'shareholder_name')
-    shareholder_name = name_json['shareholder_name']
+    shareholder_name = documentManager.get_search_attributes_from_db(shareholder_id, 'shareholder_name')
+    
     # Find elements with the given namespace
     people = root.findall('.//tns:beteiligung', namespaces)
     aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
