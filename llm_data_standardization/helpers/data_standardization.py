@@ -122,7 +122,7 @@ class DataStandardization:
         share = response.choices[0].message.content
         #change for shareholder in openai_result
         share = json.loads(share)
-        shareholder['percentage_of_total_shares'] = share
+        shareholder['percentage_of_total_shares'] = share.get('percentage_of_total_shares')
 
   
 
