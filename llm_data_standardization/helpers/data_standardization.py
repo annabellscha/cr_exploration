@@ -99,7 +99,9 @@ class DataStandardization:
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
     try:
       document_manager.save_shareholders_to_db(openai_result, company_id)
+
     except Exception as e:
-       document_manager._write_error_to_db("could not add json to shareholdes list", company_id)
+      print(f"Failed to save shareholders to DB: {e}")
+      document_manager._write_error_to_db("could not add json to shareholdes list", company_id)
 
     return openai_result
