@@ -100,11 +100,12 @@ class DocumentManager:
             # Update the shareholder's information in the 'shareholders' table
             # You would need to have a unique identifier for each shareholder to update the correct row.
             # I'm assuming here that `shareholder_id` is a field in your JSON and in the table.
+            
             response = self.supabase.table('shareholders').update(shareholder).eq('shareholder_id', shareholder['shareholder_id']).execute()
 
             # Check for errors in the response
-            if response.get('error'):
-                print(f"An error occurred while updating shareholder {shareholder['shareholder_id']}: {response['error']}")
+            # if response.get('error'):
+            #     print(f"An error occurred while updating shareholder {shareholder['shareholder_id']}: {response['error']}")
 
         return "Update completed"        
         
