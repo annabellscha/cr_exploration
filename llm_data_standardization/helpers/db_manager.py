@@ -112,7 +112,7 @@ class DocumentManager:
             print(shareholder)
             response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
             # Check if the operation was successful
-            return response
+            
             # if response.status_code in range(200, 300):
             
 
