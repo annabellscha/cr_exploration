@@ -111,13 +111,13 @@ class DataStandardization:
         {"role": "user", "content": prompt},
         {"role": "system", "content": openai_result},
         {"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"}
-      ]
+        ]
         response = client.chat.completions.create(
           model=model,
           response_format={ "type": "json_object" },
           messages=messages,
         )
-        response.choices[0].message.content
+        print(response.choices[0].message.content)
         #change the value of share to the value of response.choices[0].message.content
         share = response.choices[0].message.content
         #change for shareholder in openai_result
