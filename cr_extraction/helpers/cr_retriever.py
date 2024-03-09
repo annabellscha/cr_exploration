@@ -62,7 +62,7 @@ class CommercialRegisterRetriever:
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
                 print(f"Elements 2: {elements}")
                 if len(element) == 0:
-                    document_manager._write_error_to_db("no gs list found", company_id)
+                    document_manager._write_error_to_db("no gs list found", company_id,search_type="startups")
                     raise Exception("no gs list found")
                 self.browser.open_relative(element[0].attrs["href"])
                 level += 1
@@ -99,7 +99,10 @@ class CommercialRegisterRetriever:
 
                 element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
                 print(f"Elements 4: {elements}")
-                self.file_name = element.text
+                try:
+                    self.file_name = element.text
+                except:
+                    document_manager._write_error_to_db("no gs list in 2021 found", company_id, search_type="startups")
           
                 print(self.file_name)
                 
