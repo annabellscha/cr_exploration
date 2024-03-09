@@ -29,8 +29,8 @@ class DocumentManager:
         table_name = 'startups'
 
         # Select the link_SI_file_current column where startup_id matches the company_id
-        response = self.supabase.table(table_name).select('link_SI_file_current').eq('startup_id', company_id).execute()
-        link = response.data[0].get('link_SI_file_current')
+        response = self.supabase.table(table_name).select('link_shareholder_file_2021').eq('startup_id', company_id).execute()
+        link = response.data[0].get('link_shareholder_file_2021')
         return link 
     
     def _save_json_to_db(self, json_data: dict, startup_id: int):
@@ -41,7 +41,7 @@ class DocumentManager:
         json_string = json.dumps(json_data) if isinstance(json_data, dict) else json_data
 
         # Create a record or update an existing one with the startup_id and the JSON data
-        data = {'azure_json': json_string}
+        data = {'azure_json_2021': json_string}
 
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', startup_id).execute()
@@ -59,8 +59,8 @@ class DocumentManager:
         table_name = 'startups'
         
         # Fetch the record with the given company_id
-        response = self.supabase.table(table_name).select('azure_json').eq('startup_id', company_id).execute()
-        return response.data[0]['azure_json']
+        response = self.supabase.table(table_name).select('azure_json_2021').eq('startup_id', company_id).execute()
+        return response.data[0]['azure_json_2021']
 
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values

@@ -38,6 +38,97 @@ class CommercialRegisterRetriever:
         # Pull Overview
         self.browser.open(si_link)
 
+    def _add_gs_from2021_to_cart(self, index, company_id):
+        # Open document tree
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+       
+        
+        self.browser.open(
+            "https://www.unternehmensregister.de/ureg/registerPortal.html;{}?submitaction=showDkTree&searchIdx={}".format(
+                self.session_id, index))
+
+        # Expand
+        level = 2
+
+        while True:
+            elements = self.browser.page.select("div.dktree-container.level-{} span a".format(level))
+            print(f"Elements 1: {elements}")
+            if len(elements) == 0:
+                
+                raise Exception("no gs list found")
+            if level == 3:
+                #filter for document that contains the word "2021", '2020' or '2019' AND "Liste der Gesellschafter"
+                
+                element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
+                print(f"Elements 2: {elements}")
+                if len(element) == 0:
+                    document_manager._write_error_to_db("no gs list found", company_id,search_type="startups")
+                    raise Exception("no gs list found")
+                self.browser.open_relative(element[0].attrs["href"])
+                level += 1
+                continue
+            #if elements[0].text is a date, check if it is 2021 or earlier, else go to element[1].text and check if it is 2021 or earlier
+            
+
+            if "Liste der" not in elements[0].text:
+                print(elements[0].text)
+                print(len(elements))
+                if len(elements) > 1:
+                    dates_elements = [(datetime.strptime(e.string, '%d.%m.%Y'), e) for e in elements]
+                    print(dates_elements)
+                    # Find the element with 2021 or earlier as date
+                    #drop dates that are not 2021 or earlier
+                    dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+                    element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                    print(elements[1].text)
+                    self.browser.open_relative(element.attrs["href"])
+                    print(f"Elements in if statement 3: {elements[1]}")
+                    level += 1
+                else:
+                    self.browser.open_relative(elements[0].attrs["href"])
+                    level += 1
+            else:
+                #filter for element that contains the word "2021", '2020' or '2019' 
+               
+                # Extract dates and convert them to datetime objects
+                dates_elements = [(datetime.strptime(e.string.split('am ')[1], '%d.%m.%Y'), e) for e in elements if 'Liste der' in e.string]
+                print(dates_elements)
+                # Find the element with 2021 or earlier as date
+                #drop dates that are not 2021 or earlier
+                dates_elements = [x for x in dates_elements if x[0].year <= 2021]
+
+                element = max(dates_elements, key=lambda x: x[0])[1] if dates_elements else None
+                print(f"Elements 4: {elements}")
+                try:
+                    self.file_name = element.text
+                except:
+                    document_manager._write_error_to_db("no gs list in 2021 found", company_id, search_type="startups")
+          
+                print(self.file_name)
+                
+                self.file_type = "gs"
+                self.browser.open_relative(element.attrs["href"])
+                print(element.attrs["href"])
+                level += 1
+                break
+
+        file_format = [x.attrs["value"] for x in self.browser.page.select("input#format_orig")][0]
+
+        self.file_date = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(2) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        date_2 = self.browser.page.select("div>table.file-info-table tbody tr:nth-of-type(4) td:nth-of-type(2)")[
+            0].text.strip().replace("\n", "")
+        
+
+        if self.file_date == "unbekannt":
+            self.file_date = date_2
+
+        self.browser.select_form("#dkform")
+        self.browser["format"] = file_format
+        self.browser.submit_selected("add2cart")
+        return
+    
+
     def _add_gs_to_cart(self, index, company_id):
         # Open document tree
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
@@ -56,7 +147,10 @@ class CommercialRegisterRetriever:
                 
                 raise Exception("no gs list found")
             if level == 3:
+                #filter for document that contains the word "2021", '2020' or '2019' AND "Liste der Gesellschafter"
+                
                 element = list(filter(lambda x: x.text == "Liste der Gesellschafter", elements))
+
                 if len(element) == 0:
                     document_manager._write_error_to_db("no gs list found", company_id)
                     raise Exception("no gs list found")
@@ -64,12 +158,16 @@ class CommercialRegisterRetriever:
                 level += 1
                 continue
             if "Liste der" not in elements[0].text:
+
                 self.browser.open_relative(elements[0].attrs["href"])
                 level += 1
             else:
+                #filter for element that contains the word "2021", '2020' or '2019' 
+                element = list(filter(lambda x: x.text == "2021" or x.text == "2020" or x.text == "2019", elements))
                 self.file_name = elements[0].text
                 self.file_type = "gs"
                 self.browser.open_relative(elements[0].attrs["href"])
+          
                 level += 1
                 break
 
@@ -275,8 +373,60 @@ class CommercialRegisterRetriever:
             i+=1
         return companies
     
-    def search(self, company_name: str) -> Tuple[List[Tuple[str, int, str]], str]:
-        # Fill-in the search form
+    def search_one(self, company_id: int, search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
+
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
+         # Fill-in the search form
+          
+        self.browser.select_form('#globalSearchForm')
+        self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
+        self.browser["submitaction"] = "searchRegisterData"
+        self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
+        # self.browser.submit_selected()
+        # self.browser.open_relative(self.browser.page.select("div.right a")[0].attrs["href"])
+
+        container_div = self.browser.page.select_one('.container.result_container.global-search')
+
+        # Find all divs with class 'row back' within the container
+        row_back_divs = container_div.select('.row.back')
+        print(row_back_divs)    
+        # Find all divs with class 'row back' within the container
+        # row_back_divs = container_div.select('.row.back')
+        if len(row_back_divs) is not None:
+            self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            companies = self._parse_company_results_page(self.browser.page)
+                # we expect only one result for the company id
+                
+        print(companies)
+        result = companies
+        
+        
+        return result
+
+    def search(self, company_id: int,search_type:str) -> Tuple[List[Tuple[str, int, str]], str]:
+       
+
+        document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
+
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
+         # Fill-in the search form
         if self.session_id is not None:
             self.browser.open("https://www.unternehmensregister.de/ureg/index.html")
             
@@ -284,7 +434,6 @@ class CommercialRegisterRetriever:
         self.browser["globalSearchForm:extendedResearchCompanyName"] = company_name
         self.browser["submitaction"] = "searchRegisterData"
         self.browser.submit_selected(btnName="globalSearchForm:btnExecuteSearchOld")
-
         # self.browser.open(
         #     "https://www.unternehmensregister.de/ureg/search1.1.html;{}".format(
         #         self.session_id))
@@ -313,6 +462,7 @@ class CommercialRegisterRetriever:
 
         # get company information
         results_page = self.browser.page
+
         results = results_page.find("tbody").find_all("tr", attrs={"class": None})
 
         for i in range(0, len(results), 2):
@@ -366,18 +516,25 @@ class CommercialRegisterRetriever:
             companies.append(company)
             i+=1
 
-            
-        return companies
+        self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+        print(companies[0])   
+        return companies[0]
     
-    def extended_search(self, company_id:int, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
+    def extended_search(self, company_id:int, search_type:str, register_number:str = "", company_name:str = "", company_location:str = "", legal_form:str = "0", circuit_id:str = "0", register_type:str = "0", language:str = "0", start_date:str = "", end_date:str = "", return_one: bool = True) -> Dict:
         
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-        data=document_manager._get_search_attributes_from_db(company_id=company_id)
-        register_number = data.get('register_identification_number', None)
-        circuit_id = data.get('register_mapping', None)
+        data=document_manager._get_search_attributes_from_db(company_id=company_id, search_type=search_type)
+        if search_type == 'startups':
+            register_number = data.get('register_identification_number', None)
+            circuit_id = data.get('register_mapping', None)
 
-        company_name = data.get('startup_name', None)
-       
+            company_name = data.get('startup_name', None)
+        if search_type == 'shareholders':
+            register_number = data.get('register_id', None)
+            circuit_id = data.get('register_mapping', None)
+            company_name = data.get('shareholder_name', None)
+
+        
         print(register_number)
         print(circuit_id)
         print("we ry to print company name")
@@ -407,39 +564,45 @@ class CommercialRegisterRetriever:
 
         # Find all divs with class 'row back' within the container
         row_back_divs = container_div.select('.row.back')
-       
+        result =None
         # If there are no results or multiple results, raise an exception
         if len(row_back_divs) == 0:
             print("doing name search")
             # raise Exception("no results found")
             print(company_name)
-            companies = self.search(company_name)
+            # companies = self.search(company_name)
+            result = "normal search"
             print("check if result is empty")
-            if len(companies) == 0:
-                document_manager._write_error_to_db("no results found", company_id)
-                raise Exception("no results found")
-            else:
-                print(f"these are results: {companies}")
-                return companies
+            # if len(companies) == 0:
+            #     document_manager._write_error_to_db("no results found", company_id, search_type)
+            #     raise Exception("no results found")
+            # else:
+            #     print(f"these are results: {companies[0]}")
+            #     result = companies[0]
+            #     print(result)
         elif len(row_back_divs) > 1:
-            document_manager._write_error_to_db("multiple results found", company_id)
-            print(f"these are results: {companies}")
+            document_manager._write_error_to_db("multiple results found", company_id, search_type)
+            print(f"these are results multiple: {companies}")
             raise Exception("multiple results found")
-        else:
+        elif len(row_back_divs) == 1:
         # open search results
             self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
+            print(self.browser.page)
             companies = self._parse_company_results_page(self.browser.page)
 
             # we expect only one result for the company id
             if return_one:
                 if len(companies) != 1:
                     raise Exception("no results found/ multiple companies found")
-                    
-                return companies[0]
+                print(companies[0])
+                result = companies[0]
             else:
                 print(companies)
-                return companies
-      
+                result = companies
+        
+        
+        print(f"results{result}")
+        return result
     
     def add_documents_to_cart(self, company: Dict, documents: List[str], company_id:int) -> None:
         # set company name
@@ -447,7 +610,7 @@ class CommercialRegisterRetriever:
         
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_to_cart(index = self.company["search_index"], company_id=company_id)
+            self._add_gs_from2021_to_cart(index = self.company["search_index"], company_id=company_id)
 
         if "si" in documents:
             self._add_si_to_cart(si_link = self.company["document_urls"]["si"])
@@ -457,7 +620,7 @@ class CommercialRegisterRetriever:
 
         return
     
-    def download_documents_from_basket(self, company_id, bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
+    def download_documents_from_basket(self, company_id, search_type:str,bypass_storage: bool = False) -> Tuple[Dict, List[Dict]]:
         # open the cart & skip payment overview
         self.browser.open_relative("doccart.html;{}".format(self.session_id))
         self.browser.select_form("#doccartForm")
@@ -512,7 +675,7 @@ class CommercialRegisterRetriever:
                 
                 print("we are trying to save now")
                 document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id)
+                document_manager._save_document_link_to_db(full_path=full_path, company_id=company_id, document_type=document_type, search_type=search_type)
                 uploaded_file_paths.append(upload_result)
                 
             else: 

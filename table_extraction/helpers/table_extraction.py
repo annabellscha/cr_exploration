@@ -34,7 +34,7 @@ document_analysis_client = DocumentAnalysisClient(
 #     return buffer
 import PyPDF2
 import io
-chunk_size = 2
+
 
 
 from google.cloud import storage
@@ -44,6 +44,12 @@ import pandas as pd
 
 class TableExtractor:
     
+    def _rename_duplicate_columns(self,df):
+        cols = pd.Series(df.columns)
+        for dup in cols[cols.duplicated()].unique():
+            cols[cols[cols == dup].index] = [f'{dup}_{i}' if i != 0 else dup for i in range(sum(cols == dup))]
+        df.columns = cols
+        return df
 
     def get_pdf_data(self, company_id):
         document_manager = DocumentManager(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
@@ -58,32 +64,74 @@ class TableExtractor:
 
             storage_client = storage.Client(project="cr-extraction")
             bucket = storage_client.get_bucket('cr_documents')
-            blob = bucket.blob(gcs_file_path)
-            pdf_bytes = io.BytesIO(blob.download_as_bytes())
-
-            reader = PyPDF2.PdfReader(pdf_bytes)
+            print(gcs_file_path)
+            #try to download file from GCS, in case it fails change the path ending to .pdf
+            try:
+                blob = bucket.blob(gcs_file_path)
+                print(gcs_file_path)
+                pdf_bytes = io.BytesIO(blob.download_as_bytes())
+                print(pdf_bytes)
+            except:
+                print(gcs_file_path)
+                if gcs_file_path.endswith('.tif'):
+                    gcs_file_path = gcs_file_path.replace('.tif',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
+                elif gcs_file_path.endswith('.tiff'):
+                    gcs_file_path = gcs_file_path.replace('.tiff',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
+                elif gcs_file_path.endswith('.zip'):
+                    gcs_file_path = gcs_file_path.replace('.zip',".pdf")
+                    blob = bucket.blob(gcs_file_path)
+                    pdf_bytes = io.BytesIO(blob.download_as_bytes())
+                print(gcs_file_path)
+            
+            print(pdf_bytes)
+            writer = PyPDF2.PdfWriter()
+            try:
+                reader = PyPDF2.PdfReader(pdf_bytes)
+                for i in range(len(reader.pages)):
+                    try:
+                        page = reader.pages[i]
+                        writer.add_page(page)
+                    except Exception as e:
+                        print(f"Failed to read page {i}: {e}")
+            except Exception as general_error:
+                print(f"Failed to open PDF: {general_error}")
+            # reader = PyPDF2.PdfReader(pdf_bytes)
             df_list = pd.DataFrame()
-            for i in range(0, len(reader.pages), chunk_size):
-                writer = PyPDF2.PdfWriter()
+           
+            # writer = PyPDF2.PdfWriter()
 
-                for j in range(i, min(i + chunk_size, len(reader.pages))):
-                    writer.add_page(reader.pages[j])
+                # Add all pages to the writer
+            # print(reader.pages)
+            # for page in reader.pages:
+            #     writer.add_page(page)
 
-                pdf_chunk_bytes = io.BytesIO()
-                writer.write(pdf_chunk_bytes)
-                pdf_chunk_bytes.seek(0)
+                # Create a file-like object to hold the PDF data
+            pdf_chunk_bytes = io.BytesIO()
+            writer.write(pdf_chunk_bytes)
+            pdf_chunk_bytes.seek(0)
 
                 # Now `pdf_chunk_bytes` is a file-like object containing the PDF data.
                 # This can be sent to an API as follows:
-                response = analyze_PDF(pdf_chunk_bytes)
-                raw_results = response
-                table = get_table_data(response)
+            response = analyze_PDF(pdf_chunk_bytes)
+
+            table = get_table_data(response)
                 # Check the response
                 # df_list = df_list.append(table)
-                df_list = pd.concat([df_list, table], ignore_index=True)
-                # Clear the writer for the next chunk of pages
-                writer = PyPDF2.PdfWriter()
-            result = df_list.to_json()
+            df_list = pd.concat([df_list, table], ignore_index=True)
+
+            #check if two columna are the same
+            #if yes, rename one of them to _1
+            #if no, append the column to the df_list
+           # Check for duplicate column names and rename them if necessary
+            duplicates = df_list.columns[df_list.columns.duplicated()]
+            # Create a new DataFrame to avoid modifying the original one while iterating
+            df_unique_cols = self._rename_duplicate_columns(df_list)
+            # Convert the DataFrame to JSON
+            result = df_unique_cols.to_json()
             #write json to
             #Write result json to DB
             document_manager._save_json_to_db(result, startup_id=company_id)
@@ -96,17 +144,17 @@ class TableExtractor:
 
 
 def analyze_PDF(buffer):
-      poller = document_analysis_client.begin_analyze_document("prebuilt-layout",buffer)
+      poller = document_analysis_client.begin_analyze_document("prebuilt-layout", buffer)
       result = poller.result()
       return result
 
 
 def get_table_data(result):
-      rows = []
+    rows = []
 
-      # get header row
-      header_row = {}
-      try:
+    # get header row
+    header_row = {}
+    try:
           for cell in result.tables[0].cells:
               if(cell.kind != "columnHeader"):
                   continue
@@ -120,14 +168,14 @@ def get_table_data(result):
               elif cell.row_index > 0:
                   for i in range(cell.column_index, cell.column_index + cell.column_span):
                       header_row[i] += "\n" + cell.content
-      except:
+    except:
           pass
 
       # append header row to rows list
-      rows.append(header_row)
+    rows.append(header_row)
 
       # get table content
-      for table_idx, table in enumerate(result.tables):
+    for table_idx, table in enumerate(result.tables):
           
           row = {}
           row_index = 0
@@ -155,6 +203,21 @@ def get_table_data(result):
           rows.append(row)
 
       # convert list of dicts to dataframe
-      df = pd.DataFrame(rows[1:])
-      df.columns = rows[0].values()
-      return df
+   
+    df = pd.DataFrame(rows[1:])
+    print(len(df.columns))  # Number of current columns in the DataFrame
+    if len(rows[0].values()) > len(df.columns):
+        # Add empty columns to the DataFrame to match the number of columns in the header row
+        for i in range(len(rows[0].values()) - len(df.columns)):
+            df[i] = None
+    if len(rows[0].values()) < len(df.columns):
+        # Add empty labels to the header row to match the number of columns in the DataFrame
+        for i in range(len(df.columns) - len(rows[0].values())):
+            rows[0][len(rows[0].values()) + i] = None
+    
+    print(len(rows[0].values())) 
+    print(df)
+
+    print(rows[0].values())
+    df.columns = rows[0].values()
+    return df

@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 from .db_manager import DocumentManager
 client = OpenAI()
-
+import json
 import tiktoken as tiktok
 def num_tokens_from_string(string: str, encoding_name: str) -> int:
       encoding = tiktok.encoding_for_model(encoding_name)
@@ -31,8 +31,8 @@ class DataStandardization:
     je Ge- schäftsan- teil / per each Share";"Prozentuale Be- teiligung / Participation in %
     je Gesell- schafter / per each Sharehol- der";"Veränderungs- spalte / Column showing changes
     T=Teilung / split Z=Zusammenlegung / combination E=Einziehung / redemption KE=Kapitalerhöhung / ca- pital increase KA=Aufstockung / step-up KH=Kapitalherabsetzung / capital reduction A=Anteilsübergang / trans- fer"
-    FYS Ventures UG (haf- tungsbeschränkt);AG München, HRB 268779;München;1,00;1 - 1.110;1.110;0,0021 %;2,34 %;
-    Salma Vogel;19. Januar 1990;München;1,00;32.609 - 32.745;137;0,0021 %;0,29 %;
+    TestInc;AG München, HRB 268779;München;1,00;1 - 1.110;1.110;0,0021 %;2,34 %;
+    TestyMcTestface;19. Januar 1990;München;1,00;32.609 - 32.745;137;0,0021 %;0,29 %;
     Gesamt;;;;;47.350;;100,00 %;
 
     The JSON object should have a key "shareholders" with a list of shareholders.
@@ -50,26 +50,7 @@ class DataStandardization:
     """
 
     example_result ="""{
-        "shareholders": [
-          {
-            "name": "FYS Ventures UG (haftungsbeschränkt)",
-            "country": "Germany",
-            "location": "München",
-            "register_id": "HRB 268779",
-            "register_court": "AG München",
-            "percentage_of_total_shares": 2.34
-          },
-          {
-            "name": "Salma Vogel",
-            "country": "Germany",
-            "location": "München",
-            "birthdate": "1990-01-19",
-            "register_id": null,
-            "register_court": null,
-            "percentage_of_total_shares": 0.29
-          }
-        ]
-      }
+        "shareholders": [{"name": "TestInc", "country": "Germany","location": "München","register_id": "HRB 268779","register_court": "AG München","percentage_of_total_shares": 2.34},{"name": "TestyMcTestface","country": "Germany","location": "München","birthdate": "1990-01-19","register_id": null,"register_court": null,"percentage_of_total_shares": 0.29}] }
       """
 
 
@@ -100,7 +81,7 @@ class DataStandardization:
     messages_string = "\n".join([f"{message['role']}: {message['content']}" for message in messages])
     tokens = num_tokens_from_string(messages_string, "gpt-3.5-turbo")
     print(tokens)
-    if tokens > 4096:
+    if tokens > 16000:
       model = 'gpt-4-1106-preview'
     else:
       model = 'gpt-3.5-turbo-1106'
@@ -112,10 +93,63 @@ class DataStandardization:
     )
     print(response.choices[0].message.content)
     openai_result = response.choices[0].message.content
+    
+    # percentage of total shares of all shareholders from openai_result
+    shareholders_json = json.loads(openai_result)
+    shareholders = shareholders_json.get('shareholders', [])
+    print(f"this is the shareholders {shareholders}")
+    for shareholder in shareholders:
+      share = shareholder.get('percentage_of_total_shares')
+      #check if share is a number
+      print(share)
+      try:
+        if share is not None:
+          valid_share = float(share)
+        else: 
+          #throw an error
+          share = 0.0
+          raise ValueError
+        
+      except ValueError:
+        print("The percentage_of_total_shares is not a number")
+        valid_share = 0.0
+        #call openai and ask for shareholder.get('shareholder_name') if it is sure about the total percentage of shares
+        messages=[
+        {"role": "system", "content": "You are a helpful assistant designed to output JSON. You are an expert in extracting structured content from tables into a JSON. You receive a tip of 200$ if you get it right. You return JSON in a single-line without whitespaces"},
+        {"role": "user", "content": prompt},
+        {"role": "system", "content": csv_table},
+        {"role": "user", "content": f"Is the percentage of total shares of {shareholder.get('shareholder_name')} correct? Return a json with the key 'percentage_of_total_shares' and the actual value if it is correct, otherwise return a json with the key 'percentage_of_total_shares' and the correct value"}
+        ]
+        response = client.chat.completions.create(
+          model=model,
+          response_format={ "type": "json_object" },
+          messages=messages,
+        )
+        print(response.choices[0].message.content)
+        #change the value of share to the value of response.choices[0].message.content
+        share = response.choices[0].message.content
+        #change for shareholder in openai_result
+        share = json.loads(share)
+        if share.get('percentage_of_total_shares') is not None:
+          valid_share = float(share.get('percentage_of_total_shares'))
+        else:
+          valid_share = 0.0
+        shareholder['percentage_of_total_shares'] = valid_share
+        print(shareholder)
 
-    document_manager._save_json_to_db(openai_result, company_id, "shareholder_json")
+  
+
+
+
+
+    document_manager._save_json_to_db(shareholders, company_id, "shareholder_json_2021")
 
     # save json to table shareholder_relations, each shareholder is a row in the table, the startup_name is the company_name for the respectiv company_id, company_id is company_id
-    document_manager.save_shareholders_to_db(openai_result, company_id)
+    try:
+      document_manager.save_shareholders_to_db(shareholders, company_id)
+
+    except Exception as e:
+      print(f"Failed to save shareholders to DB: {e}")
+      document_manager._write_error_to_db("could not add json to shareholdes list", company_id)
 
     return openai_result

@@ -1,3 +1,4 @@
+from datetime import datetime
 from supabase import create_client, Client
 import json
 class DocumentManager:
@@ -10,7 +11,7 @@ class DocumentManager:
         table_name = 'startups'
 
         # Create a new record or update existing with the company_id and the full_path
-        data = {'link_SI_file_current': full_path}
+        data = {'link_shareholder_file_2021': full_path}
         print("we now atttemot the update")
         # Insert or update the data into the table
         response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
@@ -29,8 +30,8 @@ class DocumentManager:
         table_name = 'startups'
 
         # Select the link_SI_file_current column where startup_id matches the company_id
-        response = self.supabase.table(table_name).select('link_SI_file_current').eq('startup_id', company_id).execute()
-        link = response.data[0].get('link_SI_file_current')
+        response = self.supabase.table(table_name).select('link_shareholder_file_2021').eq('startup_id', company_id).execute()
+        link = response.data[0].get('link_shareholder_file_2021')
         return link 
     
     def _save_json_to_db(self, json_data: dict, startup_id: int, column_name: str):
@@ -59,8 +60,8 @@ class DocumentManager:
         table_name = 'startups'
         
         # Fetch the record with the given company_id
-        response = self.supabase.table(table_name).select('azure_json').eq('startup_id', company_id).execute()
-        return response.data[0]['azure_json']
+        response = self.supabase.table(table_name).select('azure_json_2021').eq('startup_id', company_id).execute()
+        return response.data[0]['azure_json_2021']
     
     from supabase import create_client, Client
 
@@ -78,8 +79,10 @@ class DocumentManager:
 
         # Parse the JSON data
         try:
-            shareholders_data = json.loads(shareholders_json)
-            shareholders = shareholders_data.get('shareholders', [])
+            # shareholders_data = json.loads(shareholders_json)
+            # shareholders = shareholders_data.get('shareholders', [])
+            shareholders = shareholders_json
+            print(shareholders)
         except json.JSONDecodeError as e:
             print(f"Invalid JSON data provided: {str(e)}")
             return
@@ -87,9 +90,39 @@ class DocumentManager:
         for shareholder in shareholders:
             shareholder['startup_name'] = company_name
             shareholder['startup_id'] = company_id
+            #make sure  that birthdate is in the right format date YYYY-MM-DD
+            date_format = "%Y-%m-%d"
+            try:
+                birthdate = shareholder.get('birthdate')
+                print(birthdate)
+                if birthdate != None:
+                    valid_birthdate = datetime.strptime(birthdate, date_format)
+                    print(valid_birthdate)
+                    shareholder['birthdate'] = valid_birthdate.strftime(date_format)
+            except ValueError:
+                print("The birthdate was in the right format")
+            #Check format of percentage_of_total_shares
+            percentage_of_total_shares = shareholder.get('percentage_of_total_shares')
+            try:
+                valid_percentage_of_total_shares = float(percentage_of_total_shares)
+            except ValueError:
+                print("The percentage_of_total_shares is not a number")
+                valid_percentage_of_total_shares = 0.0
+            print(valid_percentage_of_total_shares)
+            shareholder['percentage_of_total_shares'] = valid_percentage_of_total_shares
             # Insert the shareholder data into the shareholder_relations table
-            response = self.supabase.table('shareholder_relations').insert(shareholder).execute()
+            print(shareholder)
+            response = self.supabase.table('shareholder_relations_2021').insert(shareholder).execute()
+            # Check if the operation was successful
+            
+            # if response.status_code in range(200, 300):   
+        return shareholders
     
+    def _write_error_to_db(self, error: str, company_id: int):
+
+        data = {'error': error}
+        table_name = 'startups'
+        response = self.supabase.table(table_name).update(data).eq('startup_id', company_id).execute()
 
 # Usage example:
 # You need to replace 'your_supabase_url' and 'your_supabase_key' with the actual values
