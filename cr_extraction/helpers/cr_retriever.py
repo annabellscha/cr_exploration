@@ -265,8 +265,10 @@ class CommercialRegisterRetriever:
         if file_extension.lower() in ['.tif', '.tiff']:
             response.raw.decode_content = True
             # Convert the TIFF content to a PDF byte array
-            with io.BytesIO() as pdf_buffer:
-                pdf_bytes = img2pdf.convert(response.raw)
+            with io.BytesIO() as image_buffer:
+                image_buffer.write(response.content)
+                image_buffer.seek(0)
+                pdf_bytes = img2pdf.convert(image_buffer)
 
             blob.content_type = 'application/pdf'
             
