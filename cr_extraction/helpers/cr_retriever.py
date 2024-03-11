@@ -573,7 +573,7 @@ class CommercialRegisterRetriever:
             # raise Exception("no results found")
             print(company_name)
             # companies = self.search(company_name)
-            result = "normal search"
+            # result = "normal search"
             print("check if result is empty")
             # if len(companies) == 0:
             #     document_manager._write_error_to_db("no results found", company_id, search_type)
