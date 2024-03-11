@@ -587,7 +587,8 @@ class CommercialRegisterRetriever:
             self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
             companies = self._parse_company_results_page(self.browser.page)
             print(f"these are results multiple: {companies}")
-            raise Exception("multiple results found")
+            result = companies[0]
+            print("multiple results found")
         elif len(row_back_divs) == 1:
         # open search results
             self.browser.open_relative("https://www.unternehmensregister.de/ureg/registerPortal.html;{}".format(self.session_id))
