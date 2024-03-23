@@ -92,7 +92,12 @@ class StructuredInformation:
     total_MDs = len(people)-2
     
     # Find and extract the gegenstand element
-    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces).text
+    
+    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces)
+    if founding_date is not None:
+       founding_date =founding_date.text
+    else:
+       founding_date = root.find('.//tns:gruendungsmetadaten/tns:gruendungsdatum', namespaces).text
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     # 'aktuellesSatzungsdatum' finden
     
