@@ -26,7 +26,7 @@ class DocumentManager:
         #     return None
     def _get_file_path(self,shareholder_id: int):
         # Define the table name from where you want to retrieve the document link
-        table_name = 'shareholders'
+        table_name = 'shareholders_duplicate'
 
         # Select the link_SI_file_current column where shareholder_id matches the shareholder_id
         response = self.supabase.table(table_name).select('link_structured_content_file_current').eq('shareholder_id', shareholder_id).execute()
@@ -35,7 +35,7 @@ class DocumentManager:
     
     def _save_json_to_db(self, json_data: dict, shareholder_id: int, column_name: str):
         # Define the table name where you want to save the JSON data
-        table_name = 'shareholders'
+        table_name = 'shareholders_duplicate'
 
         # Convert the JSON data to a string if it's not already
         json_string = json.dumps(json_data) if isinstance(json_data, dict) else json_data
