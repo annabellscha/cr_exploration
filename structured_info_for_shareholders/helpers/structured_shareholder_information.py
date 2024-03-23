@@ -92,9 +92,10 @@ class StructuredInformation:
     total_MDs = len(people)-2
     print(total_MDs)
     # Find and extract the gegenstand element
+    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces).text
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     # 'aktuellesSatzungsdatum' finden
-    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces).text
+    
 
     for beteiligung in root.findall('.//tns:beteiligung', namespaces):
         # Look for natural person within the beteiligung element
