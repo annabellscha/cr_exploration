@@ -94,7 +94,7 @@ class StructuredInformation:
     # Find and extract the gegenstand element
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     # 'aktuellesSatzungsdatum' finden
-    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', {'tns': 'http://www.xjustiz.de'}).text
+    founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces).text
 
     for beteiligung in root.findall('.//tns:beteiligung', namespaces):
         # Look for natural person within the beteiligung element
@@ -195,7 +195,7 @@ class StructuredInformation:
     documentManager._update_shareholders_in_db(shareholders_json, shareholder_id)
     
     gegenstand = {'shareholder_purpose':gegenstand}
-    founding_date = {'founding_date':founding_date}
+    founding_date = founding_date
     #write gegenstand only to db
     documentManager._save_json_to_db(gegenstand, shareholder_id, column_name='shareholder_purpose')
     documentManager._save_json_to_db(founding_date, shareholder_id, column_name='founding_date')
