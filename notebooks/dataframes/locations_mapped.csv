@@ -1,0 +1,4755 @@
+shareholder_location;count;mapped_locations
+berlin;3805;Berlin
+münchen;2424;Munich
+hamburg;1736;Hamburg
+köln;694;Cologne
+stuttgart;608;Stuttgart
+düsseldorf;536;Cologne
+frankfurt am main;528;Frankfurt
+mannheim;313;Frankfurt
+dresden;260;other
+hannover;229;other
+aachen;223;Cologne
+nürnberg;183;other
+bonn;183;Cologne
+leipzig;174;Leipzig
+freiburg im breisgau;157;other
+münster;145;other
+bremen;141;other
+essen;140;Cologne
+karlsruhe;139;Stuttgart
+ulm;139;Stuttgart
+potsdam;138;Berlin
+darmstadt;126;Frankfurt
+dortmund;117;Cologne
+wiesbaden;116;Frankfurt
+mainz;114;Frankfurt
+london;111;international
+braunschweig;107;other
+kiel;100;other
+osnabrück;97;other
+bochum;91;Cologne
+lübeck;86;Hamburg
+augsburg;85;Munich
+bielefeld;84;other
+wuppertal;83;Cologne
+regensburg;75;other
+saarbrücken;74;other
+jena;71;Leipzig
+oldenburg;70;other
+chemnitz;68;Leipzig
+ münchen;67;Munich
+duisburg;66;Cologne
+heidelberg;65;Frankfurt
+würzburg;63;other
+frankfurt;62;Frankfurt
+traunstein;56;other
+koblenz;55;Cologne
+paderborn;55;other
+neuss;54;Cologne
+rostock;53;other
+ingolstadt;52;Munich
+zürich;48;international
+fürth;44;other
+mönchengladbach;44;Cologne
+krefeld;43;Cologne
+siegen;43;Cologne
+lüneburg;42;Hamburg
+göttingen;42;other
+kassel;41;other
+pinneberg;41;Hamburg
+zug;40;international
+ berlin;39;Berlin
+flensburg;38;other
+wien;38;international
+gießen;37;Frankfurt
+offenbach am main;35;Frankfurt
+istanbul;35;international
+arnsberg;34;other
+erlangen;33;other
+tübingen;33;Stuttgart
+stendal;33;other
+siegburg;33;Cologne
+aschaffenburg;32;Frankfurt
+meerbusch;31;Cologne
+bayreuth;30;other
+hanau;29;Frankfurt
+landshut;29;Munich
+kleve;27;other
+unknown;27;international
+amsterdam;27;international
+königstein;27;Frankfurt
+magdeburg;27;other
+tostedt;26;Hamburg
+paris;26;international
+königstein im taunus;25;Frankfurt
+gütersloh;25;other
+marburg;25;Frankfurt
+bad homburg;24;Frankfurt
+walsrode;24;other
+cottbus;24;other
+ludwigshafen am rhein;24;Frankfurt
+bamberg;24;other
+moskau;23;international
+coesfeld;23;other
+schwerin;23;other
+ratingen;23;Cologne
+konstanz;22;other
+passau;22;other
+steinfurt;22;other
+hamm;21;other
+gelsenkirchen;20;Cologne
+germering;20;Munich
+bad homburg v. d. höhe;20;Frankfurt
+erfurt;20;other
+recklinghausen;19;Cologne
+kempten (allgäu);19;other
+kleinmachnow;19;Berlin
+bergisch gladbach;18;Cologne
+bad oeynhausen;18;other
+ karlsruhe;18;Stuttgart
+kaiserslautern;18;Mannheim
+memmingen;18;other
+düren;17;Cologne
+new york;17;international
+gräfelfing;17;Munich
+helsinki;17;international
+mülheim an der ruhr;17;Cologne
+frankfurt/main;17;Frankfurt
+heilbronn;17;Stuttgart
+norderstedt;17;Hamburg
+trier;17;other
+ köln;16;Cologne
+oberhausen;16;Cologne
+offenbach;16;Frankfurt
+ludwigsburg;16;Stuttgart
+solingen;16;Cologne
+ludwigshafen;16;Frankfurt
+lemgo;16;other
+reutlingen;16;Stuttgart
+san francisco;15;international
+ aachen;15;Cologne
+hildesheim;15;other
+wittlich;15;other
+delaware;15;international
+friedberg;15;Frankfurt
+hilden;15;Cologne
+bad kreuznach;14;Frankfurt
+halle (saale);14;Leipzig
+frankfurt (oder);14;other
+kempten;14;other
+oberursel;14;Frankfurt
+weimar;14;other
+amberg;14;other
+ heidelberg;13;Frankfurt
+handelsgericht wien;13;international
+hof;13;other
+leverkusen;13;Cologne
+ hamburg;13;Hamburg
+barcelona;13;international
+coburg;13;other
+lüdenscheid;13;Cologne
+kamer van koophandel;13;international
+grünwald;13;Munich
+fulda;13;other
+m\ufcnchen;13;Munich
+companies house;13;international
+registre de commerce et des sociétés;12;international
+willich;12;Cologne
+iserlohn;12;Cologne
+dubai;12;international
+montabaur;12;Frankfurt
+weiden i.d.opf.;12;other
+neuruppin;12;Berlin
+freising;12;Munich
+troisdorf;12;Cologne
+ravensburg;11;other
+ frankfurt am main;11;Frankfurt
+madrid;11;international
+herford;11;other
+ bremen;11;other
+ mannheim;11;Frankfurt
+aurich;11;other
+langenfeld;11;Cologne
+singapur;11;international
+witten;11;Cologne
+bad vilbel;10;Frankfurt
+frankfurt a.m.;10;Frankfurt
+hagen;10;Cologne
+lohmar;10;Cologne
+worms;10;Frankfurt
+k\ufln;10;Cologne
+seevetal;10;Hamburg
+ dresden;10;other
+reinbek;10;Hamburg
+freiburg i.br.;10;other
+ hannover;10;other
+weinheim;9;Frankfurt
+handelsregisteramt des kantons zürich;9;other
+leinfelden-echterdingen;9;Stuttgart
+schweinfurt;9;other
+sindelfingen;9;Stuttgart
+ansbach;9;other
+korschenbroich;9;Cologne
+esslingen am neckar;9;Stuttgart
+dreieich;9;Frankfurt
+ag;9;international
+bad hersfeld;9;other
+ettlingen;9;Stuttgart
+ jena;9;Leipzig
+dorsten;9;other
+hofheim am taunus;9;Frankfurt
+kelkheim;9;Frankfurt
+haan;9;Cologne
+bad homburg v.d.h.;9;other
+frechen;9;Cologne
+mülheim;9;Cologne
+kopenhagen;9;international
+wetzlar;9;Frankfurt
+freiberg;9;other
+starnberg;9;Munich
+pulheim;8;Cologne
+weiden;8;international
+bensheim;8;Frankfurt
+offenburg;8;other
+halstenbek;8;Hamburg
+herne;8;Cologne
+hürth;8;Cologne
+haltern am see;8;other
+fellbach;8;Stuttgart
+herrenberg;8;Stuttgart
+ kiel;8;other
+bocholt;8;other
+des kantons zürich;8;international
+kronberg im taunus;8;Frankfurt
+neubiberg;8;Munich
+ilmenau;8;other
+königswinter;8;Cologne
+gauting;8;Munich
+stockholm;8;international
+ darmstadt;8;Frankfurt
+luxemburg;8;international
+gummersbach;8;Cologne
+rosengarten;8;Hamburg
+erftstadt;8;Cologne
+kronberg;8;Frankfurt
+ erlangen;8;other
+wollerau;8;international
+planegg;7;Munich
+bovenden;7;other
+zorneding;7;Munich
+unna;7;other
+fürstenfeldbruck;7;Munich
+neubrandenburg;7;other
+registre de commerce et des sociétés luxembourg;7;international
+ freiberg;7;other
+clausthal-zellerfeld;7;other
+hong kong;7;international
+bruchsal;7;Stuttgart
+ stuttgart;7;Stuttgart
+lörrach;7;other
+shanghai;7;international
+straubing;7;other
+remscheid;7;Cologne
+ düsseldorf;7;Cologne
+ trier;7;other
+kaarst;7;Cologne
+eschborn;7;Frankfurt
+stralsund;7;other
+wismar;7;other
+m\ufcnster;7;other
+dublin;7;international
+radebeul;7;other
+würselen;7;Cologne
+bergheim;7;international
+rodgau;7;Frankfurt
+ostfildern;7;Stuttgart
+laaber;7;other
+greifswald;7;other
+ saarbrücken;7;other
+gerlingen;7;Stuttgart
+st. gallen;6;international
+leonberg;6;Stuttgart
+bremerhaven;6;other
+sulzbach;6;international
+laupheim;6;Stuttgart
+warschau;6;international
+kirchheim;6;international
+brühl;6;Cologne
+deggendorf;6;other
+koln;6;Cologne
+eindhoven;6;international
+unselected;6;other
+ rosenheim;6;Munich
+firmenbuch der republik österreich;6;other
+wehrheim;6;Frankfurt
+tutzing;6;Munich
+böblingen;6;Stuttgart
+ahrensburg;6;Hamburg
+munsbach luxemburg;6;international
+höchberg;6;other
+stadtbergen;6;Munich
+emsdetten;6;other
+waiblingen;6;Stuttgart
+st. wendel;6;other
+hohen neuendorf;6;Berlin
+mühlhausen;6;other
+kiew;6;international
+pfinztal;6;Stuttgart
+bad homburg v.d.höhe;6;Frankfurt
+unterschleißheim;6;Munich
+ regensburg;6;other
+lorsch;6;Frankfurt
+limburg;6;international
+stadthagen;6;other
+rheine;6;other
+walldorf;6;Stuttgart
+gundelfingen;6;other
+schriesheim;6;Frankfurt
+friedrichsdorf;6;Frankfurt
+baden-baden;6;Stuttgart
+rosenheim;6;Munich
+amtsgericht;6;other
+rellingen;6;Hamburg
+grand cayman;6;international
+bad fallingbostel;6;Hamburg
+olching;6;Munich
+celle;6;other
+dachau;6;Munich
+budapest;5;international
+b berlin;5;Berlin
+bad salzuflen;5;other
+bottrop;5;Cologne
+sandhausen;5;Stuttgart
+taipei;5;international
+lichtenau;5;other
+ poing;5;Munich
+ göttingen;5;other
+eichenau;5;Munich
+ammerbuch;5;Stuttgart
+unterföhring;5;Munich
+filderstadt;5;Stuttgart
+neckargemünd;5;Frankfurt
+eching;5;Munich
+rödermark;5;Frankfurt
+gelnhausen;5;Frankfurt
+petersberg;5;Mannheim
+division corporations;5;international
+landau;5;Mannheim
+ dortmund;5;Cologne
+neustadt;5;international
+emmendingen;5;other
+berlin charlottenburg;5;Berlin
+thierhaupten;5;Munich
+winsen (luhe);5;Hamburg
+bad aibling;5;Munich
+hrb ;5;international
+bad tölz;5;Munich
+delaware department state;5;international
+wien, österreich;5;international
+gladbeck;5;Cologne
+sofia;5;international
+landsberg am lech;5;Munich
+toronto;5;international
+rösrath;5;Cologne
+hennef;5;Cologne
+königs wusterhausen;5;Berlin
+küsnacht;5;international
+wiesloch;5;Stuttgart
+pforzheim;5;Stuttgart
+schwyz;5;international
+ chemnitz;5;Leipzig
+kempen;5;Cologne
+kirchheim b. münchen;5;Munich
+st. helier;5;international
+ villingen-schwenningen;5;other
+luxembourg;5;international
+lissabon;5;international
+sankt augustin;5;Cologne
+salzburg;5;international
+garching;5;Munich
+warsaw;5;international
+neu-isenburg;5;Frankfurt
+remseck am neckar;5;Stuttgart
+berg;5;international
+wilmington;5;international
+erkrath;5;Cologne
+langerwehe;5;Cologne
+--;5;other
+hongkong;5;international
+ flensburg;5;other
+isernhagen;5;other
+kürten;5;Cologne
+warszawa;5;international
+achern;5;other
+waltrop;5;other
+wedel;5;Hamburg
+taunusstein;5;Frankfurt
+mettmann;5;Cologne
+pfaffenhofen;4;international
+kanton zug;4;international
+herzogenaurach;4;other
+schwedisches handelsregister;4;international
+egling;4;Munich
+m�nchen;4;Munich
+eppingen;4;international
+cuxhaven;4;Hamburg
+baldham;4;Munich
+detmold;4;other
+markkleeberg;4;Leipzig
+uitikon waldegg;4;international
+hessisch oldendorf;4;other
+bad nauheim;4;Frankfurt
+ch- zürich;4;international
+bad waldsee;4;other
+erding;4;Munich
+herzogenrath;4;Cologne
+ubstadt-weiher;4;Stuttgart
+breisach;4;other
+langenhagen;4;other
+bad wimpfen;4;Stuttgart
+garbsen;4;other
+pfullingen;4;Stuttgart
+ ulm;4;Stuttgart
+stutensee;4;Stuttgart
+buseck;4;Frankfurt
+kln;4;Cologne
+dieburg;4;Frankfurt
+soest;4;other
+schwetzingen;4;Mannheim
+poing;4;Munich
+cayman islands;4;international
+schenefeld;4;Hamburg
+offenbach/main;4;Frankfurt
+bad soden;4;Frankfurt
+schleswig;4;other
+neu-ulm;4;Stuttgart
+herdecke;4;Cologne
+nürtingen;4;Stuttgart
+wernigerode;4;other
+ ilmenau;4;other
+tettnang;4;other
+ nürnberg;4;other
+kerpen;4;Cologne
+haar;4;Munich
+dossenheim;4;international
+weiterstadt;4;Frankfurt
+witzenhausen;4;other
+state delaware - division corporations;4;international
+furth;4;Munich
+oxford;4;international
+dormagen;4;Cologne
+groß-bieberau;4;Frankfurt
+karlsfeld;4;Munich
+niederkassel;4;Cologne
+frankfurt/oder;4;other
+korbach;4;other
+deutschland;4;other
+aalen;4;Stuttgart
+paris, frankreich;4;international
+oststeinbek;4;Hamburg
+ münster;4;other
+weyhe;4;other
+oberried;4;other
+pullach;4;Munich
+henstedt-ulzburg;4;Hamburg
+graz;4;international
+geldern;4;international
+ homburg;4;international
+moritzburg;4;other
+bad honnef;4;Cologne
+pullach i. isartal;4;Munich
+weingarten;4;other
+wedemark;4;other
+großostheim;4;Frankfurt
+penzberg;4;Munich
+großhansdorf;4;Hamburg
+ eurasburg;4;Munich
+limassol;4;international
+ wendlingen;4;Stuttgart
+kirchheim unter teck;4;Stuttgart
+ nürtingen;4;Stuttgart
+kairo;4;international
+wolfenbüttel;4;other
+burgwedel;4;other
+buxtehude;4;Hamburg
+ljubljana, slovenia;4;international
+goslar;4;other
+mettenheim;4;Frankfurt
+schönefeld;4;Berlin
+kreuzlingen;4;international
+kromen;4;international
+wülfrath;4;Cologne
+ tholey;4;other
+vaterstetten;4;Munich
+ismaning;4;Munich
+eppstein;4;Frankfurt
+münchen / munich;4;Munich
+ leipzig;4;Leipzig
+teltow;4;Berlin
+laatzen;4;other
+companies registry jersey;4;international
+brandenburg a. d. havel;4;Berlin
+brüssel;4;international
+des kantons schwyz;4;international
+tönisvorst;4;Cologne
+ bensheim;4;Frankfurt
+wegberg;4;Cologne
+allershausen;4;Munich
+ottobrunn;4;Munich
+ freiburg;4;other
+kanton schwyz;4;international
+scheyern;4;Munich
+lauf;4;Stuttgart
+kaliningrad;4;international
+bad schwartau;4;Hamburg
+esslingen;4;Stuttgart
+balingen;4;Stuttgart
+zürich, schweiz;4;international
+telgte;4;other
+mainhausen;4;Frankfurt
+hochheim am main;4;Frankfurt
+ st. wendel;4;other
+falkensee;4;Berlin
+vaduz;4;international
+höhenkirchen-siegertsbrunn;4;Munich
+tittmoning;4;other
+unterhaching;4;Munich
+nittendorf;4;other
+schwäbisch gmünd;4;Stuttgart
+st. petersburg;4;international
+registrar companies;4;international
+rüsselsheim;4;Frankfurt
+eltville am rhein;4;Frankfurt
+korntal-münchingen;4;Stuttgart
+wermelskirchen;4;Cologne
+viernheim;4;Frankfurt
+mauritius;4;international
+charlottenburg hrb  b;4;Berlin
+türkenfeld;4;Munich
+ weil der stadt;4;Stuttgart
+baierbrunn;4;Munich
+swedish companies registration office;4;international
+ edingen-neckarhausen;4;Frankfurt
+hattersheim am main;4;Frankfurt
+dietzenbach;4;Frankfurt
+des kantons luzern;3;international
+mertingen;3;other
+waldbronn;3;Stuttgart
+albstadt;3;Stuttgart
+neusäß;3;Munich
+todendorf;3;Hamburg
+holzkirchen;3;other
+ hann. münden;3;other
+herrsching;3;Munich
+ arnsberg;3;other
+ braunschweig;3;other
+rangsdorf;3;Berlin
+sundern;3;other
+state delaware;3;international
+gröbenzell;3;Munich
+ bochum;3;Cologne
+roetgen;3;Cologne
+karlstadt;3;Frankfurt
+überlingen;3;other
+ wesel;3;other
+schneverdingen;3;Hamburg
+buchholz i.d.n.;3;Hamburg
+tallin;3;international
+steinheim an der murr;3;Stuttgart
+landau/pfalz;3;Mannheim
+geretsried;3;Munich
+homburg;3;international
+ schiffweiler;3;other
+illertissen;3;other
+achim;3;other
+ brühl;3;Cologne
+stockelsdorf;3;Hamburg
+thessaloniki;3;international
+division corporations delaware;3;international
+donauwörth;3;other
+peking;3;international
+sinsheim;3;Stuttgart
+peine;3;other
+plüderhausen;3;Stuttgart
+ waghäusel;3;Stuttgart
+herten;3;Cologne
+pullach im isartal;3;Munich
+funchal;3;international
+senden;3;other
+bad saarow;3;Berlin
+heppenheim;3;Frankfurt
+rastatt;3;Stuttgart
+icking;3;Munich
+ magdeburg;3;other
+essenheim;3;Frankfurt
+sprockhövel;3;Cologne
+bad münstereifel;3;Cologne
+ deggendorf;3;other
+cigli-izmir;3;international
+lennestadt;3;Cologne
+müllendorf;3;international
+hessisch lichtenau;3;other
+ würzburg;3;other
+hambühren;3;other
+rheinberg;3;Cologne
+companies house england and wales;3;international
+tangstedt;3;Hamburg
+ rödermark;3;Frankfurt
+friedrichshafen;3;other
+schifferstadt;3;Mannheim
+timis, rumänien;3;international
+marktoberdorf;3;other
+ oldenburg;3;other
+los angeles;3;international
+fuerth;3;other
+st. ingbert;3;other
+espelkamp;3;other
+lampertheim;3;international
+mössingen;3;Stuttgart
+altenholz;3;other
+companies house for england and wales;3;international
+ lörrach;3;other
+rüsselsheim am main;3;Frankfurt
+wilhelmsdorf;3;other
+mahlow;3;Berlin
+oer-erkenschwick;3;other
+thalwil;3;international
+herrliberg;3;international
+aichtal;3;Stuttgart
+bubenreuth;3;other
+herzberg am harz;3;other
+ratzeburg;3;Hamburg
+ starnberg;3;Munich
+heiligenhaus;3;Cologne
+firmenbuch des hr wien;3;international
+meckenbeuren;3;other
+hammelburg;3;other
+freienbach;3;international
+elsenfeld;3;Frankfurt
+wädenswil;3;international
+rom;3;international
+borken;3;other
+ebersberg;3;Munich
+neunkirchen-seelscheid;3;Cologne
+aschau im chiemgau;3;Munich
+ wetzlar;3;Frankfurt
+hünfeld;3;other
+trossingen;3;other
+ grimma ot großbardau;3;international
+kolbermoor;3;Munich
+stolzenau;3;other
+ essen;3;Cologne
+uetze;3;other
+london (vereinigtes königreich);3;international
+gilching;3;Munich
+ wiesbaden;3;Frankfurt
+zurich;3;international
+tuttlingen;3;other
+limburg a.d. lahn;3;Frankfurt
+hofheim;3;Frankfurt
+duderstadt;3;other
+companies registration office;3;international
+koeln;3;Cologne
+zeuthen;3;Berlin
+ frechen;3;Cologne
+charlottenburg (berlin);3;Berlin
+jülich;3;Cologne
+firmenbuch wien;3;international
+winterthur;3;international
+burghausen;3;other
+palo alto;3;international
+ibbenbüren;3;other
+germany;3;other
+bad wurzach;3;other
+kornwestheim;3;Stuttgart
+bodman-ludwigshafen;3;other
+meißen;3;Leipzig
+delaware (usa);3;international
+kehl;3;other
+schechen;3;Munich
+bretten;3;international
+gaimersheim;3;Munich
+ramsau;3;international
+mülheim a.d. ruhr;3;Cologne
+baar;3;Cologne
+elmenhorst;3;Hamburg
+glinde;3;Hamburg
+furtwangen im schwarzwald;3;other
+olsberg;3;other
+division corporations the state delaware;3;international
+ tübingen;3;Stuttgart
+basel;3;international
+büren;3;other
+taufkirchen;3;Munich
+brunnthal;3;Munich
+rheinau;3;international
+ hanau;3;Frankfurt
+paphos;3;international
+rietberg;3;other
+altenberge;3;other
+kusterdingen;3;Stuttgart
+schaan;3;international
+grevenbroich;3;Cologne
+merzhausen;3;other
+herrsching a. ammersee;3;Munich
+grafing;3;Munich
+seattle;3;international
+bergen;3;international
+radolfzell;3;other
+quickborn;3;Hamburg
+ willich;3;Cologne
+alsdorf;3;other
+registrar companies for england and wales;3;international
+guern- sey registry;3;international
+kanton zürich;3;international
+ottendorf-okrilla;3;other
+aschau i. chiemgau;3;Munich
+seeheim-jugenheim;3;Frankfurt
+baden;3;other
+owingen;3;other
+kenzingen;3;other
+bergisch-gladbach;3;Cologne
+blankenfelde-mahlow;3;Berlin
+ heilbronn;3;Stuttgart
+genf;3;international
+nassau;3;international
+löhne;3;other
+olten;3;international
+baku;3;international
+reichertshausen;3;Munich
+kronshagen;3;other
+kastl;3;other
+buchholz;3;Hamburg
+hattingen;3;international
+inning am ammersee;3;Munich
+rückersdorf;3;other
+larnaka;3;international
+firmenbuch österreich;3;international
+saarlouis;3;other
+rotterdam;3;international
+teheran;3;international
+vörstetten;3;other
+lindau;3;other
+butzbach;3;Frankfurt
+västerås;3;international
+vallendar;3;Cologne
+straelen;3;Cologne
+langen (hessen);3;Frankfurt
+esens;3;other
+ ingolstadt;3;Munich
+schmallenberg;3;other
+posen / polen;3;international
+wolfratshausen;3;Munich
+lviv;3;international
+einhausen;3;other
+mühldorf am inn;3;Munich
+kirchhain;3;other
+registre de commerce et des sociétés luxemburg;3;international
+ag charlottenburg (i. gr.);3;Berlin
+schwelm;3;Cologne
+speyer;3;Mannheim
+ketsch;3;Mannheim
+ av. blücher, b  brüssel;3;international
+ wien;3;international
+ehingen;3;Stuttgart
+ issum;3;Cologne
+neuenstadt;3;international
+markt indersdorf;3;Munich
+buchenbach;3;other
+leimen;3;Stuttgart
+singapore;3;international
+xanten;3;other
+stuhr;3;other
+winkelhaid;3;other
+erzhausen;3;Frankfurt
+zollikon;3;international
+barmstedt;3;Hamburg
+handelsregisteramt kanton zürich;3;international
+ neresheim;3;other
+bad endorf;3;Munich
+seelze;3;other
+tortola;3;international
+"b- rhode-saint-gen&#;se";2;international
+korneuburg, österreich;2;international
+ortenberg;2;Frankfurt
+che-..;2;international
+gericht;2;other
+armonk;2;international
+kelsterbach;2;Frankfurt
+unspecified;2;international
+hennef (sieg);2;Cologne
+wilmington, delaware;2;international
+stade;2;Hamburg
+- thuwal, saudi arabien;2;international
+hasbergen;2;other
+linz;2;international
+dienheim;2;Frankfurt
+wolfsburg;2;other
+vreden;2;other
+warngau;2;Munich
+ speyer;2;Mannheim
+ andechs;2;Munich
+eppelheim;2;Frankfurt
+ freudenberg;2;Cologne
+helsa;2;other
+langelsheim;2;other
+bernau;2;Berlin
+ goslar;2;other
+alling;2;Munich
+wentorf;2;Hamburg
+ asperg;2;Stuttgart
+bozen;2;international
+schwaig;2;Munich
+road town, tortola;2;international
+niederländisches handelsregister;2;international
+albertshofen;2;other
+kierspe;2;Cologne
+bannewitz;2;other
+ wintersingen;2;international
+lauchringen;2;other
+hagnau;2;other
+sevenoaks;2;international
+merseburg;2;Leipzig
+wilnsdorf;2;other
+hallbergmoos;2;Munich
+malmö;2;international
+wunstorf;2;other
+neukirchen/erzgeb.;2;Leipzig
+ trier, wallstraße ;2;other
+ratekau;2;Hamburg
+caesarea, israel;2;international
+ werlte;2;other
+von luxemburg;2;other
+mumbai;2;international
+schwarzenbek;2;Hamburg
+hiddenhausen;2;other
+texas;2;international
+vaihingen;2;Stuttgart
+riegelsberg;2;other
+kreuztal;2;Cologne
+rain;2;Munich
+ marburg;2;Frankfurt
+ krefeld;2;Cologne
+ankara, republic of turkey;2;international
+ dinkelsbühl;2;other
+chur;2;international
+lichtenstein;2;Stuttgart
+ kempten (allgäu);2;other
+malsch;2;Stuttgart
+kernen;2;international
+immenstaad;2;other
+langenzenn;2;other
+timmendorfer strand;2;Hamburg
+utting am ammersee;2;Munich
+göteborg;2;international
+division corporations des bundesstaates delaware;2;international
+raunheim;2;Frankfurt
+wardenburg;2;other
+haimhausen;2;Munich
+lilienthal;2;other
+op de lust ,  nottensdorf;2;Hamburg
+-;2;other
+oberschleißheim;2;Munich
+teunz;2;other
+neuenburg;2;international
+nidderau;2;Frankfurt
+ gelsenkirchen;2;Cologne
+malta;2;international
+ sulzbach;2;international
+singen;2;other
+lübbecke;2;other
+bad soden a. ts.;2;international
+ockenfels;2;Cologne
+emmerich am rhein;2;other
+ gieleroth;2;Cologne
+baunatal, landkreis kassel;2;other
+monheim;2;other
+bülstedt;2;Hamburg
+schaan/liechtenstein;2;international
+bad heilbrunn;2;Munich
+fritzlar;2;other
+ mudau;2;Frankfurt
+lautertal;2;Frankfurt
+ennepetal;2;Cologne
+gochsheim-ot weyer;2;other
+birkenau;2;Frankfurt
+ warwerort;2;other
+hirschaid;2;other
+senningerberg;2;international
+burgau;2;international
+blaubeuren;2;Stuttgart
+nordwalde;2;other
+geismarweg ,  essen;2;Cologne
+kirchlengern;2;other
+ seesen;2;other
+von schweden (bolagsverket);2;international
+erpel;2;Cologne
+erkner;2;Berlin
+senftenberg;2;other
+stockstadt;2;Frankfurt
+kristiansand;2;international
+charlottenburg, ag;2;Berlin
+sitz: hamburg;2;Hamburg
+landesgericht korneuburg;2;international
+mering;2;Munich
+frutigen (schweiz);2;international
+freudenberg;2;Cologne
+ freiburg im breisgau;2;other
+wüstenrot;2;Stuttgart
+wachtendonk;2;Cologne
+schramberg;2;other
+andernach;2;Cologne
+ekpan, delta state;2;international
+muggensturm;2;Stuttgart
+riethoven niederlande;2;international
+arlon;2;international
+ eching;2;Munich
+weil im schönbuch;2;Stuttgart
+ puchheim;2;Munich
+ telgte;2;other
+bad arolsen;2;other
+backnang;2;Stuttgart
+weißenbrunn;2;other
+bammental;2;Stuttgart
+bischberg;2;other
+reinheim;2;Frankfurt
+mailand;2;international
+klein-winternheim;2;Frankfurt
+ladenburg;2;Frankfurt
+lehrensteinsfeld;2;Stuttgart
+ mã¼llheim;2;other
+hildrizhausen;2;Stuttgart
+simpelveld;2;international
+birkenfeld;2;other
+ königsfeld im schwarzwald;2;other
+lünen;2;other
+undine, italien/italy;2;international
+meersburg;2;other
+company register austria;2;international
+immenhausen;2;other
+grünwald, landkreis münchen;2;Munich
+gehrden;2;other
+palo alto, california;2;international
+neuhausen auf den fildern;2;Stuttgart
+ münchen, arcisstraße ;2;Munich
+giessen;2;Frankfurt
+ohlsbach;2;other
+woluwe-saint-lambert;2;international
+port melbourne;2;international
+letschin;2;Berlin
+rötha;2;Leipzig
+reichshof;2;Cologne
+brachbach;2;Cologne
+velbert;2;Cologne
+espoo;2;international
+ettenheim;2;other
+lufingen;2;international
+alicante;2;international
+budapest (ungarn);2;international
+münzenberg;2;Frankfurt
+bad bramstedt;2;Hamburg
+wesel;2;other
+bibertal;2;other
+neuried;2;other
+rimpar;2;other
+leutenbach;2;other
+pocking;2;other
+rostock ot seebad warnemünde;2;other
+ hausham;2;Munich
+bad wünnenberg;2;other
+ metten;2;other
+althengstett;2;Stuttgart
+oestrich-winkel;2;Frankfurt
+basel, schweiz;2;international
+buttenwiesen;2;other
+putzbrunn;2;Munich
+cloppenburg;2;other
+ tönisvorst;2;Cologne
+niedernhausen;2;Frankfurt
+marloffstein;2;other
+ walldorf;2;Stuttgart
+otterbach;2;Mannheim
+hoisdorfer landstraße a,  großhansdorf;2;Hamburg
+kuppenheim;2;Stuttgart
+alveslohe;2;Hamburg
+straßlach-dingharting;2;Munich
+göppingen;2;Stuttgart
+wertheim;2;Frankfurt
+ingelheim;2;international
+allhartsberg;2;international
+bad feilnbach;2;Munich
+rhöndorfer straße ,  bad honnef;2;Cologne
+zornheim;2;Frankfurt
+rastede;2;other
+companies house cardiff;2;international
+rinteln;2;other
+salzhausen;2;Hamburg
+verden;2;international
+kappelrodeck;2;other
+eutin;2;Hamburg
+ bukarest;2;international
+stephanskirchen;2;Munich
+twistringen;2;other
+ steinheim;2;other
+bindlach;2;other
+bedburg;2;Cologne
+ reichenbach an der fils;2;Stuttgart
+remagen;2;Cologne
+achstetten;2;Stuttgart
+hanstedt;2;Hamburg
+herborn;2;Frankfurt
+mallersdorf-pfaffenberg;2;other
+ bietigheim-bissingen;2;Stuttgart
+handelsregisteramt des kantons basel-stadt;2;international
+luzern;2;international
+bühl;2;international
+los parques guayaquil;2;international
+wernau (neckar);2;Stuttgart
+haag;2;international
+germering, landkreis fürstenfeldbruck;2;Munich
+pfaffenhofen, niederscheyern;2;Munich
+dietramszell;2;Munich
+krailling;2;Munich
+fn  y;2;international
+karben;2;Frankfurt
+friedrichsdorf/taunus;2;Frankfurt
+boulder, co  (usa);2;international
+ ludwigshafen;2;Frankfurt
+münster / österreich;2;international
+wilhelmshaven;2;other
+hamilton;2;international
+glashütte;2;other
+register guernsey;2;international
+herzliya;2;international
+idstein;2;Frankfurt
+salzkotten;2;other
+metzingen;2;international
+seattle, washington;2;international
+feldkirchen;2;international
+waldbüttelbrunn;2;other
+ sibiu;2;international
+danndorf;2;other
+ haltern am see, weideweg ;2;other
+vechta;2;other
+großenwiehe;2;other
+hirschberg;2;international
+küsten;2;other
+neufahrn;2;Munich
+oelde;2;other
+san francisco, kalifornien, usa;2;international
+ otterndorf;2;Hamburg
+pöcking;2;Munich
+zürich/schweiz;2;international
+ nordhorn;2;other
+dr.-kolbe-str. ,  witten;2;Cologne
+ljubljana;2;international
+schwerte;2;Cologne
+ koblenz;2;Cologne
+kreischa;2;other
+vlotho;2;other
+aumühle;2;Hamburg
+krasnodar;2;international
+ zweibrücken;2;other
+rommerskirchen;2;Cologne
+handelsgert wiener neustadt;2;international
+nordenham;2;other
+ ginsheim-gustavsburg;2;Frankfurt
+münchen.;2;Munich
+ bruchsal;2;Stuttgart
+handelsregisteramt kanton zug;2;international
+grasbrunn;2;Munich
+kanton obwalden;2;international
+oberkochen;2;Stuttgart
+taucha;2;Leipzig
+täby;2;international
+münsing;2;Munich
+mￃﾼnchen;2;Munich
+liederbach am taunus;2;Frankfurt
+rothenburg;2;other
+wohratal;2;other
+ch-baar;2;international
+baunatal;2;other
+dänischen gewerbe- und gesellschaftsamt;2;international
+vilnius;2;international
+nienwohld;2;Hamburg
+commercial register delaware;2;international
+frankfurt a. m.;2;Frankfurt
+delmenhorst;2;other
+bad liebenzell;2;Stuttgart
+haibach;2;Frankfurt
+ simmerath;2;Cologne
+gesellschaftsregister von jersey;2;international
+landesgerichts graz;2;international
+l-mondorf-les bains;2;international
+landesgericht wiener neustadt;2;international
+rehau;2;other
+melle;2;international
+ nur-sultan, sary-arka  app. ;2;international
+aichwald-aichsschieß;2;other
+ münsing;2;Munich
+langen;2;Frankfurt
+ neustadt an der weinstraße;2;Mannheim
+genossenschaftsregister des landshut;2;Munich
+handelsregisteramt des kantons aargau;2;international
+ dossenheim;2;international
+ flintbek;2;Hamburg
+wildeshausen;2;other
+donaueschingen;2;other
+elmshorn;2;Hamburg
+siblin;2;Hamburg
+neckarstraße ,  ludwigsburg;2;Stuttgart
+lichtenfels;2;other
+altomünster;2;Munich
+marxzell;2;Stuttgart
+oranienburg;2;Berlin
+tallinn;2;international
+hameln;2;other
+sittensen;2;Hamburg
+heiligenberg;2;international
+wenden;2;Cologne
+gottmadingen;2;other
+freiberg am neckar;2;Stuttgart
+eiksmarka;2;international
+natendorf;2;Hamburg
+leuven;2;international
+tel aviv;2;international
+otterfing;2;Munich
+secretary state the state delaware;2;international
+schkeuditz;2;Leipzig
+schweitenkirchen;2;Munich
+kreuzlingen /schweiz;2;international
+march;2;other
+british columbia;2;international
+ paderborn;2;other
+ pluwig;2;other
+kapstadt;2;international
+ul. kujbysheva d. , kv. , sankt-petersburg, ;2;international
+oerlinghausen;2;other
+menden;2;other
+waldbrunn;2;other
+waghäusel;2;Stuttgart
+forchheim;2;other
+mainleus;2;other
+s.o.;2;international
+ stephanskirchen;2;Munich
+wangen;2;international
+weidenbach;2;Frankfurt
+mannheim - registergericht;2;Mannheim
+thuine;2;other
+stammkapital (= eur);2;other
+ weimar;2;other
+musterstadt;2;other
+durmersheim;2;Stuttgart
+handels- und firmenregister luxemburg;2;other
+neustadt / weinstraße;2;Mannheim
+vogtsburg im kaiserstuhl;2;other
+rednitzhembach;2;other
+ karlsdorf-neuthard;2;Stuttgart
+oborniki / polen;2;international
+kolde-ring ,  münster;2;other
+d\ufcsseldorf;2;Cologne
+potsdam ot neu fahrland;2;other
+königshain-wiederau ot königshain;2;other
+niederwerrn;2;other
+schöffengrund;2;Frankfurt
+ friedrichsdorf;2;Frankfurt
+bickenbach;2;other
+sankt peter;2;international
+buckenhof;2;other
+hückelhoven;2;Cologne
+ bielefeld;2;other
+commercial register secretary state delaware;2;international
+eckental;2;other
+ burtenbach;2;other
+ mettmann;2;Cologne
+emmering;2;Munich
+kelheim;2;other
+ peiting;2;Munich
+griesheim;2;international
+haßloch;2;Mannheim
+ofterdingen;2;Stuttgart
+esslingen a.n.;2;Stuttgart
+mötzingen;2;Stuttgart
+ludwigshafen a. rhein;2;Frankfurt
+bad homburg v.d. höhe;2;Frankfurt
+weiden i. d. opf.;2;other
+ cottbus;2;other
+ mainz;2;Frankfurt
+ amberg;2;other
+wolnzach;2;Munich
+fernwald;2;Frankfurt
+lyon;2;international
+firmenbuch landesgericht salzburg;2;international
+monschau;2;Cologne
+ neu-isenburg;2;Frankfurt
+andechs;2;Munich
+ bad endorf;2;Munich
+london, uk;2;international
+leer;2;other
+boston, ma;2;international
+plauen;2;other
+ osnabrück;2;other
+pacifica, kalifornien;2;international
+ tapfheim, ot donaumünster;2;other
+hoenderloo;2;international
+burg auf fehmarn;2;other
+littlehampton bn jh;2;other
+ königsdorf;2;Munich
+bad sassendorf;2;other
+ rain am lech;2;Munich
+firmenbuch;2;other
+wageningen;2;international
+dover, kent county, delaware;2;international
+goch;2;other
+ germering;2;Munich
+ochtendung;2;Cologne
+cleveland;2;international
+volgograd;2;international
+moselkern;2;other
+delaware division corporations;2;international
+commercial register kanton schwyz;2;international
+denzlingen;2;other
+guernsey registry;2;international
+woltersdorf;2;Hamburg
+wennigsen;2;other
+neuenkirchen;2;other
+pliezhausen;2;Stuttgart
+elchingen;2;Stuttgart
+mainz-kostheim;2;Frankfurt
+ lorch;2;Stuttgart
+ singen;2;other
+wien / österreich;2;international
+kanton st. gallen;2;international
+venlo;2;international
+ahlen;2;other
+horb a.n.;2;Stuttgart
+schöneck;2;international
+weilheim i. ob;2;Munich
+weßling;2;Munich
+heusenstamm;2;Frankfurt
+unternehmensregister zypern;2;international
+bad salzungen;2;other
+mörfelden-walldorf;2;Frankfurt
+trittau;2;Hamburg
+buenos aires;2;international
+altdorf;2;international
+schwabach;2;other
+michelstadt;2;Frankfurt
+mannheim - - mannheim;2;Frankfurt
+tel-aviv;2;international
+bruckmühl;2;Munich
+marzling;2;Munich
+lauf a. d. pegnitz;2;other
+eggenstein-leopoldshafen;2;Stuttgart
+zolling;2;Munich
+porta westfalica;2;other
+fn  b;2;other
+ lahnau;2;Frankfurt
+neuwied;2;Cologne
+firmenbuch des landesgerichts innsbruck;2;international
+konradstraße ,  münchen;2;Munich
+ wolfsburg;2;other
+bad rothenfelde;2;other
+oberkirch;2;other
+estland;2;international
+kottgeisering;2;Munich
+kriftel;2;Frankfurt
+ dornstetten;2;Stuttgart
+vilshofen an der donau;2;other
+lewes, delaware;2;international
+schönborn;2;Frankfurt
+garsfontein, pretoria, ;2;international
+ hamm;2;other
+handeloh;2;Hamburg
+hemmingen;2;other
+oberpframmern;2;Munich
+heinsberg;2;Cologne
+münstertal;2;international
+lauterecken;2;Mannheim
+trento/italien;2;international
+frankenthal;2;Frankfurt
+röttenbach;2;other
+ innsbruck;2;international
+schaafheim;2;Frankfurt
+chicago;2;international
+bukarest;2;international
+frankfurt/m.;2;Frankfurt
+handelsregisteramt des kantons schaffhausen;2;international
+new york, ny;2;international
+austin, texas;2;international
+molfsee;2;Hamburg
+huddinge;2;international
+aarhus;2;international
+riesa;2;Leipzig
+tamm;2;Stuttgart
+kaltenkirchen;2;Hamburg
+vereinigtes königreich;2;international
+gevelsberg;2;Cologne
+schwäbisch hall;2;Stuttgart
+cham;2;other
+lingen;2;other
+emsbüren;2;other
+notars dr. paul czaplinski, bielefeld;2;other
+landesgericht innsbruck;2;international
+ wildau, wagnerstr. ;2;Berlin
+freital;2;other
+neerach;2;international
+division corporations des department state des us-bundesstaates delaware;2;international
+deisenhofen;2;Munich
+großbeerenstr. ,  berlin;2;Berlin
+bad lippspringe;2;other
+geltendorf;2;Munich
+wietmarschen;2;other
+hellenthal;2;Cologne
+veenendaal;2;international
+division corporation des staates delaware;2;international
+ dorsten;2;other
+basel-stadt;2;international
+washington dc;2;international
+stammkapital;2;other
+landesgericht salzburg;2;international
+pfäffikon;2;international
+dommershausen;2;other
+/ charlottenburg;2;Berlin
+genf (schweiz);2;international
+stans;2;international
+amt für rechtsangelegenheiten tokio;2;international
+ stuttgart, kauffmannstraße ;2;Stuttgart
+friedberg (hessen);2;Frankfurt
+rheinfelden (baden);2;other
+winsen/luhe;2;Hamburg
+stein;2;international
+t\ufcbingen;2;other
+;2;international
+der britischen jungferninseln;2;international
+pfaffenhofen a.d. ilm;2;Munich
+kiedrich;2;Frankfurt
+unterägeri;2;international
+gerstetten;2;Stuttgart
+dusseldorf;2;Cologne
+greven;2;other
+bad pyrmont;2;other
+antweiler;2;Cologne
+ rostock;2;other
+dover;2;international
+geislingen;2;Stuttgart
+handelsregisteramt des kantons bern;2;international
+ weißenberg;2;other
+ krummwisch;2;other
+moers;2;Cologne
+stapelfeld;2;Hamburg
+ crailsheim;2;Stuttgart
+ stutensee;2;Stuttgart
+torgau;2;Leipzig
+ wolfenbüttel;2;other
+sisli, istanbul;2;international
+liechtenstein;2;international
+hille;2;other
+euskirchen;2;Cologne
+meppen;2;other
+bangkok;2;international
+bad oldesloe;2;Hamburg
+kalenborn;2;Cologne
+roßhaupten;2;other
+güglingen (stadtteil frauenzimmern);2;other
+no. z;2;international
+sgp- singapur;2;international
+schwanstetten;2;other
+bremen, hrb ;2;other
+naunhof;2;Leipzig
+ warngau;2;Munich
+grosselfingen;2;Stuttgart
+bernau bei berlin;2;Berlin
+ unterschleißheim;2;Munich
+neukirchen;2;other
+abensberg;2;other
+ahrensbök;2;Hamburg
+hergiswil;2;international
+zagreb;2;international
+ schwentinental;2;other
+kelberg;2;Cologne
+firmenbuch von wien;2;international
+jbochum;2;other
+schwaikheim;2;Stuttgart
+radevormwald;2;Cologne
+grossbartloff;2;other
+gaiberg;2;other
+faulbach;2;Frankfurt
+lippstadt;2;other
+ schonungen;2;other
+#NAME?;2;international
+ganderkesee;2;other
+amtsgereicht charlottenburg;2;Berlin
+spenge;2;other
+marl;2;international
+haigerloch;2;Stuttgart
+gammertingen;2;Stuttgart
+au i.d. hallertau;2;Munich
+groß-umstadt;2;Frankfurt
+meudon;2;international
+kamen;2;other
+adolf-göbel-straße ,  groß-gerau;2;Frankfurt
+oldenburg (oldb);2;other
+ leimen;2;Stuttgart
+valencia;2;international
+wendtorf;2;other
+secretary state delaware;2;international
+ -;2;other
+knittlingen;2;Stuttgart
+handelsregisteramt des kanton bern;2;international
+rotenburg;2;Hamburg
+ schaufling;2;other
+havixbeck;2;other
+ensdorf;2;other
+winnweiler;2;Mannheim
+kandern;2;other
+seligenstadt;2;Frankfurt
+michendorf;2;Berlin
+uttenreuth;2;other
+praha ;2;international
+lund;2;international
+zirndorf;2;other
+greitelerweg ,  paderborn;2;other
+ebhausen;2;Stuttgart
+putbus;2;other
+ brandenburg an der havel;2;Berlin
+seefeld;2;international
+eichenzell;2;other
+beilstein;2;other
+ kirchheim unter teck;2;Stuttgart
+im rosental ,  kassel;2;other
+neubiberg unterbiberg;2;Munich
+neureichenau;2;other
+tondernstieg ,  hamburg;2;Hamburg
+feusisberg;2;international
+ostbevern;2;other
+groß-zimmern;2;Frankfurt
+bruchkã¶bel;2;other
+stuttgart, hrb ;2;Stuttgart
+varna;2;international
+grevenmacher;2;international
+waldkirchen;2;other
+kronberg /ts.;2;other
+harrislee;2;other
+walzbachtal;2;Stuttgart
+engelsbrand;2;Stuttgart
+kantonsregister zürich;2;international
+holzgerlingen;2;Stuttgart
+ neu-ulm;2;Stuttgart
+ baldham;2;Munich
+renningen;2;Stuttgart
+güstrow;2;other
+pöcking, landkreis starnberg;2;Munich
+niddatal;2;Frankfurt
+weinstadt;2;Stuttgart
+raubach;2;Cologne
+ebene (republik mauritius);2;international
+ worms;2;Frankfurt
+rheda-wiedenbrück;2;other
+brunsbuttel;2;Hamburg
+weitnau;2;other
+bolagsverket;2;international
+klipphausen;2;other
+gmund a. tegernsee;2;Munich
+markdorf;2;other
+mühlheim;2;Stuttgart
+dänisches handelsregister;2;international
+alzenau;2;Frankfurt
+turin;2;international
+ hambrücken, hardtweg nr. ;2;other
+jockgrim;2;Stuttgart
+bornheim;2;Cologne
+ augsburg, max-pechstein-str. h;1;Munich
+offenau;1;Stuttgart
+leonberg ortsteil eltingen;1;other
+cork;1;international
+liechtensteiner handelsregister;1;international
+commercial register canton appenzell innerrhoden;1;international
+rheinstetten;1;Stuttgart
+hage;1;other
+anröchte;1;other
+ podolsk, moskovskaya obl.;1;international
+rechberghausen;1;Stuttgart
+isenbüttel;1;other
+niederkrüchten;1;Cologne
+ brechen;1;Frankfurt
+königseggwald;1;other
+gütenbach;1;other
+dörpen;1;other
+niemcz;1;international
+castrop- rauxel;1;Cologne
+buchberg-sengenthal;1;other
+ hürth;1;Cologne
+ duisburg;1;Cologne
+wörth an der isar;1;Munich
+neunkirchen a. sand;1;other
+boulogne, provincia de buenos aires, república argentina;1;international
+ rostock, max-reichpietsch-str. ;1;other
+oberreute;1;other
+charleston, sc ;1;international
+ wiesentheid;1;other
+ bad kreuznach;1;Frankfurt
+pfarrkirchen;1;other
+ jagstzell;1;Stuttgart
+bothkamp;1;Hamburg
+auerbach;1;other
+ emmelshausen;1;other
+oberbüren, schweiz;1;international
+ deisenhofen;1;Munich
+ michelfeld;1;Stuttgart
+karlsdorf-neuthard;1;Stuttgart
+maltepe istanbul;1;international
+bagcilar/istanbul;1;international
+amersham;1;international
+neresheim;1;other
+angern;1;other
+schömberg;1;Stuttgart
+wdlq watford;1;international
+stelzenberg;1;Cologne
+rennbahnstr. ,  münchen;1;Munich
+ herxheim;1;Mannheim
+maxdorf;1;Frankfurt
+hechingen;1;Stuttgart
+ dachau;1;Munich
+sutton;1;international
+zuzenhausen;1;Stuttgart
+klein nordende;1;Hamburg
+ panketal;1;Berlin
+kalletal;1;other
+ wesseling;1;Cologne
+norderstraße a,  wallsbüll;1;other
+meilen/schweiz;1;international
+ oberkirch;1;other
+altasehir, istanbul;1;international
+ splitt;1;Hamburg
+höchstadt;1;Mannheim
+regenstauf- ramspau;1;other
+registrar companies, justizministerium, jerusalem;1;international
+lauenburg;1;Hamburg
+ herten;1;Cologne
+agriswil, wiler ;1;international
+geisenheim;1;Frankfurt
+ zülpich;1;Cologne
+hainewalde;1;other
+ perl-nennig;1;other
+ euskirchen;1;Cologne
+schwäbisch-hall ot gelbingen;1;other
+ ingolstadt, schlüterstr. ;1;Munich
+kalchreuth;1;other
+sulzbach am taunus;1;Frankfurt
+vinnytsia;1;international
+bülach;1;international
+flüh;1;international
+ walderbach;1;other
+pilisszentkereszt;1;international
+dornburg-frickhofen;1;Frankfurt
+alenquer;1;international
+ olsberg;1;other
+großolt;1;other
+ tegernsee;1;Munich
+ stinstedt;1;Hamburg
+bratislava;1;international
+hiratsuka;1;international
+bauernstraße c,  bremen;1;other
+nou, llucmajor;1;international
+königstein i. ts .;1;Frankfurt
+balge;1;other
+lehrte-hämelerwald;1;other
+st germain-des-fossés;1;international
+palma de mallorca;1;international
+ lana (bz);1;international
+baiern bei münchen;1;Munich
+walchensee;1;Munich
+amtsgericht,;1;other
+schiffweiler;1;other
+karlsbad;1;Stuttgart
+ca  mountain view;1;international
+rheinsberg;1;Berlin
+ belum;1;Hamburg
+kisvárda;1;international
+reppenstedt;1;Hamburg
+portland, oregon;1;international
+ kiefersfelden;1;Munich
+selfkant;1;Cologne
+plesenkam;1;other
+cottbus, burger chaussee ;1;other
+boulogne-billancourt;1;international
+ oelde;1;other
+ricsweg , reken;1;other
+nagelberg;1;other
+nünrberg;1;other
+newark de ;1;international
+bexbach;1;other
+schöneiche bei berlin;1;Berlin
+inglostadt;1;other
+$-ensch;1;other
+zentrale datenbank der unternehmen;1;other
+fredersdorf-vogelsdorf;1;Berlin
+manama, kingdom of bahrain;1;international
+postbauer-heng;1;other
+zangberg;1;Munich
+lauf a.d. pegnitz;1;other
+rep;1;international
+wäschenbeuren;1;Stuttgart
+ammersbek;1;Hamburg
+steenewark ,  steinhude;1;other
+körnerstraße ,  hannover;1;other
+queensland, australi;1;international
+kocaeli / gebze;1;international
+commercial register luxemburg;1;international
+dubai multi commodities centre;1;international
+weilheim i.ob;1;Munich
+aulzhausen;1;Munich
+antdorf;1;Munich
+meggen;1;international
+homberg (efze);1;other
+freudenstadt;1;Stuttgart
+arico;1;international
+wustermark;1;Berlin
+bietigheim;1;Stuttgart
+unterseen;1;international
+grossaffoltern, farnigasse ;1;international
+woldegk;1;other
+ eppingen, wolfertstalstr. ;1;Stuttgart
+ großkarolinenfeld;1;Munich
+börnsen;1;Hamburg
+ forstinning;1;Munich
+groningen/niederlande;1;international
+ weilburg;1;Frankfurt
+südstrand ,  binz;1;other
+førde;1;international
+katzenbruchstr. ,  essen;1;Cologne
+mintraching;1;other
+dillingen;1;other
+douglas;1;international
+wie vor;1;Cologne
+finnish trade register;1;international
+rüschlikon;1;international
+mexiko-stadt;1;international
+ liederbach am taunus;1;Frankfurt
+neubeuern (ag traunstein hra ) ( neubeuern, pfaffensteinstr. );1;other
+ burgau;1;international
+santa catarina;1;international
+commercial register canton thurgau;1;international
+neustrelitz;1;other
+ hermsdorf;1;Leipzig
+tharandt;1;other
+ erfurt;1;other
+dompfaffenweg  a,  k ln;1;other
+bülowstrasse a  hamburg;1;Hamburg
+weidestraße ,  bochum;1;Cologne
+hoisdorfer landstraße ,  großhansdorf;1;Hamburg
+von sacramento califorina;1;international
+merchweiler;1;other
+"sitz: nevada/usa; p.o. box , zephyr cove, nevada , usa";1;international
+kyiv ;1;international
+ frankfurt;1;Frankfurt
+kissenbrück;1;other
+ mayen;1;Cologne
+tornesch;1;Hamburg
+levallois-perret;1;international
+ castrop-rauxel;1;Cologne
+schaffhausen;1;international
+ tremona;1;international
+herrsching am ammersee;1;Munich
+mühlbergstr.  a,  starnberg;1;Munich
+eßbach;1;other
+eschenburg;1;other
+milano;1;international
+cuttack/odisha/indien;1;international
+ ostfildern;1;Stuttgart
+ torino;1;international
+oppenwei- ler;1;other
+snhu marlborough;1;other
+ möhrendorf;1;other
+ gossau;1;international
+fridolfing;1;other
+mühldorf a.inn;1;Munich
+schierling;1;other
+ passau;1;other
+zugspitzstr. ,  berg, ortsteil aufkirchen;1;other
+ hemmingen;1;other
+schwerzenbach;1;international
+barendorf;1;international
+ nürnberg, sulzbacher straße ;1;other
+heldenstein;1;Munich
+f- seltz;1;international
+ kyiv;1;international
+salem;1;international
+ munster;1;international
+kie;1;international
+reschstr. /. og,  münchen;1;Munich
+kirchberg ,  aachen;1;Cologne
+bechhofen;1;other
+holdorf;1;other
+grafenberg;1;Stuttgart
+nurnberg;1;other
+ wiehl;1;Cologne
+stemwede-haldem;1;other
+gremsdorf;1;other
+ st. kanzian am klopeiner see;1;international
+ dürnau;1;other
+, moskau;1;international
+ammerthal;1;other
+kröbeln;1;Leipzig
+lübs;1;other
+los suenos, herradura, puntarenas, costa rica;1;international
+augustdorf;1;other
+gdańsk;1;international
+kuala lumpur;1;international
+heinrich-hertz-straße -,  recklinghausen;1;Cologne
+warstein;1;other
+singen (hohentwiel);1;other
+new york, ny, ;1;international
+sassenburg;1;other
+von madrid;1;international
+burgdorf;1;international
+hedeper;1;other
+pancevo/serbien;1;international
+aying;1;Munich
+mungia;1;international
+blankenfelde/mahlow;1;Berlin
+schwabhausen;1;other
+bad hom-burg;1;other
+ mutterstadt;1;Frankfurt
+inning;1;international
+hünfelden;1;Frankfurt
+zeitz;1;Leipzig
+blankenburg;1;other
+caras-serverin, rumänien;1;international
+donzdorf;1;Stuttgart
+ langen;1;Frankfurt
+buschstr. ,  kirchlengern;1;other
+holstenstrasse   hamburg;1;Hamburg
+sexau;1;other
+deckenpfronn;1;Stuttgart
+friedberg (hessen) - ossenheim;1;Frankfurt
+manching;1;Munich
+exeter;1;international
+ rohrdorf;1;Munich
+ bergisch gladbach;1;Cologne
+er lisse, niederlande;1;international
+landau (pfalz);1;Mannheim
+mangaf;1;international
+ siegen;1;Cologne
+charlotte, north carolina;1;international
+quito, ecuador;1;international
+sã£o paulo;1;international
+oberstdorf;1;other
+jakarta;1;international
+adelschlag;1;other
+mountain view;1;international
+tambow oblast;1;international
+luckenwalde;1;Berlin
+derry;1;international
+anzing;1;Munich
+schopfheim;1;other
+gaißach;1;Munich
+donaustr. ,  berlin;1;Berlin
+buttenheim;1;other
+neustifter straße ,  münchen;1;Munich
+olpe;1;Cologne
+ schwanfeld;1;other
+amt creuzburg;1;other
+triesen, liechten- stein;1;international
+ schwerin, august-bebel-str. ;1;other
+wohltorf;1;Hamburg
+klosters;1;international
+alsheim;1;Frankfurt
+willstätt;1;other
+rohr;1;international
+ lindlar;1;Cologne
+štore, slovenia;1;international
+ hofheim am taunus;1;Frankfurt
+rankweil/ österreich;1;international
+loka pri žusmu, slovenia;1;international
+oberammergau;1;Munich
+glienicke;1;Berlin
+ chemnitz, andréstraße ;1;Leipzig
+register für limited partnerships unter;1;other
+ gomau, alte chemnitzer straße ;1;other
+neunkirchen;1;international
+hitzhofen;1;other
+am wiesental ,  essen;1;Cologne
+ lemgo;1;other
+ ottersweier;1;Stuttgart
+coriano (rn);1;international
+ch- wollerau;1;international
+laufen;1;other
+ ellhofen;1;Stuttgart
+schwäbisch-gmünd;1;Stuttgart
+ olching;1;Munich
+ bressana bottarone;1;international
+sax/schweiz;1;international
+wienburgstraße ,  münster;1;other
+kleinblittersdorf:selected:;1;other
+efringen-kirchen;1;other
+wehr;1;other
+haag i. ob;1;Munich
+swansea;1;international
+ kyiv (ukraine);1;international
+zuzwil;1;international
+hankensbuettel;1;other
+werl;1;other
+windach;1;Munich
+ hamburg, duvenstedter berg ;1;Hamburg
+langstedt;1;other
+ klingenmünster;1;Mannheim
+pasadena/usa;1;international
+aidlingen;1;Stuttgart
+hipoltstein;1;other
+antrifttal;1;other
+aeschlen ob guten;1;other
+prien a. chiemsee;1;Munich
+eschershausen;1;other
+ neumarkt;1;other
+düren mariaweiler;1;Cologne
+muhr am see;1;other
+sereetz;1;Hamburg
+papenburg;1;other
+ra anana;1;international
+elshout, niederlande;1;international
+dohma;1;other
+st. blasien;1;other
+commercial register the delaware secretary;1;international
+ grafenrheinfeld;1;other
+london e ng;1;international
+zella-mehlis;1;other
+mettman;1;international
+ clausen;1;Mannheim
+encinitas, kalifornien/usa;1;international
+ königsbrunn;1;Munich
+tokyo-to, musashino-shi, nakacho;1;international
+buchholz in der nordheide;1;Hamburg
+sant cugat del vallés;1;international
+rottweil;1;Stuttgart
+borgo san dalmazzo (cn);1;international
+ neuler;1;Stuttgart
+gommer;1;international
+kreuzau;1;Cologne
+lingen (ems);1;other
+portola valley, kalifornien;1;international
+uste;1;international
+lingens (ems);1;other
+niefern-öschelbronn;1;Stuttgart
+harsefeld;1;Hamburg
+neuendettelsau;1;other
+cupertino;1;international
+rotthalmünster;1;other
+beek (niederlande);1;international
+baltersweiler;1;other
+saint louis;1;international
+garching b. münchen;1;Munich
+ seltisberg;1;international
+ dessau-roßlau;1;Leipzig
+apex;1;international
+badener-straße a,  zürich;1;international
+schwalbach;1;Frankfurt
+unterschleissheim;1;Munich
+gesellschaftsregister von litauen;1;other
+ königstein im taunus;1;Frankfurt
+mclean;1;international
+erbach;1;Stuttgart
+holzheim;1;international
+oebisfelde;1;other
+eislingen;1;Stuttgart
+ bad urach;1;Stuttgart
+ ludwigsau;1;other
+ netphen;1;other
+london nw au,  belsize lane;1;international
+ warngau, ot oberwarngau;1;international
+ harsewinkel;1;other
+dießen am ammersee;1;Munich
+königsbach-stein;1;Stuttgart
+monheim am rhein;1;Cologne
+bruneck;1;international
+lahnstein;1;other
+konstanz wollmatingen;1;other
+ moskau;1;international
+ wetter (hessen);1;other
+ würzburg, gegenbaurstraße ;1;other
+old bridge, nj ;1;international
+ würzburg, oeggstraße ;1;other
+oberkrämer;1;Berlin
+koburger straße ,  markkleeberg;1;Leipzig
+bal harbour, fl ;1;international
+eckernförde;1;other
+neunkirchen am brand;1;other
+ münchen, sedanstraße ;1;Munich
+ risum-lindholm;1;other
+ almaty, lurmangazy , app. ;1;other
+riedlingen;1;Stuttgart
+byron center;1;international
+alexandria;1;international
+heidenheim/ brenz;1;Stuttgart
+san francisco, usa;1;international
+wilsdruff;1;other
+deichstraße  a,  isselburg;1;other
+ilmenau ot frauenwald;1;other
+eberswalde;1;Berlin
+ aichtal, achalmstraße ;1;Stuttgart
+jerusalem;1;international
+lehrberg;1;other
+verl;1;other
+ teisendorf/ot oberteisendorf;1;other
+arnstadt;1;other
+von caserta;1;international
+ ainring/ot perach;1;other
+ steinbach;1;international
+ stuttgart, im schüle ;1;Stuttgart
+ lalling, kapfing ;1;other
+retzstadt;1;other
+berchem, antwerpen;1;international
+richen;1;Frankfurt
+everett;1;international
+bernardsville nj;1;international
+rehovot;1;international
+marktzeuln;1;other
+donaustauf;1;other
+swisttal;1;Cologne
+ dresden, tieckstraße ;1;other
+haarkampstraße ,  bochum;1;Cologne
+tretten;1;international
+kalifornien, venice, usa;1;international
+ hetzles, steingasse ;1;other
+böbingen;1;Mannheim
+seattle, usa;1;international
+ eppelborn;1;other
+ wedel;1;Hamburg
+neum\ufcnster;1;other
+ grafenau-döffingen;1;Stuttgart
+obersiggenthal (ag) nussbaumen bei baden;1;international
+mumbai , indien;1;international
+ doberschütz;1;Leipzig
+volzhsky;1;international
+bad abbach;1;other
+hohberg;1;other
+i-  gardone riviera bs;1;international
+srivilliputhur;1;international
+udligenswil;1;international
+grefrath;1;Cologne
+kahre west mumbai;1;other
+ effeltrich, am wail- lenbach ;1;other
+it-  brixen;1;international
+bollschweil;1;other
+großpostwitz;1;other
+park city, utah ;1;international
+dnipro;1;international
+küsnacht/switzerland;1;international
+fair lawn;1;international
+high wycombe;1;international
+methfesselstraãÿe ,  berlin;1;other
+schorndorf;1;Stuttgart
+mauer;1;Stuttgart
+erlbach;1;other
+bruchkobel;1;Frankfurt
+odenthal;1;Cologne
+schönwald;1;international
+storkower straße ,  berlin;1;Berlin
+lissabon (portugal);1;international
+ sigmarszell;1;other
+haßfurt;1;other
+bedford;1;international
+abu dhabi;1;international
+glan-münchweiler;1;Mannheim
+heidelberg/neckar;1;Frankfurt
+melcherleshorn ,  reichenau;1;other
+st. niklausen;1;international
+ neubeuern;1;Munich
+frauensteinplatz   frankfurt am main;1;Frankfurt
+roeckstra\udfe a  l\ufcbeck;1;other
+blaustein, ortsteil markbronn, g\uessle ;1;other
+blaustein, ortsteil dietingen, im br\ufchl ;1;other
+greenwich, ct -;1;international
+petach tikva;1;international
+uelzen;1;Hamburg
+assamstadt;1;other
+prisdorf;1;Hamburg
+sered;1;international
+ ahrensburg;1;Hamburg
+westhofen;1;Frankfurt
+bayerbach b. ergoldsbach;1;other
+stadt huanggang;1;international
+isny;1;other
+küssnacht;1;international
+uerikon;1;international
+langgasse   gelnhausen;1;Frankfurt
+roznov pod radhostem;1;international
+waldkappel;1;other
+croydon;1;international
+ unkel;1;Cologne
+ würselen;1;Cologne
+adelshofen;1;other
+shenzen;1;international
+zaporihya;1;international
+ ochtendung;1;Cologne
+ kalletal;1;other
+wasserliesch;1;other
+lemmer, niederlande;1;international
+hong kong, hong kong;1;international
+waldbreitbach;1;Cologne
+ gütersloh;1;other
+meddewade;1;Hamburg
+ritterhude;1;other
+neulußheim;1;Stuttgart
+warthausen;1;other
+danish commercial register;1;international
+los altos;1;international
+ seeheim-jugenheim;1;Frankfurt
+st. vith;1;international
+peenehagen;1;other
+spiesen-elversberg;1;other
+ sulzfeld;1;other
+bad wildungen;1;other
+ dresden ot weixdorf, bergsiedlung  c;1;other
+ dresden, hermannstraße ;1;other
+baltimore maryland/ usa;1;international
+voerde;1;Cologne
+andorra la vella;1;international
+ radebeul, augustusweg ;1;other
+sören;1;Hamburg
+ribnica;1;international
+cz- prag;1;international
+ regensburg, lieblstr. ;1;other
+groß-grönau;1;Hamburg
+joachimsthal;1;Berlin
+adelheitsdorf;1;other
+werne;1;other
+wiehl;1;Cologne
+heikendorf;1;other
+vereinigte arabische emirate;1;international
+dolenja vas;1;international
+bobingen;1;Munich
+alsbach-hänlein;1;other
+murr;1;Stuttgart
+kantons genf;1;international
+emskirchen;1;other
+nagold;1;Stuttgart
+himmelkron;1;other
+ datteln, hachhausener straße ;1;other
+burbank, ca ;1;international
+zaberfeld;1;Stuttgart
+hollern-twielenfleth;1;Hamburg
+überherrn;1;other
+graben-neudorf;1;Stuttgart
+gunstelweg  in ch -  wängi;1;other
+erdbeerweg  in  stuttgart;1;Stuttgart
+ neulußheim;1;Stuttgart
+ grünstadt;1;Frankfurt
+hebertshausen;1;Munich
+ weinheim;1;Frankfurt
+ grünwald, gabriel-von-seidl-str. .;1;Munich
+altendorf, switzerland;1;international
+dorado;1;international
+ lippstadt;1;other
+ dresden, am roßthaler bach ;1;other
+ velsburg;1;other
+messel;1;Frankfurt
+marktleugast;1;other
+bad schwalbach;1;Frankfurt
+neumünster;1;Hamburg
+oslo;1;international
+ schlierbach, hölzerstraße ;1;Stuttgart
+hohenwarsleben;1;other
+niederlande (kamer van koophandel);1;international
+ obertraubling;1;other
+stadtbezirks-\;1;other
+neustadt a.rbge.;1;other
+ unterwellen-born ot birkigt;1;other
+gronau (leine);1;other
+ufa, respublika bashkortostan;1;international
+ sachsen;1;other
+grünwald landkreis münchen;1;Munich
+rosbach;1;Cologne
+liestal;1;international
+waldstr.  e,  germering;1;Munich
+haren (ems);1;other
+fraubronnstraße ,  stuttgart;1;Stuttgart
+tröstau;1;other
+schönheide;1;other
+finnischen patent- und registerbüro von helsinki;1;international
+holzwickede;1;Cologne
+milland, liphook;1;international
+balmain;1;international
+ sindelfingen;1;Stuttgart
+biberach an der riß;1;other
+bischofsheim;1;international
+reilingen;1;Stuttgart
+hodenhagen;1;other
+satteldorf;1;Stuttgart
+döbeln;1;Leipzig
+weinbergstraße ,  wildberg - sulz am eck;1;Stuttgart
+ fischbachau- greisbach;1;Munich
+dammallee ,  bayreuth;1;other
+kirkel;1;other
+thomas-mann-straße ,  stuttgart;1;Stuttgart
+heidesee;1;Berlin
+küsnacht, schweiz;1;international
+obertshausen;1;Frankfurt
+meilen;1;international
+friedrich-ebert-straße ,  markkleeberg;1;Leipzig
+mühlspielweg ,  göttingen;1;other
+moritz-von-schwind-weg ,  pöcking;1;Munich
+reiden;1;international
+eschweiler;1;international
+bei der johanniskirche ,  hamburg;1;Hamburg
+ hornberg;1;other
+würzburger straße ,  oldenburg;1;other
+ pocking;1;other
+nadorster straße  a,  oldenburg;1;other
+welden;1;Munich
+minden;1;other
+tellig;1;other
+hirzenhain;1;Frankfurt
+wildpoldsried;1;other
+büttelborn;1;Frankfurt
+ pentling;1;other
+schaan, fürstentum liechtenstein;1;international
+lugano;1;international
+beucha;1;Leipzig
+ emmering;1;Munich
+cudwells;1;international
+companies house (england and wales);1;international
+dover, kent county, postal code ;1;international
+brønnøysundregistrene (einheitsregister von brønnøysund, norwegen);1;international
+österreichisches firmenregister;1;international
+australian securities & investments comission (asic);1;international
+ nürnberg, stuckstraße ;1;other
+strullendorf;1;other
+kronberg i.ts.;1;other
+aach;1;other
+radolfzell am bodensee;1;other
+ weyarn;1;Munich
+lindlar;1;Cologne
+nevada secretary state;1;international
+gericht, hr-nr.;1;other
+ekrath;1;other
+registrar international business companies the financial services authority the republic seychelles;1;international
+seattle, washington, usa;1;international
+st peter port;1;international
+gschwandt;1;international
+riga;1;international
+ kell;1;international
+kamer van koophandel nederland;1;international
+wörthsee;1;Munich
+staufen i. br.;1;other
+ch- stäfa;1;international
+hassel, luxemburg;1;international
+seewalchen;1;international
+rövershagen;1;other
+evessen;1;other
+mosbach/ baden;1;Stuttgart
+nürtingen (obersingen);1;other
+andover;1;international
+weisendorf;1;other
+marktschellenberg;1;other
+biebertal;1;Frankfurt
+ nandlstadt;1;Munich
+ steinfurt;1;other
+boppard;1;Frankfurt
+kleinostheim;1;Frankfurt
+tambov;1;international
+magdala;1;other
+herxheim-hayna;1;Mannheim
+ weißensberg;1;other
+#NAME?;1;international
+anif (österreich);1;international
+stadecken-elsheim;1;Frankfurt
+rm , door , building , zhongcang, chezhan road, tongzhou district, beijing, china;1;other
+horgen (ch);1;international
+register shanghai;1;international
+dueren;1;Cologne
+wallertheim;1;Frankfurt
+dresden ot schönborn;1;other
+nordstemmen;1;other
+wiener neustadt;1;international
+steinkühlerweg ,  dortmund;1;Cologne
+florstadt;1;Frankfurt
+bad kissingen;1;other
+limbach-oberfrohna;1;Leipzig
+schäftlarn- hohenschäftlarn;1;Munich
+tokio;1;international
+north carolina department state;1;international
+illschwang;1;other
+"sitz: berlin; schreiberhauer straße   berlin";1;Berlin
+sitz: seeheim-jugenheim, breslauer straße   seeheim-jugenheim;1;other
+char;1;international
+niederländische handelskammer;1;international
+lauben-heising;1;other
+haag a. d. amper;1;Munich
+commercial register greece;1;international
+ dormagen;1;Cologne
+registrator der befreiten kommanditgesellschaften der cayman-inseln;1;other
+colorado;1;international
+der niederlande (kamer von koophandel);1;international
+tiefenbach;1;other
+ rheine;1;other
+bulgarisches handelsregister;1;other
+ch- dornach;1;international
+kammerstein;1;other
+ramat gan;1;international
+volketswil;1;international
+ammerbach-altingen;1;other
+verden (aller);1;other
+registre du commerce et des sociétés - rcs;1;other
+borkheide;1;Berlin
+ wüstenrot;1;Stuttgart
+sylt;1;other
+konstancin-jeziorna;1;international
+der cayman islands;1;international
+au in der hallertau;1;Munich
+salzburg (österreich);1;international
+leinburg;1;other
+norwegisches handelsregister;1;international
+san francisco, ca;1;international
+handelskammer rom;1;international
+salem ot weildorf;1;other
+salem ot beuren;1;other
+laas;1;international
+friedrichsdorf ts.;1;other
+weissbad;1;international
+vétroz;1;international
+kufstein;1;international
+burgstall;1;other
+east twickenham;1;international
+bad oeyhausen;1;other
+ruppertsberg;1;Mannheim
+happurg;1;other
+schönberg ot lockwisch;1;other
+heideck;1;other
+kappeln;1;international
+raisting;1;Munich
+ludwigshafen a.rhein (ludwigshafen);1;Frankfurt
+golßen;1;Berlin
+zeitlarn;1;other
+qormi;1;international
+orchard lake mi ;1;international
+herrsching a.ammersee;1;Munich
+großpösna;1;Leipzig
+gesellschaftsregister hong kong;1;international
+losser;1;international
+rostock ot ktv;1;other
+wielenbach;1;Munich
+kaufering;1;Munich
+landgericht innsbruck;1;other
+sehnde;1;other
+register der juristischen personen der republik litauen;1;international
+landesgerichts innsbruck;1;international
+company register the state delaware;1;international
+neuhardenberg;1;Berlin
+rue de soudromont ,  manage;1;international
+horgen/schweiz;1;international
+grand bourg, provincia de buenos aires, argentina;1;international
+balmetto bay, florida;1;international
+ulmenstraße a,  meerbusch;1;Cologne
+ eichstetten;1;other
+münchen, hrb ;1;Munich
+eltville;1;Frankfurt
+am lippehafen   wesel;1;other
+friedrich-list-straße ;1;other
+hedwig-kettler-straße ,  karlsruhe;1;Stuttgart
+ magyar str,  üröm;1;other
+sulzbach an der murr;1;Stuttgart
+icommercial court stuttgart;1;Stuttgart
+anklam;1;other
+eichkamp ;1;Berlin
+remseck;1;Stuttgart
+baiersbronn;1;Stuttgart
+herrliberg, schweiz;1;international
+utting a. ammersee;1;Munich
+büchen;1;Hamburg
+s.o-;1;international
+company register singapore;1;international
+crossroads bank for enterprises;1;international
+weidenthal;1;Mannheim
+caserta;1;international
+świebodzice;1;international
+schlüsselfeld;1;other
+münchen (kobellstraße ,  münchen);1;Munich
+gesellschaftsregister für luxembourg;1;international
+alpen;1;international
+schwedisches unternehmens- register;1;international
+prag;1;international
+grevelsberg;1;international
+worb (schweiz);1;international
+goleta, ca ;1;international
+raanana;1;international
+holle;1;other
+bedford (uk);1;international
+charlotten- burg;1;Stuttgart
+ hambrücken;1;Stuttgart
+bad berka;1;other
+kabelsketal ot osmünde;1;other
+estnischen unternehmensregister;1;international
+berg ot kempfenhausen;1;other
+aue;1;other
+oberuckersee;1;other
+ aachen, lochnerstraße ;1;Cologne
+ garching b. münchen;1;Munich
+firmenbuch österreich, handelsgericht wien;1;international
+allendorf (eder);1;other
+schloss, westflügel bismarckstr. ;1;other
+handelsregisteramt des kantons zug, schweiz;1;international
+zwönitz;1;other
+ schleswig;1;other
+nationales register polens;1;international
+kirchberg ,  bad lauterberg;1;other
+cottastraße ,  stuttgart;1;Stuttgart
+company register in israel;1;international
+hollywood;1;international
+von dänemark;1;international
+rückersdorf, mohnwinkel la;1;other
+brentford greater london tw oau, apt.  trico house ealing road united kingdom;1;other
+fernwald-annerod;1;Frankfurt
+landau an der isar;1;other
+ schwandorf;1;other
+heemstede;1;international
+oberhausen-rheinhausen;1;Stuttgart
+fuldatal;1;other
+krummendeich;1;Hamburg
+böhme;1;other
+ oberkochen;1;Stuttgart
+ alessandria;1;international
+otterberg;1;Mannheim
+ bolsterlang;1;other
+stetten;1;international
+zumikon;1;international
+würrich;1;other
+ st. pankraz;1;international
+markranstdt;1;other
+koserow;1;other
+neussäß;1;other
+l\ufcbeck;1;other
+wilmington, delaware, usa;1;international
+hohnhorst;1;other
+hr kanton st. gallen;1;international
+untermünkheim;1;Stuttgart
+frankfurt\/oder;1;other
+jakobsli / norway;1;international
+weilheim;1;other
+bergkamen;1;other
+landesgericht feldkirch (vorarlberg/at);1;international
+register von zypern;1;international
+hb bremen;1;other
+kröslin;1;other
+des kantons zug (schweiz);1;international
+registry companies, cayman islands;1;international
+firmenregister malta;1;international
+kanton basel-stadt;1;international
+karlstein;1;international
+ perm russische foederation;1;international
+hillsborough, ca ;1;international
+kösching;1;Munich
+bahnhofsplatz ,  butzbach;1;Frankfurt
+lauenburg/elbe;1;Hamburg
+handels-gericht wien;1;international
+ ;;
+biblis-wattenheim;1;Frankfurt
+ oer-erkenschwick;1;other
+winterthur, schweiz;1;international
+archiac;1;international
+riegsee;1;Munich
+geinberg/österreich;1;international
+alexandra view #-, the echelon, ;1;international
+lich;1;Frankfurt
+kyiv;1;international
+ bad homburg v.d. h?he;1;other
+rudolf-breitscheid-straße ,  kaiserslautern;1;Mannheim
+biot;1;international
+cape town;1;international
+steinstraße ,  kaiserslautern;1;Mannheim
+ibbenbühren;1;other
+ hof;1;other
+böhl-iggelheim;1;Mannheim
+nl- lm nieuweg- ein;1;other
+montagnola, schweiz;1;international
+filsen;1;Frankfurt
+ erwitte;1;other
+keidelstraße ,  stuttgart;1;Stuttgart
+ oftersheim;1;Stuttgart
+hertsliya;1;international
+yerevan;1;international
+erfstadt;1;other
+den haag;1;international
+denkendorf;1;Stuttgart
+urbar;1;Frankfurt
+halle/sa.;1;Leipzig
+izmir;1;international
+guernsey;1;international
+wien, oskernel;1;international
+klosterneuburg, ostemail;1;other
+bad dürkheim;1;Mannheim
+colombier;1;international
+d체sseldorf;1;other
+zimmerstraße ,  braunschweig;1;other
+poznan;1;international
+emden;1;other
+fribourg, ch - schweiz;1;international
+hohenkammer;1;Munich
+basel (schweiz);1;international
+werder (havel);1;Berlin
+pasadena, ca ;1;international
+ bottighofen;1;international
+lathuile;1;international
+newtonstr.  f,  berlin;1;Berlin
+wallburgstraße , remscheid;1;Cologne
+großsteinhausen;1;other
+alvor, portimão;1;international
+des kantons thurgau;1;international
+secretary state the stare delaware;1;international
+kerkrade;1;international
+dänemark;1;international
+marxen;1;Hamburg
+freiburg i. breisgau;1;other
+bergrheinfeld;1;other
+eisenach;1;other
+marmaden nettersheim marmagen;1;other
+ römerberg;1;Stuttgart
+pfullendorf;1;other
+register kanton schwyz;1;international
+ dexheim;1;Frankfurt
+walchwil;1;international
+fürstenberg ot barsdorf;1;international
+munsbach;1;international
+ merklingen;1;Stuttgart
+steinfurt hrb ;1;other
+aßlar;1;Frankfurt
+polch-kaan;1;Cologne
+ büdelsdorf;1;other
+ nieheim;1;other
+f- cleres;1;international
+eiken (schweiz);1;international
+st. ulrich a.p.;1;international
+wiltshire;1;international
+roßdorf;1;other
+middletown;1;international
+istanbul/türkei;1;international
+idstein-walsdorf;1;Frankfurt
+ haldenwang;1;other
+bönningstedt;1;Hamburg
+frankreich;1;international
+von neuseeland;1;international
+heverlee;1;international
+benningen am neckar;1;Stuttgart
+partenheim;1;Frankfurt
+burgas;1;international
+ins;1;international
+kronberg, königstein im taunus;1;Frankfurt
+"sitz in: maples corporate services limited, postfach , ugland house, grand cayman, ky-, cayman islands; hauptgeschäftssitz in:  fute zhong road, waigaoqiao, pudong, shanghai , china";1;international
+grand cayman, cayman islands (c/o conyers trust company (cayman) limited, cricket square, hutchins drive, po box , grand cayman, ky- , cayman islands;1;international
+blaricum;1;international
+ lehrte/ahlten;1;other
+borker str. ,  lünen;1;other
+companies the cayman islands;1;international
+kempenich;1;Cologne
+burgkunstadt;1;other
+firmenbuch der stadt wien;1;international
+state new jersey;1;international
+secretary state, state delaware;1;international
+niederndorf;1;international
+trade register;1;international
+magstadt;1;Stuttgart
+ eiselfing;1;Munich
+|mnchen;1;Munich
+trade register luxemburg;1;international
+kitzbühel;1;international
+allschwil;1;international
+luxemburger handels- und;1;international
+rheinbrohl;1;Cologne
+weybridge;1;international
+whitstable;1;international
+erfurt ot alach;1;other
+ aufhausen;1;other
+registrar limited partnerships der kaimaninseln;1;international
+schneeburgstr. c,  freiburg;1;other
+amstelveen;1;international
+amöneburg;1;Frankfurt
+kirchentellinsfurt;1;Stuttgart
+ biberach an der riß;1;other
+ellwangen (jagst);1;Stuttgart
+sand in taufers;1;international
+pollenfeld;1;other
+ welling;1;Cologne
+kronach;1;other
+epfendorf;1;Stuttgart
+hramt kanton schwyz;1;international
+(kamer van koophandel) der niederlande;1;international
+altmünster;1;international
+amt für und notariate st. gallen;1;international
+kastner verwaltungs gmbh köln;1;Cologne
+pullach i. isartal, landkreis münchen;1;Munich
+mannheim, erlenstraße ;1;Frankfurt
+bachern a. wörthsee,  inning a. ammersee;1;Munich
+klosterneuburg / österreich;1;international
+schondorf am ammersee;1;Munich
+boulder;1;international
+grünstadt;1;Frankfurt
+lutterbek;1;other
+madrid / registro mercantil de madrid;1;international
+heerlen;1;international
+ bad abbach;1;other
+ großberg;1;Leipzig
+elbtal;1;Frankfurt
+companies registration office - cro;1;international
+hrb  pi;1;other
+conservatoria do registo comercial de vila nova de gaia;1;other
+ birkenfeld;1;other
+hersbruck;1;other
+königs wusterhausen ot zernsdorf;1;other
+commercial register gibraltar;1;international
+eschwege;1;other
+tivat;1;international
+st. peter port;1;international
+nuernberg;1;other
+schloß holte;1;other
+commercial register the bahamas;1;international
+weiherstr. ,  pforzheim;1;Stuttgart
+sarstedt;1;other
+ch-  uetikon am see, schweiz;1;international
+commercial register von madrid;1;international
+bergtheim;1;other
+hartenholm;1;Hamburg
+landsberg;1;Munich
+grainau;1;other
+meriküla, harjumaa;1;international
+alicante in spanien;1;international
+trondheim;1;international
+atlanta, georgia ;1;international
+im bockeloh a,  hemer;1;Cologne
+ pleiskirchen;1;Munich
+wexstraße ,  hamburg;1;Hamburg
+brilon;1;other
+charlotten-burg;1;Stuttgart
+taipei ;1;international
+minhang, shanghai;1;international
+cypress tx , vereinigte staaten (usa);1;international
+neugreifenberg;1;Munich
+ wörnitz;1;other
+gäufelden;1;Stuttgart
+aesch;1;international
+freilassing;1;other
+an der germania brauerei ,  münster;1;other
+fläsch;1;international
+ wellheim-konstein;1;other
+cäcilienstr. ,  witten;1;Cologne
+ haan;1;Cologne
+ edewecht;1;other
+hasselt ;1;international
+schonach;1;other
+seewald;1;Stuttgart
+alfeld;1;other
+kã¼rten;1;international
+meckenheim;1;Cologne
+europastraße ,  spaichingen;1;other
+bohlstraße ,  mahlstetten;1;other
+northeim;1;other
+klein molzahn;1;Hamburg
+ banzkow, hamburger frachtweg ;1;other
+ paris;1;international
+gustav-mahler-str. a,  adendorf;1;Hamburg
+a- innsbruck;1;international
+rahlstedt;1;Hamburg
+lahntal;1;other
+asperg;1;Stuttgart
+nierstein;1;Frankfurt
+ otterfing;1;Munich
+sollstedt;1;other
+pittsburgh;1;international
+ marxzell;1;Stuttgart
+biesenthal;1;Berlin
+kalmthout, belgien;1;international
+ budapest csalán út /b fsz. , hungary;1;international
+wabern;1;other
+ ebenweiler;1;other
+ biberach;1;other
+registrar limited partnerships, cayman islands;1;international
+uttar pradesh;1;international
+großharthau;1;other
+bad tennstedt;1;other
+ düsseldorf, varnhagenstraße ;1;Cologne
+ grünberg;1;Frankfurt
+wilen bei wollerau;1;international
+probsteierhagen;1;other
+würzburg, josefplatz ;1;other
+bad orb;1;Frankfurt
+sankt-petersburg;1;international
+mechernich;1;Cologne
+oslo, norwegen;1;international
+schwalbach/ts.;1;Frankfurt
+friedrich-wilhelm-lübke-koog;1;other
+husum/schobüll;1;other
+rodenäs;1;other
+oldenburg (holstein);1;other
+lauffen am neckar;1;Stuttgart
+wilmington, state of delaware (de), usa;1;international
+firmenbuch des landesgerichts wien;1;international
+th floor  holborn, london, ecn ht;1;international
+washington;1;international
+firmenbuch des landesgerichts graz;1;international
+utrecht;1;international
+regierungspräsidium stuttgart;1;Stuttgart
+the registrar companies for england and wales;1;international
+clamart;1;international
+daejeon;1;international
+der niederlande (kamer van koophandel);1;international
+commercial register canton zurich;1;international
+von luxemburg (registre de commerce et des sociétés);1;international
+glienicke/nordbahn -bbg-;1;other
+clemont-ferrand rcs;1;international
+hankensbüttel;1;other
+guichet d'enterprise;1;international
+perchtoldsdorf;1;international
+st. martin;1;international
+schönau-berzdorf;1;other
+bermuda registrar companies the government bermuda;1;international
+companies registry the jersey financial services commission;1;international
+new york city;1;international
+ettenhoferstr. ,  fürstenfeldbruck;1;Munich
+cherkasy;1;international
+kulmbach;1;other
+new york city, new york;1;international
+zwiestädterstraße ,  berlin;1;Berlin
+vysocany;1;international
+rennes;1;international
+ köln, reiterstaffelplatz ;1;Cologne
+ höchberg, alte steige  a;1;other
+oyster bay, ny;1;international
+furtwangen;1;other
+wächtersbach;1;Frankfurt
+ plate, banzkower str. ;1;other
+ rue lou hemmer,  luxemburg;1;international
+kharkiv;1;international
+ herrsching-breitbrunn;1;Munich
+ ebnath;1;other
+ hohenberg;1;international
+langenweißbach;1;Leipzig
+lahr;1;other
+müncheberg;1;Berlin
+ pitzenebene  erbes-büdesheim;1;international
+ flonheim;1;Frankfurt
+breitenbach/  bebra;1;other
+ straubing;1;other
+burgbretzingen;1;Stuttgart
+gerolsbach ot singenbach;1;other
+ \;1;other
+brooklyn ny;1;international
+köfering;1;other
+dolgoprudny;1;international
+balaschicha;1;international
+allensbach;1;other
+jupiter;1;international
+hersberg;1;international
+alteglofsheim;1;other
+nuthetal;1;Berlin
+ch- zürich, bühnerstraße ;1;international
+ag bad hersfeld;1;other
+burglengenfeld;1;other
+möser ot lostau;1;other
+buchen;1;Mannheim
+saarbrücken-gersweiler;1;other
+bottighofen, schweiz;1;international
+weißenborn;1;Leipzig
+ nürnberg, bessemerstr. ;1;other
+fahrenzhausen, landkreis freising;1;Munich
+neustadt am rã¼benberge;1;other
+schlüchtern;1;Frankfurt
+greffe du tribunal de commerce de paris;1;international
+handels- und gesellschaftsregister paris;1;international
+euro;1;international
+ bammental;1;Stuttgart
+www;1;international
+veitsbronn;1;other
+burghaun;1;other
+offenbach a.m. kurhessenstr. ;1;Frankfurt
+ marktheidenfeld;1;Frankfurt
+brasov;1;international
+brooklyn, ny, ;1;international
+ budapest, hárshegy utca -. ;1;international
+ dunakezi, lehel utca ;1;international
+schwanau;1;other
+menlo park, usa;1;international
+ pulheim;1;Cologne
+indian well;1;international
+zollikerberg;1;international
+ bernstadt;1;Stuttgart
+bad berneck i.f.;1;other
+sannat;1;international
+waldstraße .  flacht;1;Frankfurt
+am hohen rain ,  neunkirchen;1;Cologne
+ schlitz, an der trossbach ;1;other
+damme;1;international
+hövelhof;1;other
+edinburgh / schottland;1;international
+rheinfelden;1;international
+brennberg;1;other
+scuol;1;international
+ lübeck;1;Hamburg
+naumburg;1;Leipzig
+zwingenberg;1;Frankfurt
+knau;1;other
+posterstein;1;Leipzig
+lütjensee;1;Hamburg
+bangkok, thailand;1;international
+ herrenberg;1;Stuttgart
+ nürnberg, bärenschanzstraße ;1;other
+clausen;1;Mannheim
+larnaca;1;international
+rielasingen-worblingen;1;other
+weilerbach;1;Mannheim
+kappel-grafenhausen;1;other
+gaienhofen;1;other
+hilzingen;1;other
+deißlingen;1;other
+naarden;1;international
+ illertissen;1;other
+ offenbach;1;Frankfurt
+epalinges, vaud;1;international
+crabs-près-céligny;1;international
+engelskirchen;1;Cologne
+aadorf;1;international
+|i- feldthurns, pedratz ;1;international
+merenberg;1;Frankfurt
+atlanta, georgia;1;international
+hemsbach;1;Frankfurt
+alfter;1;Cologne
+bad herrenalb;1;Stuttgart
+karben okarben;1;Frankfurt
+sömmersdorf;1;other
+friesoythe;1;other
+schliengen;1;other
+heitersheim;1;other
+pressath;1;other
+dallas, texas;1;international
+theresienstr. b,  münchen;1;Munich
+haidsteiner str.   runding;1;other
+großbottwar;1;Stuttgart
+höhenkirchen;1;other
+commercial register beirut;1;international
+commercial register guernsey;1;international
+secretary state;1;international
+ pm rotterdam;1;international
+princeton;1;international
+ nehren;1;Stuttgart
+kröv, im langen morgen ;1;other
+kröv, karolingerstraße ;1;other
+ püttlingen;1;international
+delbrück;1;other
+rudolf-diesel-straße   dielheim;1;Stuttgart
+mörbisch am see, österreich;1;international
+eggolsheim;1;other
+ krailling;1;Munich
+malibu, ca, usa;1;international
+uetersen;1;Hamburg
+ - .;1;other
+brauberg;1;Cologne
+oberursel (taunus);1;Frankfurt
+linden;1;Cologne
+mill valley, ca ;1;international
+dießen;1;international
+triefenstein ot homburg am main;1;other
+sülzetal (ag stendal;1;international
+pliening, ot gelting;1;international
+syke;1;other
+register the state delaware;1;international
+ingersheim;1;international
+grimstad;1;international
+karten-becken;1;other
+berlin and münchen;1;Munich
+barcelona cataluna;1;international
+ greiz;1;Leipzig
+nürnberg, registergericht;1;other
+santiago;1;international
+#NAME?;1;international
+waldenbuch;1;Stuttgart
+padova;1;international
+ friedrichshafen;1;other
+amtsgericht, handelsregister, frankfurt am main;1;Frankfurt
+agios athanasios;1;international
+new york (usa);1;international
+"registre de commerce et des soci	²t	²s luxembourg";1;international
+/ mannheim;1;Frankfurt
+george town, grand cayman, cayman islands;1;international
+"geburtsdatum"":{"""":""""}";1;other
+eintragung f�r;1;other
+for the commencement;1;other
+wilmington, new castle county, delaware;1;international
+corporations division the state delaware;1;international
+"h\ufhe eur"":{"""":""""}";1;other
+registro mercantil de madrid;1;international
+ lichtentanne;1;Leipzig
+am petersberg   deutsch evern;1;Hamburg
+registrar companies and official receiver nicos;1;international
+villers-le-bouillet;1;international
+liège;1;international
+otterndorf;1;Hamburg
+gunskirchen;1;international
+division corporations, delaware;1;international
+offenbach a.m.;1;Frankfurt
+goirle;1;international
+sandesneben;1;Hamburg
+öhringen;1;Stuttgart
+modena;1;international
+mlheim an der ruhr;1;other
+hahnbach;1;other
+at-  friesach;1;international
+dallgow-döberitz ot seeburg;1;other
+gratkorn;1;international
+eibelstadt;1;other
+registry corporate affairs;1;international
+amstgericht mannheim;1;Mannheim
+ smith street, #-, new bridge centre, singapore ;1;international
+boras;1;international
+sydney;1;international
+großheide;1;other
+register partnerships cayman islands;1;international
+landesoberkasse baden-württemberg, baden-württembergische bank karlsruhe, blz   , konto-nr.     bei überweisungen bitte obiges aktenzeichen und dienststellen-nr.   angeben.;1;other
+heist-op-den-berg;1;international
+kernen im remstal;1;Stuttgart
+ennigerloh;1;other
+ essenbach;1;Munich
+schönenberg-kübelberg;1;Mannheim
+south san francisco, usa;1;international
+bad drieburg;1;other
+registre de commerce et des societes;1;international
+mainburg;1;Munich
+langenredder ,  grömitz;1;other
+gescher;1;other
+buxheim;1;other
+bünde;1;other
+ rostock, bremer str. ;1;other
+ bastorf, unterbastorf ;1;other
+ wettenberg;1;Frankfurt
+ontario;1;international
+heidelberg, neckar;1;Frankfurt
+bottighofen;1;international
+vellberg;1;Stuttgart
+ warendorf;1;other
+ mühldorf a.inn;1;Munich
+boldekow;1;other
+hogemann dorit;1;other
+schaanwald;1;international
+wallenbachstraße .;1;other
+weiswampach;1;international
+unternehmensregister ministerium fã¼r justiz;1;other
+landgericht tartu;1;other
+velden am wörther see;1;international
+ahlerstedt;1;Hamburg
+providence;1;international
+norwood;1;international
+strängnäs;1;international
+erkheim;1;other
+hofheim/taunus;1;Frankfurt
+handels- und gesellschaftsregister der niederlande;1;international
+us sec;1;international
+ bonn;1;Cologne
+bilbao (spanien);1;international
+"wohnort"":{"""":""""}";1;Cologne
+irisches companies registration office;1;international
+huntingdon;1;international
+des staates delaware;1;international
+ berg;1;international
+bäch;1;international
+frankenthal (pfalz);1;Frankfurt
+oberhaching-furth;1;Munich
+wallisellen;1;international
+frisco, texas, usa;1;international
+steg;1;international
+ fichtenau;1;other
+rickling;1;Hamburg
+bayrischzell;1;Munich
+department industry, science, energy and resources;1;international
+schonau;1;international
+division corporations (department states delaware);1;international
+handelsregisteramt im kanton zürich;1;international
+eigentragen im firmenbuch von österreich;1;international
+st. petersburg/russische föderation;1;international
+new york, usa;1;international
+local court;1;international
+register von tokio, japan;1;international
+ süderbrarup;1;other
+comisión nacional del mercado de valores;1;international
+ coesfeld;1;other
+ dresden, werkstättenstraße ;1;other
+wellington;1;international
+greffe du tribunal de commerce de grenoble;1;international
+san diego, ca ;1;international
+ilsede;1;other
+wittnau;1;other
+schwarzenbruck;1;other
+handeslregisteramt des kantons zürich;1;international
+beirut;1;international
+kleinwallstadt;1;Frankfurt
+(registros mercantiles);1;international
+klaipeda;1;international
+jerewan;1;international
+küssnacht am rigi;1;international
+state dela-ware, delaware division corporations;1;international
+kreuth;1;Munich
+jinhua market supervision and administration bureau;1;international
+bad homburg v. d. h?he;1;Frankfurt
+estland/estonia;1;international
+oberhaching, landkreis münchen;1;Munich
+kampala;1;international
+genua;1;international
+ radebeul, obere bergstraße  a;1;other
+moosburg;1;Munich
+kapitalerhöhung mit ausgabe neuer geschäftsanteile;1;other
+ staufen i. br.;1;other
+woodinville/usa;1;international
+tulpenstraße ,  alfter;1;Cologne
+companies commission malaysia;1;international
+ trebur;1;Frankfurt
+søborg;1;international
+baierbrunner str. ,  münchen;1;Munich
+handelregister des kantons genf/schweiz;1;other
+cheltenham;1;international
+kantons zug;1;international
+welwyn garden city;1;international
+austrian commercial court;1;international
+register von kalifornien;1;international
+unterföhring, landkreis münchen;1;Munich
+lille métropole;1;international
+ bad soden- salmünster;1;Frankfurt
+antibes;1;international
+no. w;1;international
+no. ;1;international
+freigericht;1;Frankfurt
+agr kanton thurgau;1;international
+"regsitre de commerce et des soci	t		n	t s no.";1;international
+aschaffen-burg;1;other
+companies house uk;1;international
+københavn;1;international
+staffhorst;1;other
+hildisrieden;1;international
+schaan/fürstentum liechtenstein;1;international
+erlangen, hrb ;1;other
+ seefeld, gut delling, mühle ;1;other
+ parkstein;1;other
+jersey financial services commission;1;international
+regesbostel;1;Hamburg
+finnisches handelsregister;1;international
+zweibrücken;1;other
+unternehmensregister luxemburg;1;international
+karlsdorf;1;other
+zeiler;1;other
+petershagen/ eggersdorf;1;Berlin
+ herne;1;Cologne
+ werne;1;other
+rösrath-forsbach;1;Cologne
+ fürth, zaunstr. ;1;other
+rorschach;1;international
+ großolbersdorf;1;other
+ chemin de magnan,  cogolin;1;international
+feldafing;1;Munich
+dornhan;1;Stuttgart
+l'hospitalet de llobregat, spanien;1;international
+ freienwill;1;other
+bad essen;1;other
+limburg an der lahn;1;Frankfurt
+ebenhausen;1;other
+scheibenberg;1;other
+finnland;1;international
+adalbert-stifter-str. ,  münchen;1;Munich
+fn  g;1;international
+registro público de comercio, méxico;1;international
+nicht vergeben / not;1;other
+roding;1;other
+ludwighafen am rhein;1;other
+régistre de commerce et des sociétés in luxembourg;1;international
+s. o.;1;international
+nationales handelsregisteramt des justizministeriums von rumänien mit sitz in bukarest (oficiul registrului comerțul de pe langa tribunalul cluj);1;international
+new york, ny ;1;international
+registrar corporate affairs;1;other
+weißenberg;1;other
+ köln, eintrachtstr. ;1;Cologne
+polnisches landesgerichtsregister;1;international
+horb am neckar;1;Stuttgart
+ag charlottenburg berlin;1;Berlin
+corsico;1;international
+ lechbruck am see;1;Munich
+ monsheim;1;Frankfurt
+bassersdorf;1;international
+schwielowsee ot geltow;1;international
+maia, portugal;1;international
+münchen,;1;Munich
+kirchheim unter teck -ot lindorf;1;other
+bad schallerbach;1;international
+des kantons basel-stadt;1;international
+handelsregisteramt kanton schwyz;1;international
+bad homburg v. d. hühe;1;other
+halver;1;Cologne
+frankfurt am mai;1;Frankfurt
+singapore registrar companies;1;international
+commercial register prague;1;international
+douglas, isle of man;1;international
+malta business register;1;international
+handelsregisteramt des kantons zurich;1;international
+frank- furt/oder;1;other
+stuttgarter platz ,  berlin;1;Berlin
+venice;1;international
+scheden;1;other
+vaterstetten-baldham;1;Munich
+brombach;1;Cologne
+sharkeya;1;international
+granada;1;international
+handels- und gesellschaftsregister des fürstentums liechtenstein;1;other
+palto alto;1;international
+ ravensburg;1;other
+lichtendwald;1;other
+registre de commerce et des sociétés, luxembourg;1;international
+traunstein münchen;1;other
+zentrales unternehmensregister von dänemark;1;international
+viersen;1;Cologne
+brombeerweg ,  berlin;1;Berlin
+ emsdetten, elsterstraße ;1;other
+copenhagen;1;international
+harxheim;1;Frankfurt
+ schriesheim, huberweg b;1;other
+ bad honnef;1;Cologne
+meerane;1;Leipzig
+eibenweg   aachen deutschland;1;Cologne
+burgoberbach;1;other
+odelzhausen;1;Munich
+ binningen schweiz;1;international
+bönninghauser straße ,  dortmund;1;other
+nicosia;1;international
+oadby, gb-leicester;1;international
+bornich;1;Frankfurt
+kelheim-kapfelberg;1;other
+ wildau;1;Berlin
+wiesbaden-medenbach;1;Frankfurt
+hamberge;1;Hamburg
+ langenpreising;1;Munich
+ ludwigshafen am rhein;1;Frankfurt
+mellingen;1;other
+ halver, heerstraße ;1;Cologne
+ ismaning;1;Munich
+ freising;1;Munich
+gilching, lks. starnberg;1;other
+halle;1;Leipzig
+bergkirchen;1;Munich
+firmenbuch des landesgerichts leoben;1;other
+offenberg;1;other
+registrar companies hong kong special administrative region;1;other
+gydnia;1;international
+no. , huochezhan road, sanhe city, hebei province, ;1;international
+handelsregisteramt des kantons zug (schweiz);1;international
+malta business registry;1;international
+klagenfurth;1;other
+fuzhou verwaltung für industrie und handel;1;other
+des kantons genf;1;international
+ alfter;1;Cologne
+hartford, ct;1;international
+lindenfels glattbach;1;Frankfurt
+ taufkirchen;1;Munich
+muri;1;international
+registrar companies for scotland;1;international
+ roggentin;1;other
+warschau (polen);1;international
+ neusäß;1;Munich
+bad aussee;1;international
+rotkreuz;1;international
+verona;1;international
+ goch;1;other
+rositz;1;Leipzig
+freeport;1;international
+stadtroda;1;Leipzig
+ sauerlach;1;Munich
+handels- und gesellschaftsregister luxemburg;1;international
+newark, new castle, delaware;1;international
+ halver;1;Cologne
+geisenfeld;1;Munich
+dormitz;1;other
+belgrad;1;international
+ rottach-egern;1;Munich
+kerken;1;Cologne
+lisboa;1;international
+ schönebeck (elbe);1;other
+partnerschaftsregister von guernsey;1;international
+ geretsried;1;Munich
+ witten;1;Cologne
+lemp\ue\uel\ue;1;other
+ ayl;1;other
+elsau;1;international
+frankfurt an main;1;Frankfurt
+unternehmensregister des staates delaware;1;international
+mountain view, california;1;international
+neckargmünd;1;other
+bad dürrheim;1;other
+state delaware, secretary state;1;international
+helsingborg;1;international
+belmain;1;international
+erkelenz;1;Cologne
+die;1;international
+nijmegen;1;international
+ mittweida;1;Leipzig
+tel aviv, israel;1;international
+sigmarszell;1;other
+ horgenzell, hasenweiler ;1;other
+helsinki/finnland;1;international
+swafield hall;1;international
+königsbrunn;1;Munich
+ bad wildbad im schwarzwald;1;other
+ pforzheim;1;Stuttgart
+ ebhausen;1;Stuttgart
+stadt hangzhou, provinz zhejiang, bezirk gongshu;1;international
+des kanton zürich;1;international
+parkstetten;1;other
+cayman islands companies registry;1;international
+companies register hongkong;1;international
+ordnungsnummer: .-st.;1;other
+ ronnenberg;1;other
+dänischenhagen;1;other
+bettmeralp;1;international
+vimystraße ,  freising;1;Munich
+danzig;1;international
+ pfinztal;1;Stuttgart
+novi sad;1;international
+dedelstorf;1;other
+kriens;1;international
+handelsgericht osijek;1;international
+tuntenhausen;1;Munich
+sindelfingen, maichingen;1;Stuttgart
+longuich;1;other
+baltimore;1;international
+shanghai, china;1;international
+hollenbach;1;Munich
+corte madeira, california;1;international
+tavira;1;international
+canton, ma;1;international
+dresden ot mobschatz;1;international
+mannheim k, hausnr. ;1;Mannheim
+frankfurt a.m. elsterstraße ;1;Frankfurt
+frankfurt a.m. kurfürstenstr. ;1;Frankfurt
+ friedrichsthal;1;other
+ nalbach;1;other
+werlte;1;other
+ bad homburg v. d. h{\uf}he;1;other
+oldenburg in holstein;1;other
+marquartstein;1;Munich
+neckarstraße ,  untereisesheim;1;Stuttgart
+sulzberg;1;international
+münchen (baierbrunner str. ,  münchen;1;Munich
+handelsregisteramt kanton basel-stadt;1;international
+des kantons thurgau, schweiz;1;international
+fl des flens;1;other
+moosburg, landkreis freising;1;Munich
+neuenahr-ahrweiler;1;Cologne
+westensee;1;other
+ budapest;1;international
+nach;1;international
+corvallis;1;international
+riedenheim;1;other
+gallin;1;other
+nottuln;1;other
+eisenberg;1;Leipzig
+am sulberg ,  duderstadt;1;other
+neumarkt am wallersee, österreich;1;international
+ch- zug;1;international
+isny im allgäu;1;other
+indianapolis, |usa;1;international
+oxshott;1;international
+nordheim;1;international
+ bad essen;1;other
+lüchow;1;Hamburg
+ans by;1;international
+im nölkenwinkel ,  steinhude;1;other
+maikammer;1;Mannheim
+stetten am kalten markt;1;Stuttgart
+reichenbach an der fils;1;Stuttgart
+kreillerstraße a,  münchen;1;Munich
+riehen;1;international
+wettringen;1;other
+menteroda ot urbach;1;other
+immensee;1;international
+frölingstr. ,  bad homburg;1;Frankfurt
+rm , door , building , jinshali, yanyang road, nankai district, tianjin, china;1;international
+næstved;1;international
+embrach;1;international
+ dornstadt;1;Stuttgart
+burglauer;1;other
+tsim sha tsui, hong kong;1;international
+alford;1;international
+alflen;1;other
+nideggen;1;Cologne
+kirchseeon;1;Munich
+s-gravenhage;1;international
+frankfurt\/oderhrb  ff;1;other
+registre du commerce et des sociétés grenoble;1;international
+regenburg;1;international
+reichenschwand;1;other
+st. wendel-bliesen;1;other
+braunsbedra ot groß-kayna;1;other
+der handelskammer istanbul;1;international
+"sitz: berlin; fasanenstraße   berlin";1;Berlin
+ schelklingen;1;Stuttgart
+weil der stadt;1;Stuttgart
+daegu (republik korea;1;international
+gewerbegebiet   ostermiething;1;international
+warburg;1;other
+geleen / netherlands;1;international
+großwallstädter straße ,  niedernberg;1;Frankfurt
+jever;1;other
+mülheim/ruhr;1;Cologne
+mutterstadt;1;Frankfurt
+uslar;1;other
+zell am main;1;other
+plankstadt;1;Mannheim
+bad kötzting;1;other
+karlshuld;1;Munich
+ eppelsheim, keltenweg ;1;Frankfurt
+ neunkirchen;1;international
+von ontario;1;international
+accounting and corporate regulatory authority;1;international
+landau in der pfalz;1;Mannheim
+lille;1;international
+von zypern;1;international
+menlo park, kalifornien;1;international
+stapel;1;international
+zöllikon / schweiz;1;international
+department state divison corporations (delaware);1;international
+ingoldingen;1;other
+sprockhovel;1;Cologne
+lonsheim;1;Frankfurt
+holunderweg ,  walsrode;1;other
+ gärtringen;1;Stuttgart
+rotterdam, niederlande;1;international
+stockdorf;1;Munich
+friedrich-list-straße   echterdingen;1;Stuttgart
+marcinowice;1;international
+ohradzany;1;international
+weißenfeld;1;Munich
+ schmitten;1;Frankfurt
+ kühlethal;1;other
+ freudenstadt, falkenstr. .;1;Stuttgart
+ essingen;1;Mannheim
+ mainhardt;1;Stuttgart
+iffeldorf;1;Munich
+gomaringen;1;Stuttgart
+mannheim: hrb ;1;Mannheim
+ schriesheim;1;Frankfurt
+ schwäbisch hall;1;Stuttgart
+ reinbek;1;Hamburg
+mertesdorf;1;other
+georgenstraße  a  berlin;1;Berlin
+stuttgart-bad cannstatt;1;Stuttgart
+freren;1;other
+spanisches handelsregister;1;international
+jona / schweiz;1;international
+stutgart;1;Stuttgart
+nv  las vegas;1;international
+ saarburg;1;other
+fuldabrück;1;other
+ heppenheim;1;Frankfurt
+kempers kamp ,  paderborn;1;other
+ pleckhausen;1;Cologne
+düdingen;1;international
+zã¼rich;1;international
+straubenhardt;1;Stuttgart
+weissach im tal;1;Stuttgart
+stahnsdorf;1;Berlin
+rubensstr. ,  hannover;1;other
+blankenfelde, mahlow;1;Berlin
+wald;1;international
+ attendorn, auf der lake;1;Cologne
+ blumberg;1;other
+kbo belgien;1;international
+ trierweiler;1;other
+m\ufcllheim (baden);1;other
+bolanden;1;Frankfurt
+neue bahnhofstrasse ,  berlin;1;Berlin
+#NAME?;1;international
+slobozia;1;international
+ochsenfurt/ ot zeubelried;1;other
+braunschweig salzgitter;1;other
+pegeia;1;international
+ saarbrücken-jägersfreude, achenbachstraße ;1;other
+äußere kanalstraße ,  köln;1;Cologne
+bernau am chiemsee;1;Munich
+wörth a.d. donau;1;other
+jänschwalde;1;other
+tramm;1;Hamburg
+kludenbach;1;other
+ bischheim;1;international
+neckarsulm;1;Stuttgart
+salzburg, österreich;1;international
+weißling;1;Munich
+alfershausen ,  thalmässing;1;other
+moltkestr. ,  nürnberg;1;other
+zürich, switzerland;1;international
+greenbrae;1;international
+taunusstein ;1;Frankfurt
+thalheim / erzgeb.;1;Leipzig
+ niedernswöhren;1;other
+ lilienthal;1;other
+straßwalchen;1;international
+rexton;1;international
+deisslingen;1;other
+haar, lkr. münchen;1;other
+ellerau;1;Hamburg
+ raguhn;1;Leipzig
+uittreksel kamer van koophandel.;1;international
+hellerup;1;international
+vila nova de gaia portugal;1;international
+ höhenkirchen-siegertsbrunn;1;Munich
+rehlingen;1;Hamburg
+schliersee;1;Munich
+ limburg;1;international
+heinrichstraße ,  braunschweig;1;other
+ solingen;1;Cologne
+great cheverell;1;international
+ unterneukirchen;1;Munich
+oberthulba;1;other
+schlesierstraße ,  marsberg;1;other
+garrel;1;other
+cernusco sul naviglio/ italien;1;international
+saas-fee;1;international
+ konstanz;1;other
+ahomweg ,  mühlheim/donau;1;other
+uffing a. staffelsee;1;Munich
+ag-köln;1;Cologne
+ hattstedt;1;other
+frasnacht;1;international
+varel;1;other
+ douglas road, far hills, nj ;1;international
+weeze;1;other
+waltenhofen;1;other
+rodenbach;1;Mannheim
+kössen, österreich;1;international
+riedering;1;Munich
+schemmerhofen;1;other
+biberach an der ri�;1;other
+ simbach a. inn;1;other
+budapest / ungarn;1;international
+ horb a.n.;1;Stuttgart
+petersaurach;1;other
+ köthen;1;Leipzig
+talheim;1;Stuttgart
+güglingen;1;Stuttgart
+alfred- wachtel-str. , ;1;other
+charlotenburg;1;Berlin
+braunschweig braunschweig;1;other
+nordhausen;1;other
+sylt ot keitum;1;other
+ ering am inn;1;international
+ baierbrunn;1;Munich
+ afiesl;1;international
+ falkensee;1;Berlin
+drunen, niederlande;1;international
+weidenstetten;1;Stuttgart
+beetzsee;1;Berlin
+richmond;1;international
+schweizer des kantons zug;1;international
+aßling;1;international
+bad ditzenbach;1;Stuttgart
+almaty;1;international
+greenwich, ca;1;international
+nrvenich;1;other
+ch- basel;1;international
+stockach ot hoppetenzell;1;other
+ schlier;1;other
+san francisco / usa;1;international
+ wentorf;1;Hamburg
+au;1;international
+ oberhaching;1;Munich
+ kriftel;1;Frankfurt
+des staates luxemburg (luxembourg business registers g.i.e.);1;international
+nl- ae vaals;1;international
+sitz: appen;1;other
+hirschhorn;1;Frankfurt
+buchenberg;1;other
+kleinmach now;1;other
+königslutter;1;other
+biberbach;1;Munich
+ güttersloh;1;other
+boostedt;1;Hamburg
+neckarzimmern;1;Stuttgart
+süderbrarup;1;other
+mühlingen;1;other
+cults, ab hp;1;other
+babche;1;international
+#NAME?;1;international
+  vessigebro;1;international
+westerstede;1;other
+ seefeld;1;international
+lengerich;1;other
+schwabsoien;1;Munich
+oberndorf;1;Stuttgart
+sapes, rodopi, horion kechros;1;international
+dahlenburg;1;Hamburg
+unterschleißheim, landkreis münchen;1;Munich
+schmalkalden;1;other
+bruckberg;1;other
+velden / österreich;1;international
+ahndorf;1;Hamburg
+lauenförd;1;other
+jadeweg ,  berlin;1;Berlin
+langenselbold;1;Frankfurt
+landesbergen;1;other
+hefei anhui;1;international
+leinfelden- echterdingen;1;Stuttgart
+boston, massachusetts;1;international
+a-göttlesbrunn;1;other
+leuven, belgien;1;international
+detroit;1;international
+diepholz;1;other
+datteln;1;other
+ pyla larnaka;1;international
+ niederdorfelden;1;Frankfurt
+radibor ot milkel;1;other
+martinroda;1;other
+tokyo;1;international
+ansgarstr. ,  h velhof;1;other
+ nürnberg, am anger ;1;other
+london swnt;1;international
+albershausen;1;Stuttgart
+lambrechtshagen;1;other
+dnipro , ukraine;1;international
+platz der weißen rose ,  münster;1;other
+hohenpei\udfenberg;1;other
+holzminden;1;other
+ finning;1;Munich
+providence ri, usa;1;international
+maintal;1;Frankfurt
+kantons luzern;1;international
+commissión nacional del mercardo de valores;1;international
+aigen-schlã¤gl;1;other
+borchen;1;other
+ hockenheim;1;Stuttgart
+timisoara;1;international
+schleusingen;1;other
+gera;1;Leipzig
+esslingen a. n.;1;Stuttgart
+neckartenzlingen;1;Stuttgart
+der wohnort des gesellschafters dr. bardow hat sich geändert;1;other
+stemwede;1;other
+biel/bienne, schweiz;1;international
+ransbach-baumbach;1;Cologne
+uhingen;1;Stuttgart
+carthage salambo;1;international
+ kemmern;1;other
+ neuenburg am rhein;1;other
+gelida;1;international
+ pavia;1;international
+gmund;1;Munich
+neunkirchen a. br.;1;Mannheim
+schildow;1;Berlin
+heilbronn-horkheim;1;Stuttgart
+overath;1;Cologne
+matzenstraße ,  kaiserslautern;1;Mannheim
+adderbury;1;international
+mindelheim;1;other
+beldorf;1;Hamburg
+cremlingen;1;other
+foretaksregisteret (unternehmensregister);1;other
+plau am see;1;other
+salzgitter;1;other
+forch;1;international
+ villmar;1;Frankfurt
+ arzl im pitztal;1;international
+monaco, monaco;1;international
+ münchen, kaulbachstraße  a;1;Munich
+cleebronn;1;Stuttgart
+peiting;1;Munich
+trippstadt;1;Mannheim
+aspach;1;international
+hamburg, hrb ;1;other
+bad mã¼nder;1;other
+thum/ot jahnsbach;1;other
+wakendorf;1;other
+gotteszell;1;other
+einsiedeln;1;international
+osterholz-scharmbeck;1;other
+krügerkamp ,  lemgo;1;other
+saint andré de la roche;1;international
+vaihingen an der enz;1;Stuttgart
+lübeck hra  hl;1;other
+lachendorf;1;other
+anhausen;1;Cologne
+romsey, so ql;1;other
+versoix;1;international
+ st. augustin;1;Cologne
+dallgow /bbg.;1;other
+kranj;1;international
+idstein-oberauroff;1;Frankfurt
+ osthofen;1;international
+#NAME?;1;international
+" r&ouml;delsee";1;other
+seeshaupt;1;Munich
+ cottbus, karl-liebknecht-str. ;1;other
+ cottbus, lessingstr. ;1;other
+melpitz;1;Leipzig
+ röthenbach an der pegnitz;1;other
+wuxi, jiangsu;1;international
+bröbberow, ot klein grenz;1;other
+charlottenburg, hrb  b;1;other
+lewes;1;international
+w\ufcrzburg;1;other
+mönchengladbach, aktienstr. ;1;Cologne
+peschkestr. ,  berlin;1;Berlin
+angermünde;1;Berlin
+quakenbrück;1;other
+ kerken;1;Cologne
+gesellschaftsregister f england und wales;1;other
+registrar joint stock companies;1;other
+ag frankfurt/main;1;international
+division corporations - state delaware;1;international
+der republik zypern;1;international
+laudenbach;1;Frankfurt
+division corporations (department state delaware);1;international
+gusow-platkow;1;Berlin
+registrar companies hong kong;1;international
+division corporations (department state, delaware);1;international
+poslovni register slovenije;1;international
+des kantons waadt;1;international
+dahlem kronenburg;1;Cologne
+saint-julien-en-genevois;1;international
+kanton bern;1;international
+landesgericht linz;1;international
+georgenkirchstraße /,  berlin;1;Berlin
+registrar ras khaimah economic zone;1;international
+strovolos, nicosia;1;international
+ kaprun;1;international
+inning an ammersee;1;Munich
+fischbach-göslikon;1;international
+ kierspe;1;Cologne
+luisenplatz ,  berlin;1;Berlin
+siegen   ur .- nr. / -;1;other
+siegen   ur .- nr. -;1;other
+firmenbuch nr.;1;other
+baar (switzerland);1;international
+helmstedt,  babenhausen;1;other
+des kantons bern;1;international
+großenhain;1;other
+nr. ;1;international
+#NAME?;1;international
+handelsgericht eisenstadt;1;other
+secretary the state delaware;1;international
+philadelphia;1;international
+gstaad-schönried;1;international
+süßen;1;Stuttgart
+junglinster;1;international
+treben;1;Leipzig
+coogee;1;international
+oberhaching lk. münchen;1;Munich
+kormoranweg ,  berlin;1;Berlin
+palma;1;international
+happy valley/ hong kong;1;international
+reute;1;other
+st. ruprecht an der raab;1;international
+witzmansberg;1;other
+ch- pfeffingen;1;international
+ch- münchenstein;1;international
+ bestwig;1;other
+enskede;1;international
+oosterhout;1;international
+state of delaware;1;international
+commercial register the state nuevo ledn;1;international
+sliema;1;international
+wolfhagen;1;other
+weggis;1;international
+east tamabaram;1;international
+berglen;1;Stuttgart
+somerville, ma, usa;1;international
+lausanne, schweiz;1;international
+spabrücken;1;Frankfurt
+ wangen;1;international
+kall;1;Cologne
+lotte;1;other
+redwood city, ca - ;1;international
+kidlington;1;international
+fremont, ca;1;international
+omaha;1;international
+funchal, madeira;1;international
+oakland;1;international
+finnisches (finnish patent and registration office);1;international
+wilmington/delaware;1;international
+registre de commerce et des soci\uet\ues;1;international
+grand cayman, ky-;1;international
+aerdenhourt/niederlande;1;international
+northridge, ca ;1;international
+kantons nidwalden;1;international
+altdorf b. nürnberg;1;other
+pfaffenhofen a. d. ilm;1;Munich
+buchloe;1;Munich
+wilmington, county of new castle;1;international
+springe;1;other
+karlsfeld, landkreis dachau;1;Munich
+bad tölz, landkreis bad tölz-wolfratshausen;1;Munich
+loxstedt;1;other
+guntramsdorf österreich;1;international
+weichs;1;Munich
+sant just desvern, barcelona/spain;1;international
+visselhövede;1;Hamburg
+commercial register the canton zug;1;international
+gorxheimertal;1;Frankfurt
+möhnesee;1;other
+stegaurach;1;other
+bergdietikon;1;international
+seongbuk-gu, seoul, ;1;international
+waimes (belgien);1;international
+waldfeucht;1;Cologne
+new york usa;1;international
+kopenhagen, dänemark;1;international
+von turin;1;international
+wollbach;1;other
+ frickenhausen;1;Stuttgart
+gößweinstein;1;other
+ball ground, ga;1;international
+schwebheim;1;other
+úvalno;1;international
+vourles;1;international
+now;1;Berlin
+seoul;1;international
+lodz-srodmiescie;1;international
+handelsgericht brüssel;1;international
+california secretary state;1;international
+wesendorf;1;other
+adelmannsfelden;1;Stuttgart
+firmenregister des kantons st. gallen;1;international
+händelstr. ,  seligenstadt;1;Frankfurt
+dessau-roßlau ot kleutsch, dorfstraße ;1;international
+graefestr. ,  berlin;1;Berlin
+marburg (lahn);1;Frankfurt
+newark;1;international
+acra singapore;1;international
+siek;1;Hamburg
+weinstadt (ag stuttgart, hrb );1;Stuttgart
+simmelsdorf;1;other
+ tirschenreuth-wondreb;1;other
+stockholm, schweden;1;international
+handelsregisteramt kanton aargau;1;international
+ weil am rhein;1;other
+hr mann- heim;1;Mannheim
+hr darmstadt;1;Frankfurt
+der gemeinde aargau;1;international
+des tartu county court registration department;1;international
+leipzig, gießerstraße ;1;Leipzig
+leipzig, theodor-kunz-ring ;1;Leipzig
+ montabaur;1;Frankfurt
+lwiw;1;international
+storkow;1;Berlin
+bitola;1;international
+mariendorfer weg b,  berlin;1;Berlin
+ bechtolsheim, rieslingstraße ;1;Frankfurt
+am filmlager ,  berlin;1;Berlin
+ moosinning;1;Munich
+baiersdorf;1;other
+neu-belgrad/serbia;1;international
+valencia/spain;1;international
+in der aue ,  düsseldorf;1;Cologne
+ falkenberg;1;international
+stuttgart - - stuttgart;1;Stuttgart
+wassenaar;1;international
+brückenstraße ;1;other
+kanton freiburg;1;international
+tartu;1;international
+chalottenburg;1;Berlin
+singendonkskamp, kevelaer;1;other
+ladera ranch;1;international
+companies registration office in the city cardiff;1;international
+kantonsregister appenzell;1;international
+companies registry hong kong;1;international
+rees;1;other
+stoltebüll;1;other
+haltern;1;other
+niederelbert;1;Frankfurt
+heimbach;1;other
+ fürth;1;other
+ köln, erftstraße ;1;Cologne
+ moers;1;Cologne
+ heidenheim an der brenz;1;Stuttgart
+san rafael/usa;1;international
+panketal;1;Berlin
+doha;1;international
+gottenheim;1;other
+ k�ln, hansemannstr. ;1;Cologne
+ figeholm;1;international
+schwielowsee;1;Berlin
+hochkirch;1;other
+gerichtsregister des landes polen;1;international
+limburgerhof;1;Frankfurt
+bellevue, washington;1;international
+menlo park, california;1;international
+jud ilfov;1;other
+ süßen;1;Stuttgart
+lenzerheide;1;international
+ altenstadt;1;Munich
+leoben;1;international
+surpierre;1;international
+murnau am staffelsee;1;Munich
+ weil am rhein ot haltingen;1;other
+ saaldorf-surheim;1;other
+krombach;1;other
+ober-ramstadt;1;Frankfurt
+kaufbeuren;1;Munich
+ burgschwalbach;1;Frankfurt
+ birlenbach;1;Frankfurt
+ arkebek;1;other
+neustadt/weinstraße;1;Mannheim
+ döbritschen;1;Leipzig
+altenboitzen;1;other
+ beetzsee ot radewege;1;other
+eutingen;1;Stuttgart
+ mülheim an der ruhr;1;Cologne
+altendorn;1;other
+stadtprozelten;1;Frankfurt
+obernburg a. main;1;Frankfurt
+friesenried;1;other
+rettenberg;1;other
+modautal;1;Frankfurt
+muerenbruch ,  roetgen;1;Cologne
+am jungwingert ,  weinheim;1;Frankfurt
+geisig;1;Frankfurt
+tröndel;1;other
+kröning;1;Munich
+ ritterhude;1;other
+cardiff, wales;1;international
+escheburg;1;Hamburg
+ überlingen;1;other
+kronau;1;Stuttgart
+salt lake city, ut;1;international
+r�desheim;1;other
+handelsregisteramt kantons zürich;1;international
+handels- und firmenregister des großherzogtums luxemburg;1;international
+lg innsbruck;1;international
+handelsregisteramt des kanton zug;1;international
+staatskanzlei von florida;1;international
+maisons-laffitte, frankreich;1;international
+goldwörth;1;international
+shannonville, ontario, kanada;1;international
+braunsdorf;1;international
+groningen;1;international
+werne a. d. lippe;1;other
+bad wörishofen;1;Munich
+ bayreuth;1;other
+tinnum/sylt;1;other
+registry companies;1;international
+handelsregisteramt des kantons glarus;1;international
+ag charlottenburg hrb  b berlin;1;Berlin
+southport;1;international
+gif sur yvette;1;international
+mã¼nchen;1;international
+ balingen;1;Stuttgart
+amtgerichts landshut;1;Munich
+egg;1;international
+großschirma;1;Leipzig
+ stuttgart margaretenstr. ;1;Stuttgart
+ stuttgart moserstraße ;1;Stuttgart
+reichenbach;1;other
+dillingen a.d.donau;1;other
+gaildorf;1;Stuttgart
+altlandsberg;1;Berlin
+ebersdorf b. coburg;1;other
+wolfsburg, braunschweig;1;other
+des amtes für justiz im fürstentum liechtenstein;1;international
+singapore ;1;international
+santa clara, ca ;1;international
+schalksmühle;1;Cologne
+firmenbuch des landgerichts linz, österreich;1;international
+ministry economic affairs, taiwan, unified business no. ;1;international
+genossenschaftsregister des münchen;1;Munich
+lauda-königshofen;1;other
+allendorf;1;Frankfurt
+wels;1;international
+saarbr\ufccken;1;other
+spanisches firmenregister;1;international
+boston, ma ;1;international
+sidcup, kent, england;1;international
+krakau, polen;1;international
+ st. georgen;1;other
+n- ski norwegen;1;international
+acra (singapore);1;international
+mehren;1;Cologne
+ dorn-dürkheim;1;Frankfurt
+ schwein- furt;1;other
+ummendorf;1;other
+leogang;1;international
+pulheim / freimersdorf;1;Cologne
+jardim diamantino, goiania-go (brasilien);1;international
+bernkastel-kues;1;other
+ naunhof;1;Leipzig
+panama-stadt;1;international
+weisweil;1;other
+f-algolsheim;1;international
+bad homburg vor der höhe;1;Frankfurt
+san francisco, kalifornien;1;international
+bendorf;1;international
+alverskirchen everswinkel;1;other
+bad homburg v . d. höhe;1;Frankfurt
+küssaberg;1;other
+state delaware, secretary state, division corporations;1;international
+division corporations, state delaware;1;international
+ ehrenkirchen;1;other
+scheuring;1;Munich
+wroclaw;1;international
+rosh haayin;1;international
+graben;1;Munich
+maarbachstraße ;1;Cologne
+oldersbek;1;other
+laboe;1;other
+dion-valmont / belgien;1;international
+bad driburg;1;other
+boulder, colorado;1;international
+givrins;1;international
+ ottobrunn;1;Munich
+niemetal- ellershausen;1;other
+mühlacker;1;Stuttgart
+stollberg/erz.;1;other
+ schwarzenbruck;1;other
+ gauting;1;Munich
+brooklyn;1;international
+suffield, connecticut;1;international
+kuessnacht am rigi;1;international
+hyderabad;1;international
+istanbukl türkei;1;international
+lysakar;1;international
+holmestrand;1;international
+nünberg;1;other
+heidenheim;1;Stuttgart
+belgrad/serbia;1;international
+belgisches handelsregister;1;international
+kamer van koophandel, utrecht, niederlande;1;international
+reiskirchen;1;Frankfurt
+hohenzollerndamm ,  berlin;1;Berlin
+monza;1;international
+gentofte;1;international
+n- røyken;1;international
+registergericht: aachen;1;other
+wuri dist., taichung city ;1;international
+ehringshausen;1;Frankfurt
+taichung city ;1;international
+hilchenbach;1;other
+santa clara, ca;1;international
+ dombühl;1;other
+freiburg-tiengen;1;other
+berlin  kiel;1;Berlin
+lady lake, florida/usa;1;international
+high tech campus , ae eindhoven;1;international
+camera di commercio industria artigianato e agricoltura di genova;1;international
+ avenue kléber,  paris;1;international
+coral gables;1;international
+bodenwöhr;1;other
+gimbsheim;1;Frankfurt
+nümbrecht;1;Cologne
+zerbst/anhalt;1;Leipzig
+ch- ebmatingen;1;international
+elsloo (niederlande);1;international
+gauting, landkreis starnberg;1;Munich
+crottendorf;1;other
+sehmatal-neudorf;1;other
+ /  / hualing rd., shanghai, pr china;1;international
+luzern, schweiz;1;international
+san jose, kalifornien;1;international
+birkenwerder;1;Berlin
+barsinghausen;1;other
+windsbach;1;other
+oakville;1;international
+klagenfurt;1;international
+wangen im allgäu;1;other
+des kantons aargau;1;international
+companies house von england und wales;1;international
+notar in m\ufcnchen, mit der gesch\ueftsstelle in  m\ufcnchen, tal :;1;Munich
+ubi number state washington;1;international
+margetshöchheim;1;other
+grammetal;1;other
+departement enterprise;1;international
+terrassa/barcelona;1;international
+registrar companies ireland;1;international
+hogenbögen;1;other
+accounting and corporate regulatory authority singapore;1;international
+register business enterprises in brønnøysund;1;international
+randers c;1;international
+canton zug;1;international
+des stuttgart;1;Stuttgart
+ronnenberg;1;other
+british virgin islands company registry;1;international
+delaware, ;1;international
+gauting, lkr. starnberg;1;Munich
+königsfeld;1;Cologne
+veghel;1;international
+firmenbuch der republik \udsterreich;1;international
+bad karlshafen;1;other
+kalifornien;1;international
+hopfenstr. ,  baden-baden;1;Stuttgart
+ludwigshafen a.r.;1;Frankfurt
+des kantons st. gallen;1;international
+ völklingen;1;other
+glashütten;1;other
+bad soden / ts.;1;other
+handelsregisters des kantons aargau;1;international
+landesgericht für zivilrechtssachen graz;1;international
+companies house, uk;1;international
+handelsregisteramt alba;1;international
+dos id. ;1;international
+brenz;1;other
+luzern/schweiz;1;international
+hr freiburg;1;international
+suben;1;international
+regierungspr\uesidium t\ufcbingen;1;other
+eppstein/ts.;1;other
+pfaffing;1;Munich
+eyendorf;1;Hamburg
+kamer van koophandel limburg;1;international
+groß laasch;1;other
+ludwigslust;1;other
+los angeles, kalifornien;1;international
+-registergericht-;1;other
+salt lake city;1;international
+limburg/lahn;1;Frankfurt
+os;1;international
+patent- und register- amt von finnland;1;international
+baunach;1;other
+sonnenbühl;1;Stuttgart
+am sandthof a,  goch;1;other
+cvr-nr. ;1;international
+theodor-veiel-straße ,  stuttgart;1;Stuttgart
+grebenhain;1;Frankfurt
+ag-charlottenburg;1;Berlin
+kapitalerh;1;other
+ministry justice;1;international
+neuhausen;1;international
+handelsgerichts lyon;1;international
+steinbach (taunus);1;Frankfurt
+regierungspräsidium darmstadt;1;Frankfurt
+ essenheim;1;Frankfurt
+registre du commerce et des sociétés;1;other
+schwanewede;1;other
+commerce city/co  usa;1;international
+registergericht: frankfurt am main;1;other
+kln;1;international
+herisau;1;international
+st. augustin;1;Cologne
+roschbach;1;Mannheim
+krabi;1;international
+offstein;1;Frankfurt
+"sistema technologico de informaci&oacute;n del registro publico de panama";1;international
+middletown delaware;1;international
+handelsregisteramt zu istanbul;1;international
+heide;1;other
+register-nr. ;1;international
+neckargem\ufcnd;1;other
+handelskammer;1;international
+offenbach am;1;Frankfurt
+halle/westfalen;1;other
+charlottenburg ;1;Berlin
+von jersey;1;international
+amtsgerichte stendal;1;other
+dilbeek (belgien);1;international
+nyon (schweiz);1;international
+möhrendorf;1;other
+sąd rejonowy la m.st.warszawy w warszawie,xiii wydział gospodarczy krajowego rejestru sądowego;1;other
+registrar companies cyprus;1;international
+chiasso;1;international
+des kantons nidwalden;1;other
+bad homburg v. d. h.;1;other
+kanton aargau;1;international
+potsdam ot eiche;1;other
+bockenem;1;other
+bad liebenwerda;1;Leipzig
+ dortmund, konrad-adenauer-allee ;1;Cologne
+korfesstr. ,  braunschweig;1;other
+olfen;1;other
+mittersill;1;international
+lg wels;1;international
+hürtgenwald;1;Cologne
+lindenfels,  egelsbach;1;other
+annweiler;1;Mannheim
+estnisches handelsregister;1;international
+cambridge;1;international
+brønnøysundreg. ;1;other
+krakau;1;international
+louisville;1;international
+nobitz;1;Leipzig
+bargfeld-stegen;1;Hamburg
+ fuerth;1;other
+villingen-schwenningen;1;other
+ forchheim;1;other
+grassau;1;Munich
+eckstedt;1;other
+westerjork  b,  jork;1;Hamburg
+vösendorf;1;international
+kerbach;1;international
+sinzheim;1;Stuttgart
+neunburg vorm wald;1;other
+schutterwald;1;other
+berlin-zehlendorf;1;Berlin
+weingarten (baden);1;Stuttgart
+hann. münden;1;other
+hellwege;1;Hamburg
+siegen,  heidelberg;1;other
+vällingby;1;international
+großensee;1;Hamburg
+krauchenwies;1;other
+ komarom, kossut lajos utca ;1;international
+ca  san mateo;1;international
+ engelsbrand;1;Stuttgart
+georgsmarienhütte;1;other
+artlenburg;1;Hamburg
+reinsberg ot dittmannsdorf;1;other
+brand-erbisdorf;1;other
+wettenberg launsbach;1;Frankfurt
+bad salzdetfurth;1;other
+inden;1;Cologne
+meßkirch;1;other
+ walden- buch;1;other
+b- wommelgern;1;other
+möglingen;1;Stuttgart
+dettenhausen;1;Stuttgart
+zug (schweiz);1;international
+choulex (schweiz);1;international
+ vöhringen;1;other
+taipei city , taiwan (roc), zipcode: ;1;international
+ heusweiler;1;other
+algermissen;1;other
+bingen am rhein;1;Frankfurt
+walbachtal;1;other
+ bobenheim-roxheim;1;Frankfurt
+gernsbach;1;Stuttgart
+puerto rico;1;international
+richard-wagner-straße ,  köln;1;Cologne
+parkring ,  mannheim;1;Frankfurt
+lisabon, portugal;1;international
+oyten;1;other
+surrey;1;international
+eslohe;1;other
+bietigheim-bissingen;1;Stuttgart
+parkstein;1;other
+alcobendas, madrid;1;international
+bad münders;1;other
+asbach;1;Cologne
+ roetgen;1;Cologne
+prittriching;1;Munich
+ horn;1;international
+vorderhagen;1;Cologne
+almyrida;1;international
+uehlfeld;1;other
+biedenkopf;1;other
+st. veit im innkreis;1;international
+plesna;1;international
+ mainbernheim;1;other
+ jinzhou city, liaoning province;1;international
+ cadenberge;1;Hamburg
+ esens;1;other
+ planegg;1;Munich
+ volkach;1;other
+ mayen, kolpingstr. ;1;Cologne
+schanghai;1;international
+registergericht: gießen;1;other
+des (local court) von delaware;1;international
+maueräcker ,  nassenfels;1;Munich
+telemannstr. ,  ingolstadt;1;Munich
+pappelgasse b,  erlangen;1;other
+santa fe;1;international
+winsen luhe;1;Hamburg
+vagen;1;Munich
+gustavsberg;1;international
+prichsenstadt, ot laub;1;international
+großenkneten;1;other
+munsbach, luxemburg;1;international
+ maishofen;1;international
+delaware, usa;1;international
+schwieberdingen;1;Stuttgart
+firmenbuch der;1;other
+registre des commerce et des sociétés;1;international
+estnischen handelsregister;1;international
+registo comercial;1;international
+antwerpen;1;international
+brighton;1;international
+grafrath;1;Munich
+argenbühl;1;other
+vught;1;international
+wettstetten;1;Munich
+ kanzem;1;other
+echenzeller str. a,  gaimersheim;1;Munich
+handewitt;1;other
+cramerton nc ;1;international
+karsruhe;1;other
+lautert;1;Frankfurt
+dunningen;1;other
+keltenstraße ,  pöcking;1;Munich
+langquaid;1;other
+ober-olm;1;Frankfurt
+ulmer straße  in  stuttgart;1;Stuttgart
+baumgässchen  in  pforzheim;1;other
+bad saulgau;1;other
+ulten;1;international
+ potsdam;1;Berlin
+gondelsheim;1;Stuttgart
+saarwellingen;1;other
+mörsdorf;1;Leipzig
+ eriskirch;1;other
+salem-altenbeuren;1;other
+münsterlandstraße ,  gütersloh;1;other
+neukirchen-vluyn;1;Cologne
+trierweiler;1;other
+ernsgaden;1;Munich
+große kelle;1;other
+sonnrain;1;international
+ilvesheim;1;Frankfurt
+london se uw;1;international
+uesslingen;1;international
+martinez;1;international
+amtsg charlottenburg;1;Berlin
+lohmühlenstr. ,  berlin;1;Berlin
+ plankstadt;1;Mannheim
+weilheim an der teck;1;Stuttgart
+seelingstädt;1;Leipzig
+dudenhofen;1;Mannheim
+registeramt kanton zug;1;international
+wittmar;1;other
+leun;1;Frankfurt
+registrar companies in kenia;1;international
+london (gbr);1;international
+silema;1;international
+wilmington, new castle county, delaware ;1;international
+münchen hrb ;1;Munich
+nordhorn;1;other
+charlottenburg hra  b;1;Berlin
+companies house england;1;international
+schwindegg;1;Munich
+ lichtenau;1;other
+ grasbrunn;1;Munich
+préverenges;1;international
+woodbridge, on, ll l;1;international
+ waldfischbach-burgalben;1;Mannheim
+wellendingen;1;other
+st. georgen;1;other
+ketzin ot falkenrehde /bbg.;1;international
+fahrdorf;1;other
+dobra;1;international
+ roding;1;other
+stäfa;1;international
+oberdischingen;1;Stuttgart
+richmond tw qj;1;international
+ rümmingen;1;other
+uffing am staffelsee;1;Munich
+zapfendorf;1;other
+schwedisches gesellschaftsregister;1;international
+ bad wiessee;1;Munich
+uittreksel handelsregsiter kamer van koophandel nr.;1;international
+weißenhorn;1;other
+altenbeken;1;other
+königstein i. t.;1;Frankfurt
+ rottweil;1;Stuttgart
+philippsburg;1;international
+lindau (bodensee);1;other
+ heinsberg;1;Cologne
+ montzen;1;international
+ kleve;1;other
+hochspeyer;1;Mannheim
+reddelich;1;other
+ hof, murringweg ;1;other
+gyor;1;international
+theodor-lipps-str. ,  münchen;1;Munich
+ nahe, alte ziegelei ;1;Hamburg
+singeorgiu de mures;1;international
+gardelegen;1;other
+ südliches anhalt;1;Leipzig
+neue reihe ,  cuxhaven;1;other
+wilkau-haßlau;1;Leipzig
+hergenrath (belgien);1;international
+hösbach;1;Frankfurt
+bürgstadt;1;Frankfurt
+obernburg;1;other
+ditzingen;1;Stuttgart
+wellenstein, luxembourg;1;international
+bargteheide;1;Hamburg
+frickenhausen;1;Stuttgart
+bruck;1;other
+leer (ostfriesland);1;other
+elsdorf;1;Cologne
+ oyten;1;other
+leiden;1;international
+ bad homburg;1;Frankfurt
+hüttenstraße ,  dortmund hüttenannstr. ;1;other
+ rudolstadt;1;other
+ rockendorf;1;Leipzig
+ch- lausanne;1;international
+schwentinental;1;other
+leinzell;1;Stuttgart
+freiberg a. n.;1;Stuttgart
+sersheim;1;Stuttgart
+fernham, faringdon, oxfordshire sn nz;1;international
+hasselt;1;international
+petershagen;1;other
+boston;1;international
+ch- pontresina;1;international
+wiesenbach;1;Stuttgart
+bachstraße ,  cuxhaven;1;other
+monaco;1;international
+barbing;1;other
+ besigheim;1;Stuttgart
+zellingen;1;other
+blieskastel;1;other
+ kernen i.r.;1;Stuttgart
+thier martin ,  battice;1;international
+aying gt dürrnhaar;1;international
+greifswald ot wieck;1;international
+rostock-ostseebad warnemunde;1;other
+hohenstein-ernstthal;1;Leipzig
+richard-wagner-straße ,  waldkraiburg;1;Munich
+brühlstraße ,  dormettingen;1;Stuttgart
+lippetal;1;other
+wolbeck;1;other
+freiburg-munzingen;1;other
+chandler, arizona;1;international
+lehre;1;other
+bergen auf rügen;1;other
+adendorf;1;Hamburg
+ueda;1;international
+wölfersheim;1;Frankfurt
+ rue blomet,  paris;1;international
+ st. georgen bei grieskirchen;1;international
+salzgitter friedrich-ebert-str. ;1;other
+pinne- berg;1;other
+ginsheim-gustavsburg;1;Frankfurt
+niebüll;1;other
+bieberstein bieberstein;1;Cologne
+companies house der market supervision and administration von guizhou, v.r. china;1;international
+burrweiler;1;Mannheim
+serbisches unternehmensregister;1;international
+handelskammer istanbul;1;international
+enge-sande;1;other
+sommerach;1;other
+hindelbank/switzerland;1;international
+charlot- tenburg;1;Berlin
+oficiul național al registrului comerțului;1;international
+ bräunlingen;1;other
+des kantons zug/schweiz;1;international
+des kantons schwyz/schweiz;1;international
+landgerichts wels;1;other
+schwandorf ot bcchelkchn;1;other
+bibertal-bühl;1;other
+mulfingen;1;Stuttgart
+lichtenau ot ottendorf;1;other
+eggenfelden;1;other
+ bechhofen;1;other
+zossen;1;Berlin
+scharbeutz;1;Hamburg
+halásztelek, ungarn;1;international
+bad sachsa;1;other
+budapest, ungarn;1;international
+lensahn;1;other
+fischbach bei dahn;1;Mannheim
+schneiderstraße ,  dortmund;1;Cologne
+şişli, istanbul;1;international
+sumida branch office tokyo legal affairs bureau, japan;1;international
+republik österreich firmenbuch;1;international
+tunbridge wells, tbnp;1;international
+sowerby bridge, west yorkshire, hxnx;1;international
+orth an der donau;1;international
+sattendorf;1;international
+düsseldorf, hrb ;1;Cologne
+bad soden a. taunus;1;Frankfurt
+charlottenlund;1;international
+ b;1;international
+hillerod;1;international
+leichlingen;1;Cologne
+strausberg;1;Berlin
+ einbeck;1;other
+dushanbe;1;international
+ bechtolsheim, am alten bahnhof ;1;Frankfurt
+bucharest, romania;1;international
+origlio/schweiz;1;international
+milano/italien;1;international
+san francisco/usa;1;international
+weßling-oberpfaffenhofen;1;Munich
+***;1;other
+bienenbüttel;1;Hamburg
+giengen;1;Stuttgart
+cadolzburg;1;other
+ekaterinburg, russische föderation;1;international
+ sülzfeld haselbacher straße ;1;other
+eberbach;1;international
+ arnstorf;1;other
+ achslach;1;other
+bad soden-salmünster;1;Frankfurt
+moormerland;1;other
+finsing;1;Munich
+wittstock/dosse;1;other
+ruppertshofen;1;Frankfurt
+weißensee;1;Berlin
+garmisch-partenkirchen;1;other
+haag/oberbayern;1;Munich
+eggersweide ,  hamburg;1;Hamburg
+krailing;1;other
+iloilo city;1;international
+hollnseth;1;Hamburg
+ pukhivka (ukraine);1;international
+voels, österreich;1;international
+ rheinstetten;1;Stuttgart
+winterberg;1;other
+höxter;1;other
+ schlotfeld;1;Hamburg
+palo alto kalifornien;1;international
+kieselbronn;1;Stuttgart
+encino ca;1;international
+buchrain / schweiz;1;international
+kraainem;1;international
+simmerath;1;Cologne
+djursholm;1;international
+emeryville;1;international
+handelsregisteramt des kantons zürlich;1;international
+eurasburg;1;Munich
+treis-karden;1;other
+osterhever;1;other
+bohmstedt;1;other
+rodenas;1;international
+strassen, luxemburg;1;international
+boulogne-billancourt, frankreich;1;international
+kantonsregister appenzell-innerrhoden;1;international
+büro für rechtsangelegenheiten tokio;1;international
+amt für justiz, handelsregister;1;other
+charlottenburg hrb ;1;Berlin
+company register von madrid;1;international
+handelsregisters in sundsvall;1;international
+brissago;1;international
+schorfheide;1;Berlin
+ heuchelheim -klingen;1;Mannheim
+neu ausgegeben bei kapitalerhöhung;1;other
+glauchau;1;Leipzig
+ schwabhausen;1;other
+oederan;1;Leipzig
+kissing;1;Munich
+roonstraße , köln;1;Cologne
+moorweg ,  soderstorf;1;Hamburg
+ cham;1;other
+maharashtra;1;international
+ würzburg, kiefernweg ;1;other
+papendorf;1;other
+mittelherwigsdorf;1;other
+schwaz;1;international
+reinfeld;1;Hamburg
+ limburgerhof;1;Frankfurt
+mespelbrunn;1;Frankfurt
+ kißlegg;1;other
+pottenstein;1;other
+schleiden;1;Cologne
+hamfelde;1;Hamburg
+carate brianza;1;international
+ boksee;1;Hamburg
+laufenburg;1;other
+ilsenburg;1;other
+ geilenkirchen;1;Cologne
+ mühldorf;1;Munich
+holdersteig ,  konstanz;1;other
+ blaichach-bihlerdorf;1;other
+stadt shenzhen, provinz guangdong;1;international
+bad berneck;1;other
+ neunkirchen-seelscheid;1;Cologne
+ wittenbeck, am düsterbarg ;1;other
+irxleben;1;other
+karlstein am main;1;Frankfurt
+ brackenheim, sternenfelser str. ;1;Stuttgart
+ elbtal;1;Frankfurt
+hinterm eichhof ,  bardowick;1;Hamburg
+scharbeutz/ ot haffkrug;1;international
+ otzberg;1;Frankfurt
+frankfurt a. m. wendelsweg ;1;Frankfurt
+ nürnberg, bleichstraße ;1;other
+jona;1;international
+hawalli;1;international
+steinwenden;1;Mannheim
+tarsdorf;1;international
+d - augsburg;1;Munich
+stadtlauringen;1;other
+ eresing;1;Munich
+izhevsk;1;international
+steinkirchen;1;Hamburg
+wermatswill/switzerland;1;international
+bad soden am taunus;1;Frankfurt
+ todesfelde;1;Hamburg
+vellmar;1;other
+ zürich;1;international
+ augsburg, ernst-moritz-arndt-straße  g,;1;other
+enger;1;other
+ihringen-wasenweiler;1;other
+ friedberg;1;Frankfurt
+ nurtingen;1;Stuttgart
+ schwerin;1;other
+namensänderung durch eheschließung;1;other
+würzburg, rander- sackerer str. ;1;other
+trochtelfingen;1;Stuttgart
+plettenberg;1;Cologne
+ludwigsau;1;other
+boxberg;1;Cologne
+hemau;1;other
+kings college london;1;international
+schlierbach;1;international
+cologny;1;international
+zaandijk;1;international
+sankt petersburg;1;international
+bommersheimer straße ,  oberursel (taunus);1;Frankfurt
+veitshöchheim;1;other
+ schorndorf;1;Stuttgart
+nettetal;1;Cologne
+höchstadt a.d. aisch;1;other
+nauen;1;Berlin
+eppan;1;international
+ schliersee;1;Munich
+haldenwang;1;other
+castrop-rauxel;1;Cologne
+cape town, ;1;international
+pirmasens;1;Mannheim
+bad hom- burg;1;other
+obergriesbach;1;Munich
+ erftstadt;1;Cologne
+bad grönenbach;1;other
+röthenbach;1;international
+ nordheim;1;international
+lausanne, schweiz (ch);1;international
+bernried, ot edenstetten;1;international
+waldsassen;1;other
+fahrenzhausen, appercha;1;Munich
+ehekirchen-dinkelshausen;1;Munich
+gerolsbach;1;Munich
+atasehir, istanbul;1;international
+mauern;1;Munich
+aschheim;1;Munich
+cochem;1;other
+künzell;1;other
+pornbach;1;Munich
+obersulm;1;Stuttgart
+bangkok\/thailand;1;international
+sibbesse;1;other
+gießhübl;1;international
+ryttergabsvej ,  pattburg;1;other
+changzhou, china;1;international
+waakirchen;1;Munich
+ wahlstedt;1;Hamburg
+ wrohm;1;other
+beverly;1;international
+ graben-neudorf;1;Stuttgart
+ rötgesbüttel;1;other
+hepberg;1;Munich
+neuilly-sur-seine / frankreich;1;international
+fürstenwalde/spree;1;Berlin
+ namborn;1;other
+bayerstraße b,  münchen;1;Munich
+kisdorf;1;Hamburg
+schöngeising;1;Munich
+kranzberg;1;international
+übach-palenberg;1;Cologne
+oberkleen;1;Frankfurt
+velten;1;Berlin
+eschen;1;international
+liebenwalde;1;Berlin
+ gladenbach;1;Frankfurt
+port coquitlam bc;1;international
+wettin-löbejün;1;Leipzig
+br%c%bcssel;1;international
+sinzing;1;other
+crailsheim;1;Stuttgart
+stein/schweiz;1;international
+nußdorf am inn;1;Munich
+riethnordhausen;1;other
+charlottesville;1;international
+ruffinistr. ,  gauting-unterbrunn;1;Munich
+weinsberg;1;Stuttgart
+johann-theodor-straße ,  ismaning;1;Munich
+grafing b. münchen;1;Munich
+jößnitz;1;other
+ erkelenz;1;Cologne
+singhofen;1;Frankfurt
+kalkara;1;international
+ reichenbach;1;other
+mölln;1;Hamburg
+wittgert;1;Cologne
+e- barcelona;1;international
+gesellschafters;1;other
+sisli/istanbul (türkei);1;international
+illingen;1;international
+ bad orb;1;Frankfurt
+weinböhla;1;other
+milda;1;other
+morden, mb;1;international
+ waldershof;1;other
+ schönwald;1;international
+oberasbach;1;other
+schleching;1;Munich
+st. michaelisdonn;1;Hamburg
+magdalenenstraße   berlin;1;Berlin
+ birkenau;1;Frankfurt
+tonbrigde, kent (england);1;international
+lisztstrasse   hamburg;1;Hamburg
+ ottensoos;1;other
+mülheim a.d.r.;1;Cologne
+ sengenthal, keltenring ;1;other
+ feldkirchen-westerham;1;Munich
+ berlin, eisenacher straße  a;1;Berlin
+moskau, russische föderation;1;international
+rottendorf;1;other
+bournmouth;1;international
+pool;1;international
+ nikosia;1;international
+ käshofen;1;Mannheim
+dusiburg;1;other
+windischeschenbach;1;other
+schwarzenfeld;1;other
+pelkovenstraße ,  münchen;1;Munich
+krakow am see;1;other
+admannshagen-bargeshagen;1;other
+kreuzlingen, schweiz;1;international
+ gießen, reichelsberg ;1;Frankfurt
+unterengstringen;1;international
+estoril;1;international
+hohenpeißenberg;1;Munich
+spaichingen;1;other
+ waldbrunn;1;other
+subiaco;1;international
+hohenhameln;1;other
+worb;1;international
+ mülse;1;international
+bardowick;1;Hamburg
+brunnthal/hofolfing;1;Munich
+brugge (belgien);1;international
+ginsweiler;1;Mannheim
+bucharest;1;international
+frank- furt am main;1;Frankfurt
+nentershausen;1;Frankfurt
+feldkirchen- westerham;1;Munich
+apfeldorf;1;Munich
+ch- allschwil (schweiz);1;international
+west lafayette, indiana;1;international
+seevetal, gt meckelfeld;1;international
+ot zaatzke;1;international
+" g&#xfc;nterode";1;international
+bahnhofstraße   fürstenau;1;other
+oberbarnim;1;Berlin
+grenzach-wyhlen;1;other
+ nachrodt-wiblingwerde;1;Cologne
+apelern;1;other
+heroldsberg;1;other
+ iserlohn;1;Cologne
+ hohenstein;1;Stuttgart
+rottenburg am neckar;1;Stuttgart
+gettorf;1;other
+kodály zoltán sétány  /,  százhalombatta;1;international
+hirschaid ot seigendorf;1;international
+bad bergzabern;1;Mannheim
+habach;1;Munich
+schleife;1;other
+schloß holte-stukenbrock;1;other
+reit im winkl;1;other
+neuburg;1;international
+egling a. d. paar;1;Munich
+jiangsu;1;international
+edesheim;1;Mannheim
+leingarten;1;Stuttgart
+rhens;1;Frankfurt
+winterberger str.   olsberg;1;other
+hod-hasharon;1;international
+dã¼sseldorf;1;Cologne
+registrar ministry government services toronto, ontario;1;international
+ traunreut;1;Munich
+z\ufcrich;1;international
+bern;1;international
+westerburg;1;Frankfurt
+knutsford, chesire;1;international
+estonian companies registry;1;international
+bundesstaat delaware;1;international
+stocksund;1;international
+kressborn;1;other
+kingston upon thames;1;international
+aukrug;1;Hamburg
+riyadh-sulaimania;1;international
+weil;1;Munich
+clara-zetkin-straße ,  keinmachnow;1;international
+jüterbog;1;Berlin
+stuttgart-feuerbach;1;Stuttgart
+eresing;1;Munich
+wachmannstr. a,  bremen;1;other
+rossacker ,  dießen;1;Munich
+mariano comense;1;international
+ neufahrn bei freising;1;Munich
+schwalbach am taunus;1;Frankfurt
+maselheim;1;other
+aichach;1;Munich
+kahla;1;other
+bönebüttel;1;Hamburg
+neunkirchen am sand;1;other
+vogtsburg/oberrotweil;1;other
+kirchlinteln;1;other
+geestland;1;other
+am sportplatz ,  osterby;1;other
+feuerthalen;1;international
+bad schönborn;1;Stuttgart
+neuchâtel, schweiz;1;international
+sankt-ingbert-weg ,  hannover;1;other
+ lohmar;1;Cologne
+ wilhelmshaven;1;other
+lenting;1;Munich
+ nagold;1;Stuttgart
+alte jakobstraße ,  berlin;1;Berlin
+hünstetten;1;Frankfurt
+utting;1;international
+ vk 's gravenhage, spaarneplein ;1;international
+taichung city;1;international
+london w et;1;international
+bichl;1;Munich
+ penzing;1;international
+thoßfell;1;other
+herrsching ot breitbrunn;1;international
+mittenwald;1;other
+merzig;1;other
+ dietzenbach;1;Frankfurt
+ offenbach am main;1;Frankfurt
+füssen;1;other
+ neukirchen;1;other
+ fulda;1;other
+beykoz, istanbul;1;international
+spiez;1;international
+ neckartenzlingen;1;Stuttgart
+kk amsterdam;1;international
+rhönstraße ,  rodenbach;1;Frankfurt
+middletown de ;1;international
+lev ontario;1;international
+alaquas;1;international
+reit im winkel;1;Hamburg
+hann.münden;1;other
+neustadt aisch;1;other
+motihari, indien;1;international
+g\ufttingen;1;other
+worpswede;1;other
+freiamt;1;other
+dahlem;1;Berlin
+el cerrito , california;1;international
+bodolz;1;other
+lichtenturmweg   paderborn;1;other
+wolfschlugen;1;Stuttgart
+sauerlach;1;Munich
+netanja;1;international
+linz am rhein;1;Cologne
+ lichtenfels;1;other
+ k�ln, eifelplatz -;1;Cologne
+lauter-bernsbach ot lauter;1;other
+mudersbach;1;Cologne
+niederfischbach;1;Cologne
+ quakenbrück;1;other
+ch-zürich;1;international
+erligheim;1;Stuttgart
+pretoria;1;international
+ hohenwestedt;1;Hamburg
+inzlingen;1;other
+marseille;1;international
+g\ufcntherstra\udfe   frankfurt am main;1;Frankfurt
+emil-von-behring-str.   bruchk\ufbel;1;other
+sulzburg;1;other
+ pollenfeld-preith;1;other
+wetter;1;Cologne
+shanghai, vr china;1;international
+stolberg;1;Cologne
+ brunsbüttel;1;Hamburg
+ofterschwang;1;other
+ herzogenaurach;1;other
+lavena ponte tresa va,;1;international
+ troisdorf, alte uckendorfer straße ;1;Cologne
+ bonn, im weiler ;1;Cologne
+ vohburg;1;Munich
+oberursel-weiskirchen;1;other
+großbeeren;1;Berlin
+werneuchen;1;Berlin
+washington d.c.;1;international
+ nördlingen;1;other
+frankenberg/eder;1;other
+schrobenhausen;1;Munich
+ kelkheim;1;Frankfurt
+bad segeberg;1;Hamburg
+fockbek;1;other
+ditzingen-heimerdingen,;1;Stuttgart
+nersingen;1;Stuttgart
+tegernsee;1;Munich
+kümmersbruck;1;other
+sachsenheim;1;Stuttgart
+fuchsmühl;1;other
+ch-sevelen;1;international
+preetz;1;Hamburg
+saarburg;1;other
+, samara region, roshchinsky a/;1;international
+trebbin;1;Berlin
+caracas, edo. miranda, venezuela;1;international
+ schwerin, marie-hankel-str.  a;1;other
+toronto, ontario;1;international
+schönaich,;1;Stuttgart
+dinslaken;1;Cologne
+stockach;1;other
+hyderabad, telangana;1;international
+merdig;1;other
+ lathen;1;other
+ badenweiler;1;other
+ bad feilnbach;1;Munich
+ schliengen;1;other
+ unterhaching;1;Munich
+gangelt;1;Cologne
+oppenheim;1;Frankfurt
+ hummelshain;1;other
+halle/saale;1;Leipzig
+heusweiler;1;other
+lausitzer platz ,  berlin;1;Berlin
+johannesberg;1;Frankfurt
+pettendorf;1;other
+papendorf ot sildemow;1;other
+gunten/switzerland;1;international
+menden (sauerland);1;other
+bad rappenau;1;Stuttgart
+bad mergentheim;1;other
+dessau;1;Leipzig
+dornstadt;1;Stuttgart
+hésingue;1;international
+halter am see;1;international
+frankfurt am m.;1;Frankfurt
+trofaiach;1;international
+reichenberg;1;Frankfurt
+ dieburg;1;Frankfurt
+attendorn;1;Cologne
+frankfurt straße ,  würzburg;1;other
+ aurachtal;1;other
+ georgensgmünd;1;other
+athen;1;international
+ratekau ot pansdorf;1;international
+marktoberdorf-hausen;1;Munich
+forch- heim;1;other
+nüsttal;1;other
+"
+ote: šiek";1;other
+tr- , gebze, kocaeli;1;international
+tr- , darica, kocaeli;1;other
+amman ;1;international
+pansdorf;1;other
+bermatingen;1;other
+vinius;1;international
+nieder-olm;1;Frankfurt
+bellandur, bengaluru, karnataka;1;international
+oberstaufen;1;other
+ sassenberg;1;other
+ friesenheim;1;international
+karl-marx-allee ,  berlin;1;Berlin
+ duisburg, deichstraße  e;1;Cologne
+,  berlin;1;Berlin
+portola valley;1;international
+slopne;1;international
+auckland;1;international
+öhningen;1;other
+großheubach;1;Frankfurt
+mühltal;1;Frankfurt
+röhrmoos;1;Munich
+gersthofen;1;Munich
+ mähring;1;other
+sk zvolen;1;international
+sessenbach;1;Cologne
+hörstel;1;other
+titisee-neustadt;1;other
+bad doberan;1;other
+am salzhaff;1;other
+poznań;1;international
+görlitz;1;other
+neustadt an der weinstrasse;1;Mannheim
+berlin, deutschland;1;Berlin
+sasbach;1;other
+ leverkusen;1;Cologne
+neckartailfingen;1;Stuttgart
+kirchroth;1;other
+ahlden (aller);1;other
+eine kapitalgesellschaft nach dem recht des staates delaware,  s. dupont highway, city of dover, county of kent, de , usa;1;international

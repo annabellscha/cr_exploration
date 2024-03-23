@@ -615,7 +615,7 @@ class CommercialRegisterRetriever:
         print(company)
         # add all documents to the cart
         if "gs" in documents:
-            self._add_gs_from2021_to_cart(index = self.company["search_index"], company_id=company_id)
+            self._add_gs_to_cart(index = self.company["search_index"], company_id=company_id)
 
         if "si" in documents:
             print(self.company['document_urls']['si'])

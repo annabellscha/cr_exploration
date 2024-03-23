@@ -19,7 +19,7 @@ class DocumentManager:
             data = {'link_structured_content_file_current': full_path}
             id_column = 'shareholder_id'
         else:
-            data = {'link_shareholder_file_2021': full_path}
+            data = {'link_SI_file_current': full_path}
             table_name = 'startups'
             id_column = 'startup_id'
         print("we now atttemot the update")

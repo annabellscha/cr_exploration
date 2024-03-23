@@ -1,0 +1,1591 @@
+startup_location;count;mapped_location
+Berlin;2357;Berlin
+München;824;Munich
+Hamburg;757;Hamburg
+Köln;318;Cologne
+Düsseldorf;248;Cologne
+Frankfurt am Main;241;Frankfurt
+Stuttgart;184;Stuttgart
+Karlsruhe;126;Stuttgart
+Dresden;126;other
+Aachen;104;Cologne
+Hannover;103;other
+Leipzig;95;Leipzig
+Mannheim;78;Frankfurt
+Nürnberg;76;other
+Potsdam;71;Berlin
+Münster;67;other
+Darmstadt;64;Frankfurt
+Bremen;64;other
+Heidelberg;63;Frankfurt
+Bonn;62;Cologne
+Dortmund;55;Cologne
+Freiburg im Breisgau;55;other
+Mainz;50;Frankfurt
+Essen;50;Cologne
+Bochum;45;Cologne
+Kiel;42;other
+Augsburg;40;Munich
+Grünwald;39;Munich
+Saarbrücken;35;other
+Bielefeld;34;other
+Braunschweig;33;other
+Jena;33;Leipzig
+Wiesbaden;33;Frankfurt
+Regensburg;31;other
+Paderborn;31;other
+Würzburg;30;other
+Ulm;27;Stuttgart
+Chemnitz;27;Leipzig
+Wuppertal;27;Cologne
+Magdeburg;27;other
+Göttingen;26;other
+Erlangen;26;other
+Fürth;24;other
+Konstanz;23;other
+Osnabrück;22;other
+Rostock;21;other
+Tübingen;19;Stuttgart
+Oldenburg;19;other
+Krefeld;18;Cologne
+Bad Homburg v. d. Höhe;17;Frankfurt
+Planegg;17;Munich
+Gräfelfing;17;Munich
+Ludwigsburg;17;Stuttgart
+Halle (Saale);17;Leipzig
+Mönchengladbach;17;Cologne
+Lübeck;16;Hamburg
+Ingolstadt;16;Munich
+Kaiserslautern;15;Mannheim
+Siegen;15;Cologne
+Garching b.München;15;Munich
+Gilching;14;Munich
+Offenburg;14;other
+Mülheim an der Ruhr;13;Cologne
+Bergisch Gladbach;13;Cologne
+Koblenz;13;Cologne
+Duisburg;13;Cologne
+Solingen;13;Cologne
+Ismaning;13;Munich
+Gießen;13;Frankfurt
+Taufkirchen;12;Munich
+Unterföhring;12;Munich
+Monheim am Rhein;12;Cologne
+Trier;12;other
+Heilbronn;12;Stuttgart
+Leverkusen;12;Cologne
+Ratingen;12;Cologne
+Langenfeld;12;Cologne
+Cottbus;12;other
+Meerbusch;11;Cologne
+Erfurt;11;other
+Ettlingen;11;Stuttgart
+Kassel;11;other
+Kempten (Allgäu);11;other
+Ilmenau;10;other
+Leinfelden-Echterdingen;10;Stuttgart
+Germering;10;Munich
+Rosenheim;10;Munich
+Aalen;9;Stuttgart
+Reutlingen;9;Stuttgart
+Offenbach am Main;9;Frankfurt
+Bruchsal;9;Stuttgart
+Freising;9;Munich
+Wildau;9;Berlin
+Flensburg;9;other
+Eschborn;9;Frankfurt
+Bayreuth;9;other
+Willich;9;Cologne
+Unterhaching;8;Munich
+Starnberg;8;Munich
+Kronberg im Taunus;8;Frankfurt
+Esslingen am Neckar;8;Stuttgart
+Neuss;8;Cologne
+Hildesheim;8;other
+Aschaffenburg;8;Frankfurt
+Herzogenrath;8;Cologne
+Ostfildern;8;Stuttgart
+Bocholt;8;other
+Fulda;8;other
+Hilden;7;Cologne
+Lüneburg;7;Hamburg
+Herrsching a.Ammersee;7;Munich
+Bad Soden am Taunus;7;Frankfurt
+Böblingen;7;Stuttgart
+Norderstedt;7;Hamburg
+Recklinghausen;7;Cologne
+Pforzheim;7;Stuttgart
+Teltow;7;Berlin
+Herford;7;other
+Freiberg;7;other
+Greifswald;6;other
+Kirchheim unter Teck;6;Stuttgart
+Pullach i.Isartal;6;Munich
+Bamberg;6;other
+Kempen;6;Cologne
+Isernhagen;6;other
+Leonberg;6;Stuttgart
+Baden-Baden;6;Stuttgart
+Neu-Ulm;6;Stuttgart
+Hamm;6;other
+Haar;6;Munich
+Falkensee;6;Berlin
+Holzkirchen;6;other
+Großostheim;6;Frankfurt
+Deggendorf;6;other
+Hürth;6;Cologne
+Schönefeld;6;Berlin
+Kleinmachnow;6;Berlin
+Dachau;6;Munich
+Wesel;5;other
+Walldorf;5;Stuttgart
+Kulmbach;5;other
+Düren;5;Cologne
+Bensheim;5;Frankfurt
+Iserlohn;5;Cologne
+Pulheim;5;Cologne
+Inning a.Ammersee;5;Munich
+Erkrath;5;Cologne
+Amberg;5;other
+Lohmar;5;Cologne
+Radebeul;5;other
+Witten;5;Cologne
+Schwerin;5;other
+Homburg;5;other
+Minden;5;other
+Berg;5;other
+Villingen-Schwenningen;5;other
+Königstein im Taunus;5;Frankfurt
+Gütersloh;5;other
+Hof;5;other
+Sindelfingen;5;Stuttgart
+Gelsenkirchen;5;Cologne
+Bad Vilbel;5;Frankfurt
+Wolfratshausen;5;Munich
+Hennigsdorf;5;Berlin
+Neu-Isenburg;5;Frankfurt
+Mettmann;5;Cologne
+Alzenau;5;Frankfurt
+Weßling;5;Munich
+Oberhausen;5;Cologne
+Troisdorf;5;Cologne
+Worms;5;Frankfurt
+Herrenberg;5;Stuttgart
+Haltern am See;5;other
+Siegburg;5;Cologne
+Poing;5;Munich
+Bad Honnef;5;Cologne
+Weiden i.d.OPf;5;other
+Idstein;5;Frankfurt
+Arnsberg;5;other
+St. Wendel;5;other
+Tettnang;5;other
+Straßlach-Dingharting;4;Munich
+Lippstadt;4;other
+Horb am Neckar;4;Stuttgart
+Großwallstadt;4;Frankfurt
+Oberhaching;4;Munich
+Frechen;4;Cologne
+Friedrichshafen;4;other
+Schwäbisch Gmünd;4;Stuttgart
+Pöcking;4;Munich
+Bergheim;4;other
+Hann. Münden;4;other
+Coburg;4;other
+Wedel;4;Hamburg
+Weil der Stadt;4;Stuttgart
+Brühl;4;Cologne
+Leingarten;4;Stuttgart
+Castrop-Rauxel;4;Cologne
+Dieburg;4;Frankfurt
+Singen Hohentwiel;4;other
+Groß-Umstadt;4;Frankfurt
+Putzbrunn;4;Munich
+Marburg;4;Frankfurt
+Hagenbach;4;other
+Oranienburg;4;Berlin
+Sauerlach;4;Munich
+Kelheim;4;other
+Lorch;4;Stuttgart
+Neuried;4;other
+Königswinter;4;Cologne
+Hofheim am Taunus;4;Frankfurt
+Rösrath;4;Cologne
+Leer;4;other
+Sankt Augustin;4;Cologne
+Gröbenzell;4;Munich
+Olching;4;Munich
+Straubing;4;other
+Roetgen;4;Cologne
+Nordhorn;4;other
+Weiterstadt;4;Frankfurt
+Schweinfurt;4;other
+Trebbin;4;Berlin
+Zossen;4;Berlin
+Altenberge;4;other
+Langenhagen;4;other
+Neubiberg;4;Munich
+Rheinfelden Baden;4;other
+Ludwigshafen am Rhein;4;Frankfurt
+Nürtingen;4;Stuttgart
+Garbsen;4;other
+Planegg-Martinsried;4;Munich
+Kirchheim b.München;4;Munich
+Hameln;4;other
+Baierbrunn;4;Munich
+Lüdenscheid;4;Cologne
+Kleve;4;other
+Landsberg am Lech;4;Munich
+Ludwigshafen;4;Frankfurt
+Grasbrunn;4;Munich
+Fellbach;4;Stuttgart
+Eberswalde;4;Berlin
+Weimar;4;other
+Leutenbach;3;other
+Zirndorf;3;other
+Plauen;3;other
+Dossenheim;3;other
+Kelkheim (Taunus);3;Frankfurt
+Würselen;3;Cologne
+Blankenfelde-Mahlow;3;Berlin
+Unna;3;other
+Straelen;3;Cologne
+Ravensburg;3;other
+Haan;3;Cologne
+Bruckmühl;3;Munich
+Landau in der Pfalz;3;Mannheim
+Moers;3;Cologne
+Neunkirchen;3;other
+Emsdetten;3;other
+Wittlich;3;other
+Reinbek;3;Hamburg
+Langen (Hessen);3;Frankfurt
+Siegsdorf;3;other
+Heppenheim;3;Frankfurt
+Raubling;3;Munich
+Erftstadt;3;Cologne
+Brilon;3;other
+Bad Rappenau;3;Stuttgart
+Stephanskirchen;3;Munich
+Buchholz in der Nordheide;3;Hamburg
+Pirna;3;other
+Walsrode;3;other
+Unterschleißheim;3;Munich
+Dietzenbach;3;Frankfurt
+Weinheim;3;Frankfurt
+Gummersbach;3;Cologne
+Passau;3;other
+Lingen (Ems);3;other
+Schwäbisch Hall;3;Stuttgart
+Velbert;3;Cologne
+Hainburg;3;other
+Eggenstein-Leopoldshafen;3;Stuttgart
+Schriesheim;3;Frankfurt
+Rodgau;3;Frankfurt
+Oberursel (Taunus);3;Frankfurt
+Ottobrunn;3;Munich
+Wermelskirchen;3;Cologne
+Gelnhausen;3;Frankfurt
+Ganderkesee;3;other
+Mainz-Kastel;3;Frankfurt
+Balingen;3;Stuttgart
+Olpe;3;Cologne
+Waghäusel;3;Stuttgart
+Ludwigsfelde;3;Berlin
+Crailsheim;3;Stuttgart
+Denkendorf;3;Stuttgart
+Schloß Holte-Stukenbrock;3;other
+Rüsselsheim;3;Frankfurt
+Neustadt an der Weinstraße;3;Mannheim
+Ingelheim am Rhein;3;Frankfurt
+Bad Kreuznach;3;Frankfurt
+Bremerhaven;3;other
+Tutzing;3;Munich
+Gauting;3;Munich
+Vreden;3;other
+Wolfenbüttel;3;other
+Wismar;3;other
+Valley;3;other
+Dorsten;3;other
+Schwandorf;3;other
+Rheine;3;other
+Neufahrn b.Freising;3;Munich
+Sandhausen;3;Stuttgart
+Waldkirchen;3;other
+Ehingen Donau;3;Stuttgart
+Buxtehude;3;Hamburg
+Korschenbroich;3;Cologne
+Herzogenaurach;3;other
+Brandenburg an der Havel;3;Berlin
+Ibbenbüren;3;other
+Hohenbrunn;3;Munich
+Kriftel;3;Frankfurt
+Zwickau;3;Leipzig
+Albstadt;3;Stuttgart
+Burghausen;3;other
+Göppingen;3;Stuttgart
+Gera;3;Leipzig
+Neustadt;3;other
+Weinsberg;3;Stuttgart
+Rastatt;3;Stuttgart
+Schmallenberg;3;other
+Bad Salzuflen;3;other
+Geretsried;3;Munich
+Friedberg;3;Frankfurt
+Butzbach;3;Frankfurt
+Kabelsketal OT Dölbau;3;other
+Bad Tölz;3;Munich
+Bad Hersfeld;3;other
+Landshut;3;Munich
+Pfinztal;3;Stuttgart
+Friedrichsdorf;3;Frankfurt
+Sendenhorst;3;other
+Büren;3;other
+Overath;3;Cologne
+Neuenburg am Rhein;3;other
+Gmund a.Tegernsee;3;Munich
+Ammerbuch;3;Stuttgart
+Pfungstadt;3;Frankfurt
+Bernau bei Berlin;2;Berlin
+Bernau a.Chiemsee;2;Munich
+Espelkamp;2;other
+Hanau;2;Frankfurt
+Limbach-Oberfrohna;2;Leipzig
+Gronau;2;other
+Karlsbad;2;Stuttgart
+Wegberg;2;Cologne
+Bruchköbel;2;Frankfurt
+Denzlingen;2;other
+Simmelsdorf;2;other
+Gladbeck;2;Cologne
+Mörfelden-Walldorf;2;Frankfurt
+Gerlingen;2;Stuttgart
+Issum;2;Cologne
+Soest;2;other
+Mainhausen;2;Frankfurt
+Wesseling;2;Cologne
+Kuppenheim;2;Stuttgart
+Erding;2;Munich
+Backnang;2;Stuttgart
+Bad Oeynhausen;2;other
+Kitzingen;2;other
+Wülfrath;2;Cologne
+Heuchelheim;2;Frankfurt
+Grafing b.München;2;Munich
+Jülich;2;Cologne
+Jesteburg;2;Hamburg
+Saarburg;2;other
+Werder (Havel);2;Berlin
+Baesweiler;2;Cologne
+Penzberg;2;Munich
+Eberbach;2;other
+Haibach;2;Frankfurt
+Überherrn;2;other
+Seelze;2;other
+Rutesheim;2;Stuttgart
+Menden;2;other
+Pinneberg;2;Hamburg
+Holzgerlingen;2;Stuttgart
+Achim;2;other
+Lünen;2;other
+Haldensleben;2;other
+Eching;2;Munich
+Marloffstein;2;other
+Ammersbek;2;Hamburg
+Bad Abbach;2;other
+Bad Blankenburg;2;other
+Neukirchen/Erzgeb;2;Leipzig
+Flintbek;2;Hamburg
+Bickenbach;2;other
+Waldbronn;2;Stuttgart
+Lörrach;2;other
+Schwetzingen;2;Mannheim
+Höchstadt a.d.Aisch;2;other
+Aschheim;2;Munich
+Visselhövede;2;Hamburg
+Bad Münstereifel;2;Cologne
+Klein-Winternheim;2;Frankfurt
+Frickenhausen;2;Stuttgart
+Garmisch-Partenkirchen;2;other
+Mühlhausen;2;other
+Furtwangen im Schwarzwald;2;other
+Kamp-Lintfort;2;Cologne
+Freigericht;2;Frankfurt
+Gevelsberg;2;Cologne
+Herten;2;Cologne
+Glonn;2;Munich
+Rain;2;Munich
+Emden;2;other
+Stutensee;2;Stuttgart
+Gescher;2;other
+Schmalkalden;2;other
+Gaimersheim;2;Munich
+Glienicke/Nordbahn;2;Berlin
+Wangen im Allgäu;2;other
+Vechta;2;other
+Nahe;2;Hamburg
+Ochtendung;2;Cologne
+Schwaig b. Nürnberg;2;other
+Ahlen;2;other
+Lindau (Bodensee);2;other
+Dielheim;2;Stuttgart
+Schwarzenbruck;2;other
+Mettenheim;2;Frankfurt
+Verl;2;other
+Hambrücken;2;Stuttgart
+Ehningen;2;Stuttgart
+Speyer;2;Mannheim
+Lahr;2;other
+Eschwege;2;other
+Kenzingen;2;other
+Aurich;2;other
+Lichtenau;2;other
+Zorneding;2;Munich
+Kümmersbruck;2;other
+Büsum;2;other
+Markkleeberg;2;Leipzig
+Lich;2;Frankfurt
+Bovenden;2;other
+Höhenkirchen-Siegertsbrunn;2;Munich
+Kranenburg;2;other
+Schönwalde-Glien;2;Berlin
+Rottendorf;2;other
+Korntal-Münchingen;2;Stuttgart
+Garching;2;Munich
+Wettenberg;2;Frankfurt
+Pliezhausen;2;Stuttgart
+Rellingen;2;Hamburg
+Biberach an der Riß;2;other
+Tegernsee;2;Munich
+Stockach;2;other
+Marbach am Neckar;2;Stuttgart
+Altdorf;2;other
+Plankstadt;2;Mannheim
+Bad Rothenfelde;2;other
+Herne;2;Cologne
+Sachsenheim;2;Stuttgart
+Sulzfeld;2;other
+Kiefersfelden;2;Munich
+Hemmingen;2;other
+Kirchheim b. München;2;Munich
+Wenden;2;Cologne
+Feucht;2;other
+Grünstadt;2;Frankfurt
+Dormagen;2;Cologne
+Cuxhaven;2;Hamburg
+Schlier;2;other
+Friedberg (Hessen);2;Frankfurt
+Salzgitter;2;other
+Metzingen;2;other
+Grassau;2;Munich
+Lübs;2;other
+Pocking;2;other
+Spaichingen;2;other
+Oberschleißheim;2;Munich
+Kolbermoor;2;Munich
+Emsbüren;2;other
+Schöneck;2;other
+Odenthal;2;Cologne
+Bad Schönborn;2;Stuttgart
+Kranzberg;2;other
+Eichenau;2;Munich
+Detmold;2;other
+Schwarzenfeld;2;other
+Bad Wiessee;2;Munich
+Achstetten;2;Stuttgart
+Bad Nauheim;2;Frankfurt
+Euskirchen;2;Cologne
+Maintal;2;Frankfurt
+Mössingen;2;Stuttgart
+Zellingen;2;other
+Bönningstedt;2;Hamburg
+Bernau;2;Berlin
+Tegernheim;2;other
+Altenstadt;2;Munich
+Rödermark;2;Frankfurt
+Rheinzabern;2;Stuttgart
+Geestland;2;other
+Bad Wörishofen;2;Munich
+Bornheim;2;Cologne
+Aschau i.Chiemgau;2;Munich
+Hörstel;2;other
+Goch;2;other
+Bad Wurzach;2;other
+Türkheim;2;other
+Radeberg;2;other
+Lemgo;2;other
+Waiblingen;2;Stuttgart
+Achern;2;other
+Pullach i. Isartal;2;Munich
+Krailling;2;Munich
+Haimhausen;2;Munich
+Reken;2;other
+Telgte;2;other
+Wendlingen am Neckar;2;Stuttgart
+Ratzeburg;2;Hamburg
+Rohrdorf;2;Munich
+Otterndorf;2;Hamburg
+Ahrensburg;2;Hamburg
+Bad Kissingen;2;other
+Werne;2;other
+Witzenhausen;2;other
+Verden;2;other
+Stadtlohn;2;other
+Strausberg;2;Berlin
+Lichtenfels;2;other
+Nittendorf;2;other
+Wietmarschen;2;other
+Illertissen;2;other
+Bad Heilbrunn;2;Munich
+Neubeuern;2;Munich
+Kirchzarten;2;other
+Eppstein;2;Frankfurt
+Handewitt;2;other
+Harsefeld;2;Hamburg
+Erkelenz;2;Cologne
+Fürstenfeldbruck;2;Munich
+Marktoberdorf;2;other
+Oelde;2;other
+Frankfurt / Oder;2;other
+Neuhausen auf den Fildern;2;Stuttgart
+Roßdorf;2;other
+Bühl;2;other
+Georgsmarienhütte;2;other
+Stralsund;2;other
+Rüdesheim am Rhein;2;Frankfurt
+Müllheim;2;other
+Engelskirchen;2;Cologne
+Neuenstadt am Kocher;2;Stuttgart
+Tholey;2;other
+Obersulm;2;Stuttgart
+Auetal;2;other
+Hechingen;2;Stuttgart
+Enge-Sande;2;other
+Empfingen;2;Stuttgart
+Ditzingen;2;Stuttgart
+Feldkirchen;2;other
+Karlsdorf-Neuthard;2;Stuttgart
+Wernigerode;2;other
+Filderstadt;2;Stuttgart
+Burgwedel;2;other
+Roding;2;other
+Neusäß;2;Munich
+Korbach;2;other
+Gauting-Stockdorf;2;Munich
+Barleben;2;other
+Wetzlar;2;Frankfurt
+Laatzen;2;other
+Quakenbrück;2;other
+Weinstadt;2;Stuttgart
+Olsberg;2;other
+Hambühren;2;other
+Schwelm;2;Cologne
+Überlingen;2;other
+Henstedt-Ulzburg;2;Hamburg
+Steinfurt;2;other
+Engen;2;other
+Taunusstein;2;Frankfurt
+Remscheid;2;Cologne
+Spremberg;2;other
+Thuine;2;other
+Neunkirchen-Seelscheid;2;Cologne
+Greiz;2;Leipzig
+Mauer;2;Stuttgart
+Breisach am Rhein;2;other
+Rückersdorf;2;other
+Pirmasens;2;Mannheim
+Dörpen;2;other
+Haldenwang;2;other
+Cham;2;other
+Laupheim;2;Stuttgart
+Ennepetal;2;Cologne
+Garching b. München;1;Munich
+Lam;1;other
+Greifenberg;1;Munich
+Eppishausen;1;Munich
+Kappelrodeck;1;other
+Langerringen;1;Munich
+Burgwald;1;other
+Bad Bellingen;1;other
+Selfkant-Tüddern;1;Cologne
+Emmerich am Rhein;1;other
+Schonach im Schwarzwald;1;other
+Hausham;1;Munich
+Xanten;1;other
+Südliches Anhalt OT Gröbzig;1;other
+Winhöring;1;other
+Rielasingen-Worblingen;1;other
+Haßfurt;1;other
+Gaißach;1;Munich
+Riethnordhausen;1;other
+Kirchroth;1;other
+Haag i.OB;1;Munich
+Eberstadt;1;Stuttgart
+Ellhofen;1;Stuttgart
+Neuendettelsau;1;other
+Meßkirch;1;other
+Neunkirchen a. Sand;1;other
+Tönisvorst;1;Cologne
+Gäufelden;1;Stuttgart
+Winterbach;1;Frankfurt
+Lilienthal;1;other
+Hagen;1;Cologne
+Hohenmölsen;1;Leipzig
+Crottendorf;1;other
+Meckenbeuren;1;other
+Schefflenz;1;Stuttgart
+Reinfeld (Holstein);1;Hamburg
+Altlandsberg;1;Berlin
+Hoppstädten-Weiersbach;1;other
+Buchholz;1;Hamburg
+Stockelsdorf;1;Hamburg
+Wiesloch;1;Stuttgart
+Borgholzhausen;1;other
+Teisendorf;1;other
+Hohenbrunn-Riemerling;1;Munich
+Schaufling;1;other
+Bad Lauterberg im Harz;1;other
+Neumünster;1;Hamburg
+Görlitz;1;other
+Gotha;1;other
+Wildberg;1;other
+Königsfeld im Schwarzwald;1;other
+Melle;1;other
+Traunreut;1;Munich
+Limburg-Eschhofen;1;Frankfurt
+Wohltorf;1;Hamburg
+Bautzen;1;other
+Schaafheim;1;Frankfurt
+Sankt Peter-Ording;1;other
+Diepholz;1;other
+Schönwald;1;other
+Niederkirchen;1;Mannheim
+Siek;1;Hamburg
+Schwalbach am Taunus;1;Frankfurt
+Bergneustadt;1;Cologne
+Schramberg;1;other
+Eggenfelden;1;other
+Schonungen OT Hausen;1;other
+Mengerskirchen;1;Frankfurt
+Osthofen;1;other
+Scharbeutz;1;Hamburg
+Ölbronn-Dürrn;1;Stuttgart
+Assamstadt;1;other
+Radevormwald;1;Cologne
+Pfullingen;1;Stuttgart
+Ebersberg;1;Munich
+Blomberg;1;other
+Bad Kötzting;1;other
+Lupburg;1;other
+Ebersbach;1;other
+Reichenbach an der Fils;1;Stuttgart
+Gammertingen;1;Stuttgart
+Bobenheim-Roxheim;1;Frankfurt
+Stauchitz/OT Panitz;1;other
+Lütjensee;1;Hamburg
+Immenstaad am Bodensee;1;other
+Jersbek;1;Hamburg
+Montabaur;1;Frankfurt
+Altötting;1;other
+Flein;1;Stuttgart
+Wettstetten;1;Munich
+Grafenrheinfeld;1;other
+Bernried am Starnberger See;1;Munich
+Cochem;1;other
+Eurasburg;1;Munich
+Aying;1;Munich
+Seeshaupt;1;Munich
+Üchtelhausen;1;other
+Ketsch;1;Mannheim
+Erzhausen;1;Frankfurt
+Deutsch Evern;1;Hamburg
+Maxdorf;1;Frankfurt
+Gerstetten;1;Stuttgart
+Hagen im Bremischen;1;other
+Wildeck-Bosserode;1;other
+Niederfischbach;1;Cologne
+Kaltenkirchen;1;Hamburg
+Hilchenbach;1;other
+Nördlingen;1;other
+Allensbach;1;other
+Reinheim;1;Frankfurt
+Burrweiler;1;Mannheim
+Jork;1;Hamburg
+Möhrendorf;1;other
+Deckenpfronn;1;Stuttgart
+63571 Gelnhauesn;1;other
+Weidenstetten;1;Stuttgart
+Eltville am Rhein;1;Frankfurt
+Oppenheim;1;Frankfurt
+Anzing;1;Munich
+Apfeldorf;1;Munich
+Kapfelberg;1;other
+Winterberg;1;other
+Utting am Ammersee;1;Munich
+Thurnau;1;other
+Kirchheim;1;other
+Halstenbek;1;Hamburg
+Wörnitz;1;other
+Osann-Monzel;1;other
+Molzahn;1;Hamburg
+Weingarten Baden;1;Stuttgart
+Gifhorn;1;other
+Pleiskirchen;1;Munich
+Nesselwang;1;other
+Vechta-Spreda;1;other
+Boksee;1;Hamburg
+Aspach;1;other
+Seligenstadt;1;Frankfurt
+Epfendorf;1;Stuttgart
+Schwaigern, OT Massenbach;1;other
+Bad König;1;Frankfurt
+Bischofswiesen;1;other
+Vaihingen an der Enz;1;Stuttgart
+Großschirma;1;Leipzig
+Niederfell;1;other
+Dornhan;1;Stuttgart
+Lennestadt;1;Cologne
+Asbach;1;Cologne
+Sailauf;1;Frankfurt
+Bad Doberan;1;other
+Zeven;1;Hamburg
+Versmold;1;other
+Löhne;1;other
+Korb;1;Stuttgart
+Borchen;1;other
+Bad Waldsee;1;other
+Karlsfeld;1;Munich
+Freilassing;1;other
+Kreuztal;1;Cologne
+Wiesbaum;1;Cologne
+Friedrichsthal;1;other
+Wildeshausen;1;other
+Hanstedt;1;Hamburg
+Umkirch;1;other
+Hardthausen am Kocher;1;Stuttgart
+Mering;1;Munich
+Oppenweiler;1;Stuttgart
+Falkenberg/Elster;1;Leipzig
+Dienheim;1;Frankfurt
+Berchtesgaden;1;other
+Spelle;1;other
+Burg;1;other
+Kell am See;1;other
+Raguhn-Jeßnitz OT Raguhn;1;other
+St. Georgen im Schwarzwald;1;other
+Elmshorn;1;Hamburg
+Michendorf;1;Berlin
+Rottweil;1;Stuttgart
+Mainz-Kostheim;1;Frankfurt
+Bad Bramstedt;1;Hamburg
+Wardenburg;1;other
+Ayl;1;other
+Trautskirchen;1;other
+Grimma OT Großbardau;1;other
+Hagen a.T.W;1;other
+Hainewalde;1;other
+Chieming;1;Munich
+Ramsau b.Berchtesgaden;1;other
+Flacht;1;Frankfurt
+Schweitenkirchen;1;Munich
+Lingen;1;other
+Sulzberg;1;other
+Fürstenau;1;other
+Jagstzell;1;Stuttgart
+Kösching;1;Munich
+Wollbach;1;other
+Obertshausen;1;Frankfurt
+Allershausen;1;Munich
+Weil;1;Munich
+Zetel;1;other
+Sonthofen;1;other
+Nienstädt;1;other
+Oberstaufen;1;other
+Renningen;1;Stuttgart
+Trebur-Astheim;1;Frankfurt
+Grefrath;1;Cologne
+Reute;1;other
+Stockstadt am Rhein;1;Frankfurt
+Harrislee;1;other
+Rüdersdorf bei Berlin OT Herzfelde;1;other
+Schäftlarn;1;Munich
+Haßloch;1;Mannheim
+Berkheim;1;other
+Burtenbach;1;other
+Esens;1;other
+Rümmingen;1;other
+Wiesentheid;1;other
+Kaarst;1;Cologne
+Meppen;1;other
+Furth;1;Munich
+Langballig;1;other
+Grosselfingen;1;Stuttgart
+Biblis-Wattenheim;1;Frankfurt
+Markgröningen;1;Stuttgart
+Bad Münder;1;other
+Hallbergmoos;1;Munich
+Olfen;1;other
+Beelitz;1;Berlin
+Sigmarszell;1;other
+Werlte;1;other
+Börnsen;1;Hamburg
+Lohra;1;Frankfurt
+Eppelsheim;1;Frankfurt
+Großaitingen;1;Munich
+Wilhelmsdorf;1;other
+Dummerstorf OT Beselin;1;other
+Berg b.Neumarkt i.d.OPf;1;other
+Kressbronn am Bodensee;1;other
+Föhren;1;other
+Eichwalde;1;Berlin
+Bammental;1;Stuttgart
+Ehringshausen;1;Frankfurt
+Visbek;1;other
+Kürten;1;Cologne
+Weißenbrunn;1;other
+Kabelsketal;1;Leipzig
+Gladenbach;1;Frankfurt
+Hirzenhain (Wetteraukreis;1;Frankfurt
+Andechs;1;Munich
+Bad Wünnenberg;1;other
+Heldenstein;1;Munich
+Hirschberg;1;other
+Egestorf (Nordheide);1;Hamburg
+Adelshofen;1;other
+Lauf a.d. Pegnitz;1;other
+Tuttlingen;1;other
+Gößnitz;1;Leipzig
+Sprockhövel;1;Cologne
+Hockenheim;1;Stuttgart
+Taucha;1;Leipzig
+Handrup;1;other
+Stadtsteinach;1;other
+Mühlenbecker Land OT Schönfließ;1;other
+Oberammergau;1;Munich
+Parkstein;1;other
+Marzling;1;Munich
+Irsch;1;other
+Burgthann;1;other
+Mogendorf;1;Cologne
+Riedenheim;1;other
+Geldern;1;other
+Stetten am kalten Markt;1;Stuttgart
+Weil im Schönbuch;1;Stuttgart
+Forchheim;1;other
+Algermissen;1;other
+Bretten;1;other
+Miesbach;1;Munich
+Zella-Mehlis;1;other
+Kandern;1;other
+Brieselang;1;Berlin
+Meinerzhagen;1;Cologne
+Stammham;1;other
+Bad Fallingbostel;1;Hamburg
+Dunningen;1;other
+Bissendorf;1;other
+Schwielowsee;1;Berlin
+Schmitten;1;Frankfurt
+Seevetal;1;Hamburg
+Waldbüttelbrunn;1;other
+Babenhausen;1;Frankfurt
+Twistetal;1;other
+Höxter;1;other
+Heidenheim an der Brenz;1;Stuttgart
+Linz;1;other
+Holdorf;1;other
+Ruhmannsfelden;1;other
+Seelingstädt;1;Leipzig
+Hilders;1;other
+Schäftlarn-Hohenschäftlarn;1;Munich
+Altenberg;1;other
+Oberstdorf;1;other
+Moosinning;1;Munich
+Zinna;1;other
+Hohwacht;1;other
+Tittling;1;other
+Gütenbach;1;other
+Dörth;1;Frankfurt
+Westerstede;1;other
+Nußloch;1;Stuttgart
+Saaldorf-Surheim;1;other
+Everswinkel;1;other
+Hahnbach;1;other
+Rieden;1;Cologne
+Leimen;1;Stuttgart
+Planegg/OT Martinsried;1;other
+Gieleroth;1;Cologne
+Inden;1;Cologne
+Attendorn;1;Cologne
+Nonnenhorn;1;other
+Vaterstetten-Weißenfeld;1;Munich
+Gernsheim;1;Frankfurt
+Ernsgaden;1;Munich
+Erbach;1;Stuttgart
+Friesenheim;1;other
+Rotenburg;1;Hamburg
+Völklingen;1;other
+Haslach im Kinzigtal;1;other
+Seefeld;1;other
+Geltendorf;1;Munich
+Stendal;1;other
+Dummerstorf OT Kavelstorf;1;other
+Seeheim-Jugenheim;1;Frankfurt
+Sandersdorf-Brehna;1;Leipzig
+Königsbrunn;1;Munich
+Ahaus;1;other
+Garching bei München;1;Munich
+Uhldingen-Mühlhofen;1;other
+Hattingen;1;other
+Oberhaching-Furth;1;Munich
+Mittenwalde;1;Berlin
+Weil am Rhein;1;other
+Freudenstadt;1;Stuttgart
+Heek;1;other
+Lehre;1;other
+Peiting;1;Munich
+Viersen;1;Cologne
+Bisingen;1;Stuttgart
+Runding;1;other
+Oederquart;1;Hamburg
+Valley-Oberlaindern;1;Munich
+Nebelschütz;1;other
+Bad Nenndorf;1;other
+Wäschenbeuren;1;Stuttgart
+Puchheim;1;Munich
+Amtsberg OT Wilischthal;1;other
+Ilshofen;1;Stuttgart
+Löwenberger Land;1;Berlin
+Pleckhausen;1;Cologne
+Baiern-Antholing;1;Munich
+Deggenhausertal;1;other
+Neckartenzlingen;1;Stuttgart
+Timmendorfer Strand;1;Hamburg
+Borstel-Hohenraden;1;Hamburg
+Baar-Ebenhausen;1;Munich
+Lalling;1;other
+Trossingen;1;other
+Greven;1;other
+Hodenhagen;1;other
+Donaueschingen;1;other
+Wiehl;1;Cologne
+Sittensen;1;Hamburg
+Kröv;1;other
+Hessisch Oldendorf;1;other
+Zeuthen;1;Berlin
+Warstein;1;other
+Königshain-Wiederau OT Königshain;1;other
+Dießen am Ammersee;1;Munich
+Reinfeld;1;Hamburg
+Dußlingen;1;Stuttgart
+Quedlinburg;1;other
+Rosenfeld;1;other
+Petersaurach;1;other
+Wittlich-Wengerohr;1;other
+Eschelbronn;1;Stuttgart
+Aiterhofen;1;other
+Erwitte;1;other
+Edewecht;1;other
+Sprendlingen;1;Frankfurt
+Wendelsheim;1;Frankfurt
+Teunz;1;other
+Zimmern ob Rottweil;1;other
+Weißensberg;1;other
+Alling;1;Munich
+Thum OT Jahnsbach;1;other
+Lauf a.d.Pegnitz;1;other
+Schlitz;1;other
+Badenweiler;1;other
+Weihenzell;1;other
+Rheinbach;1;Cologne
+Mandelbachtal;1;other
+Vierkirchen;1;other
+Oer-Erkenschwick;1;other
+Buttenheim;1;other
+Dornstadt;1;Stuttgart
+Wald;1;other
+Treuchtlingen;1;other
+Siblin;1;other
+Schömberg;1;Stuttgart
+Scheyern;1;Munich
+Ortenberg;1;Frankfurt
+Schwindegg;1;Munich
+Waakirchen;1;Munich
+Weilheim i.OB;1;Munich
+Landesbergen;1;other
+Pluwig;1;other
+Meersburg;1;other
+Biedenkopf;1;other
+Thalheim/Erzgeb;1;Leipzig
+Alsdorf;1;other
+Stockdorf;1;Munich
+Enger;1;other
+Wurster Nordseeküste;1;other
+Holm;1;other
+Ahnatal;1;other
+Zolling;1;Munich
+Wölfersheim;1;Frankfurt
+Baunach;1;other
+Bad Salzdetfurth;1;other
+Bad Säckingen;1;other
+Pollenfeld-Preith;1;other
+Hennef;1;Cologne
+Straubenhardt;1;Stuttgart
+Birkenwerder;1;Berlin
+Porta Westfalica;1;other
+Dreieich;1;Frankfurt
+Norheim;1;Frankfurt
+Hemau;1;other
+Herrsching a. Ammersee;1;Munich
+Aßling;1;other
+Schermbeck;1;other
+Steinheim an der Murr;1;Stuttgart
+Unterwellenborn OT Birkigt;1;other
+Gomaringen;1;Stuttgart
+Limburgerhof;1;Frankfurt
+Mücke;1;Frankfurt
+Römerberg;1;Stuttgart
+Markdorf;1;other
+Train;1;Munich
+Schkeuditz;1;Leipzig
+Belm;1;other
+Mülsen;1;Leipzig
+Bischheim;1;other
+Gädheim;1;other
+Hövelhof;1;other
+Burgdorf;1;other
+Oering;1;Hamburg
+Neuenkirchen;1;other
+Dorfprozelten;1;Frankfurt
+Schwarzenberg/Erzgeb;1;other
+Panitz;1;Leipzig
+Bad Wildbad;1;Stuttgart
+Werl;1;other
+Kerpen;1;Cologne
+Rattenkirchen;1;Munich
+Holzwickede;1;Cologne
+Argenbühl;1;other
+Bad Schwartau;1;Hamburg
+Schönebeck (Elbe);1;other
+Röttenbach;1;other
+Herdecke;1;Cologne
+Rott a.Inn;1;Munich
+Schenefeld;1;Hamburg
+Saarwellingen;1;other
+Marl;1;other
+Lahntal;1;other
+Lorsch;1;Frankfurt
+Mayen;1;Cologne
+Buchholz i.d.N;1;Hamburg
+Dohren;1;other
+Wittenburg;1;Hamburg
+Kehl;1;other
+Pirna OT Sonnenstein;1;other
+Elchesheim-Illingen;1;Stuttgart
+Reinsberg OT Hirschfeld;1;other
+Murnau a.Staffelsee;1;Munich
+Leopoldshöhe;1;other
+Geesthacht;1;Hamburg
+Magdala;1;other
+Ötigheim;1;Stuttgart
+Finning;1;Munich
+Hemhofen;1;other
+Papendorf OT Niendorf;1;other
+Dornstetten;1;Stuttgart
+Steinbach (Taunus);1;Frankfurt
+Goslar;1;other
+Roßhaupten;1;other
+Wüstenrot;1;Stuttgart
+Mudersbach;1;Cologne
+Perl-Nennig;1;other
+Südliches Anhalt OT Hinsdorf;1;other
+Nienwohld;1;Hamburg
+Steinfeld-Mühlen;1;other
+Kalchreuth;1;other
+Schifferstadt;1;Mannheim
+Salching;1;other
+Wörrstadt;1;Frankfurt
+Hornberg;1;other
+Erbendorf;1;other
+Lutherstadt Eisleben;1;Leipzig
+Münsingen;1;other
+Cleebronn;1;Stuttgart
+Kayhude;1;Hamburg
+Illingen;1;other
+Loßburg;1;Stuttgart
+Seehausen a. Staffelsee;1;Munich
+Falkenstein/Harz OT Ermsleben;1;other
+Eppingen;1;other
+Rötgesbüttel;1;other
+Bad Pyrmont;1;other
+Waldkraiburg;1;Munich
+Hochheim am Main;1;Frankfurt
+Beimerstetten;1;Stuttgart
+Anklam;1;other
+Hellenthal;1;Cologne
+Küsten;1;other
+Ofterdingen;1;Stuttgart
+Wustermark;1;Berlin
+Scheden;1;other
+Tellig;1;other
+Wittnau;1;other
+Schrobenhausen;1;Munich
+Eilenburg;1;Leipzig
+Großenwiehe;1;other
+Warburg;1;other
+Mundelsheim;1;Stuttgart
+Brechen;1;Frankfurt
+Pfarrkirchen;1;other
+Gössitz;1;other
+Neubrandenburg;1;other
+Friedland;1;other
+Schnaittach;1;other
+Warngau;1;Munich
+Altenbeken;1;other
+Grafschaft-Lantershofen;1;Cologne
+Ascheberg;1;Hamburg
+Meddewade;1;Hamburg
+Ahrensfelde;1;Berlin
+Eschershausen;1;other
+Baldham;1;Munich
+Brunnthal;1;Munich
+Lappersdorf;1;other
+Wörth a.d.Donau;1;other
+Osterhofen;1;other
+Rohr;1;other
+Ummendorf;1;other
+Werdau;1;Leipzig
+Niederbergkirchen;1;Munich
+Wannweil;1;Stuttgart
+Plüderhausen;1;Stuttgart
+Kronshagen;1;other
+Nieklitz;1;Hamburg
+Einhausen;1;other
+Geratal OT Geschwenda;1;other
+Hersbruck;1;other
+Grömitz;1;other
+Varel;1;other
+Trochtelfingen;1;Stuttgart
+Töging a.Inn;1;Munich
+Groß-Zimmern;1;Frankfurt
+Griesheim;1;other
+Damme;1;other
+Thalmässing;1;other
+Gommern;1;other
+Nehmten;1;Hamburg
+Barbing;1;other
+Buchenbach;1;other
+Weilheim an der Teck;1;Stuttgart
+Harxheim;1;Frankfurt
+Bingen;1;Frankfurt
+Nersingen;1;Stuttgart
+Warngau-Oberwarngau;1;Munich
+Buchloe;1;Munich
+Hückelhoven;1;Cologne
+Zweibrücken;1;other
+Gau-Odernheim;1;Frankfurt
+Mittweida;1;Leipzig
+Bad Neuenahr-Ahrweiler;1;Cologne
+Stolzenau;1;other
+Marktredwitz;1;other
+Laage;1;other
+Bernburg (Saale);1;Leipzig
+Kremmen OT Sommerfeld;1;other
+Kränzlin;1;Berlin
+Schiffweiler;1;other
+Weyarn;1;Munich
+Steinhöring;1;Munich
+Heimbach;1;other
+Zschopau;1;other
+Mühldorf a.Inn;1;Munich
+Hausen ob Verena;1;other
+Eckental;1;other
+Nümbrecht;1;Cologne
+Bingen am Rhein;1;Frankfurt
+Leutkirch im Allgäu;1;other
+Dettingen an der Erms;1;Stuttgart
+Faulbach;1;Frankfurt
+Mescherin;1;other
+Coswig;1;Leipzig
+Halver;1;Cologne
+Ainring;1;other
+Steinberg;1;other
+Bad Homburg;1;Frankfurt
+Celle;1;other
+Großröhrsdorf;1;other
+Egelsbach;1;Frankfurt
+Fraunberg;1;Munich
+Waldems;1;Frankfurt
+Woltersdorf;1;Hamburg
+Döbeln;1;Leipzig
+Güstrow;1;other
+Fischen i. Allgäu;1;other
+Aichhalden;1;other
+Hohen Neuendorf;1;Berlin
+Brackenheim;1;Stuttgart
+Wahlstedt;1;Hamburg
+Ronnenberg;1;other
+Wettringen;1;other
+Bexbach;1;other
+Donaustauf;1;other
+Reußenköge;1;other
+Bersteland OT Niewitz;1;other
+Buttenwiesen;1;other
+Osterrönfeld;1;other
+Banzkow;1;other
+Wittmar;1;other
+Angern;1;other
+Groß-Gerau;1;Frankfurt
+Schleswig;1;other
+Petersberg;1;Mannheim
+Bottrop;1;Cologne
+Hohenbrunn/ Riemerling;1;Munich
+Rottenburg am Neckar;1;Stuttgart
+Waldachtal;1;Stuttgart
+Schmelz;1;other
+Bad Orb;1;Frankfurt
+Datteln;1;other
+Talheim;1;Stuttgart
+Bergkamen;1;other
+Schopfheim;1;other
+Volkertshausen;1;other
+Oederan OT Breitenau;1;Leipzig
+Tamm;1;Stuttgart
+Mitterteich;1;other
+Nossen;1;Leipzig
+Weitnau;1;other
+Einbeck;1;other
+Pockau-Lengefeld;1;other
+Daun;1;other
+Mühlheim;1;Stuttgart
+Glauchau;1;Leipzig
+Gudensberg;1;other
+Essenheim;1;Frankfurt
+Elz;1;Frankfurt
+Ponitz;1;Leipzig
+Karlstein am Main;1;Frankfurt
+Fichtenau;1;other
+Winnweiler;1;Mannheim
+Wang;1;Munich
+Friesenried;1;other
+Geseke;1;other
+Kemnath;1;other
+Vöhringen;1;other
+Waldenburg;1;other
+Wartenberg;1;Berlin
+Hergensweiler;1;other
+Blumberg;1;other
+Stuhr;1;other
+Bucha OT Schorba;1;other
+Gottmadingen;1;other
+Baiersbronn;1;Stuttgart
+Langenbach;1;Munich
+Weinböhla;1;other
+Pansdorf;1;other
+Schleusingen;1;other
+Treis-Karden;1;other
+Grafrath;1;Munich
+Simbach a. Inn;1;other
+Gehrden;1;other
+Dahlenburg;1;Hamburg
+Hennickendorf b. Strausberg;1;other
+Soltau;1;Hamburg
+Wunstorf;1;other
+Bad Oldesloe;1;Hamburg
+Siefersheim;1;Frankfurt
+Wertingen;1;other
+Heiligenberg;1;other
+Feuchtwangen;1;other
+Bad Mergentheim;1;other
+Namborn-Roschberg;1;other
+Oberkochen;1;Stuttgart
+Oberschneiding;1;other
+Bietigheim;1;Stuttgart
+Gmund a.Tergernsee;1;other
+Sande;1;other
+Blaubeuren;1;Stuttgart
+Waldenbuch;1;Stuttgart
+Denkingen;1;other
+Regenstauf;1;other
+Hüttenberg;1;other
+Oranienburg OT Zehlendorf;1;other
+Wulften;1;other
+Kernen im Remstal;1;Stuttgart
+Eslohe;1;other
+Ochtrup;1;other
+Unterpleichfeld;1;other
+Gottenheim;1;other
+Swisttal;1;Cologne
+Pleß;1;other
+Schönenberg-Kübelberg;1;Mannheim
+Wellheim-Konstein;1;other
+Eppelheim;1;Frankfurt
+Walzbachtal;1;Stuttgart
+Volkach;1;other
+Freital;1;other
+Schwabach;1;other
+Rödental;1;other
+Andernach;1;Cologne
+Glinde;1;Hamburg
+Dürrwangen;1;other
+Wennigsen;1;other
+Heideck;1;other
+Kelberg;1;Cologne
+Vilshofen an der Donau;1;other
+Aitrang;1;other
+Saarbrücken-Jägersfreude;1;other
+Allendorf (Lumda);1;Frankfurt
+Leichlingen;1;Cologne
+Schönau-Berzdorf;1;other
+Schwebheim;1;other
+Wolfsburg;1;other
+Dachsbach;1;other
+Frankenthal;1;Frankfurt
+Glücksburg;1;other
+Neckargemünd;1;Frankfurt
+Dillingen a.d.Donau;1;other
+Kirchhain;1;other
+Lienen;1;other
+Vogt;1;other
+Ubstadt-Weiher;1;Stuttgart
+Dudenhofen;1;Mannheim
+Freudental;1;Stuttgart
+Gärtringen;1;Stuttgart
+Marschacht;1;Hamburg
+Calvörde;1;other
+Riß;1;other
+Schwalbach;1;Frankfurt
+Fischbachau-Greisbach;1;Munich
+Nordstemmen;1;other
+Wiesenbronn;1;other
+Oerlinghausen;1;other
+Hartenholm;1;Hamburg
+Alt Tellin OT Siedenbüssow;1;other
+Martinroda OT Angelroda;1;other
+Kottgeisering;1;Munich
+Todesfelde;1;Hamburg
+Vettelschoß;1;Cologne
+Erfurt OT Waltersleben;1;other
+Wunsiedel;1;other
+Zeitlarn;1;other
+Wörth am Rhein;1;Stuttgart
+Meitingen;1;Munich
+Forst;1;other
+Fischbach;1;other
+Plattling;1;other
+Pollenfeld;1;other
+Höchberg;1;other
+Kißlegg;1;other
+Stein;1;other
+Mönsheim;1;Stuttgart
+Ahlden;1;other
+Trebur;1;Frankfurt
+Niddatal;1;Frankfurt
+Uttenreuth;1;other
+Bergkirchen;1;Munich
+Oedheim;1;Stuttgart
+Oberdischingen;1;Stuttgart
+Pfaffenhofen a. d. Ilm;1;Munich
+Schwabhausen;1;other
+Cottbus OT Kiekebusch;1;other
+Nordhalben;1;other
+Schwerte;1;Cologne
+Vallendar;1;Cologne
+Leck;1;other
+Meiningen;1;other
+Salem;1;other
+Kirchlinteln;1;other
+Ebhausen;1;Stuttgart
+Margetshöchheim;1;other
+Blaustein;1;Stuttgart
+Dischingen;1;other
+Bendorf;1;other
+Lützen;1;Leipzig
+Danndorf;1;other
+Baiern;1;other
+Ruppichteroth;1;Cologne
+Langenzenn;1;other
+Salzhausen;1;Hamburg
+Emmelshausen;1;other
+Pfeffelbach;1;other
+Hetzles;1;other
+Oststeinbek;1;Hamburg
+Kuddewörde;1;Hamburg
+Georgensgmünd;1;other
+Wolfertschwenden;1;other
+Mertingen;1;other
+Füssen;1;other
+Strullendorf;1;other
+Liederbach;1;Frankfurt
+Kirchseeon;1;Munich
+St. Michaelisdonn;1;Hamburg
+Burgoberbach;1;other
+Michelstadt;1;Frankfurt
+Reichenau;1;other
+Bad Endorf;1;Munich
+Alfeld (Leine);1;other
+Freiberg am Neckar;1;Stuttgart
+Erlenbach;1;Stuttgart
+Oberkrämer;1;Berlin
+Elsfleth;1;other
+Wilhelmsfeld;1;Frankfurt
+Erkner;1;Berlin
+Oberboihingen;1;Stuttgart
+Traunstein;1;other
+Hitzacker;1;other
+Ginsheim-Gustavsburg;1;Frankfurt
+Fürstenwalde/Spree;1;Berlin
+Hepberg;1;Munich
+Moritzburg OT Boxdorf;1;other
+Oberschwarzach;1;other
+Mutterstadt;1;Frankfurt
+Creglingen;1;other
+Rentweinsdorf;1;other
+Wittstock/Dosse GT Randow;1;other
+Hohenpeißenberg;1;Munich
+Stemwede;1;other
+Giengen an der Brenz;1;other
+Schwanstetten;1;other
+Flörsheim-Dalsheim;1;Frankfurt
+Merseburg;1;Leipzig
+Münsing;1;Munich
+Woldegk;1;other
+Wingerode;1;other
+Steyerberg;1;other
+Gaggenau;1;Stuttgart
+Ehekirchen;1;Munich
+Haren (Ems);1;other
+Ruppertshofen;1;Frankfurt
+Mudau;1;Frankfurt
+Unkel;1;Cologne
+Aue;1;other
+Eisenach;1;other
+Schwielowsee OT Caputh;1;other
+Stegen;1;other
+Dinslaken;1;Cologne
+Sassenberg;1;other
+Sulzbach an der Murr;1;Stuttgart
+Kelsterbach;1;Frankfurt
+Uhingen;1;Stuttgart
+Lutherstadt Wittenberg OT Straach;1;other
+Wilnsdorf;1;other
+Osterhever;1;other
+Tapfheim;1;other
+Heide;1;other
+Wald-Michelbach;1;Frankfurt
+Rinteln;1;other
+Tiefenbronn;1;Stuttgart
+Bordersby OT Schönhagen;1;other
+Neresheim;1;other
+Burgstetten;1;Stuttgart
+Nuthe-Urstromtal;1;Berlin
+Hattersheim am Main;1;Frankfurt
+Mainleus;1;other
+Tirschenreuth;1;other
+Reilingen;1;Stuttgart
+Senftenberg OT Peickwitz;1;other
+Hebertshausen;1;Munich
+Itzehoe;1;Hamburg
+Blankenheim;1;Cologne
+Durbach;1;other
+Schöneiche bei Berlin;1;Berlin
+Hochspeyer;1;Mannheim
+Schorndorf;1;Stuttgart
+Weingarten;1;other
+Volxheim;1;Frankfurt
+Neu Wulmstorf;1;Hamburg
+Birkenfeld;1;other
+Delbrück;1;other
+Wittstock/Dosse;1;other
+Schechen;1;Munich
+Calw;1;Stuttgart
+Allendorf (Eder);1;other
+Löningen;1;other
+Gattendorf;1;other
+Gundelfingen;1;other
+Ebringen;1;other
+Lübbecke;1;other
+Kirchlengern;1;other
+Neckarsulm;1;Stuttgart
+Bischofsheim;1;other
+Garrel;1;other
+Waltrop;1;other
+Königs Wusterhausen;1;Berlin
+Düssseldorf;1;other
+Wernau Neckar;1;Stuttgart
+Oestrich-Winkel;1;Frankfurt
+Grünhain-Beierfeld OT Beierfeld;1;other
+Kappeln;1;other
+Gunzenhausen;1;other
+Mechow;1;Hamburg
+Velburg;1;other
+Duderstadt;1;other
+Lehrte;1;other
+Cölbe;1;other
+Sehestedt;1;other
+Icking;1;Munich
+Neuhausen;1;other
+Ottenhöfen im Schwarzwald;1;Stuttgart
+Parsberg / OPf;1;other
+Nieder-Olm;1;Frankfurt
+Grevenbroich;1;Cologne
+Rastede;1;other
+Langstedt;1;other
+Runkel-Dehrn;1;Frankfurt
+Heddesheim;1;Frankfurt
+Bibertal;1;other
+Donauwörth;1;other
+Brachttal;1;Frankfurt
+Bad Berneck;1;other
+Großkarolinenfeld;1;Munich
+Buckow (Märkische Schweiz);1;Berlin
+Bad Tennstedt;1;other
+Groß Schwülper;1;other
+Parthenstein;1;Leipzig
+Immenhausen;1;other
+Nidderau;1;Frankfurt
+Alsheim;1;Frankfurt
+Havixbeck;1;other
+Velten;1;Berlin
+Glienicke /Nordbahn;1;Berlin
+Bitterfeld-Wolfen;1;Leipzig
+Altshausen;1;other
+Thür;1;Cologne
+Bodenwöhr;1;other
+Schliersee;1;Munich
+Penzing;1;other
+Rosengarten;1;Hamburg
+Pressath;1;other
+Laboe;1;other
+Großrinderfeld;1;other
+Otter;1;Hamburg
+Groß Lindow;1;other
+Langenargen;1;other
+Neumarkt i.d.OPf;1;other
+Rhens;1;Frankfurt
+Nienburg (Weser);1;other
+Pfaffenhofen an der Ilm;1;Munich
+Oberhausen-Rheinhausen;1;Stuttgart
+Marsberg;1;other
+Östringen;1;Stuttgart
+Elmenhorst;1;Hamburg
+Hessisch Lichtenau;1;other
+Vaterstetten;1;Munich
+St. Ingbert;1;other
+Hünfelden;1;Frankfurt
+Röthenbach a.d.Pegnitz;1;other
+Wassenberg;1;Cologne
+Heiden;1;other
+Hatten;1;other
+Rheda-Wiedenbrück;1;other
+Elbtal-Hangenmeilingen;1;Frankfurt
+Schwedt/Oder;1;other
+Lichtentanne;1;Leipzig
+Hohenstein-Ernstthal;1;Leipzig
+Hankensbüttel;1;other
+Maselheim;1;other
+Mühlenfließ;1;Berlin
+Amelinghausen;1;Hamburg
+Wachtendonk;1;Cologne
+Röthlein;1;other
+Neunburg vorm Wald;1;other
+Bargteheide;1;Hamburg
