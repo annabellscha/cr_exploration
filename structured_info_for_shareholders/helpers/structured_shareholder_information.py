@@ -88,7 +88,7 @@ class StructuredInformation:
     shareholders = {"shareholders": []}
     # Find elements with the given namespace
     people = root.findall('.//tns:beteiligung', namespaces)
-    aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
+    # aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
     total_MDs = len(people)-2
     print(total_MDs)
     # Find and extract the gegenstand element
