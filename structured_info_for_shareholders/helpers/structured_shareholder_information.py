@@ -49,13 +49,13 @@ class StructuredInformation:
     bytes_buffer = io.BytesIO()
     blob.download_to_file(bytes_buffer)
     bytes_buffer.seek(0)  # Rewind the buffer to the beginning
-    print(bytes_buffer)
+    
     encodings = ['utf-8', 'iso-8859-1', 'windows-1252', 'utf-16']
     true_encoding=None
     for enc in encodings:
         try:
             content = bytes_buffer.getvalue().decode(enc)
-            print(f"Decoded with encoding: {enc}")
+            
             true_encoding = enc
             break
         except UnicodeDecodeError:
@@ -90,7 +90,7 @@ class StructuredInformation:
     people = root.findall('.//tns:beteiligung', namespaces)
     # aktenzeichen = root.find(".//{http://www.xjustiz.de}aktenzeichen.absender").text
     total_MDs = len(people)-2
-    print(total_MDs)
+    
     # Find and extract the gegenstand element
     founding_date = root.find('.//tns:satzungsdatum/tns:aktuellesSatzungsdatum', namespaces).text
     gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
