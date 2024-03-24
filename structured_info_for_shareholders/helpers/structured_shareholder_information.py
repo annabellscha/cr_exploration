@@ -118,7 +118,8 @@ class StructuredInformation:
             # Only proceed if all elements are found
             if vorname_element is not None and nachname_element is not None and geburtsdatum_element is not None and geschlecht_element is not None:
                 geschlecht_code = geschlecht_element.find('.//code', namespaces)
-                gender = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
+                if gender is not None:
+                    gender = 'Male' if geschlecht_code.text == '1' else 'Female' if geschlecht_code.text == '2' else 'Other'
                 
                 # Construct the shareholder info dictionary
                 person_info = {
