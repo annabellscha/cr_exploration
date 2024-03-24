@@ -100,7 +100,9 @@ class StructuredInformation:
        founding_date = root.find('.//tns:gruendungsmetadaten/tns:gruendungsdatum', namespaces).text
     else:
        founding_date = root.find('.//tns:auszug/tns:letzteEintragung', namespaces).text
-    gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
+    gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'})
+    if gegenstand is not None:
+        gegenstand = root.find('.//tns:basisdatenRegister/tns:gegenstand', {'tns': 'http://www.xjustiz.de'}).text
     # 'aktuellesSatzungsdatum' finden
     
 
