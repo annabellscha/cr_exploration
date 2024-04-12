@@ -100,7 +100,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2017,StudySmarter UG (haftungsbeschränkt),1,1,1,1,1,1.0,14,2
 2017,SEON Holding GmbH,1,1,1,1,0,1.0,17,3
 2017,lifespin GmbH,1,1,1,1,0,0.0,15,2
-2018,Dr. SAM Germany GmbH,1,1,1,1,0,0.0,15,2
+2018,Dr. SAM Germany GmbH,0,1,1,1,0,0.0,15,2
 2019,wayvs GmbH,1,1,1,1,1,1.0,17,2
 2018,Finbc GmbH,0,1,1,1,0,0.0,14,2
 2017,Crashtest Security GmbH,1,1,1,1,1,1.0,16,4
@@ -110,11 +110,11 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,everdrop GmbH,1,1,1,1,1,1.0,17,8
 2019,GetSteps GmbH,1,1,0,1,1,1.0,16,4
 2019,TiRo CheckEnergy GmbH,1,1,1,0,1,1.0,15,3
-2017,Perfood GmbH,1,0,1,1,0,0.0,17,1
+2017,Perfood GmbH,0,0,1,1,0,0.0,17,1
 2019,Donut Technologies GmbH,1,1,1,1,1,1.0,9,3
 2020,mix&match GmbH,1,1,1,1,1,1.0,8,4
 2020,Delightful Finance GmbH,1,1,1,0,1,1.0,9,3
-2017,Sdui GmbH,1,1,1,1,0,1.0,14,2
+2017,Sdui GmbH,0,1,1,1,0,1.0,14,2
 2019,yamuntu GmbH,0,1,1,0,0,1.0,14,2
 2017,Masterplan com GmbH,1,1,1,1,0,1.0,15,4
 2019,SPREAD GmbH,1,1,1,1,1,1.0,15,10
@@ -190,7 +190,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2017,GRITSpot GmbH,1,1,1,1,1,1.0,11,5
 2021,StayRaus GmbH,1,1,1,1,1,1.0,11,3
 2019,Climate Labs GmbH,1,1,1,0,1,1.0,11,4
-2017,northh medical GmbH,1,0,1,0,0,1.0,12,1
+2017,northh medical GmbH,0,0,1,0,0,1.0,12,1
 2020,Bonnie & Spike GmbH,1,1,1,0,0,1.0,8,4
 2017,Legal Hero GmbH,0,1,1,1,1,0.0,11,2
 2018,Zahnarzt-Helden GmbH,1,1,1,0,0,0.0,5,2
@@ -373,7 +373,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,1648 Factory GmbH,0,0,1,1,0,1.0,7,1
 2018,Digital Logistics GmbH,1,1,1,1,1,1.0,7,3
 2018,agriBORA GmbH,1,1,1,1,0,1.0,8,4
-2021,CoIQ GmbH,1,1,1,1,0,1.0,5,2
+2021,CoIQ GmbH,0,1,1,1,0,1.0,5,2
 2017,loopingo GmbH,1,0,1,1,1,0.0,6,1
 2020,eleQtron GmbH,0,0,1,1,0,0.0,3,1
 2017,Signatrix GmbH,0,1,1,1,1,0.0,7,3
@@ -456,7 +456,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2018,uze! Mobility GmbH,0,0,1,1,0,0.0,8,1
 2017,Tribeca Ice Cream GmbH,1,1,1,0,1,0.0,7,4
 2019,Sentryc GmbH,1,1,1,1,1,0.0,6,3
-2021,RS Recommerce Technologies GmbH,0,1,1,1,1,1.0,6,3
+2021,RS Recommerce Technologies GmbH,1,1,1,1,1,1.0,6,3
 2020,35up GmbH,0,0,1,1,1,0.0,5,1
 2019,Amira Media GmbH,0,0,1,1,0,0.0,8,1
 2019,PAXLY GmbH,1,1,1,1,0,1.0,7,2
@@ -535,7 +535,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2017,VisionHealth GmbH,0,0,0,1,1,0.0,6,1
 2020,deepc GmbH,1,0,1,1,1,0.0,5,1
 2019,CI HUB GmbH,1,0,1,1,1,0.0,6,1
-2020,truemorrow GmbH,1,1,1,1,1,0.0,5,2
+2020,truemorrow GmbH,0,1,1,1,1,0.0,5,2
 2021,OUR GREENERY GmbH,0,0,1,1,1,0.0,4,1
 2021,eGora GmbH,0,0,0,1,1,0.0,2,1
 2018,PlastFormance GmbH,1,0,0,1,0,0.0,3,1
@@ -546,7 +546,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,TUTAKA GmbH,0,0,1,1,0,0.0,4,1
 2020,Companyon Analytics GmbH,1,0,1,1,0,1.0,5,1
 2018,mentalis GmbH,0,0,1,1,0,0.0,4,1
-2021,Clay Health GmbH,1,0,0,1,1,1.0,4,1
+2021,Clay Health GmbH,0,0,0,1,1,1.0,4,1
 2017,SONAL Technologies UG (haftungsbeschränkt),0,1,0,0,0,0.0,5,5
 2018,sensry GmbH,0,0,1,1,0,0.0,5,1
 2020,hitcap esports GmbH,1,1,1,1,0,1.0,6,2
@@ -584,7 +584,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,comdeo GmbH,0,0,0,1,0,0.0,3,1
 2021,mogenius GmbH,1,0,0,1,0,0.0,6,1
 2020,embedded ocean GmbH,1,0,1,0,1,0.0,5,1
-2020,Total Fansports GmbH,1,0,0,1,0,0.0,1,1
+2020,Total Fansports GmbH,0,0,0,1,0,0.0,1,1
 2018,CLT Carbon Loop Technologies GmbH,1,0,1,0,1,1.0,5,1
 2020,HOLY Drinks GmbH,0,1,0,0,0,0.0,5,2
 2020,Swaarm Tech GmbH,1,1,0,1,1,1.0,5,4
@@ -605,7 +605,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2018,Hunter & Companion GmbH,0,0,1,0,1,0.0,4,1
 2019,HIGENA Cleansing and Cosmetics GmbH,1,0,1,0,0,0.0,5,1
 2021,myCor GmbH,0,0,1,0,0,0.0,6,1
-2019,fashiontale GmbH,1,0,0,0,0,0.0,5,1
+2019,fashiontale GmbH,0,0,0,0,0,0.0,5,1
 2018,Wellster Healthtech Group GmbH,0,0,1,1,1,0.0,5,1
 2018,Claim Solutions GmbH,1,0,1,0,0,0.0,5,1
 2018,Pakama Athletics GmbH,1,0,0,0,0,0.0,5,1
@@ -654,7 +654,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,Guardian Technologies GmbH,0,0,0,1,0,0.0,4,1
 2018,Humanitec GmbH,0,0,1,1,1,0.0,3,1
 2018,coindex GmbH,1,0,1,1,0,0.0,4,1
-2020,Studicon GmbH,1,0,0,1,0,0.0,1,1
+2020,Studicon GmbH,0,0,0,1,0,0.0,1,1
 2020,Theion GmbH,1,0,1,1,1,1.0,4,1
 2018,pay33 direct GmbH,0,0,1,1,1,0.0,4,1
 2018,Bluelife GmbH,0,0,1,1,1,0.0,5,1
@@ -680,7 +680,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2017,Willhelm Technologies GmbH,0,1,0,0,0,0.0,4,2
 2021,AnyMove GmbH,1,1,1,1,1,1.0,4,2
 2020,Organic Food Studio UG (haftungsbeschränkt),0,0,0,0,1,0.0,1,1
-2018,BreakthroughX Health GmbH,1,0,1,0,1,0.0,5,1
+2018,BreakthroughX Health GmbH,0,0,1,0,1,0.0,5,1
 2017,Parloa GmbH,0,0,1,0,1,0.0,4,1
 2017,Uniberry GmbH,0,0,1,0,0,0.0,3,1
 2018,Vulidity GmbH,0,0,0,1,0,0.0,4,1
@@ -787,7 +787,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2018,VISARIGHT GmbH,0,0,1,0,0,0.0,3,1
 2019,DayPepper GmbH,1,0,1,0,1,1.0,3,1
 2021,BIOBALANCE GmbH,1,0,0,0,0,0.0,2,1
-2017,Digital Apartment GmbH,1,1,0,0,0,1.0,2,2
+2017,Digital Apartment GmbH,0,1,0,0,0,1.0,2,2
 2017,SI Stuttgart Instruments GmbH,0,0,0,0,0,0.0,1,1
 2020,VesselSens GmbH,0,1,0,1,0,0.0,3,2
 2020,PROSION GmbH,1,0,1,1,0,0.0,4,1
@@ -850,7 +850,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2018,INSONE GmbH,0,1,0,0,0,0.0,4,2
 2021,Flash Labs GmbH,1,0,0,0,1,1.0,1,1
 2020,BODYCLOCK Technologies GmbH,0,0,1,0,1,0.0,4,1
-2021,Female Health & Pleasure GmbH,1,0,0,0,1,1.0,3,1
+2021,Female Health & Pleasure GmbH,0,0,0,0,1,1.0,3,1
 2021,Neural Search Labs GmbH,0,0,0,0,0,0.0,1,1
 2018,beegut GmbH,0,0,0,0,0,0.0,1,1
 2019,UniverCell Holding GmbH,0,0,0,0,0,0.0,4,1
@@ -874,7 +874,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,SiSlify GmbH,0,1,0,0,0,0.0,4,2
 2020,CROWDBUILDING Technology GmbH,0,0,0,0,1,0.0,2,1
 2020,CP Pharma Innovation UG (haftungsbeschränkt),0,0,0,0,1,0.0,1,1
-2017,CheckForPet GmbH,1,0,0,1,0,0.0,3,1
+2017,CheckForPet GmbH,0,0,0,1,0,0.0,3,1
 2019,Nimbus Health GmbH,1,1,0,1,0,1.0,3,2
 2017,Polyteia GmbH,0,0,1,1,1,0.0,3,1
 2018,up2parts GmbH,0,1,1,1,0,0.0,4,3
@@ -1057,7 +1057,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,ISVapp GmbH,1,0,0,0,1,0.0,3,1
 2017,promejo GmbH,0,0,0,0,0,0.0,2,1
 2019,ForestGum GmbH,1,0,0,0,0,0.0,3,1
-2020,fyrfeed GmbH,0,0,0,1,1,1.0,1,1
+2020,fyrfeed GmbH,1,0,0,1,1,1.0,1,1
 2020,Elara Digital GmbH,0,0,0,0,1,0.0,1,1
 2020,Sysmagine GmbH,0,0,0,0,0,0.0,2,1
 2019,Einfach zum Angebot GmbH,0,0,0,0,1,0.0,1,1
@@ -1284,7 +1284,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,RSX Technologies GmbH,0,0,0,1,0,0.0,1,1
 2018,Next Lotto GmbH,0,0,0,1,0,0.0,1,1
 2021,IMG Fibertech GmbH,0,0,0,0,0,0.0,1,1
-2017,wisefood GmbH,0,0,0,1,1,1.0,1,1
+2017,wisefood GmbH,1,0,0,1,1,1.0,1,1
 2021,CLUBA GmbH,0,0,0,0,0,0.0,1,1
 2020,Performance Recruiting GmbH,1,0,0,1,0,0.0,1,1
 2019,ETX Abwicklungsgesellschaft mbH,0,0,0,0,1,0.0,1,1
