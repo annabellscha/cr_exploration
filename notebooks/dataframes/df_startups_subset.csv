@@ -68,7 +68,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,Zava Global GmbH,0,0,1,0,0,0.0,9,1
 2017,CyberDirekt GmbH,1,1,1,1,1,1.0,18,3
 2017,Keleya Digital-Health Solutions GmbH,1,1,1,0,1,1.0,15,3
-2019,Hopkins GmbH,0,1,0,1,1,0.0,7,2
+2019,Hopkins GmbH,1,1,0,1,1,0.0,7,2
 2017,SIRPLUS GmbH,1,1,1,1,1,1.0,10,5
 2019,sewts GmbH,1,1,1,1,1,1.0,12,2
 2017,Laserhub GmbH,1,1,1,1,0,1.0,20,7
@@ -460,17 +460,17 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,35up GmbH,0,0,1,1,1,0.0,5,1
 2019,Amira Media GmbH,0,0,1,1,0,0.0,8,1
 2019,PAXLY GmbH,1,1,1,1,0,1.0,7,2
-2020,MeinLieblingsposter GmbH,1,0,0,1,0,0.0,7,1
+2020,MeinLieblingsposter GmbH,0,0,0,1,0,0.0,7,1
 2019,Kosmas Therapeutics GmbH,0,1,0,0,0,0.0,7,2
 2019,Block2Job GmbH,1,1,1,0,0,1.0,7,2
-2018,oculid GmbH,0,0,1,0,1,0.0,6,1
+2018,oculid GmbH,1,0,1,0,1,0.0,6,1
 2021,DBG Digitale betriebliche Gesundheitsvorsorge GmbH,0,1,0,0,1,0.0,7,2
 2018,GOLFCLIX GmbH,0,0,1,0,0,0.0,6,1
 2018,Smokeless.world GmbH,1,1,1,0,1,1.0,5,2
 2018,DaThera Consumer Health GmbH,1,0,0,0,1,0.0,8,1
 2019,Cuore Technology Hamburg GmbH,0,0,0,0,0,0.0,3,1
 2019,DESERTFOODS International GmbH,0,0,1,0,0,0.0,7,1
-2017,Lanes & Planes GmbH,0,0,1,1,1,0.0,7,1
+2017,Lanes & Planes GmbH,1,0,1,1,1,0.0,7,1
 2021,SWAN Beauty Tech GmbH,0,0,1,1,0,0.0,6,1
 2020,Agvolution GmbH,0,0,1,1,0,0.0,6,1
 2017,MyBiotech GmbH,0,0,1,1,0,0.0,8,1
@@ -489,7 +489,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2021,aiConomix GmbH,1,0,1,1,0,1.0,6,1
 2019,UVENTIONS GmbH,0,0,1,1,0,0.0,7,1
 2019,PSS - Pharma Service Systeme GmbH,0,0,1,1,0,0.0,7,1
-2017,Qualifyze GmbH,1,0,1,1,0,0.0,7,1
+2017,Qualifyze GmbH,0,0,1,1,0,0.0,7,1
 2017,repareo GmbH,1,1,1,1,1,1.0,5,2
 2020,Gaiali GmbH,1,0,1,1,1,1.0,5,1
 2021,Aqarios GmbH,0,0,0,1,1,0.0,7,1
@@ -639,7 +639,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,TrueSkin GmbH,1,0,1,1,1,0.0,4,1
 2021,Scoby UG (haftungsbeschränkt),0,0,0,1,0,1.0,4,1
 2021,Algenfels UG (haftungsbeschränkt),0,1,0,0,0,0.0,5,2
-2019,Nia Health GmbH,0,0,1,1,1,0.0,3,1
+2019,Nia Health GmbH,1,0,1,1,1,0.0,3,1
 2019,DEA Digital Education Academy GmbH,0,0,1,0,1,0.0,4,1
 2019,LOEWI GmbH,0,0,1,1,1,0.0,6,1
 2019,CONTIRIO GmbH,0,0,0,0,1,0.0,5,1
@@ -709,7 +709,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,TensorParc GmbH,0,0,0,0,0,0.0,3,1
 2021,VAYS GmbH,0,0,1,1,0,0.0,5,1
 2019,Avareto GmbH,0,0,0,1,1,0.0,4,1
-2020,Pick & Pack 24 GmbH,1,1,1,0,0,0.0,4,2
+2020,Pick & Pack 24 GmbH,0,1,1,0,0,0.0,4,2
 2021,eCash+ GmbH,0,1,1,0,0,0.0,5,2
 2018,REXCAR GmbH,0,0,1,0,1,0.0,5,1
 2021,Creatify GmbH,0,1,0,1,0,0.0,2,2
@@ -733,7 +733,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,STACK Hydrogen Solutions GmbH,0,0,1,1,0,0.0,4,1
 2021,Freemotion Systems GmbH,0,1,0,1,0,0.0,5,2
 2018,anytips GmbH,0,0,1,0,0,0.0,4,1
-2020,one.five GmbH,1,0,1,1,0,0.0,3,1
+2020,one.five GmbH,0,0,1,1,0,0.0,3,1
 2020,Fobe.me GmbH,0,0,1,1,1,0.0,3,1
 2018,Abihome GmbH,0,0,0,1,0,0.0,4,1
 2021,NaPaGen GmbH,0,0,0,1,0,0.0,4,1
@@ -887,7 +887,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2020,Gebrüder Schlürf GmbH,0,0,0,0,0,0.0,3,1
 2021,SmartOrthoSolutions GmbH,0,0,1,1,0,0.0,3,1
 2021,Printoptix GmbH,0,0,0,0,0,0.0,2,1
-2017,Matchday Nutrition GmbH,1,0,1,1,1,0.0,2,1
+2017,Matchday Nutrition GmbH,0,0,1,1,1,0.0,2,1
 2021,Electrified Classics GmbH,0,0,0,1,0,0.0,4,1
 2017,Avoid Murphy Products GmbH,0,0,0,0,0,0.0,3,1
 2021,Hexflow GmbH,0,0,0,1,0,0.0,4,1
