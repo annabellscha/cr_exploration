@@ -456,7 +456,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2018,uze! Mobility GmbH,0,0,1,1,0,0.0,8,1
 2017,Tribeca Ice Cream GmbH,1,1,1,0,1,0.0,7,4
 2019,Sentryc GmbH,1,1,1,1,1,0.0,6,3
-2021,RS Recommerce Technologies GmbH,1,1,1,1,1,1.0,6,3
+2021,RS Recommerce Technologies GmbH,0,1,1,1,1,1.0,6,3
 2020,35up GmbH,0,0,1,1,1,0.0,5,1
 2019,Amira Media GmbH,0,0,1,1,0,0.0,8,1
 2019,PAXLY GmbH,1,1,1,1,0,1.0,7,2
@@ -1057,7 +1057,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,ISVapp GmbH,1,0,0,0,1,0.0,3,1
 2017,promejo GmbH,0,0,0,0,0,0.0,2,1
 2019,ForestGum GmbH,1,0,0,0,0,0.0,3,1
-2020,fyrfeed GmbH,1,0,0,1,1,1.0,1,1
+2020,fyrfeed GmbH,0,0,0,1,1,1.0,1,1
 2020,Elara Digital GmbH,0,0,0,0,1,0.0,1,1
 2020,Sysmagine GmbH,0,0,0,0,0,0.0,2,1
 2019,Einfach zum Angebot GmbH,0,0,0,0,1,0.0,1,1
@@ -1284,7 +1284,7 @@ year_of_incorporation,startup_name,community_round,angel_syndication,funding_rou
 2019,RSX Technologies GmbH,0,0,0,1,0,0.0,1,1
 2018,Next Lotto GmbH,0,0,0,1,0,0.0,1,1
 2021,IMG Fibertech GmbH,0,0,0,0,0,0.0,1,1
-2017,wisefood GmbH,1,0,0,1,1,1.0,1,1
+2017,wisefood GmbH,0,0,0,1,1,1.0,1,1
 2021,CLUBA GmbH,0,0,0,0,0,0.0,1,1
 2020,Performance Recruiting GmbH,1,0,0,1,0,0.0,1,1
 2019,ETX Abwicklungsgesellschaft mbH,0,0,0,0,1,0.0,1,1
