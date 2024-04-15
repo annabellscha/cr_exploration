@@ -460,7 +460,7 @@ Payforce GmbH,m.w.mosen_GmbH,finance,cologne,münchen,0.8163666666666667,,1
 Payforce GmbH,Vealo_Ventures_GmbH,finance,other,münchen,4.111549632,,1
 Payforce GmbH,Stephan_Huber,finance,,münchen,7.72,,1
 Payforce GmbH,Vento_Ventures_GmbH_mit_Sitz_in_Berlin_with_registered_office_in_Berlin,finance,berlin,münchen,0.0722,,1
-Zazmo GmbH,Mehl_Beteiligungen_GmbH,finance,munich,kassel,1.3588566636666666,,1
+Zazmo GmbH,Mehl_Beteiligungen_GmbH,,munich,kassel,1.3588566636666666,,1
 Redwave Medical GmbH,Sehanka_UG_(haftungsbeschränkt),medicine_biotech,leipzig,jena,18.5,,1
 Redwave Medical GmbH,Dr._Johannes_Baulmann,medicine_biotech,cologne,jena,10.13,,1
 Redwave Medical GmbH,Dr._Gerhard_Scheuch,medicine_biotech,other,jena,9.4635,,1
@@ -788,7 +788,7 @@ Aware Health GmbH,Digital_Invest_GmbH,medicine_biotech,stuttgart,berlin,2.1107,,
 Aware Health GmbH,Rizky_Ventures_UG_(haftungsbeschränkt),medicine_biotech,berlin,berlin,5.026666666666666,,1
 Aware Health GmbH,Rose_Mountain_GmbH,medicine_biotech,frankfurt,berlin,0.0,,1
 Aware Health GmbH,Pallua_Beteiligungen_UG_(haftungsbeschränkt),medicine_biotech,,berlin,0.5039,,1
-Pryntad GmbH,Philipp_Karsten_Wolde,advertising,hamburg,hamburg,35.445,,1
+Pryntad GmbH,Philipp_Karsten_Wolde,,hamburg,hamburg,35.445,,1
 Commercial Excellence GmbH,Ilona_van_Megen,advertising,cologne,berlin,16.98,,1
 Solarize Energy Solutions GmbH,Bernd_Nagel,energy,,stuttgart,18.68165,,1
 Youblicity GmbH,BeAI_GmbH,advertising,frankfurt,augsburg,5.573,,1
@@ -829,7 +829,7 @@ Sentryc GmbH,Goldfinger_Investment_Holding_GmbH,ecommerce,berlin,berlin,0.559999
 ANTICIPATE GmbH,"DELDEN_UG_(haftungsbeschränkt),_Köln",industry,cologne,aachen,25.0,,1
 Better by Less GmbH,Dr._Stefan_Wiskemann,ecommerce,hamburg,hamburg,6.5089,,1
 Trisor GmbH,HB_Investments_UG_(haftungsbeschränkt),logistics,munich,berlin,48.71,,1
-Telematics Solutions GmbH,Booom_Capital_GmbH,logistics,berlin,berlin,0.268,,1
+Telematics Solutions GmbH,Booom_Capital_GmbH,,berlin,berlin,0.268,,1
 SCARAB Business Intelligence GmbH,MLA_Capital_UG_(haftungsbeschränkt),ecommerce,berlin,heidelberg,23.71,,1
 SCARAB Business Intelligence GmbH,Johannes_Bauer,ecommerce,international,heidelberg,42.5,,1
 Blackcatz Studio GmbH,R.O.I._GmbH,logistics,berlin,saarburg,1.4833333333333332,,1
@@ -1152,11 +1152,11 @@ Hejdu GmbH,DSR_Ventures_GmbH,ecommerce,,berlin,0.7232491910000001,,1
 Leek & Ribs Games UG (haftungsbeschränkt),Patrick_Rose,gaming,hamburg,lübeck,33.33,,1
 Pick & Pack 24 GmbH,Boomerang_Investments_GmbH,ecommerce,berlin,düsseldorf,10.355,,1
 Pick & Pack 24 GmbH,Seeventures_GmbH,ecommerce,other,düsseldorf,2.065,,1
-ONIC GmbH,Untermotorisiert_GmbH_AG,ecommerce,,unterföhring,3.1,,1
+ONIC GmbH,Untermotorisiert_GmbH_AG,,,unterföhring,3.1,,1
 hyrd GmbH,Rotenfels_Verwaltung_GmbH_mit_Sitz_in_Traisen,staffing,frankfurt,frankfurt am main,4.04,,1
 UniverCell Holding GmbH,Michael_Busch,energy,hamburg,flintbek,6.4444333333333335,,1
 EUMEPRO GmbH,Alexander_Götz,ecommerce,stuttgart,leingarten,21.0,,1
-fitoni UG (haftungsbeschränkt),Ceres_Equity_GmbH,ecommerce,munich,hamburg,28.57,,1
+fitoni UG (haftungsbeschränkt),Ceres_Equity_GmbH,,munich,hamburg,28.57,,1
 ORILABO Project GmbH,Thomas_Berlemann,ecommerce,munich,köln,0.68685,,1
 ORILABO Project GmbH,Increaze_Venture_GmbH,ecommerce,munich,köln,7.375,,1
 temp2 media GmbH,Marco_Scholz,ecommerce,hamburg,hamburg,6.5,,1
@@ -1178,7 +1178,7 @@ retorio GmbH,Pandora_Investments_GmbH,staffing,hamburg,münchen,0.37,,1
 retorio GmbH,MMM_Investment_GmbH,staffing,munich,münchen,2.55,,1
 retorio GmbH,Michael_Näf,staffing,international,münchen,1.4272,,1
 retorio GmbH,Haug_Beteiligungsgesellschaft_UG_(haftungsbeschränkt),staffing,munich,münchen,23.415,,1
-Sustainable Manufacturing GmbH,Uli_Richard_Meier,ecommerce,international,ganderkesee,4.02,,1
+Sustainable Manufacturing GmbH,Uli_Richard_Meier,,international,ganderkesee,4.02,,1
 HyPro-Innovations GmbH,AL_Holding_GmbH,ecommerce,cologne,ehningen,5.0,,1
 myCor GmbH,Elouma_GmbH,medicine_biotech,cologne,düsseldorf,22.5,,1
 Priceloop GmbH,Christian_Peters,ecommerce,berlin,berlin,21.0,,1
@@ -1246,7 +1246,7 @@ Yard GmbH,Michael_Hallen_Beteiligungs_GmbH,food,cologne,meerbusch,13.63,,1
 Yard GmbH,Aqoya_GmbH,food,cologne,meerbusch,18.91,,1
 Yard GmbH,Fermat_Beteiligungs_Unternehmergesellschaft_(haftungsbeschränkt),food,,meerbusch,37.5,,1
 Nexxt.One Alpha GmbH,Pausder_Ventures_GmbH,insurance,berlin,berlin,0.6366666666666667,,1
-TIIB The Institutional Investors Board GmbH,VI_VV_GmbH,finance,cologne,düsseldorf,3.0866666666666664,,1
+TIIB The Institutional Investors Board GmbH,VI_VV_GmbH,,cologne,düsseldorf,3.0866666666666664,,1
 Sysmagine GmbH,Grimm_Capital_Holding_UG_(haftungsbeschränkt)_mit_Sitz_in_Essenheim,software,frankfurt,heidelberg,47.14,,1
 RiskMiner GmbH,BASK_Capital_GmbH,software,,münchen,9.065,,1
 Creatify GmbH,Frost_Holding_GmbH,staffing,other,hagenbach,37.15,,1
@@ -1320,8 +1320,8 @@ DESERTFOODS International GmbH,Mario_Götz,agriculture,cologne,dummerstorf ot be
 SMAVOO GmbH,Dr._Rouven-B._Wiegard,hardware,other,hemmingen,37.5,,1
 SMAVOO GmbH,Tobias_Betz,hardware,hamburg,hemmingen,25.0,,1
 SMAVOO GmbH,Nima_Shafaghat,hardware,other,hemmingen,37.5,,1
-DigitalTwin Technology GmbH,Jens_Piesk,construction,cologne,köln,32.665,,1
-DigitalTwin Technology GmbH,I!see_GmbH,construction,cologne,köln,4.492,,1
+DigitalTwin Technology GmbH,Jens_Piesk,,cologne,köln,32.665,,1
+DigitalTwin Technology GmbH,I!see_GmbH,,cologne,köln,4.492,,1
 CROWDBUILDING Technology GmbH,SFO_Investment_GmbH,real_estate,frankfurt,berlin,8.33,,1
 bee smart city GmbH,BMC_Asset_Management_GmbH,media,cologne,mülheim an der ruhr,11.42,,1
 bee smart city GmbH,Thomas_Müller,media,munich,mülheim an der ruhr,17.68,,1
@@ -1426,7 +1426,7 @@ SoD ScreenOnDemand GmbH,Silvretta_UG_(haftungsbeschränkt),advertising,cologne,m
 SoD ScreenOnDemand GmbH,Palermo_Digital_GmbH,advertising,munich,münchen,33.9653,,1
 Mondas GmbH,Thomas_Hoffmeister,energy,stuttgart,freiburg im breisgau,3.33,,1
 Polyteia GmbH,TK_Management_GmbH,software,cologne,berlin,18.191175,,1
-enna systems GmbH,Matthias_Müller,hardware,munich,münchen,18.84,,1
+enna systems GmbH,Matthias_Müller,,munich,münchen,18.84,,1
 Crashtest Security GmbH,bm_associate_GmbH,software,munich,münchen,5.83,,1
 Crashtest Security GmbH,CFR_Venture_UG_(haftungsbeschraenkt),software,frankfurt,münchen,8.25,,1
 Crashtest Security GmbH,"Becker,_Christian_Matthias",software,,münchen,3.75,,1
@@ -1885,7 +1885,7 @@ Chattyco GmbH,METROPOL_Invest_GmbH,media,berlin,berlin,0.57065,,1
 Chattyco GmbH,Christoph_Goeken,media,hamburg,berlin,0.221,,1
 Perfect-iD GmbH,Florian_Bohle,blockchain_crypto,munich,köln,0.77675,,1
 Perfect-iD GmbH,Mehrdad_Piroozram,blockchain_crypto,cologne,köln,26.1,,1
-isarlend GmbH,Hans_Ulrich_Holdenried,finance,munich,münchen,3.385,,1
+isarlend GmbH,Hans_Ulrich_Holdenried,,munich,münchen,3.385,,1
 1nce GmbH,CPA_Invest_GmbH,industry,hamburg,köln,1.0549,,1
 Maniko Nails GmbH,KAHE_Holding_UG_(haftungsbeschränkt),ecommerce,berlin,berlin,0.0,,1
 Maniko Nails GmbH,Performance_Group_GmbH,ecommerce,berlin,berlin,18.49,,1
